@@ -1,40 +1,37 @@
-const {accounts, contract, web3} = require("@openzeppelin/test-environment")
-const {createSnapshot, restoreSnapshot} = require("./helpers/snapshot")
+const { accounts, contract, web3 } = require('@openzeppelin/test-environment')
+const { createSnapshot, restoreSnapshot } = require('./helpers/snapshot')
 
-const {time} = require("@openzeppelin/test-helpers")
+const { time } = require('@openzeppelin/test-helpers')
 
-const {mineBlocks} = require("./helpers/mineBlocks")
+const { mineBlocks } = require('./helpers/mineBlocks')
 
-const KeepToken = contract.fromArtifact("KeepTokenIntegration")
-const KeepTokenGrant = contract.fromArtifact("TokenGrant")
-const KeepRegistry = contract.fromArtifact("KeepRegistry")
-const BondedECDSAKeepFactoryStub = contract.fromArtifact(
-  "BondedECDSAKeepFactoryStub"
-)
-const KeepBonding = contract.fromArtifact("KeepBonding")
-const MinimumStakeSchedule = contract.fromArtifact("MinimumStakeSchedule")
-const GrantStaking = contract.fromArtifact("GrantStaking")
-const Locks = contract.fromArtifact("Locks")
-const TopUps = contract.fromArtifact("TopUps")
-const TokenStakingEscrow = contract.fromArtifact("TokenStakingEscrow")
-const TokenStaking = contract.fromArtifact("TokenStaking")
-const TokenGrant = contract.fromArtifact("TokenGrant")
-const BondedSortitionPool = contract.fromArtifact("BondedSortitionPool")
-const BondedSortitionPoolFactory = contract.fromArtifact(
-  "BondedSortitionPoolFactory"
-)
-const RandomBeaconStub = contract.fromArtifact("RandomBeaconStub")
-const BondedECDSAKeep = contract.fromArtifact("BondedECDSAKeep")
-const StackLib = contract.fromArtifact("StackLib")
+const KeepToken = contract.fromArtifact('KeepTokenIntegration')
+const KeepTokenGrant = contract.fromArtifact('TokenGrant')
+const KeepRegistry = contract.fromArtifact('KeepRegistry')
+const BondedECDSAKeepFactoryStub = contract.fromArtifact('BondedECDSAKeepFactoryStub')
+const KeepBonding = contract.fromArtifact('KeepBonding')
+const MinimumStakeSchedule = contract.fromArtifact('MinimumStakeSchedule')
+const GrantStaking = contract.fromArtifact('GrantStaking')
+const Locks = contract.fromArtifact('Locks')
+const TopUps = contract.fromArtifact('TopUps')
+const TokenStakingEscrow = contract.fromArtifact('TokenStakingEscrow')
+const TokenStaking = contract.fromArtifact('TokenStaking')
+const TokenGrant = contract.fromArtifact('TokenGrant')
+const BondedSortitionPool = contract.fromArtifact('BondedSortitionPool')
+const BondedSortitionPoolFactory = contract.fromArtifact('BondedSortitionPoolFactory')
+const RandomBeaconStub = contract.fromArtifact('RandomBeaconStub')
+const BondedECDSAKeep = contract.fromArtifact('BondedECDSAKeep')
+const StackLib = contract.fromArtifact('StackLib')
+const ERC20Stub = contract.fromArtifact('ERC20Stub')
 
 const BN = web3.utils.BN
 
-const chai = require("chai")
-chai.use(require("bn-chai")(BN))
+const chai = require('chai')
+chai.use(require('bn-chai')(BN))
 const expect = chai.expect
 const assert = chai.assert
 
-describe("BondedECDSAKeepFactory", function () {
+describe('BondedECDSAKeepFactory', function () {
   let keepToken
   let tokenStaking
   let tokenGrant
@@ -63,10 +60,7 @@ describe("BondedECDSAKeepFactory", function () {
 
   before(async () => {
     await BondedSortitionPoolFactory.detectNetwork()
-    await BondedSortitionPoolFactory.link(
-      "StackLib",
-      (await StackLib.new()).address
-    )
+    await BondedSortitionPoolFactory.link('StackLib', (await StackLib.new()).address)
 
     await initializeNewFactory()
     await initializeMemberCandidates()
@@ -83,37 +77,30 @@ describe("BondedECDSAKeepFactory", function () {
     await restoreSnapshot()
   })
 
-  describe("openKeep", async () => {
-    it("registers token staking delegated authority claim from keep", async () => {
+  describe('openKeep', async () => {
+    it('registers token staking delegated authority claim from keep', async () => {
       const keepAddress = await keepFactory.openKeep.call(
         groupSize,
         threshold,
         keepOwner,
         bond,
         stakeLockDuration,
-        {from: application, value: feeEstimate}
+        { from: application, value: feeEstimate }
       )
 
-      await keepFactory.openKeep(
-        groupSize,
-        threshold,
-        keepOwner,
-        bond,
-        stakeLockDuration,
-        {
-          from: application,
-          value: feeEstimate,
-        }
-      )
+      await keepFactory.openKeep(groupSize, threshold, keepOwner, bond, stakeLockDuration, {
+        from: application,
+        value: feeEstimate,
+      })
 
       assert.equal(
         await tokenStaking.getAuthoritySource(keepAddress),
         keepFactory.address,
-        "invalid token staking authority source"
+        'invalid token staking authority source'
       )
     })
 
-    it("locks member stakes", async () => {
+    it('locks member stakes', async () => {
       const tx = await keepFactory.openKeep(
         groupSize,
         threshold,
@@ -127,59 +114,53 @@ describe("BondedECDSAKeepFactory", function () {
       )
       const keepAddress = tx.logs[0].args.keepAddress
 
-      const expectedExpirationTime = (await time.latest()).add(
-        stakeLockDuration
-      )
+      const expectedExpirationTime = (await time.latest()).add(stakeLockDuration)
 
       for (let i = 0; i < members.length; i++) {
-        const {creators, expirations} = await tokenStaking.getLocks(members[i])
+        const { creators, expirations } = await tokenStaking.getLocks(members[i])
 
-        assert.deepEqual(
-          creators,
-          [keepAddress],
-          "incorrect token lock creator"
-        )
+        assert.deepEqual(creators, [keepAddress], 'incorrect token lock creator')
 
-        expect(expirations[0], "incorrect token lock expiration time").to.eq.BN(
+        expect(expirations[0], 'incorrect token lock expiration time').to.eq.BN(
           expectedExpirationTime
         )
       }
     })
   })
 
-  describe("closeKeep", async () => {
-    it("releases locks on member stakes", async () => {
-      const keep = await openKeep({from: keepOwner})
+  describe('closeKeep', async () => {
+    it('releases locks on member stakes', async () => {
+      const keep = await openKeep({ from: keepOwner })
 
-      await keep.closeKeep({from: keepOwner})
+      await keep.closeKeep({ from: keepOwner })
 
       for (let i = 0; i < members.length; i++) {
-        const {creators, expirations} = await tokenStaking.getLocks(members[i])
+        const { creators, expirations } = await tokenStaking.getLocks(members[i])
 
-        assert.isEmpty(creators, "incorrect token lock creator")
+        assert.isEmpty(creators, 'incorrect token lock creator')
 
-        assert.isEmpty(expirations, "incorrect token lock expiration time")
+        assert.isEmpty(expirations, 'incorrect token lock expiration time')
       }
     })
   })
 
-  describe("seizeSignerBonds", async () => {
-    it("releases locks on member stakes", async () => {
-      const keep = await openKeep({from: keepOwner})
+  describe('seizeSignerBonds', async () => {
+    it('releases locks on member stakes', async () => {
+      const keep = await openKeep({ from: keepOwner })
 
-      await keep.seizeSignerBonds({from: keepOwner})
+      await keep.seizeSignerBonds({ from: keepOwner })
 
       for (let i = 0; i < members.length; i++) {
-        const {creators, expirations} = await tokenStaking.getLocks(members[i])
+        const { creators, expirations } = await tokenStaking.getLocks(members[i])
 
-        assert.isEmpty(creators, "incorrect token lock creator")
+        assert.isEmpty(creators, 'incorrect token lock creator')
 
-        assert.isEmpty(expirations, "incorrect token lock expiration time")
+        assert.isEmpty(expirations, 'incorrect token lock expiration time')
       }
     })
   })
 
-  describe("submitSignatureFraud", () => {
+  describe('submitSignatureFraud', () => {
     // Private key: 0x937FFE93CFC943D1A8FC0CB8BAD44A978090A4623DA81EEFDFF5380D0A290B41
     // Public key:
     //  Curve: secp256k1
@@ -189,20 +170,18 @@ describe("BondedECDSAKeepFactory", function () {
     // TODO: Extract test data to a test data file and use them consistently across other tests.
 
     const publicKey1 =
-      "0x9a0544440cc47779235ccb76d669590c2cd20c7e431f97e17a1093faf03291c473e661a208a8a565ca1e384059bd2ff7ff6886df081ff1229250099d388c83df"
-    const preimage1 =
-      "0xfdaf2feee2e37c24f2f8d15ad5814b49ba04b450e67b859976cbf25c13ea90d8"
+      '0x9a0544440cc47779235ccb76d669590c2cd20c7e431f97e17a1093faf03291c473e661a208a8a565ca1e384059bd2ff7ff6886df081ff1229250099d388c83df'
+    const preimage1 = '0xfdaf2feee2e37c24f2f8d15ad5814b49ba04b450e67b859976cbf25c13ea90d8'
     // hash256Digest1 = sha256(preimage1)
-    const hash256Digest1 =
-      "0x8bacaa8f02ef807f2f61ae8e00a5bfa4528148e0ae73b2bd54b71b8abe61268e"
+    const hash256Digest1 = '0x8bacaa8f02ef807f2f61ae8e00a5bfa4528148e0ae73b2bd54b71b8abe61268e'
 
     const signature1 = {
-      R: "0xedc074a86380cc7e2e4702eaf1bec87843bc0eb7ebd490f5bdd7f02493149170",
-      S: "0x3f5005a26eb6f065ea9faea543e5ddb657d13892db2656499a43dfebd6e12efc",
+      R: '0xedc074a86380cc7e2e4702eaf1bec87843bc0eb7ebd490f5bdd7f02493149170',
+      S: '0x3f5005a26eb6f065ea9faea543e5ddb657d13892db2656499a43dfebd6e12efc',
       V: 28,
     }
 
-    it("should return true and slash members when the signature is a fraud", async () => {
+    it('should return true and slash members when the signature is a fraud', async () => {
       const keep = await openKeep()
 
       const initialStakes = []
@@ -230,22 +209,14 @@ describe("BondedECDSAKeepFactory", function () {
         preimage1
       )
 
-      assert.isTrue(res, "incorrect returned result")
+      assert.isTrue(res, 'incorrect returned result')
 
       for (let i = 0; i < members.length; i++) {
-        const expectedStake = initialStakes[i].sub(
-          await tokenStaking.minimumStake.call()
-        )
+        const expectedStake = initialStakes[i].sub(await tokenStaking.minimumStake.call())
 
-        const actualStake = await tokenStaking.eligibleStake(
-          members[i],
-          keepFactory.address
-        )
+        const actualStake = await tokenStaking.eligibleStake(members[i], keepFactory.address)
 
-        expect(actualStake).to.eq.BN(
-          expectedStake,
-          `incorrect stake for member ${i}`
-        )
+        expect(actualStake).to.eq.BN(expectedStake, `incorrect stake for member ${i}`)
       }
     })
   })
@@ -257,18 +228,12 @@ describe("BondedECDSAKeepFactory", function () {
 
     bondedSortitionPoolFactory = await BondedSortitionPoolFactory.new()
     await TokenStaking.detectNetwork()
-    await TokenStaking.link(
-      "MinimumStakeSchedule",
-      (await MinimumStakeSchedule.new()).address
-    )
-    await TokenStaking.link("GrantStaking", (await GrantStaking.new()).address)
-    await TokenStaking.link("Locks", (await Locks.new()).address)
-    await TokenStaking.link("TopUps", (await TopUps.new()).address)
+    await TokenStaking.link('MinimumStakeSchedule', (await MinimumStakeSchedule.new()).address)
+    await TokenStaking.link('GrantStaking', (await GrantStaking.new()).address)
+    await TokenStaking.link('Locks', (await Locks.new()).address)
+    await TokenStaking.link('TopUps', (await TopUps.new()).address)
 
-    const stakingEscrow = await TokenStakingEscrow.new(
-      keepToken.address,
-      keepTokenGrant.address
-    )
+    const stakingEscrow = await TokenStakingEscrow.new(keepToken.address, keepTokenGrant.address)
 
     const stakeInitializationPeriod = 30 // In seconds
 
@@ -280,11 +245,12 @@ describe("BondedECDSAKeepFactory", function () {
       stakeInitializationPeriod
     )
     tokenGrant = await TokenGrant.new(keepToken.address)
-
+    bondToken = await ERC20Stub.new()
     keepBonding = await KeepBonding.new(
       registry.address,
       tokenStaking.address,
-      tokenGrant.address
+      tokenGrant.address,
+      bondToken.address
     )
     randomBeacon = await RandomBeaconStub.new()
     const bondedECDSAKeepMasterContract = await BondedECDSAKeep.new()
@@ -313,11 +279,7 @@ describe("BondedECDSAKeepFactory", function () {
         Buffer.from(web3.utils.hexToBytes(authorizer)),
       ])
 
-      await keepToken.approveAndCall(
-        tokenStaking.address,
-        stakeBalance,
-        delegation
-      )
+      await keepToken.approveAndCall(tokenStaking.address, stakeBalance, delegation)
 
       await time.increase(initializationPeriod.addn(1))
     }
@@ -331,11 +293,9 @@ describe("BondedECDSAKeepFactory", function () {
     await keepFactory.createSortitionPool(application)
 
     for (let i = 0; i < members.length; i++) {
-      await tokenStaking.authorizeOperatorContract(
-        members[i],
-        keepFactory.address,
-        {from: authorizers[i]}
-      )
+      await tokenStaking.authorizeOperatorContract(members[i], keepFactory.address, {
+        from: authorizers[i],
+      })
       await keepBonding.authorizeSortitionPoolContract(members[i], signerPool, {
         from: authorizers[i],
       })
@@ -349,7 +309,9 @@ describe("BondedECDSAKeepFactory", function () {
 
   async function depositMemberCandidates(unbondedAmount) {
     for (let i = 0; i < members.length; i++) {
-      await keepBonding.deposit(members[i], {value: unbondedAmount})
+      await bondToken.mint(members[i], unbondedAmount)
+      await bondToken.approve(keepBonding.address, unbondedAmount, { from: members[i] })
+      await keepBonding.deposit(members[i], unbondedAmount, { from: members[i] })
     }
   }
 
@@ -372,27 +334,20 @@ describe("BondedECDSAKeepFactory", function () {
       keepOwner,
       bond,
       stakeLockDuration,
-      {from: application, value: feeEstimate}
+      { from: application, value: feeEstimate }
     )
 
-    await keepFactory.openKeep(
-      groupSize,
-      threshold,
-      keepOwner,
-      bond,
-      stakeLockDuration,
-      {
-        from: application,
-        value: feeEstimate,
-      }
-    )
+    await keepFactory.openKeep(groupSize, threshold, keepOwner, bond, stakeLockDuration, {
+      from: application,
+      value: feeEstimate,
+    })
 
     return await BondedECDSAKeep.at(keepAddress)
   }
 
   async function submitMembersPublicKeys(keep, publicKey) {
-    await keep.submitPublicKey(publicKey, {from: members[0]})
-    await keep.submitPublicKey(publicKey, {from: members[1]})
-    await keep.submitPublicKey(publicKey, {from: members[2]})
+    await keep.submitPublicKey(publicKey, { from: members[0] })
+    await keep.submitPublicKey(publicKey, { from: members[1] })
+    await keep.submitPublicKey(publicKey, { from: members[2] })
   }
 })

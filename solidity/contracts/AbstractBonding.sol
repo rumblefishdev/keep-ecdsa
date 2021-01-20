@@ -26,7 +26,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 /// @notice Contract holding deposits from keeps' operators.
 contract AbstractBonding is IBondingManagement {
     using SafeMath for uint256;
-    address internal bondTokenAddress;
+    address public bondTokenAddress;
     // Registry contract with a list of approved factories (operator contracts).
     KeepRegistry internal registry;
 
@@ -94,10 +94,30 @@ contract AbstractBonding is IBondingManagement {
         );
         ERC20 bondToken = ERC20(bondTokenAddress);
         require(
-            bondToken.allowance(msg.sender, address(this)) >= _amount,
+            bondToken.allowance(operator, address(this)) >= _amount,
             "Allowence is too low"
         );
-        bondToken.transferFrom(msg.sender, address(this), _amount);
+        bondToken.transferFrom(operator, address(this), _amount);
+        unbondedValue[operator] = unbondedValue[operator].add(_amount);
+        emit UnbondedValueDeposited(operator, beneficiary, _amount);
+    }
+    function depositFor(address operator, uint256 _amount, address _source) public payable {
+        address beneficiary = beneficiaryOf(operator);
+        // Beneficiary has to be set (delegation exist) before an operator can
+        // deposit wei. It protects from a situation when an operator wants
+        // to withdraw funds which are transfered to beneficiary with zero
+        // address.
+
+        require(
+            beneficiary != address(0),
+            "Beneficiary not defined for the operator"
+        );
+        ERC20 bondToken = ERC20(bondTokenAddress);
+        require(
+            bondToken.allowance(_source, address(this)) >= _amount,
+            "Allowence of _source is too low"
+        );
+        bondToken.transferFrom(_source, address(this), _amount);
         unbondedValue[operator] = unbondedValue[operator].add(_amount);
         emit UnbondedValueDeposited(operator, beneficiary, _amount);
     }

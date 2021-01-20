@@ -20,6 +20,7 @@ contract IBondingManagement is IBonding {
     /// @notice Add the provided value to operator's pool available for bonding.
     /// @param operator Address of the operator.
     function deposit(address operator, uint256 _amount) public payable;
+    function depositFor(address operator, uint256 _amount,address _source) public payable;
 
     /// @notice Withdraws amount from operator's value available for bonding.
     /// @param amount Value to withdraw in wei.

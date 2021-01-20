@@ -58,9 +58,16 @@ contract BondedECDSAKeep is AbstractBondedECDSAKeep {
         uint256 _stakeLockDuration,
         address _tokenStaking,
         address _keepBonding,
-        address payable _keepFactory
+        address payable _keepFactory,
+        address _bondTokenAddress
     ) public {
-        super.initialize(_owner, _members, _honestThreshold, _keepBonding);
+        super.initialize(
+            _owner,
+            _members,
+            _honestThreshold,
+            _keepBonding,
+            _bondTokenAddress
+        );
 
         memberStake = _memberStake;
         tokenStaking = TokenStaking(_tokenStaking);
@@ -88,13 +95,14 @@ contract BondedECDSAKeep is AbstractBondedECDSAKeep {
 
     function slashForSignatureFraud() internal {
         /* solium-disable-next-line */
-        (bool success, ) = address(tokenStaking).call(
-            abi.encodeWithSignature(
-                "slash(uint256,address[])",
-                memberStake,
-                members
-            )
-        );
+        (bool success, ) =
+            address(tokenStaking).call(
+                abi.encodeWithSignature(
+                    "slash(uint256,address[])",
+                    memberStake,
+                    members
+                )
+            );
 
         // Should never happen but we want to protect the owner and make sure the
         // fraud submission transaction does not fail so that the owner can

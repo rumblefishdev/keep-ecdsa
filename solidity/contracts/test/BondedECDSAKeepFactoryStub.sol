@@ -39,7 +39,8 @@ contract BondedECDSAKeepFactoryStub is BondedECDSAKeepFactory {
     function stubOpenKeep(
         address _owner,
         address[] memory _members,
-        uint256 _creationTimestamp
+        uint256 _creationTimestamp,
+        address _bondTokenAddress
     ) public returns (address keepAddress) {
         keepAddress = createClone(masterKeepAddress);
         BondedECDSAKeep keep = BondedECDSAKeep(keepAddress);
@@ -51,7 +52,8 @@ contract BondedECDSAKeepFactoryStub is BondedECDSAKeepFactory {
             0,
             address(tokenStaking),
             address(keepBonding),
-            address(this)
+            address(this),
+            _bondTokenAddress
         );
         keeps.push(keepAddress);
         keepOpenedTimestamp[keepAddress] = _creationTimestamp;

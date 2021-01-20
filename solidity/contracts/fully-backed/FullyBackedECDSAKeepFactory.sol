@@ -145,7 +145,8 @@ contract FullyBackedECDSAKeepFactory is
         uint256 _honestThreshold,
         address _owner,
         uint256 _bond,
-        uint256 _stakeLockDuration
+        uint256 _stakeLockDuration,
+        address _bondTokenAddress
     ) external payable nonReentrant returns (address keepAddress) {
         require(_groupSize > 0, "Minimum signing group size is 1");
         require(_groupSize <= 16, "Maximum signing group size is 16");
@@ -169,12 +170,12 @@ contract FullyBackedECDSAKeepFactory is
             "Insufficient payment for opening a new keep"
         );
 
-        address[] memory members = FullyBackedSortitionPool(pool)
-            .selectSetGroup(
-            _groupSize,
-            bytes32(groupSelectionSeed),
-            memberBond
-        );
+        address[] memory members =
+            FullyBackedSortitionPool(pool).selectSetGroup(
+                _groupSize,
+                bytes32(groupSelectionSeed),
+                memberBond
+            );
 
         newGroupSelectionSeed();
 
@@ -189,7 +190,8 @@ contract FullyBackedECDSAKeepFactory is
             members,
             _honestThreshold,
             address(bonding),
-            address(this)
+            address(this),
+            _bondTokenAddress
         );
 
         for (uint256 i = 0; i < _groupSize; i++) {
@@ -256,9 +258,8 @@ contract FullyBackedECDSAKeepFactory is
 
         address application = keepApplication[address(keep)];
 
-        FullyBackedSortitionPool sortitionPool = FullyBackedSortitionPool(
-            getSortitionPool(application)
-        );
+        FullyBackedSortitionPool sortitionPool =
+            FullyBackedSortitionPool(getSortitionPool(application));
 
         for (uint256 i = 0; i < members.length; i++) {
             address operator = members[i];

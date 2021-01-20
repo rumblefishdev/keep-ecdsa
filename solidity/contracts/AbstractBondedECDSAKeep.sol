@@ -36,6 +36,7 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
 
     // Address of the keep's owner.
     address public owner;
+    address public bondTokenAddress;
 
     // List of keep members' addresses.
     address[] public members;
@@ -436,23 +437,19 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
     /// It is entirely up to the application if a part of signers' bonds is
     /// returned. The application may decide for that but may also decide to
     /// seize bonds and do not return anything.
-    function returnPartialSignerBonds() external payable {
+    function returnPartialSignerBonds(uint256 _amount) external payable {
         uint256 memberCount = members.length;
-        uint256 bondPerMember = msg.value.div(memberCount);
-
+        uint256 bondPerMember = _amount.div(memberCount);
         require(bondPerMember > 0, "Partial signer bond must be non-zero");
 
-        for (uint16 i = 0; i < memberCount - 1; i++) {
-            bonding.deposit.value(bondPerMember)(members[i], 777);
+        for (uint16 i = 0; i < memberCount; i++) {
+            bonding.depositFor(members[i], bondPerMember, msg.sender);
         }
 
         // Transfer of dividend for the last member. Remainder might be equal to
         // zero in case of even distribution or some small number.
-        uint256 remainder = msg.value.mod(memberCount);
-        bonding.deposit.value(bondPerMember.add(remainder))(
-            members[memberCount - 1],
-            777
-        );
+        uint256 remainder = _amount.mod(memberCount);
+        bonding.depositFor(members[memberCount - 1], remainder, msg.sender);
     }
 
     /// @notice Closes keep when owner decides that they no longer need it.
@@ -543,14 +540,15 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
         address _owner,
         address[] memory _members,
         uint256 _honestThreshold,
-        address _bonding
+        address _bonding,
+        address _bondTokenAddress
     ) internal {
         require(!isInitialized, "Contract already initialized");
 
         owner = _owner;
         members = _members;
         honestThreshold = _honestThreshold;
-
+        bondTokenAddress = _bondTokenAddress;
         status = Status.Active;
         isInitialized = true;
 

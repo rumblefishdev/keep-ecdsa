@@ -130,7 +130,8 @@ contract BondedECDSAKeepFactory is
         uint256 _honestThreshold,
         address _owner,
         uint256 _bond,
-        uint256 _stakeLockDuration
+        uint256 _stakeLockDuration,
+        address _bondTokenAddress
     ) external payable nonReentrant returns (address keepAddress) {
         require(_groupSize > 0, "Minimum signing group size is 1");
         require(_groupSize <= 16, "Maximum signing group size is 16");
@@ -179,7 +180,8 @@ contract BondedECDSAKeepFactory is
             _stakeLockDuration,
             address(tokenStaking),
             address(keepBonding),
-            address(this)
+            address(this),
+            _bondTokenAddress
         );
 
         for (uint256 i = 0; i < _groupSize; i++) {
