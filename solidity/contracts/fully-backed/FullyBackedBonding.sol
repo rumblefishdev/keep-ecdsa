@@ -58,9 +58,13 @@ contract FullyBackedBonding is
     /// @param _initializationPeriod To avoid certain attacks on group selection,
     /// recently delegated operators must wait for a specific period of time
     /// before being eligible for group selection.
-    constructor(KeepRegistry _keepRegistry, uint256 _initializationPeriod)
+    constructor(
+        KeepRegistry _keepRegistry,
+        uint256 _initializationPeriod,
+        address _bondTokenAddress
+    )
         public
-        AbstractBonding(address(_keepRegistry))
+        AbstractBonding(address(_keepRegistry), _bondTokenAddress)
         Authorizations(_keepRegistry)
     {
         initializationPeriod = _initializationPeriod;
@@ -103,7 +107,7 @@ contract FullyBackedBonding is
             authorizer
         );
 
-        deposit(operator);
+        deposit(operator, 777);
 
         emit Delegated(owner, operator);
         emit OperatorDelegated(operator, beneficiary, authorizer, msg.value);
@@ -121,7 +125,7 @@ contract FullyBackedBonding is
     /// value deposited ever for an operator.
     /// @param operator Address of the operator.
     function topUp(address operator) public payable {
-        deposit(operator);
+        deposit(operator, 777);
 
         emit OperatorToppedUp(operator, msg.value);
     }

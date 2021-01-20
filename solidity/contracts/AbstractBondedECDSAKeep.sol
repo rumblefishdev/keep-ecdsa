@@ -363,13 +363,8 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
         bytes32 _signedDigest,
         bytes calldata _preimage
     ) external onlyWhenActive returns (bool _isFraud) {
-        bool isFraud = checkSignatureFraud(
-            _v,
-            _r,
-            _s,
-            _signedDigest,
-            _preimage
-        );
+        bool isFraud =
+            checkSignatureFraud(_v, _r, _s, _signedDigest, _preimage);
 
         require(isFraud, "Signature is not fraudulent");
 
@@ -419,11 +414,12 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
         terminateKeep();
 
         for (uint256 i = 0; i < members.length; i++) {
-            uint256 amount = bonding.bondAmount(
-                members[i],
-                address(this),
-                uint256(address(this))
-            );
+            uint256 amount =
+                bonding.bondAmount(
+                    members[i],
+                    address(this),
+                    uint256(address(this))
+                );
 
             bonding.seizeBond(
                 members[i],
@@ -447,14 +443,15 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
         require(bondPerMember > 0, "Partial signer bond must be non-zero");
 
         for (uint16 i = 0; i < memberCount - 1; i++) {
-            bonding.deposit.value(bondPerMember)(members[i]);
+            bonding.deposit.value(bondPerMember)(members[i], 777);
         }
 
         // Transfer of dividend for the last member. Remainder might be equal to
         // zero in case of even distribution or some small number.
         uint256 remainder = msg.value.mod(memberCount);
         bonding.deposit.value(bondPerMember.add(remainder))(
-            members[memberCount - 1]
+            members[memberCount - 1],
+            777
         );
     }
 
@@ -525,8 +522,9 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
             "Signed digest does not match sha256 hash of the preimage"
         );
 
-        bool isSignatureValid = publicKeyToAddress(publicKey) ==
-            ecrecover(_signedDigest, _v, _r, _s);
+        bool isSignatureValid =
+            publicKeyToAddress(publicKey) ==
+                ecrecover(_signedDigest, _v, _r, _s);
 
         // Check if the signature is valid but was not requested.
         return isSignatureValid && digests[_signedDigest] == 0;

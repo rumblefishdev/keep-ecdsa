@@ -18,13 +18,15 @@ import "./api/IBondingManagement.sol";
 
 import "@keep-network/keep-core/contracts/KeepRegistry.sol";
 
+// import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
 /// @title Abstract Bonding
 /// @notice Contract holding deposits from keeps' operators.
 contract AbstractBonding is IBondingManagement {
     using SafeMath for uint256;
-
+    address internal bondTokenAddress;
     // Registry contract with a list of approved factories (operator contracts).
     KeepRegistry internal registry;
 
@@ -72,24 +74,32 @@ contract AbstractBonding is IBondingManagement {
 
     /// @notice Initializes Keep Bonding contract.
     /// @param registryAddress Keep registry contract address.
-    constructor(address registryAddress) public {
+    constructor(address registryAddress, address _bondTokenAddress) public {
         registry = KeepRegistry(registryAddress);
+        bondTokenAddress = _bondTokenAddress;
     }
 
     /// @notice Add the provided value to operator's pool available for bonding.
     /// @param operator Address of the operator.
-    function deposit(address operator) public payable {
+    function deposit(address operator, uint256 _amount) public payable {
         address beneficiary = beneficiaryOf(operator);
         // Beneficiary has to be set (delegation exist) before an operator can
         // deposit wei. It protects from a situation when an operator wants
         // to withdraw funds which are transfered to beneficiary with zero
         // address.
+
         require(
             beneficiary != address(0),
             "Beneficiary not defined for the operator"
         );
-        unbondedValue[operator] = unbondedValue[operator].add(msg.value);
-        emit UnbondedValueDeposited(operator, beneficiary, msg.value);
+        ERC20 bondToken = ERC20(bondTokenAddress);
+        require(
+            bondToken.allowance(msg.sender, address(this)) >= _amount,
+            "Allowence is too low"
+        );
+        bondToken.transferFrom(msg.sender, address(this), _amount);
+        unbondedValue[operator] = unbondedValue[operator].add(_amount);
+        emit UnbondedValueDeposited(operator, beneficiary, _amount);
     }
 
     /// @notice Withdraws amount from operator's value available for bonding.
@@ -149,9 +159,8 @@ contract AbstractBonding is IBondingManagement {
             "Insufficient unbonded value"
         );
 
-        bytes32 bondID = keccak256(
-            abi.encodePacked(operator, holder, referenceID)
-        );
+        bytes32 bondID =
+            keccak256(abi.encodePacked(operator, holder, referenceID));
 
         require(
             lockedBonds[bondID] == 0,
@@ -180,9 +189,8 @@ contract AbstractBonding is IBondingManagement {
         address holder,
         uint256 referenceID
     ) public view returns (uint256) {
-        bytes32 bondID = keccak256(
-            abi.encodePacked(operator, holder, referenceID)
-        );
+        bytes32 bondID =
+            keccak256(abi.encodePacked(operator, holder, referenceID));
 
         return lockedBonds[bondID];
     }
@@ -201,15 +209,13 @@ contract AbstractBonding is IBondingManagement {
         uint256 newReferenceID
     ) public {
         address holder = msg.sender;
-        bytes32 bondID = keccak256(
-            abi.encodePacked(operator, holder, referenceID)
-        );
+        bytes32 bondID =
+            keccak256(abi.encodePacked(operator, holder, referenceID));
 
         require(lockedBonds[bondID] > 0, "Bond not found");
 
-        bytes32 newBondID = keccak256(
-            abi.encodePacked(operator, newHolder, newReferenceID)
-        );
+        bytes32 newBondID =
+            keccak256(abi.encodePacked(operator, newHolder, newReferenceID));
 
         require(
             lockedBonds[newBondID] == 0,
@@ -230,9 +236,8 @@ contract AbstractBonding is IBondingManagement {
     /// @param referenceID Reference ID of the bond.
     function freeBond(address operator, uint256 referenceID) public {
         address holder = msg.sender;
-        bytes32 bondID = keccak256(
-            abi.encodePacked(operator, holder, referenceID)
-        );
+        bytes32 bondID =
+            keccak256(abi.encodePacked(operator, holder, referenceID));
 
         require(lockedBonds[bondID] > 0, "Bond not found");
 
@@ -260,18 +265,18 @@ contract AbstractBonding is IBondingManagement {
         require(amount > 0, "Requested amount should be greater than zero");
 
         address payable holder = msg.sender;
-        bytes32 bondID = keccak256(
-            abi.encodePacked(operator, holder, referenceID)
-        );
+        bytes32 bondID =
+            keccak256(abi.encodePacked(operator, holder, referenceID));
 
         require(
             lockedBonds[bondID] >= amount,
             "Requested amount is greater than the bond"
         );
 
+        ERC20 bondToken = ERC20(bondTokenAddress);
         lockedBonds[bondID] = lockedBonds[bondID].sub(amount);
 
-        (bool success, ) = destination.call.value(amount)("");
+        bool success = bondToken.transfer(destination, amount);
         require(success, "Transfer failed");
 
         emit BondSeized(operator, referenceID, destination, amount);
@@ -349,8 +354,8 @@ contract AbstractBonding is IBondingManagement {
         unbondedValue[operator] = unbondedValue[operator].sub(amount);
 
         address beneficiary = beneficiaryOf(operator);
-
-        (bool success, ) = beneficiary.call.value(amount)("");
+        ERC20 bondToken = ERC20(bondTokenAddress);
+        bool success = bondToken.transfer(beneficiary, amount);
         require(success, "Transfer failed");
 
         emit UnbondedValueWithdrawn(operator, beneficiary, amount);
