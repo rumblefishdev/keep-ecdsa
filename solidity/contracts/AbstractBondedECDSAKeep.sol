@@ -442,14 +442,14 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
         uint256 bondPerMember = _amount.div(memberCount);
         require(bondPerMember > 0, "Partial signer bond must be non-zero");
 
-        for (uint16 i = 0; i < memberCount; i++) {
+        for (uint16 i = 0; i < memberCount-1; i++) {
             bonding.depositFor(members[i], bondPerMember, msg.sender);
         }
 
         // Transfer of dividend for the last member. Remainder might be equal to
         // zero in case of even distribution or some small number.
         uint256 remainder = _amount.mod(memberCount);
-        bonding.depositFor(members[memberCount - 1], remainder, msg.sender);
+        bonding.depositFor(members[memberCount - 1], bondPerMember.add(remainder), msg.sender);
     }
 
     /// @notice Closes keep when owner decides that they no longer need it.
