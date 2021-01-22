@@ -63,7 +63,8 @@ describe('BondedECDSAKeep', function () {
     stakeLockDuration,
     tokenStaking,
     keepBonding,
-    keepFactory
+    keepFactory,
+    bondTokenAddress
   ) {
     const startBlock = await web3.eth.getBlockNumber()
 
@@ -75,7 +76,8 @@ describe('BondedECDSAKeep', function () {
       stakeLockDuration,
       tokenStaking,
       keepBonding,
-      keepFactory
+      keepFactory,
+      bondTokenAddress
     )
 
     const events = await factoryStub.getPastEvents('BondedECDSAKeepCreated', {
@@ -152,8 +154,7 @@ describe('BondedECDSAKeep', function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address,
-        bondToken.address
+        factoryStub.address
       )
     })
 
@@ -167,8 +168,7 @@ describe('BondedECDSAKeep', function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address,
-        bondToken.address
+        factoryStub.address
       )
 
       assert.equal(
@@ -188,8 +188,7 @@ describe('BondedECDSAKeep', function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address,
-        bondToken.address
+        factoryStub.address
       )
 
       for (let i = 0; i < members.length; i++) {
@@ -210,8 +209,7 @@ describe('BondedECDSAKeep', function () {
           stakeLockDuration,
           tokenStaking.address,
           keepBonding.address,
-          factoryStub.address,
-          bondToken.address
+          factoryStub.address
         ),
         'Contract already initialized'
       )
@@ -1380,7 +1378,8 @@ describe('BondedECDSAKeep', function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await tokenStaking.setBeneficiary(member1, beneficiary)
@@ -1410,7 +1409,8 @@ describe('BondedECDSAKeep', function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await expectRevert(keep.withdraw(member), 'No funds to withdraw')
@@ -1431,7 +1431,8 @@ describe('BondedECDSAKeep', function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await keep.distributeETHReward({ value: ethValue })
@@ -1575,7 +1576,8 @@ describe('BondedECDSAKeep', function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await initializeTokens(token, keep, accounts[0], valueWithRemainder)
