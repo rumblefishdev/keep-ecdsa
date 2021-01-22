@@ -26,11 +26,10 @@ contract BondedECDSAKeepCloneFactory is CloneFactory {
         uint256 _stakeLockDuration,
         address _tokenStaking,
         address _keepBonding,
-        address payable _keepFactory,
-        address _bondTokenAddress
+        address payable _keepFactory
     ) external payable returns (address keepAddress) {
         keepAddress = createClone(masterBondedECDSAKeepAddress);
-        assert(isClone(masterBondedECDSAKeepAddress, keepAddress));
+        // assert(isClone(masterBondedECDSAKeepAddress, keepAddress));
 
         BondedECDSAKeep keep = BondedECDSAKeep(keepAddress);
         keep.initialize(
@@ -41,8 +40,7 @@ contract BondedECDSAKeepCloneFactory is CloneFactory {
             _stakeLockDuration,
             _tokenStaking,
             _keepBonding,
-            _keepFactory,
-            _bondTokenAddress
+            _keepFactory
         );
 
         emit BondedECDSAKeepCreated(keepAddress);

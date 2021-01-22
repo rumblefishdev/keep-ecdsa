@@ -58,9 +58,11 @@ contract BondedECDSAKeep is AbstractBondedECDSAKeep {
         uint256 _stakeLockDuration,
         address _tokenStaking,
         address _keepBonding,
-        address payable _keepFactory,
-        address _bondTokenAddress
+        address payable _keepFactory
     ) public {
+        address _bondTokenAddress =
+            BondedECDSAKeepFactory(_keepFactory).bondTokenAddress();
+
         super.initialize(
             _owner,
             _members,

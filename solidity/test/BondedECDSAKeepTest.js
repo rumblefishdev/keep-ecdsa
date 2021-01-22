@@ -75,8 +75,7 @@ describe('BondedECDSAKeep', function () {
       stakeLockDuration,
       tokenStaking,
       keepBonding,
-      keepFactory,
-      bondToken.address
+      keepFactory
     )
 
     const events = await factoryStub.getPastEvents('BondedECDSAKeepCreated', {

@@ -32,7 +32,7 @@ contract FullyBackedECDSAKeepCloneFactoryStub is
         address _bondTokenAddress
     ) external payable returns (address keepAddress) {
         keepAddress = createClone(masterKeepAddress);
-        assert(isClone(masterKeepAddress, keepAddress));
+        // assert(isClone(masterKeepAddress, keepAddress));
 
         FullyBackedECDSAKeep keep = FullyBackedECDSAKeep(keepAddress);
         keep.initialize(

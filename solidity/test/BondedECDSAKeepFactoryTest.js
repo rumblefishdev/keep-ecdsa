@@ -994,7 +994,8 @@ describe('BondedECDSAKeepFactory', function () {
         bondedSortitionPoolFactory.address,
         tokenStaking.address,
         keepBonding.address,
-        randomBeacon
+        randomBeacon,
+        bondToken.address
       )
     })
 
@@ -1310,7 +1311,8 @@ describe('BondedECDSAKeepFactory', function () {
       bondedSortitionPoolFactory.address,
       tokenStaking.address,
       keepBonding.address,
-      randomBeacon.address
+      randomBeacon.address,
+      bondToken.address
     )
 
     await registry.approveOperatorContract(keepFactory.address)
