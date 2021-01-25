@@ -80,6 +80,7 @@ contract FullyBackedECDSAKeepFactory is
     // keep address -> application address
     mapping(address => address) keepApplication;
 
+    address public bondTokenAddress;
     // Notification that a new keep has been created.
     event FullyBackedECDSAKeepCreated(
         address indexed keepAddress,
@@ -97,12 +98,14 @@ contract FullyBackedECDSAKeepFactory is
         address _masterKeepAddress,
         address _sortitionPoolFactoryAddress,
         address _bondingAddress,
-        address _randomBeaconAddress
+        address _randomBeaconAddress,
+        address _bondTokenAddress
     )
         public
         KeepCreator(_masterKeepAddress)
         GroupSelectionSeed(_randomBeaconAddress)
     {
+        bondTokenAddress = _bondTokenAddress;
         sortitionPoolFactory = FullyBackedSortitionPoolFactory(
             _sortitionPoolFactoryAddress
         );
@@ -145,8 +148,7 @@ contract FullyBackedECDSAKeepFactory is
         uint256 _honestThreshold,
         address _owner,
         uint256 _bond,
-        uint256 _stakeLockDuration,
-        address _bondTokenAddress
+        uint256 _stakeLockDuration
     ) external payable nonReentrant returns (address keepAddress) {
         require(_groupSize > 0, "Minimum signing group size is 1");
         require(_groupSize <= 16, "Maximum signing group size is 16");
@@ -191,7 +193,7 @@ contract FullyBackedECDSAKeepFactory is
             _honestThreshold,
             address(bonding),
             address(this),
-            _bondTokenAddress
+            bondTokenAddress
         );
 
         for (uint256 i = 0; i < _groupSize; i++) {

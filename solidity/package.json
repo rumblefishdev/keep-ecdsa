@@ -16,7 +16,7 @@
     "build": "truffle compile",
     "compile": "truffle compile AbstractBonding.sol",
     "test": "npm run test:js",
-    "test:temp": "mocha test/FullyBackedBondingTest.js --timeout 20000",
+    "test:temp": "mocha test/FullyBackedECDSAKeepFactoryTest.js --timeout 20000",
     "test:js": "truffle compile && mocha --exit --recursive --timeout 75000",
     "test:quick": "mocha --exit --recursive --timeout 45000",
     "lint": "npm run lint:js && npm run lint:sol",
