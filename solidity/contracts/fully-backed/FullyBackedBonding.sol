@@ -21,6 +21,7 @@ import "@keep-network/keep-core/contracts/StakeDelegatable.sol";
 import "@keep-network/keep-core/contracts/KeepRegistry.sol";
 
 import "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
 /// @title Fully Backed Bonding
 /// @notice Contract holding deposits and delegations for ETH-only keeps'
@@ -83,23 +84,29 @@ contract FullyBackedBonding is
     function delegate(
         address operator,
         address payable beneficiary,
-        address authorizer
+        address authorizer,
+        uint256 _amount
     ) external payable {
         address owner = msg.sender;
 
         require(operator != address(0), "Invalid operator address");
         require(authorizer != address(0), "Invalid authorizer address");
+        ERC20 bondToken = ERC20(bondTokenAddress);
 
         require(
             operators[operator].owner == address(0),
-            "Operator already in use"
+            "FullyBackedBonding: Operator already in use"
         );
 
         require(
-            msg.value >= MINIMUM_DELEGATION_DEPOSIT,
-            "Insufficient delegation value"
+            _amount >= MINIMUM_DELEGATION_DEPOSIT,
+            "FullyBackedBonding: Insufficient delegation value"
         );
-
+        // require(
+        //     bondToken.allowance(operator, address(this)) >=
+        //         MINIMUM_DELEGATION_DEPOSIT,
+        //     "FullyBackedBonding: Allowence is too low"
+        // );
         operators[operator] = Operator(
             OperatorParams.pack(0, block.timestamp, 0),
             owner,
@@ -107,10 +114,10 @@ contract FullyBackedBonding is
             authorizer
         );
 
-        deposit(operator, 777);
+        depositFor(operator, _amount, msg.sender);
 
         emit Delegated(owner, operator);
-        emit OperatorDelegated(operator, beneficiary, authorizer, msg.value);
+        emit OperatorDelegated(operator, beneficiary, authorizer, _amount);
     }
 
     /// @notice Top-ups operator's unbonded value.
@@ -124,10 +131,11 @@ contract FullyBackedBonding is
     /// and events emitted by these functions should be enough to determine total
     /// value deposited ever for an operator.
     /// @param operator Address of the operator.
-    function topUp(address operator) public payable {
-        deposit(operator, 777);
+    function topUp(address operator, uint256 _amount) public payable {
+        ERC20 bondToken = ERC20(bondTokenAddress);
+        depositFor(operator, _amount, msg.sender);
 
-        emit OperatorToppedUp(operator, msg.value);
+        emit OperatorToppedUp(operator, _amount);
     }
 
     /// @notice Checks if the operator for the given bond creator contract
