@@ -26,6 +26,7 @@ const BondedSortitionPoolFactory = contract.fromArtifact(
 const RandomBeaconStub = contract.fromArtifact("RandomBeaconStub")
 const BondedECDSAKeep = contract.fromArtifact("BondedECDSAKeep")
 const StackLib = contract.fromArtifact("StackLib")
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 
 const BN = web3.utils.BN
 
@@ -280,11 +281,12 @@ describe("BondedECDSAKeepFactory", function () {
       stakeInitializationPeriod
     )
     tokenGrant = await TokenGrant.new(keepToken.address)
-
+    bondToken = await ERC20Stub.new()
     keepBonding = await KeepBonding.new(
       registry.address,
       tokenStaking.address,
-      tokenGrant.address
+      tokenGrant.address,
+      bondToken.address
     )
     randomBeacon = await RandomBeaconStub.new()
     const bondedECDSAKeepMasterContract = await BondedECDSAKeep.new()
@@ -293,7 +295,8 @@ describe("BondedECDSAKeepFactory", function () {
       bondedSortitionPoolFactory.address,
       tokenStaking.address,
       keepBonding.address,
-      randomBeacon.address
+      randomBeacon.address,
+      bondToken.address
     )
 
     await registry.approveOperatorContract(keepFactory.address)
@@ -334,7 +337,9 @@ describe("BondedECDSAKeepFactory", function () {
       await tokenStaking.authorizeOperatorContract(
         members[i],
         keepFactory.address,
-        {from: authorizers[i]}
+        {
+          from: authorizers[i],
+        }
       )
       await keepBonding.authorizeSortitionPoolContract(members[i], signerPool, {
         from: authorizers[i],
@@ -349,7 +354,11 @@ describe("BondedECDSAKeepFactory", function () {
 
   async function depositMemberCandidates(unbondedAmount) {
     for (let i = 0; i < members.length; i++) {
-      await keepBonding.deposit(members[i], {value: unbondedAmount})
+      await bondToken.mint(members[i], unbondedAmount)
+      await bondToken.approve(keepBonding.address, unbondedAmount, {
+        from: members[i],
+      })
+      await keepBonding.deposit(members[i], unbondedAmount, {from: members[i]})
     }
   }
 

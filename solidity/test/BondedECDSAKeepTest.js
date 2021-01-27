@@ -23,6 +23,7 @@ const BondedECDSAKeepCloneFactory = contract.fromArtifact(
 )
 
 const truffleAssert = require("truffle-assertions")
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 
 const BN = web3.utils.BN
 
@@ -41,6 +42,7 @@ describe("BondedECDSAKeep", function () {
   const authorizers = [accounts[2], accounts[3], accounts[4]]
   const signingPool = accounts[5]
   const beneficiary = accounts[6]
+  const distributor = accounts[7]
   const honestThreshold = 1
 
   const stakeLockDuration = time.duration.days(180)
@@ -53,6 +55,7 @@ describe("BondedECDSAKeep", function () {
   let keep
   let factoryStub
   let memberStake
+  let bondToken
 
   async function newKeep(
     owner,
@@ -62,7 +65,8 @@ describe("BondedECDSAKeep", function () {
     stakeLockDuration,
     tokenStaking,
     keepBonding,
-    keepFactory
+    keepFactory,
+    bondTokenAddress
   ) {
     const startBlock = await web3.eth.getBlockNumber()
 
@@ -74,7 +78,8 @@ describe("BondedECDSAKeep", function () {
       stakeLockDuration,
       tokenStaking,
       keepBonding,
-      keepFactory
+      keepFactory,
+      bondTokenAddress
     )
 
     const events = await factoryStub.getPastEvents("BondedECDSAKeepCreated", {
@@ -95,10 +100,12 @@ describe("BondedECDSAKeep", function () {
     registry = await KeepRegistry.new()
     tokenStaking = await TokenStakingStub.new()
     tokenGrant = await TokenGrantStub.new()
+    bondToken = await ERC20Stub.new()
     keepBonding = await KeepBonding.new(
       registry.address,
       tokenStaking.address,
-      tokenGrant.address
+      tokenGrant.address,
+      bondToken.address
     )
     bondedECDSAKeepStubMaster = await BondedECDSAKeepStub.new()
     factoryStub = await BondedECDSAKeepCloneFactory.new(
@@ -127,7 +134,6 @@ describe("BondedECDSAKeep", function () {
 
   beforeEach(async () => {
     await createSnapshot()
-
     keep = await newKeep(
       owner,
       members,
@@ -136,7 +142,8 @@ describe("BondedECDSAKeep", function () {
       stakeLockDuration,
       tokenStaking.address,
       keepBonding.address,
-      factoryStub.address
+      factoryStub.address,
+      bondToken.address
     )
   })
 
@@ -355,7 +362,8 @@ describe("BondedECDSAKeep", function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await factoryStub.newKeep(
@@ -366,7 +374,8 @@ describe("BondedECDSAKeep", function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       keepWith16Signers = await BondedECDSAKeep.at(keepAddress)
@@ -625,7 +634,7 @@ describe("BondedECDSAKeep", function () {
 
     it("should seize signer bond", async () => {
       const expectedBondsSum = initialBondsSum
-      const ownerBalanceBefore = await web3.eth.getBalance(owner)
+      const ownerBalanceBefore = await bondToken.balanceOf(owner)
 
       expect(await keep.checkBondAmount()).to.eq.BN(
         expectedBondsSum,
@@ -638,9 +647,9 @@ describe("BondedECDSAKeep", function () {
       const seizedSignerBondsFee = new BN(txHash.receipt.gasUsed).mul(
         new BN(gasPrice)
       )
-      const ownerBalanceDiff = new BN(await web3.eth.getBalance(owner))
-        .add(seizedSignerBondsFee)
-        .sub(new BN(ownerBalanceBefore))
+      const ownerBalanceDiff = new BN(await bondToken.balanceOf(owner)).sub(
+        new BN(ownerBalanceBefore)
+      )
 
       expect(ownerBalanceDiff).to.eq.BN(
         expectedBondsSum,
@@ -1079,7 +1088,9 @@ describe("BondedECDSAKeep", function () {
         signatureR,
         signatureS,
         signatureRecoveryID,
-        {from: members[0]}
+        {
+          from: members[0],
+        }
       )
 
       truffleAssert.eventEmitted(res, "SignatureSubmitted", (ev) => {
@@ -1136,7 +1147,9 @@ describe("BondedECDSAKeep", function () {
             signatureR,
             malleableS,
             malleableRecoveryID,
-            {from: members[0]}
+            {
+              from: members[0],
+            }
           )
           assert(false, "Test call did not error as expected")
         } catch (e) {
@@ -1284,8 +1297,14 @@ describe("BondedECDSAKeep", function () {
       )
     })
 
-    it("correctly distributes ETH", async () => {
-      await keep.returnPartialSignerBonds({value: allReturnedBondsValue})
+    it("correctly distributes Bond tokens", async () => {
+      bondToken.mint(distributor, allReturnedBondsValue)
+      await bondToken.approve(keepBonding.address, allReturnedBondsValue, {
+        from: distributor,
+      })
+      await keep.returnPartialSignerBonds(allReturnedBondsValue, {
+        from: distributor,
+      })
 
       const member1UnbondedAfter = await keepBonding.availableUnbondedValue(
         members[0],
@@ -1302,7 +1321,6 @@ describe("BondedECDSAKeep", function () {
         bondCreator,
         signingPool
       )
-
       expect(
         member1UnbondedAfter,
         "incorrect unbounded balance for member 1"
@@ -1319,10 +1337,20 @@ describe("BondedECDSAKeep", function () {
 
     it("correctly handles remainder", async () => {
       const remainder = new BN(2)
-
-      await keep.returnPartialSignerBonds({
-        value: allReturnedBondsValue.add(remainder),
-      })
+      bondToken.mint(distributor, allReturnedBondsValue.add(remainder))
+      await bondToken.approve(
+        keepBonding.address,
+        allReturnedBondsValue.add(remainder),
+        {
+          from: distributor,
+        }
+      )
+      await keep.returnPartialSignerBonds(
+        allReturnedBondsValue.add(remainder),
+        {
+          from: distributor,
+        }
+      )
 
       const member1UnbondedAfter = await keepBonding.availableUnbondedValue(
         members[0],
@@ -1356,14 +1384,14 @@ describe("BondedECDSAKeep", function () {
 
     it("reverts with zero value", async () => {
       await expectRevert(
-        keep.returnPartialSignerBonds({value: 0}),
+        keep.returnPartialSignerBonds(0),
         "Partial signer bond must be non-zero"
       )
     })
 
     it("reverts with zero value per member", async () => {
       await expectRevert(
-        keep.returnPartialSignerBonds({value: members.length - 1}),
+        keep.returnPartialSignerBonds(members.length - 1),
         "Partial signer bond must be non-zero"
       )
     })
@@ -1520,7 +1548,8 @@ describe("BondedECDSAKeep", function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await tokenStaking.setBeneficiary(member1, beneficiary)
@@ -1556,7 +1585,8 @@ describe("BondedECDSAKeep", function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await expectRevert(keep.withdraw(member), "No funds to withdraw")
@@ -1577,7 +1607,8 @@ describe("BondedECDSAKeep", function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await keep.distributeETHReward({value: ethValue})
@@ -1730,7 +1761,8 @@ describe("BondedECDSAKeep", function () {
         stakeLockDuration,
         tokenStaking.address,
         keepBonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await initializeTokens(token, keep, accounts[0], valueWithRemainder)
@@ -1775,10 +1807,21 @@ describe("BondedECDSAKeep", function () {
     await tokenStaking.setBeneficiary(members[0], beneficiary)
     await tokenStaking.setBeneficiary(members[1], beneficiary)
     await tokenStaking.setBeneficiary(members[2], beneficiary)
-
-    await keepBonding.deposit(members[0], {value: member1Value})
-    await keepBonding.deposit(members[1], {value: member2Value})
-    await keepBonding.deposit(members[2], {value: member3Value})
+    await bondToken.mint(members[0], member1Value)
+    await bondToken.mint(members[1], member2Value)
+    await bondToken.mint(members[2], member3Value)
+    await bondToken.approve(keepBonding.address, member1Value, {
+      from: members[0],
+    })
+    await bondToken.approve(keepBonding.address, member2Value, {
+      from: members[1],
+    })
+    await bondToken.approve(keepBonding.address, member3Value, {
+      from: members[2],
+    })
+    await keepBonding.deposit(members[0], member1Value, {from: members[0]})
+    await keepBonding.deposit(members[1], member2Value, {from: members[1]})
+    await keepBonding.deposit(members[2], member3Value, {from: members[2]})
   }
 
   async function createMembersBonds(keep, bond1, bond2, bond3) {
@@ -1798,7 +1841,9 @@ describe("BondedECDSAKeep", function () {
       referenceID,
       bondValue1,
       signingPool,
-      {from: bondCreator}
+      {
+        from: bondCreator,
+      }
     )
     await keepBonding.createBond(
       members[1],
@@ -1806,7 +1851,9 @@ describe("BondedECDSAKeep", function () {
       referenceID,
       bondValue2,
       signingPool,
-      {from: bondCreator}
+      {
+        from: bondCreator,
+      }
     )
     await keepBonding.createBond(
       members[2],
@@ -1814,7 +1861,9 @@ describe("BondedECDSAKeep", function () {
       referenceID,
       bondValue3,
       signingPool,
-      {from: bondCreator}
+      {
+        from: bondCreator,
+      }
     )
 
     return bondValue1.add(bondValue2).add(bondValue3)

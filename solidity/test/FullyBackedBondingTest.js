@@ -7,7 +7,7 @@ const TestEtherReceiver = contract.fromArtifact("TestEtherReceiver")
 
 const {expectEvent, expectRevert, time} = require("@openzeppelin/test-helpers")
 const {ZERO_ADDRESS} = require("@openzeppelin/test-helpers/src/constants")
-
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 const BN = web3.utils.BN
 
 const chai = require("chai")
@@ -31,6 +31,7 @@ describe("FullyBackedBonding", function () {
   let bondCreator
   let sortitionPool
   let thirdParty
+  let bondToken
 
   before(async () => {
     operator = accounts[1]
@@ -40,11 +41,12 @@ describe("FullyBackedBonding", function () {
     bondCreator = accounts[5]
     sortitionPool = accounts[6]
     thirdParty = accounts[7]
-
+    bondToken = await ERC20Stub.new()
     registry = await KeepRegistry.new()
     bonding = await FullyBackedBonding.new(
       registry.address,
-      initializationPeriod
+      initializationPeriod,
+      bondToken.address
     )
     etherReceiver = await TestEtherReceiver.new()
 
@@ -63,13 +65,19 @@ describe("FullyBackedBonding", function () {
 
   describe("delegate", async () => {
     it("registers delegation", async () => {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
+        from: owner,
+      })
+      // console.log(await bondToken.allowance(owner, bonding.address))
+      // console.log(minimumDelegationValue)
       const {receipt} = await bonding.delegate(
         operator,
         beneficiary,
         authorizer,
+        minimumDelegationValue,
         {
           from: owner,
-          value: minimumDelegationValue,
         }
       )
 
@@ -113,13 +121,17 @@ describe("FullyBackedBonding", function () {
     })
 
     it("emits events", async () => {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
+        from: owner,
+      })
       const receipt = await bonding.delegate(
         operator,
         beneficiary,
         authorizer,
+        minimumDelegationValue,
         {
           from: owner,
-          value: minimumDelegationValue,
         }
       )
 
@@ -138,10 +150,10 @@ describe("FullyBackedBonding", function () {
 
     it("deposits passed value as unbonded value", async () => {
       const value = minimumDelegationValue
-
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, value)
+      await bondToken.approve(bonding.address, value, {from: owner})
+      await bonding.delegate(operator, beneficiary, authorizer, value, {
         from: owner,
-        value: value,
       })
 
       expect(await bonding.unbondedValue(operator)).to.eq.BN(
@@ -168,11 +180,11 @@ describe("FullyBackedBonding", function () {
 
     it("reverts if insufficient value passed", async () => {
       const value = minimumDelegationValue.subn(1)
-
+      bondToken.mint(owner, value)
+      await bondToken.approve(bonding.address, value, {from: owner})
       await expectRevert(
-        bonding.delegate(operator, beneficiary, authorizer, {
+        bonding.delegate(operator, beneficiary, authorizer, value, {
           from: owner,
-          value: value,
         }),
         "Insufficient delegation value"
       )
@@ -180,56 +192,115 @@ describe("FullyBackedBonding", function () {
 
     it("allows multiple operators for the same owner", async () => {
       const operator2 = accounts[5]
-
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
         from: owner,
-        value: minimumDelegationValue,
+      })
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
+      bondToken.mint(owner, minimumDelegationValue)
+
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
+        from: owner,
       })
 
-      await bonding.delegate(operator2, beneficiary, authorizer, {
-        from: owner,
-        value: minimumDelegationValue,
-      })
+      await bonding.delegate(
+        operator2,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
     })
 
     it("reverts if zero address for operator provided", async () => {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
+        from: owner,
+      })
       await expectRevert(
-        bonding.delegate(ZERO_ADDRESS, beneficiary, authorizer, {
-          from: owner,
-          value: minimumDelegationValue,
-        }),
+        bonding.delegate(
+          ZERO_ADDRESS,
+          beneficiary,
+          authorizer,
+          minimumDelegationValue,
+          {
+            from: owner,
+          }
+        ),
         "Invalid operator address"
       )
     })
 
     it("reverts if zero address for beneficiary provided", async () => {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
+        from: owner,
+      })
       await expectRevert(
-        bonding.delegate(operator, ZERO_ADDRESS, authorizer, {
-          from: owner,
-          value: minimumDelegationValue,
-        }),
+        bonding.delegate(
+          operator,
+          ZERO_ADDRESS,
+          authorizer,
+          minimumDelegationValue,
+          {
+            from: owner,
+          }
+        ),
         "Beneficiary not defined for the operator"
       )
     })
 
     it("reverts if zero address for authorizer provided", async () => {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
+        from: owner,
+      })
       await expectRevert(
-        bonding.delegate(operator, beneficiary, ZERO_ADDRESS, {
-          from: owner,
-          value: minimumDelegationValue,
-        }),
+        bonding.delegate(
+          operator,
+          beneficiary,
+          ZERO_ADDRESS,
+          minimumDelegationValue,
+          {
+            from: owner,
+          }
+        ),
         "Invalid authorizer address"
       )
     })
 
     it("reverts if operator is already in use", async () => {
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
         from: owner,
-        value: minimumDelegationValue,
       })
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
 
       await expectRevert(
-        bonding.delegate(operator, accounts[5], accounts[5]),
+        bonding.delegate(
+          operator,
+          accounts[5],
+          accounts[5],
+          minimumDelegationValue
+        ),
         "Operator already in use"
       )
     })
@@ -242,18 +313,25 @@ describe("FullyBackedBonding", function () {
 
     beforeEach(async () => {
       initialDeposit = minimumDelegationValue
-
-      await bonding.delegate(operator, beneficiary, authorizer, {
-        from: owner,
-        value: initialDeposit,
-      })
+      bondToken.mint(owner, initialDeposit)
+      await bondToken.approve(bonding.address, initialDeposit, {from: owner})
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        initialDeposit,
+        {
+          from: owner,
+        }
+      )
     })
 
     it("adds value to deposited on delegation", async () => {
       const expectedFinalBalance = initialDeposit.add(value)
-
-      await bonding.topUp(operator, {
-        value: value,
+      bondToken.mint(owner, value)
+      await bondToken.approve(bonding.address, value, {from: owner})
+      await bonding.topUp(operator, value, {
+        from: owner,
       })
 
       expect(await bonding.unbondedValue(operator)).to.eq.BN(
@@ -263,8 +341,10 @@ describe("FullyBackedBonding", function () {
     })
 
     it("emits event", async () => {
-      const receipt = await bonding.topUp(operator, {
-        value: value,
+      bondToken.mint(owner, value)
+      await bondToken.approve(bonding.address, value, {from: owner})
+      const receipt = await bonding.topUp(operator, value, {
+        from: owner,
       })
 
       expectEvent(receipt, "OperatorToppedUp", {
@@ -275,8 +355,8 @@ describe("FullyBackedBonding", function () {
 
     it("reverts when no delegation happened", async () => {
       await expectRevert(
-        bonding.topUp(thirdParty, {
-          value: new BN(123),
+        bonding.topUp(thirdParty, new BN(123), {
+          from: owner,
         }),
         "Beneficiary not defined for the operator"
       )
@@ -288,19 +368,26 @@ describe("FullyBackedBonding", function () {
       const initialDeposit = minimumDelegationValue
       const value = new BN(123)
       const expectedFinalBalance = initialDeposit.add(value)
-
-      await bonding.delegate(operator, beneficiary, authorizer, {
-        from: owner,
-        value: initialDeposit,
-      })
+      bondToken.mint(owner, initialDeposit)
+      await bondToken.approve(bonding.address, initialDeposit, {from: owner})
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        initialDeposit,
+        {
+          from: owner,
+        }
+      )
 
       expect(await bonding.unbondedValue(operator)).to.eq.BN(
         initialDeposit,
         "invalid initial unbonded value"
       )
-
-      await bonding.deposit(operator, {
-        value: value,
+      bondToken.mint(operator, initialDeposit)
+      await bondToken.approve(bonding.address, initialDeposit, {from: operator})
+      await bonding.deposit(operator, value, {
+        from: operator,
       })
 
       expect(await bonding.unbondedValue(operator)).to.eq.BN(
@@ -335,11 +422,17 @@ describe("FullyBackedBonding", function () {
     beforeEach(async () => {
       initialDeposit = minimumDelegationValue
       delegationLockPeriod = await bonding.DELEGATION_LOCK_PERIOD.call()
-
-      await bonding.delegate(operator, beneficiary, authorizer, {
-        from: owner,
-        value: initialDeposit,
-      })
+      bondToken.mint(owner, initialDeposit)
+      await bondToken.approve(bonding.address, initialDeposit, {from: owner})
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        initialDeposit,
+        {
+          from: owner,
+        }
+      )
 
       await bonding.authorizeOperatorContract(operator, bondCreator, {
         from: authorizer,
@@ -360,11 +453,17 @@ describe("FullyBackedBonding", function () {
 
     it("cannot be called before delegation lock period passes", async () => {
       const operator2 = await web3.eth.personal.newAccount("pass")
-
-      await bonding.delegate(operator2, beneficiary, authorizer, {
-        from: owner,
-        value: initialDeposit,
-      })
+      bondToken.mint(owner, initialDeposit)
+      await bondToken.approve(bonding.address, initialDeposit, {from: owner})
+      await bonding.delegate(
+        operator2,
+        beneficiary,
+        authorizer,
+        initialDeposit,
+        {
+          from: owner,
+        }
+      )
 
       await bonding.authorizeOperatorContract(operator2, bondCreator, {
         from: authorizer,
@@ -405,7 +504,7 @@ describe("FullyBackedBonding", function () {
       const expectedUnbonded = initialDeposit.sub(value)
 
       const expectedBeneficiaryBalance = web3.utils
-        .toBN(await web3.eth.getBalance(beneficiary))
+        .toBN(await bondToken.balanceOf(beneficiary))
         .add(value)
 
       expect(await bonding.unbondedValue(operator)).to.eq.BN(
@@ -420,7 +519,7 @@ describe("FullyBackedBonding", function () {
         "invalid unbonded value"
       )
 
-      const actualBeneficiaryBalance = await web3.eth.getBalance(beneficiary)
+      const actualBeneficiaryBalance = await bondToken.balanceOf(beneficiary)
       expect(actualBeneficiaryBalance).to.eq.BN(
         expectedBeneficiaryBalance,
         "invalid beneficiary balance"
@@ -448,32 +547,23 @@ describe("FullyBackedBonding", function () {
         "Insufficient unbonded value"
       )
     })
-
-    it("reverts if transfer fails", async () => {
-      const operator2 = accounts[7]
-
-      await etherReceiver.setShouldFail(true)
-
-      await bonding.delegate(operator2, etherReceiver.address, authorizer, {
-        from: owner,
-        value: initialDeposit,
-      })
-
-      await time.increase(delegationLockPeriod.addn(1))
-
-      await expectRevert(
-        bonding.withdraw(value, operator2, {from: operator2}),
-        "Transfer failed"
-      )
-    })
   })
 
   describe("isInitialized", async () => {
     it("returns true when authorized and initialization period passed", async () => {
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
         from: owner,
-        value: minimumDelegationValue,
       })
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
 
       await bonding.authorizeOperatorContract(operator, bondCreator, {
         from: authorizer,
@@ -485,10 +575,19 @@ describe("FullyBackedBonding", function () {
     })
 
     it("returns false when authorized but initialization period not passed yet", async () => {
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
         from: owner,
-        value: minimumDelegationValue,
       })
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
 
       await bonding.authorizeOperatorContract(operator, bondCreator, {
         from: authorizer,
@@ -500,10 +599,19 @@ describe("FullyBackedBonding", function () {
     })
 
     it("returns false when initialization period passed but not authorized", async () => {
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
         from: owner,
-        value: minimumDelegationValue,
       })
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
 
       await time.increase(initializationPeriod.addn(1))
 
@@ -511,19 +619,37 @@ describe("FullyBackedBonding", function () {
     })
 
     it("returns false when not authorized and initialization period not passed", async () => {
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
         from: owner,
-        value: minimumDelegationValue,
       })
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
 
       assert.isFalse(await bonding.isInitialized(operator, bondCreator))
     })
 
     it("returns false when initialization period passed but other contract authorized", async () => {
-      await bonding.delegate(operator, beneficiary, authorizer, {
+      bondToken.mint(owner, minimumDelegationValue)
+      await bondToken.approve(bonding.address, minimumDelegationValue, {
         from: owner,
-        value: minimumDelegationValue,
       })
+      await bonding.delegate(
+        operator,
+        beneficiary,
+        authorizer,
+        minimumDelegationValue,
+        {
+          from: owner,
+        }
+      )
 
       await registry.approveOperatorContract(thirdParty)
       await bonding.authorizeOperatorContract(operator, thirdParty, {
@@ -537,10 +663,19 @@ describe("FullyBackedBonding", function () {
 
     describe("getDelegationInfo", async () => {
       it("returns delegation details", async () => {
-        await bonding.delegate(operator, beneficiary, authorizer, {
+        bondToken.mint(owner, minimumDelegationValue)
+        await bondToken.approve(bonding.address, minimumDelegationValue, {
           from: owner,
-          value: minimumDelegationValue,
         })
+        await bonding.delegate(
+          operator,
+          beneficiary,
+          authorizer,
+          minimumDelegationValue,
+          {
+            from: owner,
+          }
+        )
 
         const delegationInfo = await bonding.getDelegationInfo(operator)
         expect(delegationInfo.createdAt).to.eq.BN(await time.latest())

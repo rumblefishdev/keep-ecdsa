@@ -9,14 +9,16 @@ contract FullyBackedECDSAKeepFactoryStub is FullyBackedECDSAKeepFactory {
         address _masterKeepAddress,
         address _sortitionPoolFactoryAddress,
         address _bondingAddress,
-        address _randomBeaconAddress
+        address _randomBeaconAddress,
+        address _bondTokenAddress
     )
         public
         FullyBackedECDSAKeepFactory(
             _masterKeepAddress,
             _sortitionPoolFactoryAddress,
             _bondingAddress,
-            _randomBeaconAddress
+            _randomBeaconAddress,
+            _bondTokenAddress
         )
     {}
 

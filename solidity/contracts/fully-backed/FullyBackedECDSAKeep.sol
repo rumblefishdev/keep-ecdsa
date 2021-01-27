@@ -42,9 +42,16 @@ contract FullyBackedECDSAKeep is AbstractBondedECDSAKeep {
         address[] memory _members,
         uint256 _honestThreshold,
         address _bonding,
-        address payable _keepFactory
+        address payable _keepFactory,
+        address _bondTokenAddress
     ) public {
-        super.initialize(_owner, _members, _honestThreshold, _bonding);
+        super.initialize(
+            _owner,
+            _members,
+            _honestThreshold,
+            _bonding,
+            _bondTokenAddress
+        );
 
         bonding = FullyBackedBonding(_bonding);
         keepFactory = FullyBackedECDSAKeepFactory(_keepFactory);

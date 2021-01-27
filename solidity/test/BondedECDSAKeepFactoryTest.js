@@ -21,6 +21,7 @@ const BondedSortitionPoolFactory = contract.fromArtifact(
 )
 const RandomBeaconStub = contract.fromArtifact("RandomBeaconStub")
 const BondedECDSAKeep = contract.fromArtifact("BondedECDSAKeep")
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 
 const BN = web3.utils.BN
 
@@ -192,12 +193,16 @@ describe("BondedECDSAKeepFactory", function () {
       await keepBonding.authorizeSortitionPoolContract(
         members[0],
         signerPool1Address,
-        {from: authorizers[0]}
+        {
+          from: authorizers[0],
+        }
       )
       await keepBonding.authorizeSortitionPoolContract(
         members[1],
         signerPool2Address,
-        {from: authorizers[1]}
+        {
+          from: authorizers[1],
+        }
       )
 
       await keepFactory.registerMemberCandidate(application1, {
@@ -425,8 +430,10 @@ describe("BondedECDSAKeepFactory", function () {
       await keepFactory.registerMemberCandidate(application, {
         from: members[0],
       })
-
-      await keepBonding.deposit(members[0], {value: new BN(1)})
+      const value = new BN(1)
+      await bondToken.mint(members[0], value)
+      await bondToken.approve(keepBonding.address, value, {from: members[0]})
+      await keepBonding.deposit(members[0], value, {from: members[0]})
 
       assert.isTrue(
         await keepFactory.isOperatorUpToDate(members[0], application)
@@ -1193,7 +1200,11 @@ describe("BondedECDSAKeepFactory", function () {
         await keepBonding.authorizeSortitionPoolContract(operator, signerPool, {
           from: operator,
         })
-        await keepBonding.deposit(operator, {value: unbondedAmount})
+        await bondToken.mint(operator, unbondedAmount)
+        await bondToken.approve(keepBonding.address, unbondedAmount, {
+          from: operator,
+        })
+        await keepBonding.deposit(operator, unbondedAmount, {from: operator})
         await keepFactory.registerMemberCandidate(application, {
           from: operator,
         })
@@ -1209,10 +1220,12 @@ describe("BondedECDSAKeepFactory", function () {
       bondedSortitionPoolFactory = await BondedSortitionPoolFactory.new()
       tokenStaking = await TokenStakingStub.new()
       tokenGrant = await TokenGrantStub.new()
+      bondToken = await ERC20Stub.new()
       keepBonding = await KeepBonding.new(
         registry.address,
         tokenStaking.address,
-        tokenGrant.address
+        tokenGrant.address,
+        bondToken.address
       )
       randomBeacon = accounts[1]
       const bondedECDSAKeepMasterContract = await BondedECDSAKeep.new()
@@ -1221,7 +1234,8 @@ describe("BondedECDSAKeepFactory", function () {
         bondedSortitionPoolFactory.address,
         tokenStaking.address,
         keepBonding.address,
-        randomBeacon
+        randomBeacon,
+        bondToken.address
       )
     })
 
@@ -1542,13 +1556,15 @@ describe("BondedECDSAKeepFactory", function () {
 
   async function initializeNewFactory() {
     registry = await KeepRegistry.new()
+    bondToken = await ERC20Stub.new()
     bondedSortitionPoolFactory = await BondedSortitionPoolFactory.new()
     tokenStaking = await TokenStakingStub.new()
     tokenGrant = await TokenGrantStub.new()
     keepBonding = await KeepBonding.new(
       registry.address,
       tokenStaking.address,
-      tokenGrant.address
+      tokenGrant.address,
+      bondToken.address
     )
     randomBeacon = await RandomBeaconStub.new()
     const bondedECDSAKeepMasterContract = await BondedECDSAKeep.new()
@@ -1557,7 +1573,8 @@ describe("BondedECDSAKeepFactory", function () {
       bondedSortitionPoolFactory.address,
       tokenStaking.address,
       keepBonding.address,
-      randomBeacon.address
+      randomBeacon.address,
+      bondToken.address
     )
 
     await registry.approveOperatorContract(keepFactory.address)
@@ -1598,7 +1615,11 @@ describe("BondedECDSAKeepFactory", function () {
 
   async function depositMemberCandidates(unbondedAmount) {
     for (let i = 0; i < members.length; i++) {
-      await keepBonding.deposit(members[i], {value: unbondedAmount})
+      await bondToken.mint(members[i], unbondedAmount)
+      await bondToken.approve(keepBonding.address, unbondedAmount, {
+        from: members[i],
+      })
+      await keepBonding.deposit(members[i], unbondedAmount, {from: members[i]})
     }
   }
 
