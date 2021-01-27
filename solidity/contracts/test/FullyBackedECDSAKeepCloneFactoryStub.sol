@@ -28,10 +28,11 @@ contract FullyBackedECDSAKeepCloneFactoryStub is
         address[] calldata _members,
         uint256 _honestThreshold,
         address _keepBonding,
-        address payable _keepFactory
+        address payable _keepFactory,
+        address _bondTokenAddress
     ) external payable returns (address keepAddress) {
         keepAddress = createClone(masterKeepAddress);
-        assert(isClone(masterKeepAddress, keepAddress));
+        // assert(isClone(masterKeepAddress, keepAddress));
 
         FullyBackedECDSAKeep keep = FullyBackedECDSAKeep(keepAddress);
         keep.initialize(
@@ -39,7 +40,8 @@ contract FullyBackedECDSAKeepCloneFactoryStub is
             _members,
             _honestThreshold,
             _keepBonding,
-            _keepFactory
+            _keepFactory,
+            _bondTokenAddress
         );
 
         emit FullyBackedECDSAKeepCreated(keepAddress);

@@ -21,6 +21,7 @@ const TestEtherReceiver = contract.fromArtifact("TestEtherReceiver")
 const FullyBackedECDSAKeepCloneFactoryStub = contract.fromArtifact(
   "FullyBackedECDSAKeepCloneFactoryStub"
 )
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 
 const truffleAssert = require("truffle-assertions")
 
@@ -41,6 +42,7 @@ describe("FullyBackedECDSAKeep", function () {
   const beneficiaries = [accounts[7], accounts[8], accounts[9]]
   const authorizers = [accounts[2], accounts[3], accounts[4]]
   const signingPool = accounts[5]
+  const distributor = accounts[10]
   const honestThreshold = 1
 
   const delegationInitPeriod = time.duration.hours(12)
@@ -50,6 +52,7 @@ describe("FullyBackedECDSAKeep", function () {
   let keepStubMaster
   let keep
   let factoryStub
+  let bondToken
 
   async function newKeep(
     owner,
@@ -65,7 +68,8 @@ describe("FullyBackedECDSAKeep", function () {
       members,
       honestThreshold,
       bonding,
-      keepFactory
+      keepFactory,
+      bondToken.address
     )
 
     const events = await factoryStub.getPastEvents(
@@ -87,9 +91,11 @@ describe("FullyBackedECDSAKeep", function () {
 
   before(async () => {
     registry = await KeepRegistry.new()
+    bondToken = await ERC20Stub.new()
     bonding = await FullyBackedBondingStub.new(
       registry.address,
-      delegationInitPeriod
+      delegationInitPeriod,
+      bondToken.address
     )
     keepStubMaster = await FullyBackedECDSAKeepStub.new()
     factoryStub = await FullyBackedECDSAKeepCloneFactoryStub.new(
@@ -126,7 +132,8 @@ describe("FullyBackedECDSAKeep", function () {
         members,
         honestThreshold,
         bonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
     })
 
@@ -137,7 +144,8 @@ describe("FullyBackedECDSAKeep", function () {
         members,
         honestThreshold,
         bonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       assert.equal(
@@ -155,7 +163,8 @@ describe("FullyBackedECDSAKeep", function () {
           members,
           honestThreshold,
           bonding.address,
-          factoryStub.address
+          factoryStub.address,
+          bondToken.address
         ),
         "Contract already initialized"
       )
@@ -296,7 +305,8 @@ describe("FullyBackedECDSAKeep", function () {
         sixteenSigners,
         sixteenSigners.length,
         bonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       await factoryStub.newKeep(
@@ -304,7 +314,8 @@ describe("FullyBackedECDSAKeep", function () {
         sixteenSigners,
         sixteenSigners.length,
         bonding.address,
-        factoryStub.address
+        factoryStub.address,
+        bondToken.address
       )
 
       keepWith16Signers = await FullyBackedECDSAKeep.at(keepAddress)
@@ -563,22 +574,17 @@ describe("FullyBackedECDSAKeep", function () {
 
     it("should seize signer bond", async () => {
       const expectedBondsSum = initialBondsSum
-      const ownerBalanceBefore = await web3.eth.getBalance(owner)
+      const ownerBalanceBefore = await bondToken.balanceOf(owner)
 
       expect(await keep.checkBondAmount()).to.eq.BN(
         expectedBondsSum,
         "incorrect bond amount before seizure"
       )
-
-      const gasPrice = await web3.eth.getGasPrice()
-
       const txHash = await keep.seizeSignerBonds({from: owner})
-      const seizedSignerBondsFee = new BN(txHash.receipt.gasUsed).mul(
-        new BN(gasPrice)
+
+      const ownerBalanceDiff = new BN(await bondToken.balanceOf(owner)).sub(
+        new BN(ownerBalanceBefore)
       )
-      const ownerBalanceDiff = new BN(await web3.eth.getBalance(owner))
-        .add(seizedSignerBondsFee)
-        .sub(new BN(ownerBalanceBefore))
 
       expect(ownerBalanceDiff).to.eq.BN(
         expectedBondsSum,
@@ -952,7 +958,9 @@ describe("FullyBackedECDSAKeep", function () {
         signatureR,
         signatureS,
         signatureRecoveryID,
-        {from: members[0]}
+        {
+          from: members[0],
+        }
       )
 
       truffleAssert.eventEmitted(res, "SignatureSubmitted", (ev) => {
@@ -1009,7 +1017,9 @@ describe("FullyBackedECDSAKeep", function () {
             signatureR,
             malleableS,
             malleableRecoveryID,
-            {from: members[0]}
+            {
+              from: members[0],
+            }
           )
           assert(false, "Test call did not error as expected")
         } catch (e) {
@@ -1146,7 +1156,13 @@ describe("FullyBackedECDSAKeep", function () {
     })
 
     it("correctly distributes ETH", async () => {
-      await keep.returnPartialSignerBonds({value: allReturnedBondsValue})
+      await bondToken.mint(distributor, allReturnedBondsValue)
+      await bondToken.approve(bonding.address, allReturnedBondsValue, {
+        from: distributor,
+      })
+      await keep.returnPartialSignerBonds(allReturnedBondsValue, {
+        from: distributor,
+      })
 
       const member1UnbondedAfter = await bonding.availableUnbondedValue(
         members[0],
@@ -1180,10 +1196,16 @@ describe("FullyBackedECDSAKeep", function () {
 
     it("correctly handles remainder", async () => {
       const remainder = new BN(2)
-
-      await keep.returnPartialSignerBonds({
-        value: allReturnedBondsValue.add(remainder),
-      })
+      await bondToken.mint(distributor, allReturnedBondsValue.add(remainder))
+      await bondToken.approve(
+        bonding.address,
+        allReturnedBondsValue.add(remainder),
+        {from: distributor}
+      )
+      await keep.returnPartialSignerBonds(
+        allReturnedBondsValue.add(remainder),
+        {from: distributor}
+      )
 
       const member1UnbondedAfter = await bonding.availableUnbondedValue(
         members[0],
@@ -1217,14 +1239,14 @@ describe("FullyBackedECDSAKeep", function () {
 
     it("reverts with zero value", async () => {
       await expectRevert(
-        keep.returnPartialSignerBonds({value: 0}),
+        keep.returnPartialSignerBonds(0),
         "Partial signer bond must be non-zero"
       )
     })
 
     it("reverts with zero value per member", async () => {
       await expectRevert(
-        keep.returnPartialSignerBonds({value: members.length - 1}),
+        keep.returnPartialSignerBonds(members.length - 1),
         "Partial signer bond must be non-zero"
       )
     })
@@ -1634,10 +1656,23 @@ describe("FullyBackedECDSAKeep", function () {
 
   async function delegate(operator, beneficiary, authorizer, unbondedValue) {
     const minimumDelegationDeposit = await bonding.MINIMUM_DELEGATION_DEPOSIT.call()
-
-    await bonding.delegate(operator, beneficiary, authorizer, {
-      value: unbondedValue || minimumDelegationDeposit,
-    })
+    bondToken.mint(operator, unbondedValue || minimumDelegationDeposit)
+    await bondToken.approve(
+      bonding.address,
+      unbondedValue || minimumDelegationDeposit,
+      {
+        from: operator,
+      }
+    )
+    await bonding.delegate(
+      operator,
+      beneficiary,
+      authorizer,
+      unbondedValue || minimumDelegationDeposit,
+      {
+        from: operator,
+      }
+    )
 
     await bonding.authorizeOperatorContract(operator, bondCreator, {
       from: authorizer,
@@ -1654,10 +1689,24 @@ describe("FullyBackedECDSAKeep", function () {
     if (initialUnbondedValue.eq(unbondedValue)) {
       return
     } else if (initialUnbondedValue.gt(unbondedValue)) {
-      await bonding.withdraw(initialUnbondedValue.sub(unbondedValue), operator)
+      await bonding.withdraw(
+        initialUnbondedValue.sub(unbondedValue),
+        operator,
+        {
+          from: operator,
+        }
+      )
     } else {
-      await bonding.deposit(operator, {
-        value: unbondedValue.sub(initialUnbondedValue),
+      bondToken.mint(operator, unbondedValue.sub(initialUnbondedValue))
+      await bondToken.approve(
+        bonding.address,
+        unbondedValue.sub(initialUnbondedValue),
+        {
+          from: operator,
+        }
+      )
+      await bonding.deposit(operator, unbondedValue.sub(initialUnbondedValue), {
+        from: operator,
       })
     }
   }
@@ -1683,7 +1732,9 @@ describe("FullyBackedECDSAKeep", function () {
       referenceID,
       bondValue1,
       signingPool,
-      {from: bondCreator}
+      {
+        from: bondCreator,
+      }
     )
     await bonding.createBond(
       members[1],
@@ -1691,7 +1742,9 @@ describe("FullyBackedECDSAKeep", function () {
       referenceID,
       bondValue2,
       signingPool,
-      {from: bondCreator}
+      {
+        from: bondCreator,
+      }
     )
     await bonding.createBond(
       members[2],
@@ -1699,7 +1752,9 @@ describe("FullyBackedECDSAKeep", function () {
       referenceID,
       bondValue3,
       signingPool,
-      {from: bondCreator}
+      {
+        from: bondCreator,
+      }
     )
 
     return bondValue1.add(bondValue2).add(bondValue3)

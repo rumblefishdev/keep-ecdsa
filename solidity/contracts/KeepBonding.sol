@@ -37,8 +37,9 @@ contract KeepBonding is AbstractBonding {
     constructor(
         address registryAddress,
         address tokenStakingAddress,
-        address tokenGrantAddress
-    ) public AbstractBonding(registryAddress) {
+        address tokenGrantAddress,
+        address _bondTokenAddress
+    ) public AbstractBonding(registryAddress, _bondTokenAddress) {
         tokenStaking = TokenStaking(tokenStakingAddress);
         tokenGrant = TokenGrant(tokenGrantAddress);
     }

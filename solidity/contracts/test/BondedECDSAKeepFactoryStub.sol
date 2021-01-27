@@ -10,7 +10,8 @@ contract BondedECDSAKeepFactoryStub is BondedECDSAKeepFactory {
         address sortitionPoolFactory,
         address tokenStaking,
         address keepBonding,
-        address randomBeacon
+        address randomBeacon,
+        address _bondTokenAddress
     )
         public
         BondedECDSAKeepFactory(
@@ -18,7 +19,8 @@ contract BondedECDSAKeepFactoryStub is BondedECDSAKeepFactory {
             sortitionPoolFactory,
             tokenStaking,
             keepBonding,
-            randomBeacon
+            randomBeacon,
+            _bondTokenAddress
         )
     {}
 

@@ -3,13 +3,13 @@ pragma solidity 0.5.17;
 import "../../contracts/BondedECDSAKeep.sol";
 import "../../contracts/CloneFactory.sol";
 
-
 /// @title Bonded ECDSA Keep Factory Stub using clone factory.
 /// @dev This contract is for testing purposes only.
 contract BondedECDSAKeepCloneFactory is CloneFactory {
     uint256 public minimumStake = 200000 * 1e18;
 
     address public masterBondedECDSAKeepAddress;
+    address public bondTokenAddress;
     bool public membersSlashed;
 
     constructor(address _masterBondedECDSAKeepAddress) public {
@@ -26,11 +26,12 @@ contract BondedECDSAKeepCloneFactory is CloneFactory {
         uint256 _stakeLockDuration,
         address _tokenStaking,
         address _keepBonding,
-        address payable _keepFactory
+        address payable _keepFactory,
+        address _bondTokenAddress
     ) external payable returns (address keepAddress) {
         keepAddress = createClone(masterBondedECDSAKeepAddress);
         assert(isClone(masterBondedECDSAKeepAddress, keepAddress));
-
+        bondTokenAddress = _bondTokenAddress;
         BondedECDSAKeep keep = BondedECDSAKeep(keepAddress);
         keep.initialize(
             _owner,

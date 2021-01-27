@@ -77,13 +77,15 @@ contract BondedECDSAKeepFactory is
     // all KEEPs in eligible stake matter when calculating operator's eligible
     // weight for signer selection.
     uint256 public constant poolStakeWeightDivisor = 1e18;
+    address public bondTokenAddress;
 
     constructor(
         address _masterBondedECDSAKeepAddress,
         address _sortitionPoolFactory,
         address _tokenStaking,
         address _keepBonding,
-        address _randomBeacon
+        address _randomBeacon,
+        address _bondTokenAddress
     )
         public
         KeepCreator(_masterBondedECDSAKeepAddress)
@@ -92,6 +94,7 @@ contract BondedECDSAKeepFactory is
         sortitionPoolFactory = BondedSortitionPoolFactory(
             _sortitionPoolFactory
         );
+        bondTokenAddress = _bondTokenAddress;
         tokenStaking = TokenStaking(_tokenStaking);
         keepBonding = KeepBonding(_keepBonding);
     }
@@ -156,12 +159,13 @@ contract BondedECDSAKeepFactory is
 
         uint256 minimumStake = tokenStaking.minimumStake();
 
-        address[] memory members = BondedSortitionPool(pool).selectSetGroup(
-            _groupSize,
-            bytes32(groupSelectionSeed),
-            minimumStake,
-            memberBond
-        );
+        address[] memory members =
+            BondedSortitionPool(pool).selectSetGroup(
+                _groupSize,
+                bytes32(groupSelectionSeed),
+                minimumStake,
+                memberBond
+            );
 
         newGroupSelectionSeed();
 

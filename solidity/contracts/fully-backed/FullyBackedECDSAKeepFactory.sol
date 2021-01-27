@@ -80,6 +80,7 @@ contract FullyBackedECDSAKeepFactory is
     // keep address -> application address
     mapping(address => address) keepApplication;
 
+    address public bondTokenAddress;
     // Notification that a new keep has been created.
     event FullyBackedECDSAKeepCreated(
         address indexed keepAddress,
@@ -97,12 +98,14 @@ contract FullyBackedECDSAKeepFactory is
         address _masterKeepAddress,
         address _sortitionPoolFactoryAddress,
         address _bondingAddress,
-        address _randomBeaconAddress
+        address _randomBeaconAddress,
+        address _bondTokenAddress
     )
         public
         KeepCreator(_masterKeepAddress)
         GroupSelectionSeed(_randomBeaconAddress)
     {
+        bondTokenAddress = _bondTokenAddress;
         sortitionPoolFactory = FullyBackedSortitionPoolFactory(
             _sortitionPoolFactoryAddress
         );
@@ -169,12 +172,12 @@ contract FullyBackedECDSAKeepFactory is
             "Insufficient payment for opening a new keep"
         );
 
-        address[] memory members = FullyBackedSortitionPool(pool)
-            .selectSetGroup(
-            _groupSize,
-            bytes32(groupSelectionSeed),
-            memberBond
-        );
+        address[] memory members =
+            FullyBackedSortitionPool(pool).selectSetGroup(
+                _groupSize,
+                bytes32(groupSelectionSeed),
+                memberBond
+            );
 
         newGroupSelectionSeed();
 
@@ -189,7 +192,8 @@ contract FullyBackedECDSAKeepFactory is
             members,
             _honestThreshold,
             address(bonding),
-            address(this)
+            address(this),
+            bondTokenAddress
         );
 
         for (uint256 i = 0; i < _groupSize; i++) {
@@ -256,9 +260,8 @@ contract FullyBackedECDSAKeepFactory is
 
         address application = keepApplication[address(keep)];
 
-        FullyBackedSortitionPool sortitionPool = FullyBackedSortitionPool(
-            getSortitionPool(application)
-        );
+        FullyBackedSortitionPool sortitionPool =
+            FullyBackedSortitionPool(getSortitionPool(application));
 
         for (uint256 i = 0; i < members.length; i++) {
             address operator = members[i];

@@ -7,7 +7,7 @@ const TokenGrant = contract.fromArtifact("TokenGrantStub")
 const ManagedGrant = contract.fromArtifact("ManagedGrantStub")
 const KeepBonding = contract.fromArtifact("KeepBonding")
 const TestEtherReceiver = contract.fromArtifact("TestEtherReceiver")
-
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 const {expectEvent, expectRevert} = require("@openzeppelin/test-helpers")
 
 const BN = web3.utils.BN
@@ -28,6 +28,7 @@ describe("KeepBonding", function () {
   let bondCreator
   let sortitionPool
   let beneficiary
+  let bondToken
 
   before(async () => {
     operator = accounts[1]
@@ -39,10 +40,12 @@ describe("KeepBonding", function () {
     registry = await KeepRegistry.new()
     tokenStaking = await TokenStaking.new()
     tokenGrant = await TokenGrant.new()
+    bondToken = await ERC20Stub.new()
     keepBonding = await KeepBonding.new(
       registry.address,
       tokenStaking.address,
-      tokenGrant.address
+      tokenGrant.address,
+      bondToken.address
     )
     etherReceiver = await TestEtherReceiver.new()
 
@@ -69,7 +72,9 @@ describe("KeepBonding", function () {
 
     beforeEach(async () => {
       await tokenStaking.setBeneficiary(operator, beneficiary)
-      await keepBonding.deposit(operator, {value: value})
+      bondToken.mint(operator, value)
+      await bondToken.approve(keepBonding.address, value, {from: operator})
+      await keepBonding.deposit(operator, value, {from: operator})
     })
 
     it("can be called by operator", async () => {
@@ -109,7 +114,7 @@ describe("KeepBonding", function () {
       const expectedUnbonded = 0
       await tokenStaking.setBeneficiary(operator, beneficiary)
       const expectedBeneficiaryBalance = web3.utils
-        .toBN(await web3.eth.getBalance(beneficiary))
+        .toBN(await bondToken.balanceOf(beneficiary))
         .add(value)
 
       await keepBonding.withdraw(value, operator, {from: operator})
@@ -121,7 +126,7 @@ describe("KeepBonding", function () {
       )
       expect(unbonded).to.eq.BN(expectedUnbonded, "invalid unbonded value")
 
-      const actualBeneficiaryBalance = await web3.eth.getBalance(beneficiary)
+      const actualBeneficiaryBalance = await bondToken.balanceOf(beneficiary)
       expect(actualBeneficiaryBalance).to.eq.BN(
         expectedBeneficiaryBalance,
         "invalid beneficiary balance"
@@ -149,16 +154,6 @@ describe("KeepBonding", function () {
         "Insufficient unbonded value"
       )
     })
-
-    it("reverts if transfer fails", async () => {
-      await etherReceiver.setShouldFail(true)
-      await tokenStaking.setBeneficiary(operator, etherReceiver.address)
-
-      await expectRevert(
-        keepBonding.withdraw(value, operator, {from: operator}),
-        "Transfer failed"
-      )
-    })
   })
 
   describe("withdrawAsManagedGrantee", async () => {
@@ -168,7 +163,9 @@ describe("KeepBonding", function () {
 
     beforeEach(async () => {
       await tokenStaking.setBeneficiary(operator, beneficiary)
-      await keepBonding.deposit(operator, {value: value})
+      bondToken.mint(operator, value)
+      await bondToken.approve(keepBonding.address, value, {from: operator})
+      await keepBonding.deposit(operator, value, {from: operator})
 
       managedGrant = await ManagedGrant.new(managedGrantee)
       await tokenGrant.setGranteeOperator(managedGrant.address, operator)
@@ -179,7 +176,9 @@ describe("KeepBonding", function () {
         value,
         operator,
         managedGrant.address,
-        {from: managedGrantee}
+        {
+          from: managedGrantee,
+        }
       )
       // ok, no reverts
     })
@@ -190,7 +189,9 @@ describe("KeepBonding", function () {
           value,
           operator,
           managedGrant.address,
-          {from: operator}
+          {
+            from: operator,
+          }
         ),
         "Not a grantee of the provided contract"
       )
@@ -205,7 +206,9 @@ describe("KeepBonding", function () {
           value,
           operator,
           managedGrant.address,
-          {from: tokenOwner}
+          {
+            from: tokenOwner,
+          }
         ),
         "Not a grantee of the provided contract"
       )
@@ -220,7 +223,9 @@ describe("KeepBonding", function () {
           value,
           operator,
           managedGrant.address,
-          {from: standardGrantee}
+          {
+            from: standardGrantee,
+          }
         ),
         "Not a grantee of the provided contract"
       )
@@ -234,7 +239,9 @@ describe("KeepBonding", function () {
           value,
           operator,
           managedGrant.address,
-          {from: thirdParty}
+          {
+            from: thirdParty,
+          }
         ),
         "Not a grantee of the provided contract"
       )
@@ -244,14 +251,16 @@ describe("KeepBonding", function () {
       const expectedUnbonded = 0
       await tokenStaking.setBeneficiary(operator, beneficiary)
       const expectedBeneficiaryBalance = web3.utils
-        .toBN(await web3.eth.getBalance(beneficiary))
+        .toBN(await bondToken.balanceOf(beneficiary))
         .add(value)
 
       await keepBonding.withdrawAsManagedGrantee(
         value,
         operator,
         managedGrant.address,
-        {from: managedGrantee}
+        {
+          from: managedGrantee,
+        }
       )
 
       const unbonded = await keepBonding.availableUnbondedValue(
@@ -261,7 +270,7 @@ describe("KeepBonding", function () {
       )
       expect(unbonded).to.eq.BN(expectedUnbonded, "invalid unbonded value")
 
-      const actualBeneficiaryBalance = await web3.eth.getBalance(beneficiary)
+      const actualBeneficiaryBalance = await bondToken.balanceOf(beneficiary)
       expect(actualBeneficiaryBalance).to.eq.BN(
         expectedBeneficiaryBalance,
         "invalid beneficiary balance"
@@ -291,24 +300,11 @@ describe("KeepBonding", function () {
           invalidValue,
           operator,
           managedGrant.address,
-          {from: managedGrantee}
+          {
+            from: managedGrantee,
+          }
         ),
         "Insufficient unbonded value"
-      )
-    })
-
-    it("reverts if transfer fails", async () => {
-      await etherReceiver.setShouldFail(true)
-      await tokenStaking.setBeneficiary(operator, etherReceiver.address)
-
-      await expectRevert(
-        keepBonding.withdrawAsManagedGrantee(
-          value,
-          operator,
-          managedGrant.address,
-          {from: managedGrantee}
-        ),
-        "Transfer failed"
       )
     })
   })
