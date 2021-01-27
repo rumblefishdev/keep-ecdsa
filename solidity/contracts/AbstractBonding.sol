@@ -95,7 +95,7 @@ contract AbstractBonding is IBondingManagement {
         ERC20 bondToken = ERC20(bondTokenAddress);
         require(
             bondToken.allowance(operator, address(this)) >= _amount,
-            "Allowence is too low"
+            "Allowance is too low"
         );
         bondToken.transferFrom(operator, address(this), _amount);
         unbondedValue[operator] = unbondedValue[operator].add(_amount);
@@ -115,7 +115,7 @@ contract AbstractBonding is IBondingManagement {
         ERC20 bondToken = ERC20(bondTokenAddress);
         require(
             bondToken.allowance(_source, address(this)) >= _amount,
-            "Allowence of _source is too low"
+            "Allowance of _source is too low"
         );
         bondToken.transferFrom(_source, address(this), _amount);
         unbondedValue[operator] = unbondedValue[operator].add(_amount);
