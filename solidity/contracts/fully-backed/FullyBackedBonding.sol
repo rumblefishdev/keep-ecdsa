@@ -86,7 +86,7 @@ contract FullyBackedBonding is
         address payable beneficiary,
         address authorizer,
         uint256 _amount
-    ) external payable {
+    ) external {
         address owner = msg.sender;
 
         require(operator != address(0), "Invalid operator address");
@@ -102,11 +102,6 @@ contract FullyBackedBonding is
             _amount >= MINIMUM_DELEGATION_DEPOSIT,
             "FullyBackedBonding: Insufficient delegation value"
         );
-        // require(
-        //     bondToken.allowance(operator, address(this)) >=
-        //         MINIMUM_DELEGATION_DEPOSIT,
-        //     "FullyBackedBonding: Allowence is too low"
-        // );
         operators[operator] = Operator(
             OperatorParams.pack(0, block.timestamp, 0),
             owner,
@@ -131,7 +126,7 @@ contract FullyBackedBonding is
     /// and events emitted by these functions should be enough to determine total
     /// value deposited ever for an operator.
     /// @param operator Address of the operator.
-    function topUp(address operator, uint256 _amount) public payable {
+    function topUp(address operator, uint256 _amount) public {
         ERC20 bondToken = ERC20(bondTokenAddress);
         depositFor(operator, _amount, msg.sender);
 

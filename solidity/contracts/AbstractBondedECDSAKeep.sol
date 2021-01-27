@@ -437,7 +437,7 @@ contract AbstractBondedECDSAKeep is IBondedECDSAKeep {
     /// It is entirely up to the application if a part of signers' bonds is
     /// returned. The application may decide for that but may also decide to
     /// seize bonds and do not return anything.
-    function returnPartialSignerBonds(uint256 _amount) external payable {
+    function returnPartialSignerBonds(uint256 _amount) external {
         uint256 memberCount = members.length;
         uint256 bondPerMember = _amount.div(memberCount);
         require(bondPerMember > 0, "Partial signer bond must be non-zero");

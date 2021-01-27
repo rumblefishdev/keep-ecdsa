@@ -81,7 +81,7 @@ contract AbstractBonding is IBondingManagement {
 
     /// @notice Add the provided value to operator's pool available for bonding.
     /// @param operator Address of the operator.
-    function deposit(address operator, uint256 _amount) public payable {
+    function deposit(address operator, uint256 _amount) public {
         address beneficiary = beneficiaryOf(operator);
         // Beneficiary has to be set (delegation exist) before an operator can
         // deposit wei. It protects from a situation when an operator wants
@@ -101,7 +101,7 @@ contract AbstractBonding is IBondingManagement {
         unbondedValue[operator] = unbondedValue[operator].add(_amount);
         emit UnbondedValueDeposited(operator, beneficiary, _amount);
     }
-    function depositFor(address operator, uint256 _amount, address _source) public payable {
+    function depositFor(address operator, uint256 _amount, address _source) public {
         address beneficiary = beneficiaryOf(operator);
         // Beneficiary has to be set (delegation exist) before an operator can
         // deposit wei. It protects from a situation when an operator wants
@@ -280,11 +280,11 @@ contract AbstractBonding is IBondingManagement {
         address operator,
         uint256 referenceID,
         uint256 amount,
-        address payable destination
+        address destination
     ) public {
         require(amount > 0, "Requested amount should be greater than zero");
 
-        address payable holder = msg.sender;
+        address holder = msg.sender;
         bytes32 bondID =
             keccak256(abi.encodePacked(operator, holder, referenceID));
 
