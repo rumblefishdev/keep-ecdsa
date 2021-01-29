@@ -7,10 +7,11 @@ import "./StakingInfoStub.sol";
 contract AbstractBondingStub is AbstractBonding {
     StakingInfoStub stakingInfoStub;
 
-    constructor(address registryAddress, address stakingInfoAddress)
-        public
-        AbstractBonding(registryAddress)
-    {
+    constructor(
+        address registryAddress,
+        address stakingInfoAddress,
+        address _bondTokenAddress
+    ) public AbstractBonding(registryAddress, _bondTokenAddress) {
         stakingInfoStub = StakingInfoStub(stakingInfoAddress);
     }
 

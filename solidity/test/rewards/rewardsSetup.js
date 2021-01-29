@@ -20,8 +20,10 @@ const BondedSortitionPoolFactory = contract.fromArtifact(
 const RandomBeaconStub = contract.fromArtifact("RandomBeaconStub")
 const BondedECDSAKeepStub = contract.fromArtifact("BondedECDSAKeepStub")
 const KeepTokenGrant = contract.fromArtifact("TokenGrant")
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 
 async function initialize() {
+  let bondToken = await ERC20Stub.new()
   const owner = accounts[0]
 
   await BondedSortitionPoolFactory.detectNetwork()
@@ -52,7 +54,9 @@ async function initialize() {
   const stakingEscrow = await TokenStakingEscrow.new(
     keepToken.address,
     keepTokenGrant.address,
-    {from: owner}
+    {
+      from: owner,
+    }
   )
 
   const stakeInitializationPeriod = 30 // In seconds
@@ -71,6 +75,7 @@ async function initialize() {
     registry.address,
     tokenStaking.address,
     tokenGrant.address,
+    bondToken.address,
     {from: owner}
   )
   const randomBeacon = await RandomBeaconStub.new({from: owner})
@@ -83,6 +88,7 @@ async function initialize() {
     tokenStaking.address,
     keepBonding.address,
     randomBeacon.address,
+    bondToken.address,
     {from: owner}
   )
 

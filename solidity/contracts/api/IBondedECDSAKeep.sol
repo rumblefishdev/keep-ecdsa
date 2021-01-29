@@ -60,7 +60,7 @@ contract IBondedECDSAKeep {
     /// It is entirely up to the application if a part of signers' bonds is
     /// returned. The application may decide for that but may also decide to
     /// seize bonds and do not return anything.
-    function returnPartialSignerBonds() external payable;
+    function returnPartialSignerBonds(uint256 _amount) external;
 
     /// @notice Submits a fraud proof for a valid signature from this keep that was
     /// not first approved via a call to sign.

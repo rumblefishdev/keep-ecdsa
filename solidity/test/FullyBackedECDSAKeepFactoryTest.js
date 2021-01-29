@@ -23,7 +23,7 @@ const RandomBeaconStub = contract.fromArtifact("RandomBeaconStub")
 const FullyBackedECDSAKeepStub = contract.fromArtifact(
   "FullyBackedECDSAKeepStub"
 )
-
+const ERC20Stub = contract.fromArtifact("ERC20Stub")
 const BN = web3.utils.BN
 
 const chai = require("chai")
@@ -42,6 +42,7 @@ describe("FullyBackedECDSAKeepFactory", function () {
   let signerPoolAddress
   let minimumDelegationDeposit
   let delegationLockPeriod
+  let bondToken
 
   const application = accounts[1]
   const members = [accounts[2], accounts[3], accounts[4]]
@@ -185,12 +186,16 @@ describe("FullyBackedECDSAKeepFactory", function () {
       await bonding.authorizeSortitionPoolContract(
         members[0],
         signerPool1Address,
-        {from: authorizers[0]}
+        {
+          from: authorizers[0],
+        }
       )
       await bonding.authorizeSortitionPoolContract(
         members[1],
         signerPool2Address,
-        {from: authorizers[1]}
+        {
+          from: authorizers[1],
+        }
       )
 
       await keepFactory.registerMemberCandidate(application1, {
@@ -511,7 +516,9 @@ describe("FullyBackedECDSAKeepFactory", function () {
     })
 
     it("does not update operator if bonding value increased insignificantly above minimum", async () => {
-      bonding.deposit(members[0], {value: new BN(1)})
+      bondToken.mint(members[0], new BN(1))
+      await bondToken.approve(bonding.address, new BN(1), {from: members[0]})
+      bonding.deposit(members[0], new BN(1), {from: members[0]})
       assert.isTrue(
         await keepFactory.isOperatorUpToDate(members[0], application),
         "unexpected status of the operator after bonding value change"
@@ -524,7 +531,13 @@ describe("FullyBackedECDSAKeepFactory", function () {
     })
 
     it("updates operator if bonding value increased significantly above minimum", async () => {
-      bonding.deposit(members[0], {value: minimumBondableValue.muln(2)})
+      bondToken.mint(members[0], minimumBondableValue.muln(2))
+      await bondToken.approve(bonding.address, minimumBondableValue.muln(2), {
+        from: members[0],
+      })
+      bonding.deposit(members[0], minimumBondableValue.muln(2), {
+        from: members[0],
+      })
 
       assert.isFalse(
         await keepFactory.isOperatorUpToDate(members[0], application),
@@ -1262,7 +1275,8 @@ describe("FullyBackedECDSAKeepFactory", function () {
       sortitionPoolFactory = await FullyBackedSortitionPoolFactory.new()
       bonding = await FullyBackedBonding.new(
         registry.address,
-        delegationInitPeriod
+        delegationInitPeriod,
+        bondToken.address
       )
       randomBeacon = accounts[1]
       const keepMasterContract = await FullyBackedECDSAKeepStub.new()
@@ -1270,7 +1284,8 @@ describe("FullyBackedECDSAKeepFactory", function () {
         keepMasterContract.address,
         sortitionPoolFactory.address,
         bonding.address,
-        randomBeacon
+        randomBeacon,
+        bondToken.address
       )
     })
 
@@ -1694,9 +1709,11 @@ describe("FullyBackedECDSAKeepFactory", function () {
   async function initializeNewFactory() {
     registry = await KeepRegistry.new()
     sortitionPoolFactory = await FullyBackedSortitionPoolFactory.new()
+    bondToken = await ERC20Stub.new()
     bonding = await FullyBackedBonding.new(
       registry.address,
-      delegationInitPeriod
+      delegationInitPeriod,
+      bondToken.address
     )
     randomBeacon = await RandomBeaconStub.new()
     const keepMasterContract = await FullyBackedECDSAKeepStub.new()
@@ -1704,7 +1721,8 @@ describe("FullyBackedECDSAKeepFactory", function () {
       keepMasterContract.address,
       sortitionPoolFactory.address,
       bonding.address,
-      randomBeacon.address
+      randomBeacon.address,
+      bondToken.address
     )
 
     minimumDelegationDeposit = await bonding.MINIMUM_DELEGATION_DEPOSIT.call()
@@ -1738,9 +1756,24 @@ describe("FullyBackedECDSAKeepFactory", function () {
   }
 
   async function delegate(operator, beneficiary, authorizer, unbondedValue) {
-    await bonding.delegate(operator, beneficiary, authorizer, {
-      value: unbondedValue || minimumDelegationDeposit,
-    })
+    const minimumDelegationValue = await bonding.MINIMUM_DELEGATION_DEPOSIT.call()
+    bondToken.mint(operator, unbondedValue || minimumDelegationValue)
+    await bondToken.approve(
+      bonding.address,
+      unbondedValue || minimumDelegationValue,
+      {
+        from: operator,
+      }
+    )
+    await bonding.delegate(
+      operator,
+      beneficiary,
+      authorizer,
+      unbondedValue || minimumDelegationDeposit,
+      {
+        from: operator,
+      }
+    )
 
     await bonding.authorizeOperatorContract(operator, keepFactory.address, {
       from: authorizer,
@@ -1756,10 +1789,22 @@ describe("FullyBackedECDSAKeepFactory", function () {
     if (initialUnbondedValue.eq(unbondedValue)) {
       return
     } else if (initialUnbondedValue.gt(unbondedValue)) {
-      await bonding.withdraw(initialUnbondedValue.sub(unbondedValue), operator)
+      await bonding.withdraw(
+        initialUnbondedValue.sub(unbondedValue),
+        operator,
+        {from: operator}
+      )
     } else {
-      await bonding.deposit(operator, {
-        value: unbondedValue.sub(initialUnbondedValue),
+      bondToken.mint(operator, unbondedValue.sub(initialUnbondedValue))
+      await bondToken.approve(
+        bonding.address,
+        unbondedValue.sub(initialUnbondedValue),
+        {
+          from: operator,
+        }
+      )
+      await bonding.deposit(operator, unbondedValue.sub(initialUnbondedValue), {
+        from: operator,
       })
     }
   }
