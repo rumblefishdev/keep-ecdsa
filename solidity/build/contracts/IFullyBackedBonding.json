@@ -1,0 +1,460 @@
+{
+  "contractName": "IFullyBackedBonding",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "bondCreator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "authorizedSortitionPool",
+          "type": "address"
+        }
+      ],
+      "name": "availableUnbondedValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "bondCreator",
+          "type": "address"
+        }
+      ],
+      "name": "isInitialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"bondCreator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"authorizedSortitionPool\",\"type\":\"address\"}],\"name\":\"availableUnbondedValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"bondCreator\",\"type\":\"address\"}],\"name\":\"isInitialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isInitialized(address,address)\":{\"params\":{\"bondCreator\":\"The bond creator contract address.\",\"operator\":\"The operator address.\"},\"return\":\"True if operator has passed initialization period for given bond creator contract, false otherwise.\"}},\"title\":\"Fully Backed Bonding contract interface.\"},\"userdoc\":{\"methods\":{\"isInitialized(address,address)\":{\"notice\":\"Checks if the operator for the given bond creator contract has passed the initialization period.\"}},\"notice\":\"The interface should be implemented by a bonding contract used for Fully Backed Sortition Pool.\"}},\"settings\":{\"compilationTarget\":{\"@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol\":\"IFullyBackedBonding\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@keep-network/sortition-pools/contracts/api/IBonding.sol\":{\"keccak256\":\"0xe62ea5302af749042e419ad1643f0e9788bbbefe82a5c5d0b3e77a4a5a4b241e\",\"urls\":[\"bzz-raw://3ac748582f07716200c2f500aee47a8c2a79c1144fe3454e112290906cb3dfbf\",\"dweb:/ipfs/QmdNqK1V25QB1asWyWJfsSAVxorTjBp8DXG5eXw71e31rM\"]},\"@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol\":{\"keccak256\":\"0x7ae54969ff6989a2b918d49c4cc1a795b93eb8c03e64ad4e25aff3a0be82d05d\",\"urls\":[\"bzz-raw://baf7230f6934530351131f02817fa8ac5e96bbc5898ef3dc86db9d313101d707\",\"dweb:/ipfs/QmPaTsArVgnJaKKWTiM4KD8TQbihg8mymWWr7Qy6Cc6d7e\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.17;\n\nimport \"./IBonding.sol\";\n\n/// @title Fully Backed Bonding contract interface.\n/// @notice The interface should be implemented by a bonding contract used for\n/// Fully Backed Sortition Pool.\ncontract IFullyBackedBonding is IBonding {\n  /// @notice Checks if the operator for the given bond creator contract\n  /// has passed the initialization period.\n  /// @param operator The operator address.\n  /// @param bondCreator The bond creator contract address.\n  /// @return True if operator has passed initialization period for given\n  /// bond creator contract, false otherwise.\n  function isInitialized(address operator, address bondCreator)\n    public\n    view\n    returns (bool);\n}\n",
+  "sourcePath": "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol",
+  "ast": {
+    "absolutePath": "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol",
+    "exportedSymbols": {
+      "IFullyBackedBonding": [
+        20914
+      ]
+    },
+    "id": 20915,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20901,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:87"
+      },
+      {
+        "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+        "file": "./IBonding.sol",
+        "id": 20902,
+        "nodeType": "ImportDirective",
+        "scope": 20915,
+        "sourceUnit": 20900,
+        "src": "25:24:87",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 20903,
+              "name": "IBonding",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20899,
+              "src": "247:8:87",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IBonding_$20899",
+                "typeString": "contract IBonding"
+              }
+            },
+            "id": 20904,
+            "nodeType": "InheritanceSpecifier",
+            "src": "247:8:87"
+          }
+        ],
+        "contractDependencies": [
+          20899
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Fully Backed Bonding contract interface.\n @notice The interface should be implemented by a bonding contract used for\n Fully Backed Sortition Pool.",
+        "fullyImplemented": false,
+        "id": 20914,
+        "linearizedBaseContracts": [
+          20914,
+          20899
+        ],
+        "name": "IFullyBackedBonding",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Checks if the operator for the given bond creator contract\n has passed the initialization period.\n @param operator The operator address.\n @param bondCreator The bond creator contract address.\n @return True if operator has passed initialization period for given\n bond creator contract, false otherwise.",
+            "id": 20913,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isInitialized",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20909,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20906,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20913,
+                  "src": "624:16:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20905,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "624:7:87",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20908,
+                  "name": "bondCreator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20913,
+                  "src": "642:19:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20907,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "642:7:87",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:39:87"
+            },
+            "returnParameters": {
+              "id": 20912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20911,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20913,
+                  "src": "696:4:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 20910,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "696:4:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:6:87"
+            },
+            "scope": 20914,
+            "src": "601:101:87",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 20915,
+        "src": "215:489:87"
+      }
+    ],
+    "src": "0:705:87"
+  },
+  "legacyAST": {
+    "absolutePath": "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol",
+    "exportedSymbols": {
+      "IFullyBackedBonding": [
+        20914
+      ]
+    },
+    "id": 20915,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20901,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:87"
+      },
+      {
+        "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+        "file": "./IBonding.sol",
+        "id": 20902,
+        "nodeType": "ImportDirective",
+        "scope": 20915,
+        "sourceUnit": 20900,
+        "src": "25:24:87",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 20903,
+              "name": "IBonding",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20899,
+              "src": "247:8:87",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IBonding_$20899",
+                "typeString": "contract IBonding"
+              }
+            },
+            "id": 20904,
+            "nodeType": "InheritanceSpecifier",
+            "src": "247:8:87"
+          }
+        ],
+        "contractDependencies": [
+          20899
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Fully Backed Bonding contract interface.\n @notice The interface should be implemented by a bonding contract used for\n Fully Backed Sortition Pool.",
+        "fullyImplemented": false,
+        "id": 20914,
+        "linearizedBaseContracts": [
+          20914,
+          20899
+        ],
+        "name": "IFullyBackedBonding",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Checks if the operator for the given bond creator contract\n has passed the initialization period.\n @param operator The operator address.\n @param bondCreator The bond creator contract address.\n @return True if operator has passed initialization period for given\n bond creator contract, false otherwise.",
+            "id": 20913,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isInitialized",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20909,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20906,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20913,
+                  "src": "624:16:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20905,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "624:7:87",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20908,
+                  "name": "bondCreator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20913,
+                  "src": "642:19:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20907,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "642:7:87",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:39:87"
+            },
+            "returnParameters": {
+              "id": 20912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20911,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20913,
+                  "src": "696:4:87",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 20910,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "696:4:87",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:6:87"
+            },
+            "scope": 20914,
+            "src": "601:101:87",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 20915,
+        "src": "215:489:87"
+      }
+    ],
+    "src": "0:705:87"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.467Z",
+  "devdoc": {
+    "methods": {
+      "isInitialized(address,address)": {
+        "params": {
+          "bondCreator": "The bond creator contract address.",
+          "operator": "The operator address."
+        },
+        "return": "True if operator has passed initialization period for given bond creator contract, false otherwise."
+      }
+    },
+    "title": "Fully Backed Bonding contract interface."
+  },
+  "userdoc": {
+    "methods": {
+      "isInitialized(address,address)": {
+        "notice": "Checks if the operator for the given bond creator contract has passed the initialization period."
+      }
+    },
+    "notice": "The interface should be implemented by a bonding contract used for Fully Backed Sortition Pool."
+  }
+}

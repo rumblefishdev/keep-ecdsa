@@ -1,0 +1,408 @@
+{
+  "contractName": "IBonding",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "bondCreator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "authorizedSortitionPool",
+          "type": "address"
+        }
+      ],
+      "name": "availableUnbondedValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"bondCreator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"authorizedSortitionPool\",\"type\":\"address\"}],\"name\":\"availableUnbondedValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"@keep-network/sortition-pools/contracts/api/IBonding.sol\":\"IBonding\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@keep-network/sortition-pools/contracts/api/IBonding.sol\":{\"keccak256\":\"0xe62ea5302af749042e419ad1643f0e9788bbbefe82a5c5d0b3e77a4a5a4b241e\",\"urls\":[\"bzz-raw://3ac748582f07716200c2f500aee47a8c2a79c1144fe3454e112290906cb3dfbf\",\"dweb:/ipfs/QmdNqK1V25QB1asWyWJfsSAVxorTjBp8DXG5eXw71e31rM\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.17;\n\ninterface IBonding {\n    // Gives the amount of ETH\n    // the `operator` has made available for bonding by the `bondCreator`.\n    // If the operator doesn't exist,\n    // or the bond creator isn't authorized,\n    // returns 0.\n    function availableUnbondedValue(\n        address operator,\n        address bondCreator,\n        address authorizedSortitionPool\n    ) external view returns (uint256);\n}\n",
+  "sourcePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+  "ast": {
+    "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+    "exportedSymbols": {
+      "IBonding": [
+        20899
+      ]
+    },
+    "id": 20900,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20887,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:86"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20899,
+        "linearizedBaseContracts": [
+          20899
+        ],
+        "name": "IBonding",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 20898,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "availableUnbondedValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20889,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "298:16:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20888,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "298:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20891,
+                  "name": "bondCreator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "324:19:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20890,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20893,
+                  "name": "authorizedSortitionPool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "353:31:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:102:86"
+            },
+            "returnParameters": {
+              "id": 20897,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20896,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "414:7:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20895,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "414:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "413:9:86"
+            },
+            "scope": 20899,
+            "src": "257:166:86",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20900,
+        "src": "25:400:86"
+      }
+    ],
+    "src": "0:426:86"
+  },
+  "legacyAST": {
+    "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+    "exportedSymbols": {
+      "IBonding": [
+        20899
+      ]
+    },
+    "id": 20900,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20887,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:86"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20899,
+        "linearizedBaseContracts": [
+          20899
+        ],
+        "name": "IBonding",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 20898,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "availableUnbondedValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20889,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "298:16:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20888,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "298:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20891,
+                  "name": "bondCreator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "324:19:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20890,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20893,
+                  "name": "authorizedSortitionPool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "353:31:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:102:86"
+            },
+            "returnParameters": {
+              "id": 20897,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20896,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20898,
+                  "src": "414:7:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20895,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "414:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "413:9:86"
+            },
+            "scope": 20899,
+            "src": "257:166:86",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20900,
+        "src": "25:400:86"
+      }
+    ],
+    "src": "0:426:86"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.467Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
