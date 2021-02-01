@@ -14,7 +14,6 @@ const FullyBackedECDSAKeepFactory = artifacts.require(
   "FullyBackedECDSAKeepFactory"
 )
 
-const SortitionPoolsDeployer = require("@keep-network/sortition-pools/migrations/scripts/deployContracts")
 const BondedSortitionPoolFactory = artifacts.require(
   "BondedSortitionPoolFactory"
 )
@@ -37,39 +36,44 @@ let {
   TokenGrantAddress,
   RegistryAddress,
   KeepTokenAddress,
+  BondTokenAddress,
 } = require("./external-contracts")
 
 module.exports = async function (deployer, network) {
   // Set the stake initialization period to 1 second for local development and testnet.
-  if (network === "local" || network === "ropsten" || network === "keep_dev") {
+  if (
+    network === "local" ||
+    network === "ropsten" ||
+    network === "keep_dev" ||
+    network === "sov"
+  ) {
     initializationPeriod = 1
   }
 
-  const sortitionPoolsDeployer = new SortitionPoolsDeployer(deployer, artifacts)
-  await sortitionPoolsDeployer.deployBondedSortitionPoolFactory()
-  await sortitionPoolsDeployer.deployFullyBackedSortitionPoolFactory()
+  // if (process.env.TEST) {
+  //   console.log(process.env.TEST)
+  //   TokenStakingStub = artifacts.require("TokenStakingStub")
+  //   TokenStakingAddress = (await TokenStakingStub.new()).address
 
-  if (process.env.TEST) {
-    TokenStakingStub = artifacts.require("TokenStakingStub")
-    TokenStakingAddress = (await TokenStakingStub.new()).address
+  //   TokenGrantStub = artifacts.require("TokenGrantStub")
+  //   TokenGrantAddress = (await TokenGrantStub.new()).address
 
-    TokenGrantStub = artifacts.require("TokenGrantStub")
-    TokenGrantAddress = (await TokenGrantStub.new()).address
+  //   RandomBeaconStub = artifacts.require("RandomBeaconStub")
+  //   RandomBeaconAddress = (await RandomBeaconStub.new()).address
 
-    RandomBeaconStub = artifacts.require("RandomBeaconStub")
-    RandomBeaconAddress = (await RandomBeaconStub.new()).address
-
-    RegistryAddress = (await deployer.deploy(KeepRegistry)).address
-  }
+  //   RegistryAddress = (await deployer.deploy(KeepRegistry)).address
+  // console.log('##')
+  // }
+  // console.log('122')
 
   // KEEP staking and ETH bonding
   await deployer.deploy(
     KeepBonding,
     RegistryAddress,
     TokenStakingAddress,
-    TokenGrantAddress
+    TokenGrantAddress,
+    BondTokenAddress
   )
-
   await deployer.deploy(BondedECDSAKeep)
 
   await deployer.deploy(
@@ -78,8 +82,10 @@ module.exports = async function (deployer, network) {
     BondedSortitionPoolFactory.address,
     TokenStakingAddress,
     KeepBonding.address,
-    RandomBeaconAddress
+    RandomBeaconAddress,
+    BondTokenAddress
   )
+
 
   const bondedECDSAKeepVendorImplV1 = await deployer.deploy(
     BondedECDSAKeepVendorImplV1
@@ -99,7 +105,8 @@ module.exports = async function (deployer, network) {
   await deployer.deploy(
     FullyBackedBonding,
     RegistryAddress,
-    initializationPeriod
+    initializationPeriod,
+    BondTokenAddress
   )
 
   await deployer.deploy(FullyBackedECDSAKeep)
@@ -109,7 +116,8 @@ module.exports = async function (deployer, network) {
     FullyBackedECDSAKeep.address,
     FullyBackedSortitionPoolFactory.address,
     FullyBackedBonding.address,
-    RandomBeaconAddress
+    RandomBeaconAddress,
+    BondTokenAddress
   )
 
   // Liquidity Rewards

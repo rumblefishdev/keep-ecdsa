@@ -6,9 +6,9 @@
  *
  */
 
-require('@babel/register');
-require('@babel/polyfill');
-const HDWalletProvider = require("@truffle/hdwallet-provider");
+require("@babel/register")
+require("@babel/polyfill")
+const HDWalletProvider = require("@truffle/hdwallet-provider")
 
 module.exports = {
   /**
@@ -32,6 +32,34 @@ module.exports = {
       network_id: "*", // Any network (default: none)
       websockets: true, //  Enable EventEmitter interface for web3 (default: false)
     },
+    sov: {
+      provider: function () {
+        return new HDWalletProvider(
+          "2d61b31f93df83e90e78b61943019f3d03fd9f31901359a0e065a4c896eee23d",
+          "https://testnet.sovryn.app/rpc"
+        )
+      },
+      gas: 6700000,
+      gasPrice: 80000000,
+      skipDryRun: false,
+      network_id: "*",
+      timeoutBlocks: 50,
+      deploymentPollingInterval: 1000,
+    },
+    local: {
+      provider: function () {
+        return new HDWalletProvider(
+          "4526476adb17c8f751fc4e71e23c4f5e7e2013cd62417b63825cb6cde8a42627",
+          "HTTP://127.0.0.1:7545"
+        )
+      },
+      gas: 6700000,
+      gasPrice: 80000000,
+      skipDryRun: false,
+      network_id: "*",
+      timeoutBlocks: 50,
+      deploymentPollingInterval: 1000,
+    },
     keep_dev: {
       provider: function () {
         return new HDWalletProvider(
@@ -43,12 +71,15 @@ module.exports = {
       network_id: 1101,
     },
     ropsten: {
-      provider: function() {
-        return new HDWalletProvider(process.env.CONTRACT_OWNER_ETH_ACCOUNT_PRIVATE_KEY, process.env.ETH_HOSTNAME)
+      provider: function () {
+        return new HDWalletProvider(
+          process.env.CONTRACT_OWNER_ETH_ACCOUNT_PRIVATE_KEY,
+          process.env.ETH_HOSTNAME
+        )
       },
       gas: 8000000,
       network_id: 3,
-      skipDryRun: true
+      skipDryRun: true,
     },
   },
   // Configure your compilers

@@ -1,0 +1,2316 @@
+{
+  "contractName": "IBondingManagement",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "bondCreator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "authorizedSortitionPool",
+          "type": "address"
+        }
+      ],
+      "name": "availableUnbondedValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_source",
+          "type": "address"
+        }
+      ],
+      "name": "depositFor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "holder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "referenceID",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "authorizedSortitionPool",
+          "type": "address"
+        }
+      ],
+      "name": "createBond",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "holder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "referenceID",
+          "type": "uint256"
+        }
+      ],
+      "name": "bondAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "referenceID",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "newHolder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newReferenceID",
+          "type": "uint256"
+        }
+      ],
+      "name": "reassignBond",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "referenceID",
+          "type": "uint256"
+        }
+      ],
+      "name": "freeBond",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "referenceID",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "destination",
+          "type": "address"
+        }
+      ],
+      "name": "seizeBond",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"bondCreator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"authorizedSortitionPool\",\"type\":\"address\"}],\"name\":\"availableUnbondedValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"referenceID\",\"type\":\"uint256\"}],\"name\":\"bondAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"referenceID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"authorizedSortitionPool\",\"type\":\"address\"}],\"name\":\"createBond\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_source\",\"type\":\"address\"}],\"name\":\"depositFor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"referenceID\",\"type\":\"uint256\"}],\"name\":\"freeBond\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"referenceID\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"newHolder\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"newReferenceID\",\"type\":\"uint256\"}],\"name\":\"reassignBond\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"referenceID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"destination\",\"type\":\"address\"}],\"name\":\"seizeBond\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"bondAmount(address,address,uint256)\":{\"params\":{\"holder\":\"Address of the holder of the bond.\",\"operator\":\"Address of the operator.\",\"referenceID\":\"Reference ID of the bond.\"},\"return\":\"Amount of wei in the selected bond.\"},\"createBond(address,address,uint256,uint256,address)\":{\"params\":{\"amount\":\"Value to bond in wei.\",\"authorizedSortitionPool\":\"Address of authorized sortition pool.\",\"holder\":\"Address of the holder of the bond.\",\"operator\":\"Address of the operator to bond.\",\"referenceID\":\"Reference ID used to track the bond by holder.\"}},\"deposit(address,uint256)\":{\"params\":{\"operator\":\"Address of the operator.\"}},\"freeBond(address,uint256)\":{\"params\":{\"operator\":\"Address of the bonded operator.\",\"referenceID\":\"Reference ID of the bond.\"}},\"reassignBond(address,uint256,address,uint256)\":{\"params\":{\"newHolder\":\"Address of the new holder of the bond.\",\"newReferenceID\":\"New reference ID to register the bond.\",\"operator\":\"Address of the bonded operator.\",\"referenceID\":\"Reference ID of the bond.\"}},\"seizeBond(address,uint256,uint256,address)\":{\"params\":{\"amount\":\"Amount to be seized.\",\"destination\":\"Address to send the amount to.\",\"operator\":\"Address of the bonded operator.\",\"referenceID\":\"Reference ID of the bond.\"}},\"withdraw(uint256,address)\":{\"params\":{\"amount\":\"Value to withdraw in wei.\",\"operator\":\"Address of the operator.\"}}}},\"userdoc\":{\"methods\":{\"bondAmount(address,address,uint256)\":{\"notice\":\"Returns value of wei bonded for the operator.\"},\"createBond(address,address,uint256,uint256,address)\":{\"notice\":\"Create bond for the given operator, holder, reference and amount.\"},\"deposit(address,uint256)\":{\"notice\":\"Add the provided value to operator's pool available for bonding.\"},\"freeBond(address,uint256)\":{\"notice\":\"Releases the bond and moves the bond value to the operator's unbounded value pool.\"},\"reassignBond(address,uint256,address,uint256)\":{\"notice\":\"Reassigns a bond to a new holder under a new reference.\"},\"seizeBond(address,uint256,uint256,address)\":{\"notice\":\"Seizes the bond by moving some or all of the locked bond to the provided destination address.\"},\"withdraw(uint256,address)\":{\"notice\":\"Withdraws amount from operator's value available for bonding.\"}}}},\"settings\":{\"compilationTarget\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondingManagement.sol\":\"IBondingManagement\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondingManagement.sol\":{\"keccak256\":\"0x00888f7edf918020ce70acf3ab6a17ff3d4b410a5413bf7ded1d3d5f21de1fb7\",\"urls\":[\"bzz-raw://a8e5989318021ed8866f03537c649c12fb75831859df5198028e5a4430494799\",\"dweb:/ipfs/QmWCPALgJvVfq3aveqEyRcquEckdeHFFbD7ATuraMAVaer\"]},\"@keep-network/sortition-pools/contracts/api/IBonding.sol\":{\"keccak256\":\"0xe62ea5302af749042e419ad1643f0e9788bbbefe82a5c5d0b3e77a4a5a4b241e\",\"urls\":[\"bzz-raw://3ac748582f07716200c2f500aee47a8c2a79c1144fe3454e112290906cb3dfbf\",\"dweb:/ipfs/QmdNqK1V25QB1asWyWJfsSAVxorTjBp8DXG5eXw71e31rM\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/**\n▓▓▌ ▓▓ ▐▓▓ ▓▓▓▓▓▓▓▓▓▓▌▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄\n▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▌▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\n  ▓▓▓▓▓▓    ▓▓▓▓▓▓▓▀    ▐▓▓▓▓▓▓    ▐▓▓▓▓▓   ▓▓▓▓▓▓     ▓▓▓▓▓   ▐▓▓▓▓▓▌   ▐▓▓▓▓▓▓\n  ▓▓▓▓▓▓▄▄▓▓▓▓▓▓▓▀      ▐▓▓▓▓▓▓▄▄▄▄         ▓▓▓▓▓▓▄▄▄▄         ▐▓▓▓▓▓▌   ▐▓▓▓▓▓▓\n  ▓▓▓▓▓▓▓▓▓▓▓▓▓▀        ▐▓▓▓▓▓▓▓▓▓▓         ▓▓▓▓▓▓▓▓▓▓▌        ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\n  ▓▓▓▓▓▓▀▀▓▓▓▓▓▓▄       ▐▓▓▓▓▓▓▀▀▀▀         ▓▓▓▓▓▓▀▀▀▀         ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▀\n  ▓▓▓▓▓▓   ▀▓▓▓▓▓▓▄     ▐▓▓▓▓▓▓     ▓▓▓▓▓   ▓▓▓▓▓▓     ▓▓▓▓▓   ▐▓▓▓▓▓▌\n▓▓▓▓▓▓▓▓▓▓ █▓▓▓▓▓▓▓▓▓ ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓▓▓\n▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓ ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓▓▓\n\n                           Trust math, not hardware.\n*/\n\npragma solidity 0.5.17;\n\nimport \"@keep-network/sortition-pools/contracts/api/IBonding.sol\";\n\ncontract IBondingManagement is IBonding {\n    /// @notice Add the provided value to operator's pool available for bonding.\n    /// @param operator Address of the operator.\n    function deposit(address operator, uint256 _amount) public;\n    function depositFor(address operator, uint256 _amount,address _source) public;\n\n    /// @notice Withdraws amount from operator's value available for bonding.\n    /// @param amount Value to withdraw in wei.\n    /// @param operator Address of the operator.\n    function withdraw(uint256 amount, address operator) public;\n\n    /// @notice Create bond for the given operator, holder, reference and amount.\n    /// @param operator Address of the operator to bond.\n    /// @param holder Address of the holder of the bond.\n    /// @param referenceID Reference ID used to track the bond by holder.\n    /// @param amount Value to bond in wei.\n    /// @param authorizedSortitionPool Address of authorized sortition pool.\n    function createBond(\n        address operator,\n        address holder,\n        uint256 referenceID,\n        uint256 amount,\n        address authorizedSortitionPool\n    ) public;\n\n    /// @notice Returns value of wei bonded for the operator.\n    /// @param operator Address of the operator.\n    /// @param holder Address of the holder of the bond.\n    /// @param referenceID Reference ID of the bond.\n    /// @return Amount of wei in the selected bond.\n    function bondAmount(\n        address operator,\n        address holder,\n        uint256 referenceID\n    ) public view returns (uint256);\n\n    /// @notice Reassigns a bond to a new holder under a new reference.\n    /// @param operator Address of the bonded operator.\n    /// @param referenceID Reference ID of the bond.\n    /// @param newHolder Address of the new holder of the bond.\n    /// @param newReferenceID New reference ID to register the bond.\n    function reassignBond(\n        address operator,\n        uint256 referenceID,\n        address newHolder,\n        uint256 newReferenceID\n    ) public;\n\n    /// @notice Releases the bond and moves the bond value to the operator's\n    /// unbounded value pool.\n    /// @param operator Address of the bonded operator.\n    /// @param referenceID Reference ID of the bond.\n    function freeBond(address operator, uint256 referenceID) public;\n\n    /// @notice Seizes the bond by moving some or all of the locked bond to the\n    /// provided destination address.\n    /// @param operator Address of the bonded operator.\n    /// @param referenceID Reference ID of the bond.\n    /// @param amount Amount to be seized.\n    /// @param destination Address to send the amount to.\n    function seizeBond(\n        address operator,\n        uint256 referenceID,\n        uint256 amount,\n        address destination\n    ) public;\n}\n",
+  "sourcePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondingManagement.sol",
+  "ast": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondingManagement.sol",
+    "exportedSymbols": {
+      "IBondingManagement": [
+        5839
+      ]
+    },
+    "id": 5840,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5759,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1837:23:21"
+      },
+      {
+        "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+        "file": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+        "id": 5760,
+        "nodeType": "ImportDirective",
+        "scope": 5840,
+        "sourceUnit": 20949,
+        "src": "1862:66:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5761,
+              "name": "IBonding",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20948,
+              "src": "1961:8:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IBonding_$20948",
+                "typeString": "contract IBonding"
+              }
+            },
+            "id": 5762,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1961:8:21"
+          }
+        ],
+        "contractDependencies": [
+          20948
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 5839,
+        "linearizedBaseContracts": [
+          5839,
+          20948
+        ],
+        "name": "IBondingManagement",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Add the provided value to operator's pool available for bonding.\n @param operator Address of the operator.",
+            "id": 5769,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5767,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5764,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5769,
+                  "src": "2123:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5763,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2123:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5766,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5769,
+                  "src": "2141:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5765,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2141:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2122:35:21"
+            },
+            "returnParameters": {
+              "id": 5768,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2164:0:21"
+            },
+            "scope": 5839,
+            "src": "2106:59:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 5778,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositFor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5776,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5771,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5778,
+                  "src": "2190:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5770,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2190:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5773,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5778,
+                  "src": "2208:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5772,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2208:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5775,
+                  "name": "_source",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5778,
+                  "src": "2224:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5774,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2224:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2189:51:21"
+            },
+            "returnParameters": {
+              "id": 5777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2247:0:21"
+            },
+            "scope": 5839,
+            "src": "2170:78:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Withdraws amount from operator's value available for bonding.\n @param amount Value to withdraw in wei.\n @param operator Address of the operator.",
+            "id": 5785,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5780,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5785,
+                  "src": "2447:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5779,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2447:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5782,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5785,
+                  "src": "2463:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5781,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2463:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2446:34:21"
+            },
+            "returnParameters": {
+              "id": 5784,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2487:0:21"
+            },
+            "scope": 5839,
+            "src": "2429:59:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Create bond for the given operator, holder, reference and amount.\n @param operator Address of the operator to bond.\n @param holder Address of the holder of the bond.\n @param referenceID Reference ID used to track the bond by holder.\n @param amount Value to bond in wei.\n @param authorizedSortitionPool Address of authorized sortition pool.",
+            "id": 5798,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5796,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5787,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2914:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5786,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2914:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5789,
+                  "name": "holder",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2940:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5788,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2940:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5791,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2964:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5790,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2964:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5793,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2993:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5792,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2993:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5795,
+                  "name": "authorizedSortitionPool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "3017:31:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5794,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3017:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2904:150:21"
+            },
+            "returnParameters": {
+              "id": 5797,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3061:0:21"
+            },
+            "scope": 5839,
+            "src": "2885:177:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns value of wei bonded for the operator.\n @param operator Address of the operator.\n @param holder Address of the holder of the bond.\n @param referenceID Reference ID of the bond.\n @return Amount of wei in the selected bond.",
+            "id": 5809,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bondAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5805,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5800,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3370:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5799,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3370:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5802,
+                  "name": "holder",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3396:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5801,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3396:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5804,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3420:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5803,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3420:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3360:85:21"
+            },
+            "returnParameters": {
+              "id": 5808,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5807,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3467:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5806,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3467:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3466:9:21"
+            },
+            "scope": 5839,
+            "src": "3341:135:21",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Reassigns a bond to a new holder under a new reference.\n @param operator Address of the bonded operator.\n @param referenceID Reference ID of the bond.\n @param newHolder Address of the new holder of the bond.\n @param newReferenceID New reference ID to register the bond.",
+            "id": 5820,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reassignBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5818,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5811,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3827:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5810,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3827:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5813,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3853:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5812,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3853:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5815,
+                  "name": "newHolder",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3882:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5814,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3882:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5817,
+                  "name": "newReferenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3909:22:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5816,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3909:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3817:120:21"
+            },
+            "returnParameters": {
+              "id": 5819,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3944:0:21"
+            },
+            "scope": 5839,
+            "src": "3796:149:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Releases the bond and moves the bond value to the operator's\n unbounded value pool.\n @param operator Address of the bonded operator.\n @param referenceID Reference ID of the bond.",
+            "id": 5827,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "freeBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5825,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5822,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5827,
+                  "src": "4185:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5821,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4185:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5824,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5827,
+                  "src": "4203:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5823,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4203:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4184:39:21"
+            },
+            "returnParameters": {
+              "id": 5826,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4230:0:21"
+            },
+            "scope": 5839,
+            "src": "4167:64:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Seizes the bond by moving some or all of the locked bond to the\n provided destination address.\n @param operator Address of the bonded operator.\n @param referenceID Reference ID of the bond.\n @param amount Amount to be seized.\n @param destination Address to send the amount to.",
+            "id": 5838,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "seizeBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5836,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5829,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4593:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5828,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4593:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5831,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4619:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5830,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4619:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5833,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4648:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5832,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4648:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5835,
+                  "name": "destination",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4672:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5834,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4672:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4583:114:21"
+            },
+            "returnParameters": {
+              "id": 5837,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4704:0:21"
+            },
+            "scope": 5839,
+            "src": "4565:140:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5840,
+        "src": "1930:2777:21"
+      }
+    ],
+    "src": "1837:2871:21"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondingManagement.sol",
+    "exportedSymbols": {
+      "IBondingManagement": [
+        5839
+      ]
+    },
+    "id": 5840,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5759,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1837:23:21"
+      },
+      {
+        "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+        "file": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
+        "id": 5760,
+        "nodeType": "ImportDirective",
+        "scope": 5840,
+        "sourceUnit": 20949,
+        "src": "1862:66:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5761,
+              "name": "IBonding",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20948,
+              "src": "1961:8:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IBonding_$20948",
+                "typeString": "contract IBonding"
+              }
+            },
+            "id": 5762,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1961:8:21"
+          }
+        ],
+        "contractDependencies": [
+          20948
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 5839,
+        "linearizedBaseContracts": [
+          5839,
+          20948
+        ],
+        "name": "IBondingManagement",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Add the provided value to operator's pool available for bonding.\n @param operator Address of the operator.",
+            "id": 5769,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5767,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5764,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5769,
+                  "src": "2123:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5763,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2123:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5766,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5769,
+                  "src": "2141:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5765,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2141:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2122:35:21"
+            },
+            "returnParameters": {
+              "id": 5768,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2164:0:21"
+            },
+            "scope": 5839,
+            "src": "2106:59:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 5778,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositFor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5776,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5771,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5778,
+                  "src": "2190:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5770,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2190:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5773,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5778,
+                  "src": "2208:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5772,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2208:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5775,
+                  "name": "_source",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5778,
+                  "src": "2224:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5774,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2224:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2189:51:21"
+            },
+            "returnParameters": {
+              "id": 5777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2247:0:21"
+            },
+            "scope": 5839,
+            "src": "2170:78:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Withdraws amount from operator's value available for bonding.\n @param amount Value to withdraw in wei.\n @param operator Address of the operator.",
+            "id": 5785,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5780,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5785,
+                  "src": "2447:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5779,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2447:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5782,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5785,
+                  "src": "2463:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5781,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2463:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2446:34:21"
+            },
+            "returnParameters": {
+              "id": 5784,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2487:0:21"
+            },
+            "scope": 5839,
+            "src": "2429:59:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Create bond for the given operator, holder, reference and amount.\n @param operator Address of the operator to bond.\n @param holder Address of the holder of the bond.\n @param referenceID Reference ID used to track the bond by holder.\n @param amount Value to bond in wei.\n @param authorizedSortitionPool Address of authorized sortition pool.",
+            "id": 5798,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5796,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5787,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2914:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5786,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2914:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5789,
+                  "name": "holder",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2940:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5788,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2940:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5791,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2964:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5790,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2964:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5793,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "2993:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5792,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2993:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5795,
+                  "name": "authorizedSortitionPool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5798,
+                  "src": "3017:31:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5794,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3017:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2904:150:21"
+            },
+            "returnParameters": {
+              "id": 5797,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3061:0:21"
+            },
+            "scope": 5839,
+            "src": "2885:177:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns value of wei bonded for the operator.\n @param operator Address of the operator.\n @param holder Address of the holder of the bond.\n @param referenceID Reference ID of the bond.\n @return Amount of wei in the selected bond.",
+            "id": 5809,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bondAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5805,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5800,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3370:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5799,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3370:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5802,
+                  "name": "holder",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3396:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5801,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3396:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5804,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3420:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5803,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3420:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3360:85:21"
+            },
+            "returnParameters": {
+              "id": 5808,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5807,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5809,
+                  "src": "3467:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5806,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3467:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3466:9:21"
+            },
+            "scope": 5839,
+            "src": "3341:135:21",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Reassigns a bond to a new holder under a new reference.\n @param operator Address of the bonded operator.\n @param referenceID Reference ID of the bond.\n @param newHolder Address of the new holder of the bond.\n @param newReferenceID New reference ID to register the bond.",
+            "id": 5820,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reassignBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5818,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5811,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3827:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5810,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3827:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5813,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3853:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5812,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3853:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5815,
+                  "name": "newHolder",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3882:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5814,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3882:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5817,
+                  "name": "newReferenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5820,
+                  "src": "3909:22:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5816,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3909:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3817:120:21"
+            },
+            "returnParameters": {
+              "id": 5819,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3944:0:21"
+            },
+            "scope": 5839,
+            "src": "3796:149:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Releases the bond and moves the bond value to the operator's\n unbounded value pool.\n @param operator Address of the bonded operator.\n @param referenceID Reference ID of the bond.",
+            "id": 5827,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "freeBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5825,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5822,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5827,
+                  "src": "4185:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5821,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4185:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5824,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5827,
+                  "src": "4203:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5823,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4203:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4184:39:21"
+            },
+            "returnParameters": {
+              "id": 5826,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4230:0:21"
+            },
+            "scope": 5839,
+            "src": "4167:64:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Seizes the bond by moving some or all of the locked bond to the\n provided destination address.\n @param operator Address of the bonded operator.\n @param referenceID Reference ID of the bond.\n @param amount Amount to be seized.\n @param destination Address to send the amount to.",
+            "id": 5838,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "seizeBond",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5836,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5829,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4593:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5828,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4593:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5831,
+                  "name": "referenceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4619:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5830,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4619:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5833,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4648:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5832,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4648:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5835,
+                  "name": "destination",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5838,
+                  "src": "4672:19:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5834,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4672:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4583:114:21"
+            },
+            "returnParameters": {
+              "id": 5837,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4704:0:21"
+            },
+            "scope": 5839,
+            "src": "4565:140:21",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5840,
+        "src": "1930:2777:21"
+      }
+    ],
+    "src": "1837:2871:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:36:47.940Z",
+  "devdoc": {
+    "methods": {
+      "bondAmount(address,address,uint256)": {
+        "params": {
+          "holder": "Address of the holder of the bond.",
+          "operator": "Address of the operator.",
+          "referenceID": "Reference ID of the bond."
+        },
+        "return": "Amount of wei in the selected bond."
+      },
+      "createBond(address,address,uint256,uint256,address)": {
+        "params": {
+          "amount": "Value to bond in wei.",
+          "authorizedSortitionPool": "Address of authorized sortition pool.",
+          "holder": "Address of the holder of the bond.",
+          "operator": "Address of the operator to bond.",
+          "referenceID": "Reference ID used to track the bond by holder."
+        }
+      },
+      "deposit(address,uint256)": {
+        "params": {
+          "operator": "Address of the operator."
+        }
+      },
+      "freeBond(address,uint256)": {
+        "params": {
+          "operator": "Address of the bonded operator.",
+          "referenceID": "Reference ID of the bond."
+        }
+      },
+      "reassignBond(address,uint256,address,uint256)": {
+        "params": {
+          "newHolder": "Address of the new holder of the bond.",
+          "newReferenceID": "New reference ID to register the bond.",
+          "operator": "Address of the bonded operator.",
+          "referenceID": "Reference ID of the bond."
+        }
+      },
+      "seizeBond(address,uint256,uint256,address)": {
+        "params": {
+          "amount": "Amount to be seized.",
+          "destination": "Address to send the amount to.",
+          "operator": "Address of the bonded operator.",
+          "referenceID": "Reference ID of the bond."
+        }
+      },
+      "withdraw(uint256,address)": {
+        "params": {
+          "amount": "Value to withdraw in wei.",
+          "operator": "Address of the operator."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "bondAmount(address,address,uint256)": {
+        "notice": "Returns value of wei bonded for the operator."
+      },
+      "createBond(address,address,uint256,uint256,address)": {
+        "notice": "Create bond for the given operator, holder, reference and amount."
+      },
+      "deposit(address,uint256)": {
+        "notice": "Add the provided value to operator's pool available for bonding."
+      },
+      "freeBond(address,uint256)": {
+        "notice": "Releases the bond and moves the bond value to the operator's unbounded value pool."
+      },
+      "reassignBond(address,uint256,address,uint256)": {
+        "notice": "Reassigns a bond to a new holder under a new reference."
+      },
+      "seizeBond(address,uint256,uint256,address)": {
+        "notice": "Seizes the bond by moving some or all of the locked bond to the provided destination address."
+      },
+      "withdraw(uint256,address)": {
+        "notice": "Withdraws amount from operator's value available for bonding."
+      }
+    }
+  }
+}

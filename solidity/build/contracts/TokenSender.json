@@ -1,0 +1,345 @@
+{
+  "contractName": "TokenSender",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_extraData",
+          "type": "bytes"
+        }
+      ],
+      "name": "approveAndCall",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_extraData\",\"type\":\"bytes\"}],\"name\":\"approveAndCall\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of sender contract for approveAndCall pattern.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"@keep-network/keep-core/contracts/TokenSender.sol\":\"TokenSender\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@keep-network/keep-core/contracts/TokenSender.sol\":{\"keccak256\":\"0xe50a3a7d2f30e8801d8b608c462f65c868e17ff8b2f0db3448876adf0f288117\",\"urls\":[\"bzz-raw://f040546b183d26a9e26adfc01a6425eb6bce1cec1ab5b142aa360c8096ede385\",\"dweb:/ipfs/QmdRa8huRUmsTTvwnWPBF7V2gTQAGsGn3VFUeBfbisBszw\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.17;\n\n/// @dev Interface of sender contract for approveAndCall pattern.\ninterface TokenSender {\n    function approveAndCall(address _spender, uint256 _value, bytes calldata _extraData) external;\n}",
+  "sourcePath": "@keep-network/keep-core/contracts/TokenSender.sol",
+  "ast": {
+    "absolutePath": "@keep-network/keep-core/contracts/TokenSender.sol",
+    "exportedSymbols": {
+      "TokenSender": [
+        12667
+      ]
+    },
+    "id": 12668,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12657,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:58"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface of sender contract for approveAndCall pattern.",
+        "fullyImplemented": false,
+        "id": 12667,
+        "linearizedBaseContracts": [
+          12667
+        ],
+        "name": "TokenSender",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 12666,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approveAndCall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12664,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12659,
+                  "name": "_spender",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12666,
+                  "src": "143:16:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12658,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "143:7:58",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12661,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12666,
+                  "src": "161:14:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12660,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "161:7:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12663,
+                  "name": "_extraData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12666,
+                  "src": "177:25:58",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12662,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "177:5:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "142:61:58"
+            },
+            "returnParameters": {
+              "id": 12665,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "212:0:58"
+            },
+            "scope": 12667,
+            "src": "119:94:58",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12668,
+        "src": "91:124:58"
+      }
+    ],
+    "src": "0:215:58"
+  },
+  "legacyAST": {
+    "absolutePath": "@keep-network/keep-core/contracts/TokenSender.sol",
+    "exportedSymbols": {
+      "TokenSender": [
+        12667
+      ]
+    },
+    "id": 12668,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12657,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:58"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface of sender contract for approveAndCall pattern.",
+        "fullyImplemented": false,
+        "id": 12667,
+        "linearizedBaseContracts": [
+          12667
+        ],
+        "name": "TokenSender",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 12666,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approveAndCall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12664,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12659,
+                  "name": "_spender",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12666,
+                  "src": "143:16:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12658,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "143:7:58",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12661,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12666,
+                  "src": "161:14:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12660,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "161:7:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12663,
+                  "name": "_extraData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12666,
+                  "src": "177:25:58",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12662,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "177:5:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "142:61:58"
+            },
+            "returnParameters": {
+              "id": 12665,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "212:0:58"
+            },
+            "scope": 12667,
+            "src": "119:94:58",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12668,
+        "src": "91:124:58"
+      }
+    ],
+    "src": "0:215:58"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.407Z",
+  "devdoc": {
+    "details": "Interface of sender contract for approveAndCall pattern.",
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

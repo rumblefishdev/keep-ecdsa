@@ -1,0 +1,1795 @@
+{
+  "contractName": "MinimumStakeSchedule",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "base",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "schedule",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "steps",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"base\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"schedule\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"steps\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"MinimumStakeSchedule defines the minimum stake parametrization and schedule. It starts with a minimum stake of 100k KEEP. Over the following 2 years, the minimum stake is lowered periodically using a uniform stepwise function, eventually ending at 10k.\"}},\"settings\":{\"compilationTarget\":{\"@keep-network/keep-core/contracts/libraries/staking/MinimumStakeSchedule.sol\":\"MinimumStakeSchedule\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@keep-network/keep-core/contracts/libraries/staking/MinimumStakeSchedule.sol\":{\"keccak256\":\"0x31a399a918eba21f0002019a70b1b68c9610a5a4977fcd874b86d4965eb974c3\",\"urls\":[\"bzz-raw://acbe55a89d5e6f7b6d4add0764e7b47acbdc31afc0d5b1f211b45546d3a5cd6c\",\"dweb:/ipfs/QmcXSUaLV7d117ZvyMnRB3MVXVEGy62ccB5u6d8h1Sm792\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzz-raw://d62d769b2219d5de39013093412623e624fa887f871826ea3bae6052ee893610\",\"dweb:/ipfs/QmV3yVktya1s617QmuzQR2CfuJgUi3dR2xEZY9ecmqZ2G1\"]}},\"version\":1}",
+  "bytecode": "0x60f0610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060475760003560e01c80635001f3b514604c57806360192799146068578063b0604a26146084575b600080fd5b605260a0565b6040518082815260200191505060405180910390f35b606e60ae565b6040518082815260200191505060405180910390f35b608a60b3565b6040518082815260200191505060405180910390f35b69021e19e0c9bab240000081565b600a81565b6303c267008156fea265627a7a72315820ff49c8496d529fcc9eefdd71a120125e169093db18b36ef59e09d9a26e216f5964736f6c63430005110032",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060475760003560e01c80635001f3b514604c57806360192799146068578063b0604a26146084575b600080fd5b605260a0565b6040518082815260200191505060405180910390f35b606e60ae565b6040518082815260200191505060405180910390f35b608a60b3565b6040518082815260200191505060405180910390f35b69021e19e0c9bab240000081565b600a81565b6303c267008156fea265627a7a72315820ff49c8496d529fcc9eefdd71a120125e169093db18b36ef59e09d9a26e216f5964736f6c63430005110032",
+  "sourceMap": "363:798:66:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "363:798:66:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;596:43;;;:::i;:::-;;;;;;;;;;;;;;;;;;;556:34;;;:::i;:::-;;;;;;;;;;;;;;;;;;;500:50;;;:::i;:::-;;;;;;;;;;;;;;;;;;;596:43;627:12;596:43;:::o;556:34::-;588:2;556:34;:::o;500:50::-;535:15;500:50;:::o",
+  "source": "pragma solidity 0.5.17;\n\nimport \"openzeppelin-solidity/contracts/math/SafeMath.sol\";\n\n/// @notice MinimumStakeSchedule defines the minimum stake parametrization and\n/// schedule. It starts with a minimum stake of 100k KEEP. Over the following\n/// 2 years, the minimum stake is lowered periodically using a uniform stepwise\n/// function, eventually ending at 10k.\nlibrary MinimumStakeSchedule {\n    using SafeMath for uint256;\n\n    // 2 years in seconds (seconds per day * days in a year * years)\n    uint256 public constant schedule = 86400 * 365 * 2;\n    uint256 public constant steps = 10;\n    uint256 public constant base = 10000 * 1e18;\n\n    /// @notice Returns the current value of the minimum stake. The minimum\n    /// stake is lowered periodically over the course of 2 years since the time\n    /// of the shedule start and eventually ends at 10k KEEP.\n    function current(uint256 scheduleStart) internal view returns (uint256) {\n        if (now < scheduleStart.add(schedule)) {\n            uint256 currentStep = steps.mul(now.sub(scheduleStart)).div(schedule);\n            return base.mul(steps.sub(currentStep));\n        }\n        return base;\n    }\n}",
+  "sourcePath": "@keep-network/keep-core/contracts/libraries/staking/MinimumStakeSchedule.sol",
+  "ast": {
+    "absolutePath": "@keep-network/keep-core/contracts/libraries/staking/MinimumStakeSchedule.sol",
+    "exportedSymbols": {
+      "MinimumStakeSchedule": [
+        16217
+      ]
+    },
+    "id": 16218,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16158,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:66"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "file": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "id": 16159,
+        "nodeType": "ImportDirective",
+        "scope": 16218,
+        "sourceUnit": 21421,
+        "src": "25:59:66",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@notice MinimumStakeSchedule defines the minimum stake parametrization and\n schedule. It starts with a minimum stake of 100k KEEP. Over the following\n 2 years, the minimum stake is lowered periodically using a uniform stepwise\n function, eventually ending at 10k.",
+        "fullyImplemented": true,
+        "id": 16217,
+        "linearizedBaseContracts": [
+          16217
+        ],
+        "name": "MinimumStakeSchedule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 16162,
+            "libraryName": {
+              "contractScope": null,
+              "id": 16160,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 21420,
+              "src": "404:8:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$21420",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "398:27:66",
+            "typeName": {
+              "id": 16161,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "417:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": true,
+            "id": 16169,
+            "name": "schedule",
+            "nodeType": "VariableDeclaration",
+            "scope": 16217,
+            "src": "500:50:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 16163,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "500:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_63072000_by_1",
+                "typeString": "int_const 63072000"
+              },
+              "id": 16168,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "commonType": {
+                  "typeIdentifier": "t_rational_31536000_by_1",
+                  "typeString": "int_const 31536000"
+                },
+                "id": 16166,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "leftExpression": {
+                  "argumentTypes": null,
+                  "hexValue": "3836343030",
+                  "id": 16164,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "535:5:66",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_86400_by_1",
+                    "typeString": "int_const 86400"
+                  },
+                  "value": "86400"
+                },
+                "nodeType": "BinaryOperation",
+                "operator": "*",
+                "rightExpression": {
+                  "argumentTypes": null,
+                  "hexValue": "333635",
+                  "id": 16165,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "543:3:66",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_365_by_1",
+                    "typeString": "int_const 365"
+                  },
+                  "value": "365"
+                },
+                "src": "535:11:66",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_31536000_by_1",
+                  "typeString": "int_const 31536000"
+                }
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "32",
+                "id": 16167,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "549:1:66",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2_by_1",
+                  "typeString": "int_const 2"
+                },
+                "value": "2"
+              },
+              "src": "535:15:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_63072000_by_1",
+                "typeString": "int_const 63072000"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 16172,
+            "name": "steps",
+            "nodeType": "VariableDeclaration",
+            "scope": 16217,
+            "src": "556:34:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 16170,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "556:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3130",
+              "id": 16171,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "588:2:66",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10_by_1",
+                "typeString": "int_const 10"
+              },
+              "value": "10"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 16177,
+            "name": "base",
+            "nodeType": "VariableDeclaration",
+            "scope": 16217,
+            "src": "596:43:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 16173,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "596:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_10000000000000000000000_by_1",
+                "typeString": "int_const 10000000000000000000000"
+              },
+              "id": 16176,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "3130303030",
+                "id": 16174,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "627:5:66",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_10000_by_1",
+                  "typeString": "int_const 10000"
+                },
+                "value": "10000"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "31653138",
+                "id": 16175,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "635:4:66",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                  "typeString": "int_const 1000000000000000000"
+                },
+                "value": "1e18"
+              },
+              "src": "627:12:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10000000000000000000000_by_1",
+                "typeString": "int_const 10000000000000000000000"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 16215,
+              "nodeType": "Block",
+              "src": "936:223:66",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 16189,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 16184,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22401,
+                      "src": "950:3:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 16187,
+                          "name": "schedule",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 16169,
+                          "src": "974:8:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 16185,
+                          "name": "scheduleStart",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 16179,
+                          "src": "956:13:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 16186,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "add",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 21314,
+                        "src": "956:17:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 16188,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "956:27:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "950:33:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 16212,
+                  "nodeType": "IfStatement",
+                  "src": "946:186:66",
+                  "trueBody": {
+                    "id": 16211,
+                    "nodeType": "Block",
+                    "src": "985:147:66",
+                    "statements": [
+                      {
+                        "assignments": [
+                          16191
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 16191,
+                            "name": "currentStep",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 16211,
+                            "src": "999:19:66",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 16190,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "999:7:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 16202,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 16200,
+                              "name": "schedule",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 16169,
+                              "src": "1059:8:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 16196,
+                                      "name": "scheduleStart",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 16179,
+                                      "src": "1039:13:66",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "expression": {
+                                      "argumentTypes": null,
+                                      "id": 16194,
+                                      "name": "now",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 22401,
+                                      "src": "1031:3:66",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    },
+                                    "id": 16195,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "memberName": "sub",
+                                    "nodeType": "MemberAccess",
+                                    "referencedDeclaration": 21339,
+                                    "src": "1031:7:66",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                      "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                    }
+                                  },
+                                  "id": 16197,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "functionCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1031:22:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 16192,
+                                  "name": "steps",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 16172,
+                                  "src": "1021:5:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "id": 16193,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "mul",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 21373,
+                                "src": "1021:9:66",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                  "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                }
+                              },
+                              "id": 16198,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1021:33:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 16199,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "div",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 21398,
+                            "src": "1021:37:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 16201,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1021:47:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "999:69:66"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "id": 16207,
+                                  "name": "currentStep",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 16191,
+                                  "src": "1108:11:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 16205,
+                                  "name": "steps",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 16172,
+                                  "src": "1098:5:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "id": 16206,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "sub",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 21339,
+                                "src": "1098:9:66",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                  "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                }
+                              },
+                              "id": 16208,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1098:22:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 16203,
+                              "name": "base",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 16177,
+                              "src": "1089:4:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 16204,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "mul",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 21373,
+                            "src": "1089:8:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 16209,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1089:32:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "functionReturnParameters": 16183,
+                        "id": 16210,
+                        "nodeType": "Return",
+                        "src": "1082:39:66"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 16213,
+                    "name": "base",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 16177,
+                    "src": "1148:4:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 16183,
+                  "id": 16214,
+                  "nodeType": "Return",
+                  "src": "1141:11:66"
+                }
+              ]
+            },
+            "documentation": "@notice Returns the current value of the minimum stake. The minimum\n stake is lowered periodically over the course of 2 years since the time\n of the shedule start and eventually ends at 10k KEEP.",
+            "id": 16216,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "current",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16180,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16179,
+                  "name": "scheduleStart",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16216,
+                  "src": "881:21:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16178,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "881:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "880:23:66"
+            },
+            "returnParameters": {
+              "id": 16183,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16182,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16216,
+                  "src": "927:7:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16181,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "927:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "926:9:66"
+            },
+            "scope": 16217,
+            "src": "864:295:66",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 16218,
+        "src": "363:798:66"
+      }
+    ],
+    "src": "0:1161:66"
+  },
+  "legacyAST": {
+    "absolutePath": "@keep-network/keep-core/contracts/libraries/staking/MinimumStakeSchedule.sol",
+    "exportedSymbols": {
+      "MinimumStakeSchedule": [
+        16217
+      ]
+    },
+    "id": 16218,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16158,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:66"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "file": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "id": 16159,
+        "nodeType": "ImportDirective",
+        "scope": 16218,
+        "sourceUnit": 21421,
+        "src": "25:59:66",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@notice MinimumStakeSchedule defines the minimum stake parametrization and\n schedule. It starts with a minimum stake of 100k KEEP. Over the following\n 2 years, the minimum stake is lowered periodically using a uniform stepwise\n function, eventually ending at 10k.",
+        "fullyImplemented": true,
+        "id": 16217,
+        "linearizedBaseContracts": [
+          16217
+        ],
+        "name": "MinimumStakeSchedule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 16162,
+            "libraryName": {
+              "contractScope": null,
+              "id": 16160,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 21420,
+              "src": "404:8:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$21420",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "398:27:66",
+            "typeName": {
+              "id": 16161,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "417:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": true,
+            "id": 16169,
+            "name": "schedule",
+            "nodeType": "VariableDeclaration",
+            "scope": 16217,
+            "src": "500:50:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 16163,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "500:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_63072000_by_1",
+                "typeString": "int_const 63072000"
+              },
+              "id": 16168,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "commonType": {
+                  "typeIdentifier": "t_rational_31536000_by_1",
+                  "typeString": "int_const 31536000"
+                },
+                "id": 16166,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "leftExpression": {
+                  "argumentTypes": null,
+                  "hexValue": "3836343030",
+                  "id": 16164,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "535:5:66",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_86400_by_1",
+                    "typeString": "int_const 86400"
+                  },
+                  "value": "86400"
+                },
+                "nodeType": "BinaryOperation",
+                "operator": "*",
+                "rightExpression": {
+                  "argumentTypes": null,
+                  "hexValue": "333635",
+                  "id": 16165,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "543:3:66",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_365_by_1",
+                    "typeString": "int_const 365"
+                  },
+                  "value": "365"
+                },
+                "src": "535:11:66",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_31536000_by_1",
+                  "typeString": "int_const 31536000"
+                }
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "32",
+                "id": 16167,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "549:1:66",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2_by_1",
+                  "typeString": "int_const 2"
+                },
+                "value": "2"
+              },
+              "src": "535:15:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_63072000_by_1",
+                "typeString": "int_const 63072000"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 16172,
+            "name": "steps",
+            "nodeType": "VariableDeclaration",
+            "scope": 16217,
+            "src": "556:34:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 16170,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "556:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3130",
+              "id": 16171,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "588:2:66",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10_by_1",
+                "typeString": "int_const 10"
+              },
+              "value": "10"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 16177,
+            "name": "base",
+            "nodeType": "VariableDeclaration",
+            "scope": 16217,
+            "src": "596:43:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 16173,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "596:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_10000000000000000000000_by_1",
+                "typeString": "int_const 10000000000000000000000"
+              },
+              "id": 16176,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "3130303030",
+                "id": 16174,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "627:5:66",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_10000_by_1",
+                  "typeString": "int_const 10000"
+                },
+                "value": "10000"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "31653138",
+                "id": 16175,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "635:4:66",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                  "typeString": "int_const 1000000000000000000"
+                },
+                "value": "1e18"
+              },
+              "src": "627:12:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10000000000000000000000_by_1",
+                "typeString": "int_const 10000000000000000000000"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 16215,
+              "nodeType": "Block",
+              "src": "936:223:66",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 16189,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 16184,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22401,
+                      "src": "950:3:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 16187,
+                          "name": "schedule",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 16169,
+                          "src": "974:8:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 16185,
+                          "name": "scheduleStart",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 16179,
+                          "src": "956:13:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 16186,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "add",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 21314,
+                        "src": "956:17:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 16188,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "956:27:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "950:33:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 16212,
+                  "nodeType": "IfStatement",
+                  "src": "946:186:66",
+                  "trueBody": {
+                    "id": 16211,
+                    "nodeType": "Block",
+                    "src": "985:147:66",
+                    "statements": [
+                      {
+                        "assignments": [
+                          16191
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 16191,
+                            "name": "currentStep",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 16211,
+                            "src": "999:19:66",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 16190,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "999:7:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 16202,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 16200,
+                              "name": "schedule",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 16169,
+                              "src": "1059:8:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 16196,
+                                      "name": "scheduleStart",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 16179,
+                                      "src": "1039:13:66",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "expression": {
+                                      "argumentTypes": null,
+                                      "id": 16194,
+                                      "name": "now",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 22401,
+                                      "src": "1031:3:66",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    },
+                                    "id": 16195,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "memberName": "sub",
+                                    "nodeType": "MemberAccess",
+                                    "referencedDeclaration": 21339,
+                                    "src": "1031:7:66",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                      "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                    }
+                                  },
+                                  "id": 16197,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "functionCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1031:22:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 16192,
+                                  "name": "steps",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 16172,
+                                  "src": "1021:5:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "id": 16193,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "mul",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 21373,
+                                "src": "1021:9:66",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                  "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                }
+                              },
+                              "id": 16198,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1021:33:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 16199,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "div",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 21398,
+                            "src": "1021:37:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 16201,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1021:47:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "999:69:66"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "id": 16207,
+                                  "name": "currentStep",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 16191,
+                                  "src": "1108:11:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 16205,
+                                  "name": "steps",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 16172,
+                                  "src": "1098:5:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "id": 16206,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "sub",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 21339,
+                                "src": "1098:9:66",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                  "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                }
+                              },
+                              "id": 16208,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1098:22:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 16203,
+                              "name": "base",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 16177,
+                              "src": "1089:4:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 16204,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "mul",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 21373,
+                            "src": "1089:8:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 16209,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1089:32:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "functionReturnParameters": 16183,
+                        "id": 16210,
+                        "nodeType": "Return",
+                        "src": "1082:39:66"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 16213,
+                    "name": "base",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 16177,
+                    "src": "1148:4:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 16183,
+                  "id": 16214,
+                  "nodeType": "Return",
+                  "src": "1141:11:66"
+                }
+              ]
+            },
+            "documentation": "@notice Returns the current value of the minimum stake. The minimum\n stake is lowered periodically over the course of 2 years since the time\n of the shedule start and eventually ends at 10k KEEP.",
+            "id": 16216,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "current",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16180,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16179,
+                  "name": "scheduleStart",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16216,
+                  "src": "881:21:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16178,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "881:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "880:23:66"
+            },
+            "returnParameters": {
+              "id": 16183,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16182,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16216,
+                  "src": "927:7:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16181,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "927:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "926:9:66"
+            },
+            "scope": 16217,
+            "src": "864:295:66",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 16218,
+        "src": "363:798:66"
+      }
+    ],
+    "src": "0:1161:66"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.433Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "MinimumStakeSchedule defines the minimum stake parametrization and schedule. It starts with a minimum stake of 100k KEEP. Over the following 2 years, the minimum stake is lowered periodically using a uniform stepwise function, eventually ending at 10k."
+  }
+}

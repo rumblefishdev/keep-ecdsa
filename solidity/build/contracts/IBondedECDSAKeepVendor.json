@@ -1,0 +1,240 @@
+{
+  "contractName": "IBondedECDSAKeepVendor",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "selectFactory",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"selectFactory\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"selectFactory()\":{\"return\":\"Selected ECDSA keep factory address.\"}},\"title\":\"ECDSA Keep Vendor\"},\"userdoc\":{\"methods\":{\"selectFactory()\":{\"notice\":\"Select a recommended ECDSA keep factory from all registered ECDSA keep factories.\"}},\"notice\":\"Contract reflecting an ECDSA keep vendor.\"}},\"settings\":{\"compilationTarget\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepVendor.sol\":\"IBondedECDSAKeepVendor\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepVendor.sol\":{\"keccak256\":\"0x1e55e88b1e671312b6626919857f4d3b3ec9e5de7a2f1556a1c52dae30a7d5f1\",\"urls\":[\"bzz-raw://074cf47fd04426a33f6159d04de2d993143c14b6935547ae087aaea02d38eecb\",\"dweb:/ipfs/QmQqfxbtPaYci8qfVRM3guAiAmGZCHXTo4twKuNpM3oWf8\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/**\n▓▓▌ ▓▓ ▐▓▓ ▓▓▓▓▓▓▓▓▓▓▌▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄\n▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▌▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\n  ▓▓▓▓▓▓    ▓▓▓▓▓▓▓▀    ▐▓▓▓▓▓▓    ▐▓▓▓▓▓   ▓▓▓▓▓▓     ▓▓▓▓▓   ▐▓▓▓▓▓▌   ▐▓▓▓▓▓▓\n  ▓▓▓▓▓▓▄▄▓▓▓▓▓▓▓▀      ▐▓▓▓▓▓▓▄▄▄▄         ▓▓▓▓▓▓▄▄▄▄         ▐▓▓▓▓▓▌   ▐▓▓▓▓▓▓\n  ▓▓▓▓▓▓▓▓▓▓▓▓▓▀        ▐▓▓▓▓▓▓▓▓▓▓         ▓▓▓▓▓▓▓▓▓▓▌        ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\n  ▓▓▓▓▓▓▀▀▓▓▓▓▓▓▄       ▐▓▓▓▓▓▓▀▀▀▀         ▓▓▓▓▓▓▀▀▀▀         ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▀\n  ▓▓▓▓▓▓   ▀▓▓▓▓▓▓▄     ▐▓▓▓▓▓▓     ▓▓▓▓▓   ▓▓▓▓▓▓     ▓▓▓▓▓   ▐▓▓▓▓▓▌\n▓▓▓▓▓▓▓▓▓▓ █▓▓▓▓▓▓▓▓▓ ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓▓▓\n▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓ ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓▓▓\n\n                           Trust math, not hardware.\n*/\n\npragma solidity 0.5.17;\n\n/// @title ECDSA Keep Vendor\n/// @notice Contract reflecting an ECDSA keep vendor.\ncontract IBondedECDSAKeepVendor {\n    /// @notice Select a recommended ECDSA keep factory from all registered\n    /// ECDSA keep factories.\n    /// @return Selected ECDSA keep factory address.\n    function selectFactory() public view returns (address payable);\n}\n",
+  "sourcePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepVendor.sol",
+  "ast": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepVendor.sol",
+    "exportedSymbols": {
+      "IBondedECDSAKeepVendor": [
+        5757
+      ]
+    },
+    "id": 5758,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5751,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1837:23:20"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title ECDSA Keep Vendor\n @notice Contract reflecting an ECDSA keep vendor.",
+        "fullyImplemented": false,
+        "id": 5757,
+        "linearizedBaseContracts": [
+          5757
+        ],
+        "name": "IBondedECDSAKeepVendor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Select a recommended ECDSA keep factory from all registered\n ECDSA keep factories.\n @return Selected ECDSA keep factory address.",
+            "id": 5756,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "selectFactory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5752,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2164:2:20"
+            },
+            "returnParameters": {
+              "id": 5755,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5754,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5756,
+                  "src": "2188:15:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 5753,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2188:15:20",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2187:17:20"
+            },
+            "scope": 5757,
+            "src": "2142:63:20",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5758,
+        "src": "1945:262:20"
+      }
+    ],
+    "src": "1837:371:20"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepVendor.sol",
+    "exportedSymbols": {
+      "IBondedECDSAKeepVendor": [
+        5757
+      ]
+    },
+    "id": 5758,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5751,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1837:23:20"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title ECDSA Keep Vendor\n @notice Contract reflecting an ECDSA keep vendor.",
+        "fullyImplemented": false,
+        "id": 5757,
+        "linearizedBaseContracts": [
+          5757
+        ],
+        "name": "IBondedECDSAKeepVendor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Select a recommended ECDSA keep factory from all registered\n ECDSA keep factories.\n @return Selected ECDSA keep factory address.",
+            "id": 5756,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "selectFactory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5752,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2164:2:20"
+            },
+            "returnParameters": {
+              "id": 5755,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5754,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5756,
+                  "src": "2188:15:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 5753,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2188:15:20",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2187:17:20"
+            },
+            "scope": 5757,
+            "src": "2142:63:20",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5758,
+        "src": "1945:262:20"
+      }
+    ],
+    "src": "1837:371:20"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.313Z",
+  "devdoc": {
+    "methods": {
+      "selectFactory()": {
+        "return": "Selected ECDSA keep factory address."
+      }
+    },
+    "title": "ECDSA Keep Vendor"
+  },
+  "userdoc": {
+    "methods": {
+      "selectFactory()": {
+        "notice": "Select a recommended ECDSA keep factory from all registered ECDSA keep factories."
+      }
+    },
+    "notice": "Contract reflecting an ECDSA keep vendor."
+  }
+}

@@ -1,0 +1,1039 @@
+{
+  "contractName": "BondedECDSAKeepVendorImplV1Stub",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "factory",
+          "type": "address"
+        }
+      ],
+      "name": "FactoryUpgradeCompleted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "factory",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "FactoryUpgradeStarted",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "completeFactoryUpgrade",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factoryUpgradeTimeDelay",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "registryAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address payable",
+          "name": "factory",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "initialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "selectFactory",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_factory",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeFactory",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getVersion",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getKeepFactory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getNewKeepFactory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getFactoryRegistrationInitiatedTimestamp",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"factory\",\"type\":\"address\"}],\"name\":\"FactoryUpgradeCompleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"factory\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"FactoryUpgradeStarted\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"completeFactoryUpgrade\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"factoryUpgradeTimeDelay\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getFactoryRegistrationInitiatedTimestamp\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getKeepFactory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getNewKeepFactory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVersion\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"registryAddress\",\"type\":\"address\"},{\"internalType\":\"address payable\",\"name\":\"factory\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"selectFactory\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_factory\",\"type\":\"address\"}],\"name\":\"upgradeFactory\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This contract is for testing purposes only.\",\"methods\":{\"completeFactoryUpgrade()\":{\"details\":\"It is the second part of the two-step factory upgrade process. The function can be called after factory upgrade time delay period has passed since the new factory upgrade. It emits an event containing the new factory address.\"},\"initialize(address,address)\":{\"params\":{\"factory\":\"Keep factory contract registered initially in the vendor contract.\",\"registryAddress\":\"Keep registry contract linked to this contract.\"}},\"selectFactory()\":{\"return\":\"ECDSA keep factory address.\"},\"upgradeFactory(address)\":{\"details\":\"Registers a new ECDSA keep factory. Address cannot be zero and cannot be the same that is currently registered. It is a first part of the two-step factory upgrade process. The function emits an event containing the new factory address and current block timestamp.\",\"params\":{\"_factory\":\"ECDSA keep factory address.\"}}},\"title\":\"Bonded ECDSA Keep Vendor Implementation Stub\"},\"userdoc\":{\"methods\":{\"completeFactoryUpgrade()\":{\"notice\":\"Finalizes ECDSA keep factory upgrade.\"},\"initialize(address,address)\":{\"notice\":\"Initializes Keep Vendor contract implementation.\"},\"initialized()\":{\"notice\":\"Checks if this contract is initialized.\"},\"selectFactory()\":{\"notice\":\"Selects the latest ECDSA keep factory.\"},\"upgradeFactory(address)\":{\"notice\":\"Starts new ECDSA keep factory upgrade.\"}}}},\"settings\":{\"compilationTarget\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV1Stub.sol\":\"BondedECDSAKeepVendorImplV1Stub\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/BondedECDSAKeepVendorImplV1.sol\":{\"keccak256\":\"0x54144c73bf559174e9c7d554c34245555d0922e4bacf0a1825a3580d2b4a1d69\",\"urls\":[\"bzz-raw://e626d078856400877544e472f613a2fbfa39a6fc51c3dd1d7929749de7ed6e07\",\"dweb:/ipfs/QmQpVbnWCvddt2UZ1UrnH7Dz3iLowcYsS86ah9YRpAkarr\"]},\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepVendor.sol\":{\"keccak256\":\"0x1e55e88b1e671312b6626919857f4d3b3ec9e5de7a2f1556a1c52dae30a7d5f1\",\"urls\":[\"bzz-raw://074cf47fd04426a33f6159d04de2d993143c14b6935547ae087aaea02d38eecb\",\"dweb:/ipfs/QmQqfxbtPaYci8qfVRM3guAiAmGZCHXTo4twKuNpM3oWf8\"]},\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV1Stub.sol\":{\"keccak256\":\"0x5b5e49c487bad5a3a58afbd516f846b065014217b5406440b1a63bb277bcd2a1\",\"urls\":[\"bzz-raw://f2cd929d892013eb5440865335b2d3510974bbd8deccf972e55667858cc292bb\",\"dweb:/ipfs/QmThchJ12gLdbeGGB2EJVMiGa6AMzBwETKcWoakXf4iuB7\"]},\"@keep-network/keep-core/contracts/KeepRegistry.sol\":{\"keccak256\":\"0x723cf0ade28c4158935e6c22f1da1ee98252ad1bc1cac30fe8fa462fe36ea886\",\"urls\":[\"bzz-raw://6244a0370c42ae7bac430e646694d64b80397e02209ae9ec1e01776e6b5a49fc\",\"dweb:/ipfs/QmcygjqGFv81ZpyKTUwdMRt1VdnM9H6pGUuKAP5YLmL5U8\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzz-raw://d62d769b2219d5de39013093412623e624fa887f871826ea3bae6052ee893610\",\"dweb:/ipfs/QmV3yVktya1s617QmuzQR2CfuJgUi3dR2xEZY9ecmqZ2G1\"]}},\"version\":1}",
+  "bytecode": "0x60806040526001600060405180807f426f6e64656445434453414b65657056656e646f72496d706c56310000000000815250601b019050908152602001604051809103902060006101000a81548160ff0219169083151502179055506111448061006a6000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c806360445ffc1161006657806360445ffc1461023a57806369e367b5146102845780636d0193871461028e578063b58006e3146102d8578063ef505921146102f65761009e565b80630d8e6e2c146100a3578063158ef93e146101265780633fd1919914610148578063485cc9551461019257806353d52a5f146101f6575b600080fd5b6100ab610314565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100eb5780820151818401526020810190506100d0565b50505050905090810190601f1680156101185780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61012e610351565b604051808215151515815260200191505060405180910390f35b6101506103a3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101f4600480360360408110156101a857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610491565b005b6102386004803603602081101561020c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610739565b005b610242610d6d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61028c610d97565b005b610296610fd1565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6102e0610ffb565b6040518082815260200191505060405180910390f35b6102fe611001565b6040518082815260200191505060405180910390f35b60606040518060400160405280600281526020017f5631000000000000000000000000000000000000000000000000000000000000815250905090565b60008060405180807f426f6e64656445434453414b65657056656e646f72496d706c56310000000000815250601b019050908152602001604051809103902060009054906101000a900460ff16905090565b60008073ffffffffffffffffffffffffffffffffffffffff16600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610469576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f4b65657020666163746f7279206973206e6f742072656769737465726564000081525060200191505060405180910390fd5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610534576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f496e636f7272656374207265676973747279206164647265737300000000000081525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156105d7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260198152602001807f496e636f727265637420666163746f727920616464726573730000000000000081525060200191505060405180910390fd5b6105df610351565b15610652576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f436f6e747261637420697320616c726561647920696e697469616c697a65642e81525060200191505060405180910390fd5b6001600060405180807f426f6e64656445434453414b65657056656e646f72496d706c56310000000000815250601b019050908152602001604051809103902060006101000a81548160ff02191690831515021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550620151806002819055505050565b600073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156107e1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806110c96026913960400191505060405180910390fd5b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166363dc5fcf306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561088257600080fd5b505afa158015610896573d6000803e3d6000fd5b505050506040513d60208110156108ac57600080fd5b810190808051906020019092919050505090503373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614610943576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001806110a16028913960400191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156109e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260198152602001807f496e636f727265637420666163746f727920616464726573730000000000000081525060200191505060405180910390fd5b6109ee61100b565b15610a9f578173ffffffffffffffffffffffffffffffffffffffff16600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610a9a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806110ef6021913960400191505060405180910390fd5b610b64565b8173ffffffffffffffffffffffffffffffffffffffff16600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610b63576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f466163746f727920616c7265616479207265676973746572656400000000000081525060200191505060405180910390fd5b5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166384d57689836040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b158015610c0357600080fd5b505afa158015610c17573d6000803e3d6000fd5b505050506040513d6020811015610c2d57600080fd5b8101908080519060200190929190505050610cb0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f466163746f727920636f6e7472616374206973206e6f7420617070726f76656481525060200191505060405180910390fd5b81600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000429050806005819055507f7ba46fad67d21f155bf83249e984870391cc0ae4a7c24b904d4cf3026d7949968382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a1505050565b6000600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b610d9f61100b565b610e11576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f55706772616465206e6f7420696e69746961746564000000000000000000000081525060200191505060405180910390fd5b600254610e296005544261101790919063ffffffff16565b1015610e9d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260118152602001807f54696d6572206e6f7420656c617073656400000000000000000000000000000081525060200191505060405180910390fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060006005819055507ffdc9bc4a18331f66f4014c6040c30e2246393f7c34d95c1dfb6004d28dd659a5600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a1565b6000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60025481565b6000600554905090565b60008060055411905090565b60008282111561108f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525060200191505060405180910390fd5b60008284039050809150509291505056fe43616c6c6572206973206e6f74206f70657261746f7220636f6e74726163742075706772616465724b65657052656769737472792061646472657373206973206e6f742072656769737465726564466163746f7279207570677261646520616c726561647920696e69746961746564a265627a7a723158204321375aff925ba9d31182a4e122c414eaa4044b39465b0d99abce29fc6f2bb864736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c806360445ffc1161006657806360445ffc1461023a57806369e367b5146102845780636d0193871461028e578063b58006e3146102d8578063ef505921146102f65761009e565b80630d8e6e2c146100a3578063158ef93e146101265780633fd1919914610148578063485cc9551461019257806353d52a5f146101f6575b600080fd5b6100ab610314565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100eb5780820151818401526020810190506100d0565b50505050905090810190601f1680156101185780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61012e610351565b604051808215151515815260200191505060405180910390f35b6101506103a3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101f4600480360360408110156101a857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610491565b005b6102386004803603602081101561020c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610739565b005b610242610d6d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61028c610d97565b005b610296610fd1565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6102e0610ffb565b6040518082815260200191505060405180910390f35b6102fe611001565b6040518082815260200191505060405180910390f35b60606040518060400160405280600281526020017f5631000000000000000000000000000000000000000000000000000000000000815250905090565b60008060405180807f426f6e64656445434453414b65657056656e646f72496d706c56310000000000815250601b019050908152602001604051809103902060009054906101000a900460ff16905090565b60008073ffffffffffffffffffffffffffffffffffffffff16600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610469576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f4b65657020666163746f7279206973206e6f742072656769737465726564000081525060200191505060405180910390fd5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610534576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f496e636f7272656374207265676973747279206164647265737300000000000081525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156105d7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260198152602001807f496e636f727265637420666163746f727920616464726573730000000000000081525060200191505060405180910390fd5b6105df610351565b15610652576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f436f6e747261637420697320616c726561647920696e697469616c697a65642e81525060200191505060405180910390fd5b6001600060405180807f426f6e64656445434453414b65657056656e646f72496d706c56310000000000815250601b019050908152602001604051809103902060006101000a81548160ff02191690831515021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550620151806002819055505050565b600073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156107e1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806110c96026913960400191505060405180910390fd5b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166363dc5fcf306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561088257600080fd5b505afa158015610896573d6000803e3d6000fd5b505050506040513d60208110156108ac57600080fd5b810190808051906020019092919050505090503373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614610943576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001806110a16028913960400191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156109e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260198152602001807f496e636f727265637420666163746f727920616464726573730000000000000081525060200191505060405180910390fd5b6109ee61100b565b15610a9f578173ffffffffffffffffffffffffffffffffffffffff16600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610a9a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806110ef6021913960400191505060405180910390fd5b610b64565b8173ffffffffffffffffffffffffffffffffffffffff16600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610b63576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f466163746f727920616c7265616479207265676973746572656400000000000081525060200191505060405180910390fd5b5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166384d57689836040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b158015610c0357600080fd5b505afa158015610c17573d6000803e3d6000fd5b505050506040513d6020811015610c2d57600080fd5b8101908080519060200190929190505050610cb0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f466163746f727920636f6e7472616374206973206e6f7420617070726f76656481525060200191505060405180910390fd5b81600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000429050806005819055507f7ba46fad67d21f155bf83249e984870391cc0ae4a7c24b904d4cf3026d7949968382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a1505050565b6000600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b610d9f61100b565b610e11576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f55706772616465206e6f7420696e69746961746564000000000000000000000081525060200191505060405180910390fd5b600254610e296005544261101790919063ffffffff16565b1015610e9d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260118152602001807f54696d6572206e6f7420656c617073656400000000000000000000000000000081525060200191505060405180910390fd5b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060006005819055507ffdc9bc4a18331f66f4014c6040c30e2246393f7c34d95c1dfb6004d28dd659a5600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a1565b6000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60025481565b6000600554905090565b60008060055411905090565b60008282111561108f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525060200191505060405180910390fd5b60008284039050809150509291505056fe43616c6c6572206973206e6f74206f70657261746f7220636f6e74726163742075706772616465724b65657052656769737472792061646472657373206973206e6f742072656769737465726564466163746f7279207570677261646520616c726561647920696e69746961746564a265627a7a723158204321375aff925ba9d31182a4e122c414eaa4044b39465b0d99abce29fc6f2bb864736f6c63430005110032",
+  "sourceMap": "193:538:30:-;;;3538:4:5;3492:12;:43;;;;;;;;;;;;;;;;;;;;;;;;;:50;;;;;;;;;;;;;;;;;;193:538:30;;;;;;",
+  "deployedSourceMap": "193:538:30:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;193:538:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;271:86;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;271:86:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4357:117:5;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;6692:176;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;3797:498;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3797:498:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;4888:850;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4888:850:5;;;;;;;;;;;;;;;;;;;:::i;:::-;;460:97:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;6061:526:5;;;:::i;:::-;;363:91:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;2777:38:5;;;:::i;:::-;;;;;;;;;;;;;;;;;;;563:166:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;271:86;314:13;339:11;;;;;;;;;;;;;;;;;;;271:86;:::o;4357:117:5:-;4401:4;4424:12;:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4417:50;;4357:117;:::o;6692:176::-;6738:15;6796:1;6773:25;;:11;;;;;;;;;;;:25;;;;6765:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6850:11;;;;;;;;;;;6843:18;;6692:176;:::o;3797:498::-;3931:1;3904:29;;:15;:29;;;;3896:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4001:1;3982:21;;:7;:21;;;;3974:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4053:13;:11;:13::i;:::-;4052:14;4044:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4159:4;4113:12;:43;;;;;;;;;;;;;;;;;;;;;;;;;:50;;;;;;;;;;;;;;;;;;4198:15;4174:8;;:40;;;;;;;;;;;;;;;;;;4238:7;4224:11;;:21;;;;;;;;;;;;;;;;;;4282:6;4256:23;:32;;;;3797:498;;:::o;4888:850::-;7232:1;7203:31;;7211:8;;;;;;;;;;;7203:31;;;;7182:116;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;7309:32;7344:8;;;;;;;;;;;:36;;;7402:4;7344:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;7344:73:5;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;7344:73:5;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;7344:73:5;;;;;;;;;;;;;;;;7309:108;;7476:10;7448:38;;:24;:38;;;7427:125;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5032:1;5012:22;;:8;:22;;;;5004:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5079:20;:18;:20::i;:::-;5075:262;;;5158:8;5140:26;;:14;;;;;;;;;;;:26;;;;5115:118;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5075:262;;;5287:8;5272:23;;:11;;;;;;;;;;;:23;;;;5264:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5075:262;5368:8;;;;;;;;;;;:35;;;5404:8;5368:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;5368:45:5;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;5368:45:5;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;5368:45:5;;;;;;;;;;;;;;;;5347:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5499:8;5482:14;;:25;;;;;;;;;;;;;;;;;;5583:17;5603:15;5583:35;;5664:9;5629:32;:44;;;;5689:42;5711:8;5721:9;5689:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;7562:1;4888:850;;:::o;460:97:30:-;510:7;536:14;;;;;;;;;;;529:21;;460:97;:::o;6061:526:5:-;6120:20;:18;:20::i;:::-;6112:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6340:23;;6267:53;6287:32;;6267:15;:19;;:53;;;;:::i;:::-;:96;;6177:229;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6431:14;;;;;;;;;;;6417:11;;:28;;;;;;;;;;;;;;;;;;6480:1;6455:14;;:27;;;;;;;;;;;;;;;;;;6527:1;6492:32;:36;;;;6544;6568:11;;;;;;;;;;;6544:36;;;;;;;;;;;;;;;;;;;;;;6061:526::o;363:91:30:-;410:7;436:11;;;;;;;;;;;429:18;;363:91;:::o;2777:38:5:-;;;;:::o;563:166:30:-;660:7;690:32;;683:39;;563:166;:::o;6874:119:5:-;6927:4;6985:1;6950:32;;:36;6943:43;;6874:119;:::o;1274:179:94:-;1332:7;1364:1;1359;:6;;1351:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1410:9;1426:1;1422;:5;1410:17;;1445:1;1438:8;;;1274:179;;;;:::o",
+  "source": "pragma solidity 0.5.17;\n\nimport \"../../contracts/BondedECDSAKeepVendorImplV1.sol\";\n\n/// @title Bonded ECDSA Keep Vendor Implementation Stub\n/// @dev This contract is for testing purposes only.\ncontract BondedECDSAKeepVendorImplV1Stub is BondedECDSAKeepVendorImplV1 {\n    function getVersion() public view returns (string memory) {\n        return \"V1\";\n    }\n\n    function getKeepFactory() public view returns (address) {\n        return keepFactory;\n    }\n\n    function getNewKeepFactory() public view returns (address) {\n        return newKeepFactory;\n    }\n\n    function getFactoryRegistrationInitiatedTimestamp()\n        public\n        view\n        returns (uint256)\n    {\n        return factoryUpgradeInitiatedTimestamp;\n    }\n}\n",
+  "sourcePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV1Stub.sol",
+  "ast": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV1Stub.sol",
+    "exportedSymbols": {
+      "BondedECDSAKeepVendorImplV1Stub": [
+        7139
+      ]
+    },
+    "id": 7140,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7103,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:30"
+      },
+      {
+        "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/BondedECDSAKeepVendorImplV1.sol",
+        "file": "../../contracts/BondedECDSAKeepVendorImplV1.sol",
+        "id": 7104,
+        "nodeType": "ImportDirective",
+        "scope": 7140,
+        "sourceUnit": 3148,
+        "src": "25:57:30",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7105,
+              "name": "BondedECDSAKeepVendorImplV1",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3147,
+              "src": "237:27:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BondedECDSAKeepVendorImplV1_$3147",
+                "typeString": "contract BondedECDSAKeepVendorImplV1"
+              }
+            },
+            "id": 7106,
+            "nodeType": "InheritanceSpecifier",
+            "src": "237:27:30"
+          }
+        ],
+        "contractDependencies": [
+          3147,
+          5757
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Bonded ECDSA Keep Vendor Implementation Stub\n @dev This contract is for testing purposes only.",
+        "fullyImplemented": true,
+        "id": 7139,
+        "linearizedBaseContracts": [
+          7139,
+          3147,
+          5757
+        ],
+        "name": "BondedECDSAKeepVendorImplV1Stub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 7113,
+              "nodeType": "Block",
+              "src": "329:28:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "5631",
+                    "id": 7111,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "346:4:30",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_4c23426613a5dc69e08fbd2787e6210aa679d4522e95a89d4dd88c4fd13a2283",
+                      "typeString": "literal_string \"V1\""
+                    },
+                    "value": "V1"
+                  },
+                  "functionReturnParameters": 7110,
+                  "id": 7112,
+                  "nodeType": "Return",
+                  "src": "339:11:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7114,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVersion",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "290:2:30"
+            },
+            "returnParameters": {
+              "id": 7110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7109,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7114,
+                  "src": "314:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7108,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "313:15:30"
+            },
+            "scope": 7139,
+            "src": "271:86:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7121,
+              "nodeType": "Block",
+              "src": "419:35:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7119,
+                    "name": "keepFactory",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2899,
+                    "src": "436:11:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 7118,
+                  "id": 7120,
+                  "nodeType": "Return",
+                  "src": "429:18:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7122,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getKeepFactory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7115,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "386:2:30"
+            },
+            "returnParameters": {
+              "id": 7118,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7117,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7122,
+                  "src": "410:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7116,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "410:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "409:9:30"
+            },
+            "scope": 7139,
+            "src": "363:91:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7129,
+              "nodeType": "Block",
+              "src": "519:38:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7127,
+                    "name": "newKeepFactory",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2901,
+                    "src": "536:14:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 7126,
+                  "id": 7128,
+                  "nodeType": "Return",
+                  "src": "529:21:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7130,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNewKeepFactory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7123,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "486:2:30"
+            },
+            "returnParameters": {
+              "id": 7126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7125,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7130,
+                  "src": "510:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7124,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "510:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "509:9:30"
+            },
+            "scope": 7139,
+            "src": "460:97:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7137,
+              "nodeType": "Block",
+              "src": "673:56:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7135,
+                    "name": "factoryUpgradeInitiatedTimestamp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2903,
+                    "src": "690:32:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7134,
+                  "id": 7136,
+                  "nodeType": "Return",
+                  "src": "683:39:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7138,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFactoryRegistrationInitiatedTimestamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7131,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "612:2:30"
+            },
+            "returnParameters": {
+              "id": 7134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7133,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7138,
+                  "src": "660:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7132,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "660:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "659:9:30"
+            },
+            "scope": 7139,
+            "src": "563:166:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7140,
+        "src": "193:538:30"
+      }
+    ],
+    "src": "0:732:30"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV1Stub.sol",
+    "exportedSymbols": {
+      "BondedECDSAKeepVendorImplV1Stub": [
+        7139
+      ]
+    },
+    "id": 7140,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7103,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:30"
+      },
+      {
+        "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/BondedECDSAKeepVendorImplV1.sol",
+        "file": "../../contracts/BondedECDSAKeepVendorImplV1.sol",
+        "id": 7104,
+        "nodeType": "ImportDirective",
+        "scope": 7140,
+        "sourceUnit": 3148,
+        "src": "25:57:30",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7105,
+              "name": "BondedECDSAKeepVendorImplV1",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3147,
+              "src": "237:27:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BondedECDSAKeepVendorImplV1_$3147",
+                "typeString": "contract BondedECDSAKeepVendorImplV1"
+              }
+            },
+            "id": 7106,
+            "nodeType": "InheritanceSpecifier",
+            "src": "237:27:30"
+          }
+        ],
+        "contractDependencies": [
+          3147,
+          5757
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Bonded ECDSA Keep Vendor Implementation Stub\n @dev This contract is for testing purposes only.",
+        "fullyImplemented": true,
+        "id": 7139,
+        "linearizedBaseContracts": [
+          7139,
+          3147,
+          5757
+        ],
+        "name": "BondedECDSAKeepVendorImplV1Stub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 7113,
+              "nodeType": "Block",
+              "src": "329:28:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "5631",
+                    "id": 7111,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "346:4:30",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_4c23426613a5dc69e08fbd2787e6210aa679d4522e95a89d4dd88c4fd13a2283",
+                      "typeString": "literal_string \"V1\""
+                    },
+                    "value": "V1"
+                  },
+                  "functionReturnParameters": 7110,
+                  "id": 7112,
+                  "nodeType": "Return",
+                  "src": "339:11:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7114,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVersion",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "290:2:30"
+            },
+            "returnParameters": {
+              "id": 7110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7109,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7114,
+                  "src": "314:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7108,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "313:15:30"
+            },
+            "scope": 7139,
+            "src": "271:86:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7121,
+              "nodeType": "Block",
+              "src": "419:35:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7119,
+                    "name": "keepFactory",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2899,
+                    "src": "436:11:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 7118,
+                  "id": 7120,
+                  "nodeType": "Return",
+                  "src": "429:18:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7122,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getKeepFactory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7115,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "386:2:30"
+            },
+            "returnParameters": {
+              "id": 7118,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7117,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7122,
+                  "src": "410:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7116,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "410:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "409:9:30"
+            },
+            "scope": 7139,
+            "src": "363:91:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7129,
+              "nodeType": "Block",
+              "src": "519:38:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7127,
+                    "name": "newKeepFactory",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2901,
+                    "src": "536:14:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 7126,
+                  "id": 7128,
+                  "nodeType": "Return",
+                  "src": "529:21:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7130,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNewKeepFactory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7123,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "486:2:30"
+            },
+            "returnParameters": {
+              "id": 7126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7125,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7130,
+                  "src": "510:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7124,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "510:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "509:9:30"
+            },
+            "scope": 7139,
+            "src": "460:97:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7137,
+              "nodeType": "Block",
+              "src": "673:56:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7135,
+                    "name": "factoryUpgradeInitiatedTimestamp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2903,
+                    "src": "690:32:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7134,
+                  "id": 7136,
+                  "nodeType": "Return",
+                  "src": "683:39:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7138,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFactoryRegistrationInitiatedTimestamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7131,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "612:2:30"
+            },
+            "returnParameters": {
+              "id": 7134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7133,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7138,
+                  "src": "660:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7132,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "660:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "659:9:30"
+            },
+            "scope": 7139,
+            "src": "563:166:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7140,
+        "src": "193:538:30"
+      }
+    ],
+    "src": "0:732:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.328Z",
+  "devdoc": {
+    "details": "This contract is for testing purposes only.",
+    "methods": {
+      "completeFactoryUpgrade()": {
+        "details": "It is the second part of the two-step factory upgrade process. The function can be called after factory upgrade time delay period has passed since the new factory upgrade. It emits an event containing the new factory address."
+      },
+      "initialize(address,address)": {
+        "params": {
+          "factory": "Keep factory contract registered initially in the vendor contract.",
+          "registryAddress": "Keep registry contract linked to this contract."
+        }
+      },
+      "selectFactory()": {
+        "return": "ECDSA keep factory address."
+      },
+      "upgradeFactory(address)": {
+        "details": "Registers a new ECDSA keep factory. Address cannot be zero and cannot be the same that is currently registered. It is a first part of the two-step factory upgrade process. The function emits an event containing the new factory address and current block timestamp.",
+        "params": {
+          "_factory": "ECDSA keep factory address."
+        }
+      }
+    },
+    "title": "Bonded ECDSA Keep Vendor Implementation Stub"
+  },
+  "userdoc": {
+    "methods": {
+      "completeFactoryUpgrade()": {
+        "notice": "Finalizes ECDSA keep factory upgrade."
+      },
+      "initialize(address,address)": {
+        "notice": "Initializes Keep Vendor contract implementation."
+      },
+      "initialized()": {
+        "notice": "Checks if this contract is initialized."
+      },
+      "selectFactory()": {
+        "notice": "Selects the latest ECDSA keep factory."
+      },
+      "upgradeFactory(address)": {
+        "notice": "Starts new ECDSA keep factory upgrade."
+      }
+    }
+  }
+}
