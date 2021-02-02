@@ -1,0 +1,3888 @@
+{
+  "contractName": "RolesLookup",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{},\"title\":\"Roles Lookup\"},\"userdoc\":{\"methods\":{},\"notice\":\"Library facilitating lookup of roles in stake delegation setup.\"}},\"settings\":{\"compilationTarget\":{\"@keep-network/keep-core/contracts/libraries/RolesLookup.sol\":\"RolesLookup\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@keep-network/keep-core/contracts/Authorizations.sol\":{\"keccak256\":\"0xd49b3840507c924cc37ac2da48bf1549013a79d84daf2cb106b4d4b9c6096e7a\",\"urls\":[\"bzz-raw://2b740d974564d027f9df04253f71ce2314839a682beac926b778e0f7ea59fbb5\",\"dweb:/ipfs/QmamRuiYLpt2fCUPrQypkvrf7BrCsdV12QgaSHQYPsJHT2\"]},\"@keep-network/keep-core/contracts/GrantStakingPolicy.sol\":{\"keccak256\":\"0x9d7604d5ccd4bf23b5aca39074183aabad98ce47bc74edd2023e7e0b1be6d1b5\",\"urls\":[\"bzz-raw://92fb21051ecfa9b9885b775c2cff1778cfbab3afe3b436e234a4f08181277983\",\"dweb:/ipfs/QmPxQUWpL6iFcydJxyFsZjmWRnxziPVA2rqrgwhn6F7Tfe\"]},\"@keep-network/keep-core/contracts/KeepRegistry.sol\":{\"keccak256\":\"0x723cf0ade28c4158935e6c22f1da1ee98252ad1bc1cac30fe8fa462fe36ea886\",\"urls\":[\"bzz-raw://6244a0370c42ae7bac430e646694d64b80397e02209ae9ec1e01776e6b5a49fc\",\"dweb:/ipfs/QmcygjqGFv81ZpyKTUwdMRt1VdnM9H6pGUuKAP5YLmL5U8\"]},\"@keep-network/keep-core/contracts/KeepToken.sol\":{\"keccak256\":\"0x50defd2a00e356ed8eaf9aba405719f567c2da0164db5cdeadd68d155f6ded3b\",\"urls\":[\"bzz-raw://dbc8fb24f311c2dc95a26b1a1dfc9c7d93c634d32ef623fc23f799da5988fafb\",\"dweb:/ipfs/QmShZ3FtP2WUC9r1rbka8BWSf6oFkBbuxgxiDqhpwxo6zZ\"]},\"@keep-network/keep-core/contracts/ManagedGrant.sol\":{\"keccak256\":\"0x47f1cccc9f9c095b34ca514ae25cc467bbced15251b06f39896e0237e7fdec7c\",\"urls\":[\"bzz-raw://cad43bec15804ff17bd40fdee3598676f716b60204da9be163f15f45135ad250\",\"dweb:/ipfs/QmYHYEfR2UPZJZpsDhN2o1iD7drVSz8oqbYQFVT4G2oKqr\"]},\"@keep-network/keep-core/contracts/StakeDelegatable.sol\":{\"keccak256\":\"0xa1d81d17bc9f6bcc5878fb9b8acfdf7797c1561bf35111bac6bdbc3bba2c62aa\",\"urls\":[\"bzz-raw://deca3e5444cd9a5546818854009f9ac8c8e58479609de1a128ca73863f10ae7a\",\"dweb:/ipfs/QmcWYJkcHxsmCEhxRz6W5gSBgH597VYZgEaog9pzoLyZtt\"]},\"@keep-network/keep-core/contracts/TokenGrant.sol\":{\"keccak256\":\"0xad97f1a667f3be66dc6904fb7925e940ca57e4c88d38ae960672d95d7911bf6f\",\"urls\":[\"bzz-raw://f3f6b377ddcc2ad2b47811f115c20bdf6a6a208066afaebe027ac4eb165ca231\",\"dweb:/ipfs/QmXNSkqCDoBS1KGQbQ3PqXr1iMPgkPNWLcEKiBrV8u5LeW\"]},\"@keep-network/keep-core/contracts/TokenGrantStake.sol\":{\"keccak256\":\"0x014bbb7f336388024480415391cad745ec52cd255cd2740c890948246ab4d524\",\"urls\":[\"bzz-raw://745d488e7271fe9c71879c09fd09eb96b2193346adfddbb59638b80610707be3\",\"dweb:/ipfs/QmR3DyUzhTjE971QovXxMchRkUD3eHUj5S73Eahrf2Wyw8\"]},\"@keep-network/keep-core/contracts/TokenSender.sol\":{\"keccak256\":\"0xe50a3a7d2f30e8801d8b608c462f65c868e17ff8b2f0db3448876adf0f288117\",\"urls\":[\"bzz-raw://f040546b183d26a9e26adfc01a6425eb6bce1cec1ab5b142aa360c8096ede385\",\"dweb:/ipfs/QmdRa8huRUmsTTvwnWPBF7V2gTQAGsGn3VFUeBfbisBszw\"]},\"@keep-network/keep-core/contracts/TokenStaking.sol\":{\"keccak256\":\"0x957a8b500117fd8c74466e9c2cfd13e295e5cd66107bda1e5fdea1871248d0e8\",\"urls\":[\"bzz-raw://c6cca24bbf724e77009cb683d1715b8ffb1faa7ad2089156d6fc8d600a397fd4\",\"dweb:/ipfs/QmeVnKTgFhfVSfEgCcoFD86MfGUB9FTD8cbi5SxX2Vmy67\"]},\"@keep-network/keep-core/contracts/TokenStakingEscrow.sol\":{\"keccak256\":\"0x152a565d564bee09ea3f0f363c912fe3361966bf8d60f14ebcb8bf593d3b140e\",\"urls\":[\"bzz-raw://78ffe4daadcfeacc49c45c4e9879f62c2df3bdd00587b033492ee901537976f1\",\"dweb:/ipfs/QmPwmSu4XF7KpHnC6bqBTkrkjA6CUnC8h5PML9DqkAzLW8\"]},\"@keep-network/keep-core/contracts/libraries/RolesLookup.sol\":{\"keccak256\":\"0x4622ccfb359f6478d3e87fb99f755dcebde1b5040662f3572ab8c8d50d2f8bc0\",\"urls\":[\"bzz-raw://cee3570c755b0a30412af08ce4663f85078b10a0eccf6808bec125897c7ead8e\",\"dweb:/ipfs/Qmc9EAjLfBYXfhtd24uNFzu1XKrPaqS5ismF4ZGsPyiBuU\"]},\"@keep-network/keep-core/contracts/libraries/grant/UnlockingSchedule.sol\":{\"keccak256\":\"0x26f8fe158e3f661bc54fc42a50a1686ef92dd18316a03592bafa2db6a2af9c3f\",\"urls\":[\"bzz-raw://718b4a48d7a50c151328cd15e91e9b9b4cba0db7f7b6b06533709614f9811a55\",\"dweb:/ipfs/QmYyTN6cLZiWumwE6jt2yDHNtc6DMCXaEntgKAN3zqp8yX\"]},\"@keep-network/keep-core/contracts/libraries/staking/GrantStaking.sol\":{\"keccak256\":\"0x96253ba2eb78b83a04dd48f0a7ff6083ca72d6e4a27dec0888959c1b3b0be9aa\",\"urls\":[\"bzz-raw://a2ad3ddeba9de2f24b1c1c0339baf52a0b0446248ddfc0554d8fb71ce2057c0f\",\"dweb:/ipfs/QmdYxpcxm8TG7i3qYswudhxvff8hnARSR1GsVcY2fjUpzh\"]},\"@keep-network/keep-core/contracts/libraries/staking/LockUtils.sol\":{\"keccak256\":\"0x0fbd9a4d82cf8803f00cb59cca9580d379c8d98a759b8a6d74f75f01c19fc635\",\"urls\":[\"bzz-raw://f2df931f0a11d4f63aa1f6193419606711a24ce7381dd15db52419c783dc7952\",\"dweb:/ipfs/QmRMGWSbfYPaxppBb7w2cQHpAwDc4T9MBmpZqU396i8hKK\"]},\"@keep-network/keep-core/contracts/libraries/staking/Locks.sol\":{\"keccak256\":\"0xf45306074f9e893646c21e53954891e29c8011887545d8bbbcab7ef74558b18a\",\"urls\":[\"bzz-raw://971d3c54afde9050e455e79ec42b28d86a101bec8afab30e22b1fa4bfc110cc4\",\"dweb:/ipfs/QmfGTvrbc8dJXaxsxAmZM6oU8AvP5V6C2PQ5JF3gCJC81m\"]},\"@keep-network/keep-core/contracts/libraries/staking/MinimumStakeSchedule.sol\":{\"keccak256\":\"0x31a399a918eba21f0002019a70b1b68c9610a5a4977fcd874b86d4965eb974c3\",\"urls\":[\"bzz-raw://acbe55a89d5e6f7b6d4add0764e7b47acbdc31afc0d5b1f211b45546d3a5cd6c\",\"dweb:/ipfs/QmcXSUaLV7d117ZvyMnRB3MVXVEGy62ccB5u6d8h1Sm792\"]},\"@keep-network/keep-core/contracts/libraries/staking/TopUps.sol\":{\"keccak256\":\"0xe3a3c8d5e542f4f8ac8fdab92de57081257e1c07288e0e592cfc27551085e07f\",\"urls\":[\"bzz-raw://4cffa006da7f76868bcca1d107be436f3cd83339ff76df79c3e92a029e7ad66a\",\"dweb:/ipfs/QmZ5AArQ3gKBeXqGwGnSH45BQZQpGvjuQ4LnNaarrLrdy5\"]},\"@keep-network/keep-core/contracts/utils/AddressArrayUtils.sol\":{\"keccak256\":\"0xfb546b43ffd00d565d8440b6d221f5f046222e95469e33044665a56e79fcde48\",\"urls\":[\"bzz-raw://1f947ef8956e26d564cffd73a4f0dcdb02db1d7a46774d4e8876328116f6b663\",\"dweb:/ipfs/QmYUpg3JhhkogsY5nnjyMg6TEwoqRzTkJAWdhQGSbYqMH3\"]},\"@keep-network/keep-core/contracts/utils/BytesLib.sol\":{\"keccak256\":\"0xf5c726e1c77dea37b9ea1edd9bc7b4eebfafe33ce766a2607eb37d7144e4d68c\",\"urls\":[\"bzz-raw://32f61bad1923d749aff36ad9f62929e603ed27832348ba58d44d01561339d761\",\"dweb:/ipfs/QmWvfwapwUr9SnnEWXdmpo4r2TtVPFJFSUBXKJQpLZkYp1\"]},\"@keep-network/keep-core/contracts/utils/OperatorParams.sol\":{\"keccak256\":\"0xc13cbf7a6ad4740a8ad6373229b20b66eb4cc3d7aa9870161765ab8197513ab7\",\"urls\":[\"bzz-raw://e8343bc058fcee610863777792a25608549d80e126a05d076481dedb48587565\",\"dweb:/ipfs/QmR8ztc4StcK4yw7QmXj2b9TtS3Qs1BERrqDLtPZmUiffS\"]},\"@keep-network/keep-core/contracts/utils/PercentUtils.sol\":{\"keccak256\":\"0x696b15997a739e6c47c5bc29e1f9023998bb188405221a6b337377bca4ab3f68\",\"urls\":[\"bzz-raw://e93e2287fe6b6e1c5cc45ebc92b9d682e19a5b1302e00cb037391da753282bbf\",\"dweb:/ipfs/QmRXmEopRWNaL7mvY5nTyNNob3EPHF67R6Nxhm3F4VsDoo\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzz-raw://d62d769b2219d5de39013093412623e624fa887f871826ea3bae6052ee893610\",\"dweb:/ipfs/QmV3yVktya1s617QmuzQR2CfuJgUi3dR2xEZY9ecmqZ2G1\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzz-raw://cd3429aa9a4878dcf6c73faa32c3722f4013d4be012ece543b246faa6b50f55c\",\"dweb:/ipfs/QmS55hgTvNEAKinus19m65CB4wcymN8EiUPFpRx5tYJ1i2\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x852793a3c2f86d336a683b30d688ec3dcfc57451af5a2bf5975cda3b7191a901\",\"urls\":[\"bzz-raw://4f5b57664069671648fb81f55b0082faecdf1b2f159eec6b1fa6cef9b7d73bc5\",\"dweb:/ipfs/QmcyytaLs7zFdb4Uu7C5PmQRhQdB3wA3fUdkV6mkYfdDFH\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol\":{\"keccak256\":\"0xa5ebf3344a36eb60e723e0764d85251c496e15e4b2d737b56415502b559a1765\",\"urls\":[\"bzz-raw://c543fd1fc299b7d32c658c86118ff2d0e7897a7c8b9d5f576fe6c0271c28961b\",\"dweb:/ipfs/QmNMrjLnsC4JP54aXLHhpra5NPTAs8rrd2bgXfYYYdJMhS\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol\":{\"keccak256\":\"0xc61b3603089b09a730d8ca72e9133a496cc4405da40e9b87c12f073245d774bf\",\"urls\":[\"bzz-raw://de8bb0003d53de236913f0e0102e7a9d015e02098f2495edd000f207fe2be2f4\",\"dweb:/ipfs/QmbtwNwAJEehWWL7yGGyyMoenQvcqtz91pqLgQPpLRoLYC\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x90e8c2521653bbb1768b05889c5760031e688d9cd361f167489b89215e201b95\",\"urls\":[\"bzz-raw://d0abb99bb8bfc2bc0a89902b8ed1dc0442ad08cc78cee64c291b3df6a27bcccc\",\"dweb:/ipfs/QmP5NaEwZthQeM2ESz4WTT3osrP7jhbvu7ocbttBi2JAw6\"]},\"openzeppelin-solidity/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0xf6f89424e17870561dc23c5933c55c5726b66a68d51ad2a2c00c569a5f02f507\",\"urls\":[\"bzz-raw://005657a7ffbf6d12726ac0167b55be965dc473d43f061b605f883a54cc00ab4f\",\"dweb:/ipfs/QmaBzyvDQyNnn6DXQYewEtN9Go85orikSnW9PwNWqUGPEX\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0xf3358e5819ca73357abd6c90bdfffd0474af54364897f6b3e3234c4b71fbe9a1\",\"urls\":[\"bzz-raw://75ae8d04454d1511a2ed986cc8585736f05c5c25280683b3d24712a9f414a4bf\",\"dweb:/ipfs/Qmb3kNCoBUZdah1AgBBD4zMk898j5Qw8ahT1w5cCMYp5Y3\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a7231582072c05d894113fb880eff98c157534fe92c9f014d49f567623fe47a3c22fe131464736f6c63430005110032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a7231582072c05d894113fb880eff98c157534fe92c9f014d49f567623fe47a3c22fe131464736f6c63430005110032",
+  "sourceMap": "259:3873:61:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "259:3873:61:-;;;;;;;;",
+  "source": "pragma solidity 0.5.17;\n\nimport \"../utils/AddressArrayUtils.sol\";\nimport \"../StakeDelegatable.sol\";\nimport \"../TokenGrant.sol\";\nimport \"../ManagedGrant.sol\";\n\n/// @title Roles Lookup\n/// @notice Library facilitating lookup of roles in stake delegation setup.\nlibrary RolesLookup {\n    using AddressArrayUtils for address[];\n\n    /// @notice Returns true if the tokenOwner delegated tokens to operator\n    /// using the provided stakeDelegatable contract. Othwerwise, returns false.\n    /// This function works only for the case when tokenOwner own those tokens\n    /// and those are not tokens from a grant.\n    function isTokenOwnerForOperator(\n        address tokenOwner,\n        address operator,\n        StakeDelegatable stakeDelegatable\n    ) internal view returns (bool) {\n        return stakeDelegatable.ownerOf(operator) == tokenOwner;\n    }\n\n    /// @notice Returns true if the grantee delegated tokens to operator\n    /// with the provided tokenGrant contract. Otherwise, returns false.\n    /// This function works only for the case when tokens were generated from\n    /// a non-managed grant, that is, the grantee is a non-contract address to\n    /// which the delegated tokens were granted.\n    /// @dev This function does not validate the staking reltionship on\n    /// a particular staking contract. It only checks whether the grantee\n    /// staked at least one time with the given operator. If you are interested\n    /// in a particular token staking contract, you need to perform additional\n    /// check.\n    function isGranteeForOperator(\n        address grantee,\n        address operator,\n        TokenGrant tokenGrant\n    ) internal view returns (bool) {\n        address[] memory operators = tokenGrant.getGranteeOperators(grantee);\n        return operators.contains(operator);\n    }\n\n    /// @notice Returns true if the grantee from the given managed grant contract\n    /// delegated tokens to operator with the provided tokenGrant contract.\n    /// Otherwise, returns false. In case the grantee declared by the managed\n    /// grant contract does not match the provided grantee, function reverts.\n    /// This function works only for cases when grantee, from TokenGrant's\n    /// perspective, is a smart contract exposing grantee() function returning\n    /// the final grantee. One possibility is the ManagedGrant contract.\n    /// @dev This function does not validate the staking reltionship on\n    /// a particular staking contract. It only checks whether the grantee\n    /// staked at least one time with the given operator. If you are interested\n    /// in a particular token staking contract, you need to perform additional\n    /// check.\n    function isManagedGranteeForOperator(\n        address grantee,\n        address operator,\n        address managedGrantContract,\n        TokenGrant tokenGrant\n    ) internal view returns (bool) {\n        require(\n            ManagedGrant(managedGrantContract).grantee() == grantee,\n            \"Not a grantee of the provided contract\"\n        );\n\n        address[] memory operators = tokenGrant.getGranteeOperators(\n            managedGrantContract\n        );\n        return operators.contains(operator);\n    }\n\n    /// @notice Returns true if grant with the given ID has been created with\n    /// managed grant pointing currently to the grantee passed as a parameter.\n    /// @dev The function does not revert if grant has not been created with\n    /// a managed grantee. This function is not a view because it uses low-level\n    /// call to check if the grant has been created with a managed grant.\n    /// It does not however modify any state.\n    function isManagedGranteeForGrant(\n        address grantee,\n        uint256 grantId,\n        TokenGrant tokenGrant\n    ) internal returns (bool) {\n        (,,,,, address managedGrant) = tokenGrant.getGrant(grantId);\n        (, bytes memory result) = managedGrant.call(\n            abi.encodeWithSignature(\"grantee()\")\n        );\n        if (result.length == 0) {\n            return false;\n        }\n        address managedGrantee = abi.decode(result, (address));\n        return grantee == managedGrantee;\n    }\n}",
+  "sourcePath": "@keep-network/keep-core/contracts/libraries/RolesLookup.sol",
+  "ast": {
+    "absolutePath": "@keep-network/keep-core/contracts/libraries/RolesLookup.sol",
+    "exportedSymbols": {
+      "RolesLookup": [
+        15240
+      ]
+    },
+    "id": 15241,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 15097,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:61"
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/utils/AddressArrayUtils.sol",
+        "file": "../utils/AddressArrayUtils.sol",
+        "id": 15098,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 16604,
+        "src": "25:40:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/StakeDelegatable.sol",
+        "file": "../StakeDelegatable.sol",
+        "id": 15099,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 11132,
+        "src": "66:33:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/TokenGrant.sol",
+        "file": "../TokenGrant.sol",
+        "id": 15100,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 12399,
+        "src": "100:27:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/ManagedGrant.sol",
+        "file": "../ManagedGrant.sol",
+        "id": 15101,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 9246,
+        "src": "128:29:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@title Roles Lookup\n @notice Library facilitating lookup of roles in stake delegation setup.",
+        "fullyImplemented": true,
+        "id": 15240,
+        "linearizedBaseContracts": [
+          15240
+        ],
+        "name": "RolesLookup",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 15105,
+            "libraryName": {
+              "contractScope": null,
+              "id": 15102,
+              "name": "AddressArrayUtils",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 16603,
+              "src": "291:17:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AddressArrayUtils_$16603",
+                "typeString": "library AddressArrayUtils"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "285:38:61",
+            "typeName": {
+              "baseType": {
+                "id": 15103,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "313:7:61",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 15104,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "313:9:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            }
+          },
+          {
+            "body": {
+              "id": 15123,
+              "nodeType": "Block",
+              "src": "777:72:61",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 15121,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 15118,
+                          "name": "operator",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15109,
+                          "src": "819:8:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 15116,
+                          "name": "stakeDelegatable",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15111,
+                          "src": "794:16:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_StakeDelegatable_$11131",
+                            "typeString": "contract StakeDelegatable"
+                          }
+                        },
+                        "id": 15117,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "ownerOf",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 11104,
+                        "src": "794:24:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_address_$",
+                          "typeString": "function (address) view external returns (address)"
+                        }
+                      },
+                      "id": 15119,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "794:34:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 15120,
+                      "name": "tokenOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15107,
+                      "src": "832:10:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "794:48:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15115,
+                  "id": 15122,
+                  "nodeType": "Return",
+                  "src": "787:55:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if the tokenOwner delegated tokens to operator\n using the provided stakeDelegatable contract. Othwerwise, returns false.\n This function works only for the case when tokenOwner own those tokens\n and those are not tokens from a grant.",
+            "id": 15124,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isTokenOwnerForOperator",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15112,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15107,
+                  "name": "tokenOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "654:18:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15106,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "654:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15109,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "682:16:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15108,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "682:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15111,
+                  "name": "stakeDelegatable",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "708:33:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_StakeDelegatable_$11131",
+                    "typeString": "contract StakeDelegatable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15110,
+                    "name": "StakeDelegatable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11131,
+                    "src": "708:16:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_StakeDelegatable_$11131",
+                      "typeString": "contract StakeDelegatable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:103:61"
+            },
+            "returnParameters": {
+              "id": 15115,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15114,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "771:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15113,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "771:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "770:6:61"
+            },
+            "scope": 15240,
+            "src": "612:237:61",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 15149,
+              "nodeType": "Block",
+              "src": "1674:130:61",
+              "statements": [
+                {
+                  "assignments": [
+                    15138
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15138,
+                      "name": "operators",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15149,
+                      "src": "1684:26:61",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                        "typeString": "address[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 15136,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1684:7:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 15137,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "1684:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                          "typeString": "address[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15143,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15141,
+                        "name": "grantee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15126,
+                        "src": "1744:7:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15139,
+                        "name": "tokenGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15130,
+                        "src": "1713:10:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                          "typeString": "contract TokenGrant"
+                        }
+                      },
+                      "id": 15140,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getGranteeOperators",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11458,
+                      "src": "1713:30:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address) view external returns (address[] memory)"
+                      }
+                    },
+                    "id": 15142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1713:39:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                      "typeString": "address[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1684:68:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15146,
+                        "name": "operator",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15128,
+                        "src": "1788:8:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15144,
+                        "name": "operators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15138,
+                        "src": "1769:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      "id": 15145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contains",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16535,
+                      "src": "1769:18:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_array$_t_address_$dyn_memory_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address[] memory,address) pure returns (bool)"
+                      }
+                    },
+                    "id": 15147,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1769:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15134,
+                  "id": 15148,
+                  "nodeType": "Return",
+                  "src": "1762:35:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if the grantee delegated tokens to operator\n with the provided tokenGrant contract. Otherwise, returns false.\n This function works only for the case when tokens were generated from\n a non-managed grant, that is, the grantee is a non-contract address to\n which the delegated tokens were granted.\n @dev This function does not validate the staking reltionship on\n a particular staking contract. It only checks whether the grantee\n staked at least one time with the given operator. If you are interested\n in a particular token staking contract, you need to perform additional\n check.",
+            "id": 15150,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isGranteeForOperator",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15131,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15126,
+                  "name": "grantee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1566:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15125,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1566:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15128,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1591:16:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15127,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1591:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15130,
+                  "name": "tokenGrant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1617:21:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                    "typeString": "contract TokenGrant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15129,
+                    "name": "TokenGrant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 12398,
+                    "src": "1617:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                      "typeString": "contract TokenGrant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1556:88:61"
+            },
+            "returnParameters": {
+              "id": 15134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15133,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1668:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15132,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1668:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1667:6:61"
+            },
+            "scope": 15240,
+            "src": "1527:277:61",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 15188,
+              "nodeType": "Block",
+              "src": "2863:316:61",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 15170,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "id": 15165,
+                                  "name": "managedGrantContract",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 15156,
+                                  "src": "2907:20:61",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  }
+                                ],
+                                "id": 15164,
+                                "name": "ManagedGrant",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 9245,
+                                "src": "2894:12:61",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_ManagedGrant_$9245_$",
+                                  "typeString": "type(contract ManagedGrant)"
+                                }
+                              },
+                              "id": 15166,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "2894:34:61",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ManagedGrant_$9245",
+                                "typeString": "contract ManagedGrant"
+                              }
+                            },
+                            "id": 15167,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "grantee",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 8872,
+                            "src": "2894:42:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                              "typeString": "function () view external returns (address)"
+                            }
+                          },
+                          "id": 15168,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2894:44:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 15169,
+                          "name": "grantee",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15152,
+                          "src": "2942:7:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2894:55:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f742061206772616e746565206f66207468652070726f766964656420636f6e7472616374",
+                        "id": 15171,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2963:40:61",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f4560f1dba4587e0a10393fa1dd46e433c9bdcba3ba707b45d608688f818ab53",
+                          "typeString": "literal_string \"Not a grantee of the provided contract\""
+                        },
+                        "value": "Not a grantee of the provided contract"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f4560f1dba4587e0a10393fa1dd46e433c9bdcba3ba707b45d608688f818ab53",
+                          "typeString": "literal_string \"Not a grantee of the provided contract\""
+                        }
+                      ],
+                      "id": 15163,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        22402,
+                        22403
+                      ],
+                      "referencedDeclaration": 22403,
+                      "src": "2873:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 15172,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2873:140:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 15173,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2873:140:61"
+                },
+                {
+                  "assignments": [
+                    15177
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15177,
+                      "name": "operators",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15188,
+                      "src": "3024:26:61",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                        "typeString": "address[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 15175,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "3024:7:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 15176,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "3024:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                          "typeString": "address[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15182,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15180,
+                        "name": "managedGrantContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15156,
+                        "src": "3097:20:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15178,
+                        "name": "tokenGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15158,
+                        "src": "3053:10:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                          "typeString": "contract TokenGrant"
+                        }
+                      },
+                      "id": 15179,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getGranteeOperators",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11458,
+                      "src": "3053:30:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address) view external returns (address[] memory)"
+                      }
+                    },
+                    "id": 15181,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3053:74:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                      "typeString": "address[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3024:103:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15185,
+                        "name": "operator",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15154,
+                        "src": "3163:8:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15183,
+                        "name": "operators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15177,
+                        "src": "3144:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      "id": 15184,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contains",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16535,
+                      "src": "3144:18:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_array$_t_address_$dyn_memory_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address[] memory,address) pure returns (bool)"
+                      }
+                    },
+                    "id": 15186,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3144:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15162,
+                  "id": 15187,
+                  "nodeType": "Return",
+                  "src": "3137:35:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if the grantee from the given managed grant contract\n delegated tokens to operator with the provided tokenGrant contract.\n Otherwise, returns false. In case the grantee declared by the managed\n grant contract does not match the provided grantee, function reverts.\n This function works only for cases when grantee, from TokenGrant's\n perspective, is a smart contract exposing grantee() function returning\n the final grantee. One possibility is the ManagedGrant contract.\n @dev This function does not validate the staking reltionship on\n a particular staking contract. It only checks whether the grantee\n staked at least one time with the given operator. If you are interested\n in a particular token staking contract, you need to perform additional\n check.",
+            "id": 15189,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isManagedGranteeForOperator",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15152,
+                  "name": "grantee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2717:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15151,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2717:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15154,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2742:16:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15153,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2742:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15156,
+                  "name": "managedGrantContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2768:28:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15155,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2768:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15158,
+                  "name": "tokenGrant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2806:21:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                    "typeString": "contract TokenGrant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15157,
+                    "name": "TokenGrant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 12398,
+                    "src": "2806:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                      "typeString": "contract TokenGrant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2707:126:61"
+            },
+            "returnParameters": {
+              "id": 15162,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15161,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2857:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15160,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2857:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2856:6:61"
+            },
+            "scope": 15240,
+            "src": "2671:508:61",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 15238,
+              "nodeType": "Block",
+              "src": "3765:365:61",
+              "statements": [
+                {
+                  "assignments": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    15201
+                  ],
+                  "declarations": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                      "constant": false,
+                      "id": 15201,
+                      "name": "managedGrant",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15238,
+                      "src": "3782:20:61",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 15200,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "3782:7:61",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15206,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15204,
+                        "name": "grantId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15193,
+                        "src": "3826:7:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15202,
+                        "name": "tokenGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15195,
+                        "src": "3806:10:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                          "typeString": "contract TokenGrant"
+                        }
+                      },
+                      "id": 15203,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getGrant",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11392,
+                      "src": "3806:19:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_address_$",
+                        "typeString": "function (uint256) view external returns (uint256,uint256,uint256,uint256,uint256,address)"
+                      }
+                    },
+                    "id": 15205,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3806:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_address_$",
+                      "typeString": "tuple(uint256,uint256,uint256,uint256,uint256,address)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3775:59:61"
+                },
+                {
+                  "assignments": [
+                    null,
+                    15208
+                  ],
+                  "declarations": [
+                    null,
+                    {
+                      "constant": false,
+                      "id": 15208,
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15238,
+                      "src": "3847:19:61",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 15207,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "3847:5:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15216,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "6772616e7465652829",
+                            "id": 15213,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "3925:11:61",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_d5f520765e05e5807d58bc8e28a312f2f3223a294689898d92eba5ea678bb70c",
+                              "typeString": "literal_string \"grantee()\""
+                            },
+                            "value": "grantee()"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_d5f520765e05e5807d58bc8e28a312f2f3223a294689898d92eba5ea678bb70c",
+                              "typeString": "literal_string \"grantee()\""
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 15211,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22386,
+                            "src": "3901:3:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 15212,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "encodeWithSignature",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "3901:23:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function (string memory) pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 15214,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "3901:36:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15209,
+                        "name": "managedGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15201,
+                        "src": "3870:12:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 15210,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "call",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "3870:17:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                      }
+                    },
+                    "id": 15215,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3870:77:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(bool,bytes memory)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3844:103:61"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 15220,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15217,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15208,
+                        "src": "3961:6:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 15218,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "3961:13:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 15219,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "3978:1:61",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "3961:18:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 15224,
+                  "nodeType": "IfStatement",
+                  "src": "3957:61:61",
+                  "trueBody": {
+                    "id": 15223,
+                    "nodeType": "Block",
+                    "src": "3981:37:61",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 15221,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "4002:5:61",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 15199,
+                        "id": 15222,
+                        "nodeType": "Return",
+                        "src": "3995:12:61"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "assignments": [
+                    15226
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15226,
+                      "name": "managedGrantee",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15238,
+                      "src": "4027:22:61",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 15225,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "4027:7:61",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15233,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15229,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15208,
+                        "src": "4063:6:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "id": 15230,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "4072:7:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          }
+                        ],
+                        "id": 15231,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "4071:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15227,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22386,
+                        "src": "4052:3:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 15228,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "decode",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "4052:10:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 15232,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4052:29:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "4027:54:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 15236,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 15234,
+                      "name": "grantee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15191,
+                      "src": "4098:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 15235,
+                      "name": "managedGrantee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15226,
+                      "src": "4109:14:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "4098:25:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15199,
+                  "id": 15237,
+                  "nodeType": "Return",
+                  "src": "4091:32:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if grant with the given ID has been created with\n managed grant pointing currently to the grantee passed as a parameter.\n @dev The function does not revert if grant has not been created with\n a managed grantee. This function is not a view because it uses low-level\n call to check if the grant has been created with a managed grant.\n It does not however modify any state.",
+            "id": 15239,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isManagedGranteeForGrant",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15191,
+                  "name": "grantee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3663:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15190,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3663:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15193,
+                  "name": "grantId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3688:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15192,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3688:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15195,
+                  "name": "tokenGrant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3713:21:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                    "typeString": "contract TokenGrant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15194,
+                    "name": "TokenGrant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 12398,
+                    "src": "3713:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                      "typeString": "contract TokenGrant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3653:87:61"
+            },
+            "returnParameters": {
+              "id": 15199,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15198,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3759:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15197,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3759:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3758:6:61"
+            },
+            "scope": 15240,
+            "src": "3620:510:61",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 15241,
+        "src": "259:3873:61"
+      }
+    ],
+    "src": "0:4132:61"
+  },
+  "legacyAST": {
+    "absolutePath": "@keep-network/keep-core/contracts/libraries/RolesLookup.sol",
+    "exportedSymbols": {
+      "RolesLookup": [
+        15240
+      ]
+    },
+    "id": 15241,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 15097,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:61"
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/utils/AddressArrayUtils.sol",
+        "file": "../utils/AddressArrayUtils.sol",
+        "id": 15098,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 16604,
+        "src": "25:40:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/StakeDelegatable.sol",
+        "file": "../StakeDelegatable.sol",
+        "id": 15099,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 11132,
+        "src": "66:33:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/TokenGrant.sol",
+        "file": "../TokenGrant.sol",
+        "id": 15100,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 12399,
+        "src": "100:27:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/ManagedGrant.sol",
+        "file": "../ManagedGrant.sol",
+        "id": 15101,
+        "nodeType": "ImportDirective",
+        "scope": 15241,
+        "sourceUnit": 9246,
+        "src": "128:29:61",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@title Roles Lookup\n @notice Library facilitating lookup of roles in stake delegation setup.",
+        "fullyImplemented": true,
+        "id": 15240,
+        "linearizedBaseContracts": [
+          15240
+        ],
+        "name": "RolesLookup",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 15105,
+            "libraryName": {
+              "contractScope": null,
+              "id": 15102,
+              "name": "AddressArrayUtils",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 16603,
+              "src": "291:17:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AddressArrayUtils_$16603",
+                "typeString": "library AddressArrayUtils"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "285:38:61",
+            "typeName": {
+              "baseType": {
+                "id": 15103,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "313:7:61",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 15104,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "313:9:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            }
+          },
+          {
+            "body": {
+              "id": 15123,
+              "nodeType": "Block",
+              "src": "777:72:61",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 15121,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 15118,
+                          "name": "operator",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15109,
+                          "src": "819:8:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 15116,
+                          "name": "stakeDelegatable",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15111,
+                          "src": "794:16:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_StakeDelegatable_$11131",
+                            "typeString": "contract StakeDelegatable"
+                          }
+                        },
+                        "id": 15117,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "ownerOf",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 11104,
+                        "src": "794:24:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_address_$",
+                          "typeString": "function (address) view external returns (address)"
+                        }
+                      },
+                      "id": 15119,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "794:34:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 15120,
+                      "name": "tokenOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15107,
+                      "src": "832:10:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "794:48:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15115,
+                  "id": 15122,
+                  "nodeType": "Return",
+                  "src": "787:55:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if the tokenOwner delegated tokens to operator\n using the provided stakeDelegatable contract. Othwerwise, returns false.\n This function works only for the case when tokenOwner own those tokens\n and those are not tokens from a grant.",
+            "id": 15124,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isTokenOwnerForOperator",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15112,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15107,
+                  "name": "tokenOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "654:18:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15106,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "654:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15109,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "682:16:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15108,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "682:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15111,
+                  "name": "stakeDelegatable",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "708:33:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_StakeDelegatable_$11131",
+                    "typeString": "contract StakeDelegatable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15110,
+                    "name": "StakeDelegatable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11131,
+                    "src": "708:16:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_StakeDelegatable_$11131",
+                      "typeString": "contract StakeDelegatable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:103:61"
+            },
+            "returnParameters": {
+              "id": 15115,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15114,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15124,
+                  "src": "771:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15113,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "771:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "770:6:61"
+            },
+            "scope": 15240,
+            "src": "612:237:61",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 15149,
+              "nodeType": "Block",
+              "src": "1674:130:61",
+              "statements": [
+                {
+                  "assignments": [
+                    15138
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15138,
+                      "name": "operators",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15149,
+                      "src": "1684:26:61",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                        "typeString": "address[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 15136,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1684:7:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 15137,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "1684:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                          "typeString": "address[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15143,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15141,
+                        "name": "grantee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15126,
+                        "src": "1744:7:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15139,
+                        "name": "tokenGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15130,
+                        "src": "1713:10:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                          "typeString": "contract TokenGrant"
+                        }
+                      },
+                      "id": 15140,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getGranteeOperators",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11458,
+                      "src": "1713:30:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address) view external returns (address[] memory)"
+                      }
+                    },
+                    "id": 15142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1713:39:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                      "typeString": "address[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1684:68:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15146,
+                        "name": "operator",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15128,
+                        "src": "1788:8:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15144,
+                        "name": "operators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15138,
+                        "src": "1769:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      "id": 15145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contains",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16535,
+                      "src": "1769:18:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_array$_t_address_$dyn_memory_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address[] memory,address) pure returns (bool)"
+                      }
+                    },
+                    "id": 15147,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1769:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15134,
+                  "id": 15148,
+                  "nodeType": "Return",
+                  "src": "1762:35:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if the grantee delegated tokens to operator\n with the provided tokenGrant contract. Otherwise, returns false.\n This function works only for the case when tokens were generated from\n a non-managed grant, that is, the grantee is a non-contract address to\n which the delegated tokens were granted.\n @dev This function does not validate the staking reltionship on\n a particular staking contract. It only checks whether the grantee\n staked at least one time with the given operator. If you are interested\n in a particular token staking contract, you need to perform additional\n check.",
+            "id": 15150,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isGranteeForOperator",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15131,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15126,
+                  "name": "grantee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1566:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15125,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1566:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15128,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1591:16:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15127,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1591:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15130,
+                  "name": "tokenGrant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1617:21:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                    "typeString": "contract TokenGrant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15129,
+                    "name": "TokenGrant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 12398,
+                    "src": "1617:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                      "typeString": "contract TokenGrant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1556:88:61"
+            },
+            "returnParameters": {
+              "id": 15134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15133,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15150,
+                  "src": "1668:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15132,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1668:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1667:6:61"
+            },
+            "scope": 15240,
+            "src": "1527:277:61",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 15188,
+              "nodeType": "Block",
+              "src": "2863:316:61",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 15170,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "id": 15165,
+                                  "name": "managedGrantContract",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 15156,
+                                  "src": "2907:20:61",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  }
+                                ],
+                                "id": 15164,
+                                "name": "ManagedGrant",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 9245,
+                                "src": "2894:12:61",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_ManagedGrant_$9245_$",
+                                  "typeString": "type(contract ManagedGrant)"
+                                }
+                              },
+                              "id": 15166,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "2894:34:61",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ManagedGrant_$9245",
+                                "typeString": "contract ManagedGrant"
+                              }
+                            },
+                            "id": 15167,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "grantee",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 8872,
+                            "src": "2894:42:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                              "typeString": "function () view external returns (address)"
+                            }
+                          },
+                          "id": 15168,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2894:44:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 15169,
+                          "name": "grantee",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15152,
+                          "src": "2942:7:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2894:55:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f742061206772616e746565206f66207468652070726f766964656420636f6e7472616374",
+                        "id": 15171,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2963:40:61",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f4560f1dba4587e0a10393fa1dd46e433c9bdcba3ba707b45d608688f818ab53",
+                          "typeString": "literal_string \"Not a grantee of the provided contract\""
+                        },
+                        "value": "Not a grantee of the provided contract"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f4560f1dba4587e0a10393fa1dd46e433c9bdcba3ba707b45d608688f818ab53",
+                          "typeString": "literal_string \"Not a grantee of the provided contract\""
+                        }
+                      ],
+                      "id": 15163,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        22402,
+                        22403
+                      ],
+                      "referencedDeclaration": 22403,
+                      "src": "2873:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 15172,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2873:140:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 15173,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2873:140:61"
+                },
+                {
+                  "assignments": [
+                    15177
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15177,
+                      "name": "operators",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15188,
+                      "src": "3024:26:61",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                        "typeString": "address[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 15175,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "3024:7:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 15176,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "3024:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                          "typeString": "address[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15182,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15180,
+                        "name": "managedGrantContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15156,
+                        "src": "3097:20:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15178,
+                        "name": "tokenGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15158,
+                        "src": "3053:10:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                          "typeString": "contract TokenGrant"
+                        }
+                      },
+                      "id": 15179,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getGranteeOperators",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11458,
+                      "src": "3053:30:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address) view external returns (address[] memory)"
+                      }
+                    },
+                    "id": 15181,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3053:74:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                      "typeString": "address[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3024:103:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15185,
+                        "name": "operator",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15154,
+                        "src": "3163:8:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15183,
+                        "name": "operators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15177,
+                        "src": "3144:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      "id": 15184,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contains",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16535,
+                      "src": "3144:18:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_array$_t_address_$dyn_memory_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_array$_t_address_$dyn_memory_ptr_$",
+                        "typeString": "function (address[] memory,address) pure returns (bool)"
+                      }
+                    },
+                    "id": 15186,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3144:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15162,
+                  "id": 15187,
+                  "nodeType": "Return",
+                  "src": "3137:35:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if the grantee from the given managed grant contract\n delegated tokens to operator with the provided tokenGrant contract.\n Otherwise, returns false. In case the grantee declared by the managed\n grant contract does not match the provided grantee, function reverts.\n This function works only for cases when grantee, from TokenGrant's\n perspective, is a smart contract exposing grantee() function returning\n the final grantee. One possibility is the ManagedGrant contract.\n @dev This function does not validate the staking reltionship on\n a particular staking contract. It only checks whether the grantee\n staked at least one time with the given operator. If you are interested\n in a particular token staking contract, you need to perform additional\n check.",
+            "id": 15189,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isManagedGranteeForOperator",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15152,
+                  "name": "grantee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2717:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15151,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2717:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15154,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2742:16:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15153,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2742:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15156,
+                  "name": "managedGrantContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2768:28:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15155,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2768:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15158,
+                  "name": "tokenGrant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2806:21:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                    "typeString": "contract TokenGrant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15157,
+                    "name": "TokenGrant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 12398,
+                    "src": "2806:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                      "typeString": "contract TokenGrant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2707:126:61"
+            },
+            "returnParameters": {
+              "id": 15162,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15161,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15189,
+                  "src": "2857:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15160,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2857:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2856:6:61"
+            },
+            "scope": 15240,
+            "src": "2671:508:61",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 15238,
+              "nodeType": "Block",
+              "src": "3765:365:61",
+              "statements": [
+                {
+                  "assignments": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    15201
+                  ],
+                  "declarations": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                      "constant": false,
+                      "id": 15201,
+                      "name": "managedGrant",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15238,
+                      "src": "3782:20:61",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 15200,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "3782:7:61",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15206,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15204,
+                        "name": "grantId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15193,
+                        "src": "3826:7:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15202,
+                        "name": "tokenGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15195,
+                        "src": "3806:10:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                          "typeString": "contract TokenGrant"
+                        }
+                      },
+                      "id": 15203,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getGrant",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11392,
+                      "src": "3806:19:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_address_$",
+                        "typeString": "function (uint256) view external returns (uint256,uint256,uint256,uint256,uint256,address)"
+                      }
+                    },
+                    "id": 15205,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3806:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_address_$",
+                      "typeString": "tuple(uint256,uint256,uint256,uint256,uint256,address)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3775:59:61"
+                },
+                {
+                  "assignments": [
+                    null,
+                    15208
+                  ],
+                  "declarations": [
+                    null,
+                    {
+                      "constant": false,
+                      "id": 15208,
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15238,
+                      "src": "3847:19:61",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 15207,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "3847:5:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15216,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "6772616e7465652829",
+                            "id": 15213,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "3925:11:61",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_d5f520765e05e5807d58bc8e28a312f2f3223a294689898d92eba5ea678bb70c",
+                              "typeString": "literal_string \"grantee()\""
+                            },
+                            "value": "grantee()"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_d5f520765e05e5807d58bc8e28a312f2f3223a294689898d92eba5ea678bb70c",
+                              "typeString": "literal_string \"grantee()\""
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 15211,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22386,
+                            "src": "3901:3:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 15212,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "encodeWithSignature",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "3901:23:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function (string memory) pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 15214,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "3901:36:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15209,
+                        "name": "managedGrant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15201,
+                        "src": "3870:12:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 15210,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "call",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "3870:17:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                      }
+                    },
+                    "id": 15215,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3870:77:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(bool,bytes memory)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3844:103:61"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 15220,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15217,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15208,
+                        "src": "3961:6:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 15218,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "3961:13:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 15219,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "3978:1:61",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "3961:18:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 15224,
+                  "nodeType": "IfStatement",
+                  "src": "3957:61:61",
+                  "trueBody": {
+                    "id": 15223,
+                    "nodeType": "Block",
+                    "src": "3981:37:61",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 15221,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "4002:5:61",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 15199,
+                        "id": 15222,
+                        "nodeType": "Return",
+                        "src": "3995:12:61"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "assignments": [
+                    15226
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15226,
+                      "name": "managedGrantee",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 15238,
+                      "src": "4027:22:61",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 15225,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "4027:7:61",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 15233,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 15229,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15208,
+                        "src": "4063:6:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "id": 15230,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "4072:7:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          }
+                        ],
+                        "id": 15231,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "4071:9:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15227,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22386,
+                        "src": "4052:3:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 15228,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "decode",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "4052:10:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 15232,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4052:29:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "4027:54:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 15236,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 15234,
+                      "name": "grantee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15191,
+                      "src": "4098:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 15235,
+                      "name": "managedGrantee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15226,
+                      "src": "4109:14:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "4098:25:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 15199,
+                  "id": 15237,
+                  "nodeType": "Return",
+                  "src": "4091:32:61"
+                }
+              ]
+            },
+            "documentation": "@notice Returns true if grant with the given ID has been created with\n managed grant pointing currently to the grantee passed as a parameter.\n @dev The function does not revert if grant has not been created with\n a managed grantee. This function is not a view because it uses low-level\n call to check if the grant has been created with a managed grant.\n It does not however modify any state.",
+            "id": 15239,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isManagedGranteeForGrant",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15191,
+                  "name": "grantee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3663:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15190,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3663:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15193,
+                  "name": "grantId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3688:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15192,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3688:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15195,
+                  "name": "tokenGrant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3713:21:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                    "typeString": "contract TokenGrant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15194,
+                    "name": "TokenGrant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 12398,
+                    "src": "3713:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TokenGrant_$12398",
+                      "typeString": "contract TokenGrant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3653:87:61"
+            },
+            "returnParameters": {
+              "id": 15199,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15198,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15239,
+                  "src": "3759:4:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15197,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3759:4:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3758:6:61"
+            },
+            "scope": 15240,
+            "src": "3620:510:61",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 15241,
+        "src": "259:3873:61"
+      }
+    ],
+    "src": "0:4132:61"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.425Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Roles Lookup"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Library facilitating lookup of roles in stake delegation setup."
+  }
+}

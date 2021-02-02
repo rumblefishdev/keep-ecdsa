@@ -10,9 +10,17 @@ contract FullyBackedBondingStub is FullyBackedBonding {
     // using SafeMath for uint256;
     // // address public delegatedAuthority;
     // bool slashingShouldFail;
-    constructor(KeepRegistry _keepRegistry, uint256 _initializationPeriod)
+    constructor(
+        KeepRegistry _keepRegistry,
+        uint256 _initializationPeriod,
+        address _bondTokenAddress
+    )
         public
-        FullyBackedBonding(_keepRegistry, _initializationPeriod)
+        FullyBackedBonding(
+            _keepRegistry,
+            _initializationPeriod,
+            _bondTokenAddress
+        )
     {}
 
     function setBeneficiary(address _operator, address payable _beneficiary)

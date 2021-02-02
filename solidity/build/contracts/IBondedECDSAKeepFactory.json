@@ -1,0 +1,1108 @@
+{
+  "contractName": "IBondedECDSAKeepFactory",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_groupSize",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_honestThreshold",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_bond",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_stakeLockDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "openKeep",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "keepAddress",
+          "type": "address"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "openKeepFeeEstimate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_application",
+          "type": "address"
+        }
+      ],
+      "name": "getSortitionPoolWeight",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_minimumBondableValue",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_groupSize",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_honestThreshold",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMinimumBondableValue",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_application\",\"type\":\"address\"}],\"name\":\"getSortitionPoolWeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_groupSize\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_honestThreshold\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_bond\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_stakeLockDuration\",\"type\":\"uint256\"}],\"name\":\"openKeep\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"keepAddress\",\"type\":\"address\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"openKeepFeeEstimate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_minimumBondableValue\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_groupSize\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_honestThreshold\",\"type\":\"uint256\"}],\"name\":\"setMinimumBondableValue\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getSortitionPoolWeight(address)\":{\"params\":{\"_application\":\"Address of the application.\"},\"return\":\"The sum of all registered operators' weights in the pool. Reverts if sortition pool for the application does not exist.\"},\"openKeep(uint256,uint256,address,uint256,uint256)\":{\"params\":{\"_bond\":\"Value of ETH bond required from the keep.\",\"_groupSize\":\"Number of members in the keep.\",\"_honestThreshold\":\"Minimum number of honest keep members.\",\"_owner\":\"Address of the keep owner.\",\"_stakeLockDuration\":\"Stake lock duration in seconds.\"},\"return\":\"Address of the opened keep.\"},\"openKeepFeeEstimate()\":{\"return\":\"Uint256 estimate.\"},\"setMinimumBondableValue(uint256,uint256,uint256)\":{\"details\":\"The default minimum bond value for each sortition pool created is 20 ETH.\",\"params\":{\"_groupSize\":\"Number of signers in the keep.\",\"_honestThreshold\":\"Minimum number of honest keep signers.\",\"_minimumBondableValue\":\"The minimum unbonded value the application requires from a single keep.\"}}},\"title\":\"Bonded ECDSA Keep Factory\"},\"userdoc\":{\"methods\":{\"getSortitionPoolWeight(address)\":{\"notice\":\"Gets the total weight of operators in the sortition pool for the given application.\"},\"openKeep(uint256,uint256,address,uint256,uint256)\":{\"notice\":\"Open a new ECDSA Keep.\"},\"openKeepFeeEstimate()\":{\"notice\":\"Gets a fee estimate for opening a new keep.\"},\"setMinimumBondableValue(uint256,uint256,uint256)\":{\"notice\":\"Sets the minimum bondable value required from the operator to join the sortition pool of the given application. It is up to the application to specify a reasonable minimum bond for operators trying to join the pool to prevent griefing by operators joining without enough bondable value.\"}},\"notice\":\"Factory for Bonded ECDSA Keeps.\"}},\"settings\":{\"compilationTarget\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepFactory.sol\":\"IBondedECDSAKeepFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepFactory.sol\":{\"keccak256\":\"0x07ae883d2a0f5b7fe2c0b055206f565da51b04d1ca574ae4d4da3a19e6badcdb\",\"urls\":[\"bzz-raw://038b4f5b45b2d676ef7411b69cadd490d5789e3d245afd78aaa72177ce042572\",\"dweb:/ipfs/QmRaBYU4HCDSH33a3gpLN4t2TsyNaFRxLKv3WeAZEgk9Rr\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/**\n▓▓▌ ▓▓ ▐▓▓ ▓▓▓▓▓▓▓▓▓▓▌▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄\n▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▌▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\n  ▓▓▓▓▓▓    ▓▓▓▓▓▓▓▀    ▐▓▓▓▓▓▓    ▐▓▓▓▓▓   ▓▓▓▓▓▓     ▓▓▓▓▓   ▐▓▓▓▓▓▌   ▐▓▓▓▓▓▓\n  ▓▓▓▓▓▓▄▄▓▓▓▓▓▓▓▀      ▐▓▓▓▓▓▓▄▄▄▄         ▓▓▓▓▓▓▄▄▄▄         ▐▓▓▓▓▓▌   ▐▓▓▓▓▓▓\n  ▓▓▓▓▓▓▓▓▓▓▓▓▓▀        ▐▓▓▓▓▓▓▓▓▓▓         ▓▓▓▓▓▓▓▓▓▓▌        ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\n  ▓▓▓▓▓▓▀▀▓▓▓▓▓▓▄       ▐▓▓▓▓▓▓▀▀▀▀         ▓▓▓▓▓▓▀▀▀▀         ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▀\n  ▓▓▓▓▓▓   ▀▓▓▓▓▓▓▄     ▐▓▓▓▓▓▓     ▓▓▓▓▓   ▓▓▓▓▓▓     ▓▓▓▓▓   ▐▓▓▓▓▓▌\n▓▓▓▓▓▓▓▓▓▓ █▓▓▓▓▓▓▓▓▓ ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓▓▓\n▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓ ▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓▓▓\n\n                           Trust math, not hardware.\n*/\n\npragma solidity 0.5.17;\n\n/// @title Bonded ECDSA Keep Factory\n/// @notice Factory for Bonded ECDSA Keeps.\ninterface IBondedECDSAKeepFactory {\n    /// @notice Open a new ECDSA Keep.\n    /// @param _groupSize Number of members in the keep.\n    /// @param _honestThreshold Minimum number of honest keep members.\n    /// @param _owner Address of the keep owner.\n    /// @param _bond Value of ETH bond required from the keep.\n    /// @param _stakeLockDuration Stake lock duration in seconds.\n    /// @return Address of the opened keep.\n    function openKeep(\n        uint256 _groupSize,\n        uint256 _honestThreshold,\n        address _owner,\n        uint256 _bond,\n        uint256 _stakeLockDuration\n    ) external payable returns (address keepAddress);\n\n    /// @notice Gets a fee estimate for opening a new keep.\n    /// @return Uint256 estimate.\n    function openKeepFeeEstimate() external view returns (uint256);\n\n    /// @notice Gets the total weight of operators\n    /// in the sortition pool for the given application.\n    /// @param _application Address of the application.\n    /// @return The sum of all registered operators' weights in the pool.\n    /// Reverts if sortition pool for the application does not exist.\n    function getSortitionPoolWeight(address _application)\n        external\n        view\n        returns (uint256);\n\n    /// @notice Sets the minimum bondable value required from the operator to\n    /// join the sortition pool of the given application. It is up to the\n    /// application to specify a reasonable minimum bond for operators trying to\n    /// join the pool to prevent griefing by operators joining without enough\n    /// bondable value.\n    /// @dev The default minimum bond value for each sortition pool created\n    /// is 20 ETH.\n    /// @param _minimumBondableValue The minimum unbonded value the application\n    /// requires from a single keep.\n    /// @param _groupSize Number of signers in the keep.\n    /// @param _honestThreshold Minimum number of honest keep signers.\n    function setMinimumBondableValue(\n        uint256 _minimumBondableValue,\n        uint256 _groupSize,\n        uint256 _honestThreshold\n    ) external;\n}\n",
+  "sourcePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepFactory.sol",
+  "ast": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepFactory.sol",
+    "exportedSymbols": {
+      "IBondedECDSAKeepFactory": [
+        5749
+      ]
+    },
+    "id": 5750,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5712,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1837:23:19"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Bonded ECDSA Keep Factory\n @notice Factory for Bonded ECDSA Keeps.",
+        "fullyImplemented": false,
+        "id": 5749,
+        "linearizedBaseContracts": [
+          5749
+        ],
+        "name": "IBondedECDSAKeepFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Open a new ECDSA Keep.\n @param _groupSize Number of members in the keep.\n @param _honestThreshold Minimum number of honest keep members.\n @param _owner Address of the keep owner.\n @param _bond Value of ETH bond required from the keep.\n @param _stakeLockDuration Stake lock duration in seconds.\n @return Address of the opened keep.",
+            "id": 5727,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "openKeep",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5723,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5714,
+                  "name": "_groupSize",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2399:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5713,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2399:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5716,
+                  "name": "_honestThreshold",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2427:24:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5715,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2427:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5718,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2461:14:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5717,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2461:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5720,
+                  "name": "_bond",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2485:13:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5719,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2485:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5722,
+                  "name": "_stakeLockDuration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2508:26:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5721,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2508:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2389:151:19"
+            },
+            "returnParameters": {
+              "id": 5726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5725,
+                  "name": "keepAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2567:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2567:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2566:21:19"
+            },
+            "scope": 5749,
+            "src": "2372:216:19",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets a fee estimate for opening a new keep.\n @return Uint256 estimate.",
+            "id": 5732,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "openKeepFeeEstimate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5728,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2716:2:19"
+            },
+            "returnParameters": {
+              "id": 5731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5730,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5732,
+                  "src": "2742:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5729,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2742:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2741:9:19"
+            },
+            "scope": 5749,
+            "src": "2688:63:19",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets the total weight of operators\n in the sortition pool for the given application.\n @param _application Address of the application.\n @return The sum of all registered operators' weights in the pool.\n Reverts if sortition pool for the application does not exist.",
+            "id": 5739,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSortitionPoolWeight",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5735,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5734,
+                  "name": "_application",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5739,
+                  "src": "3097:20:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5733,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3097:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3096:22:19"
+            },
+            "returnParameters": {
+              "id": 5738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5737,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5739,
+                  "src": "3166:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5736,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3166:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3165:9:19"
+            },
+            "scope": 5749,
+            "src": "3065:110:19",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Sets the minimum bondable value required from the operator to\n join the sortition pool of the given application. It is up to the\n application to specify a reasonable minimum bond for operators trying to\n join the pool to prevent griefing by operators joining without enough\n bondable value.\n @dev The default minimum bond value for each sortition pool created\n is 20 ETH.\n @param _minimumBondableValue The minimum unbonded value the application\n requires from a single keep.\n @param _groupSize Number of signers in the keep.\n @param _honestThreshold Minimum number of honest keep signers.",
+            "id": 5748,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinimumBondableValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5741,
+                  "name": "_minimumBondableValue",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5748,
+                  "src": "3898:29:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5740,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3898:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5743,
+                  "name": "_groupSize",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5748,
+                  "src": "3937:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5742,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3937:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5745,
+                  "name": "_honestThreshold",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5748,
+                  "src": "3965:24:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5744,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3965:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3888:107:19"
+            },
+            "returnParameters": {
+              "id": 5747,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4004:0:19"
+            },
+            "scope": 5749,
+            "src": "3856:149:19",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5750,
+        "src": "1943:2064:19"
+      }
+    ],
+    "src": "1837:2171:19"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepFactory.sol",
+    "exportedSymbols": {
+      "IBondedECDSAKeepFactory": [
+        5749
+      ]
+    },
+    "id": 5750,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5712,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1837:23:19"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Bonded ECDSA Keep Factory\n @notice Factory for Bonded ECDSA Keeps.",
+        "fullyImplemented": false,
+        "id": 5749,
+        "linearizedBaseContracts": [
+          5749
+        ],
+        "name": "IBondedECDSAKeepFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Open a new ECDSA Keep.\n @param _groupSize Number of members in the keep.\n @param _honestThreshold Minimum number of honest keep members.\n @param _owner Address of the keep owner.\n @param _bond Value of ETH bond required from the keep.\n @param _stakeLockDuration Stake lock duration in seconds.\n @return Address of the opened keep.",
+            "id": 5727,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "openKeep",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5723,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5714,
+                  "name": "_groupSize",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2399:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5713,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2399:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5716,
+                  "name": "_honestThreshold",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2427:24:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5715,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2427:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5718,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2461:14:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5717,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2461:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5720,
+                  "name": "_bond",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2485:13:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5719,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2485:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5722,
+                  "name": "_stakeLockDuration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2508:26:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5721,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2508:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2389:151:19"
+            },
+            "returnParameters": {
+              "id": 5726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5725,
+                  "name": "keepAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5727,
+                  "src": "2567:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2567:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2566:21:19"
+            },
+            "scope": 5749,
+            "src": "2372:216:19",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets a fee estimate for opening a new keep.\n @return Uint256 estimate.",
+            "id": 5732,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "openKeepFeeEstimate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5728,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2716:2:19"
+            },
+            "returnParameters": {
+              "id": 5731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5730,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5732,
+                  "src": "2742:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5729,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2742:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2741:9:19"
+            },
+            "scope": 5749,
+            "src": "2688:63:19",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets the total weight of operators\n in the sortition pool for the given application.\n @param _application Address of the application.\n @return The sum of all registered operators' weights in the pool.\n Reverts if sortition pool for the application does not exist.",
+            "id": 5739,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSortitionPoolWeight",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5735,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5734,
+                  "name": "_application",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5739,
+                  "src": "3097:20:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5733,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3097:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3096:22:19"
+            },
+            "returnParameters": {
+              "id": 5738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5737,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5739,
+                  "src": "3166:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5736,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3166:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3165:9:19"
+            },
+            "scope": 5749,
+            "src": "3065:110:19",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Sets the minimum bondable value required from the operator to\n join the sortition pool of the given application. It is up to the\n application to specify a reasonable minimum bond for operators trying to\n join the pool to prevent griefing by operators joining without enough\n bondable value.\n @dev The default minimum bond value for each sortition pool created\n is 20 ETH.\n @param _minimumBondableValue The minimum unbonded value the application\n requires from a single keep.\n @param _groupSize Number of signers in the keep.\n @param _honestThreshold Minimum number of honest keep signers.",
+            "id": 5748,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinimumBondableValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5741,
+                  "name": "_minimumBondableValue",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5748,
+                  "src": "3898:29:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5740,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3898:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5743,
+                  "name": "_groupSize",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5748,
+                  "src": "3937:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5742,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3937:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5745,
+                  "name": "_honestThreshold",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5748,
+                  "src": "3965:24:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5744,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3965:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3888:107:19"
+            },
+            "returnParameters": {
+              "id": 5747,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4004:0:19"
+            },
+            "scope": 5749,
+            "src": "3856:149:19",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5750,
+        "src": "1943:2064:19"
+      }
+    ],
+    "src": "1837:2171:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.312Z",
+  "devdoc": {
+    "methods": {
+      "getSortitionPoolWeight(address)": {
+        "params": {
+          "_application": "Address of the application."
+        },
+        "return": "The sum of all registered operators' weights in the pool. Reverts if sortition pool for the application does not exist."
+      },
+      "openKeep(uint256,uint256,address,uint256,uint256)": {
+        "params": {
+          "_bond": "Value of ETH bond required from the keep.",
+          "_groupSize": "Number of members in the keep.",
+          "_honestThreshold": "Minimum number of honest keep members.",
+          "_owner": "Address of the keep owner.",
+          "_stakeLockDuration": "Stake lock duration in seconds."
+        },
+        "return": "Address of the opened keep."
+      },
+      "openKeepFeeEstimate()": {
+        "return": "Uint256 estimate."
+      },
+      "setMinimumBondableValue(uint256,uint256,uint256)": {
+        "details": "The default minimum bond value for each sortition pool created is 20 ETH.",
+        "params": {
+          "_groupSize": "Number of signers in the keep.",
+          "_honestThreshold": "Minimum number of honest keep signers.",
+          "_minimumBondableValue": "The minimum unbonded value the application requires from a single keep."
+        }
+      }
+    },
+    "title": "Bonded ECDSA Keep Factory"
+  },
+  "userdoc": {
+    "methods": {
+      "getSortitionPoolWeight(address)": {
+        "notice": "Gets the total weight of operators in the sortition pool for the given application."
+      },
+      "openKeep(uint256,uint256,address,uint256,uint256)": {
+        "notice": "Open a new ECDSA Keep."
+      },
+      "openKeepFeeEstimate()": {
+        "notice": "Gets a fee estimate for opening a new keep."
+      },
+      "setMinimumBondableValue(uint256,uint256,uint256)": {
+        "notice": "Sets the minimum bondable value required from the operator to join the sortition pool of the given application. It is up to the application to specify a reasonable minimum bond for operators trying to join the pool to prevent griefing by operators joining without enough bondable value."
+      }
+    },
+    "notice": "Factory for Bonded ECDSA Keeps."
+  }
+}

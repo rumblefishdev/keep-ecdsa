@@ -1,0 +1,957 @@
+{
+  "contractName": "ECDSABackportRewardsEscrowBeneficiary",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IStakerRewards",
+          "name": "_stakerRewards",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "__escrowSentTokens",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "stakerRewards",
+      "outputs": [
+        {
+          "internalType": "contract IStakerRewards",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"contract IStakerRewards\",\"name\":\"_stakerRewards\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"__escrowSentTokens\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"stakerRewards\",\"outputs\":[{\"internalType\":\"contract IStakerRewards\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"ECDSABackportRewardsEscrowBeneficiary\"},\"userdoc\":{\"methods\":{},\"notice\":\"Trasfer the received tokens from Phased Escrow to a designated         ECDSABackportRewards contract.\"}},\"settings\":{\"compilationTarget\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/ECDSARewardsEscrowBeneficiary.sol\":\"ECDSABackportRewardsEscrowBeneficiary\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/ECDSARewardsEscrowBeneficiary.sol\":{\"keccak256\":\"0x1efe8cdbdf8ce5d8cd6e43cc4dcfdff6cf7a2bd9a5aad9713dcc74c632ad3b80\",\"urls\":[\"bzz-raw://6fd2c1bb3258cce7380714f52d80d4db9e0f74127e67d013a66f573e352645e6\",\"dweb:/ipfs/QmenjHFDeej4m7D9Dt3ozADTbLWm1Vb6oxXit4bhUjKc7z\"]},\"@keep-network/keep-core/contracts/Escrow.sol\":{\"keccak256\":\"0xd8687624668d3adac564ad458b2e13ad8e40c4587e1ab62720b181312d8d4811\",\"urls\":[\"bzz-raw://f49fcc1eee6e08350c5048e50176eaaeab469b6624bf64717bcfbc94600becfe\",\"dweb:/ipfs/Qmax1dPMnK5s9BxSJkaiF6b3BHZ7b3tq29fNRhJhja8jVN\"]},\"@keep-network/keep-core/contracts/PhasedEscrow.sol\":{\"keccak256\":\"0xffcd59113e7757beb6cf67dcd281d4262ae14d1dbc010894fd72b1e670c9c936\",\"urls\":[\"bzz-raw://1a34f384f53cfedb7c6ae4ab6623af58550d897af1ded58e8ce482892e289ff7\",\"dweb:/ipfs/Qmcxg7gAtXMk9XhB1LWaXfhec4huCVa2sX6epa3eXat4wp\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzz-raw://d62d769b2219d5de39013093412623e624fa887f871826ea3bae6052ee893610\",\"dweb:/ipfs/QmV3yVktya1s617QmuzQR2CfuJgUi3dR2xEZY9ecmqZ2G1\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzz-raw://cd3429aa9a4878dcf6c73faa32c3722f4013d4be012ece543b246faa6b50f55c\",\"dweb:/ipfs/QmS55hgTvNEAKinus19m65CB4wcymN8EiUPFpRx5tYJ1i2\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x90e8c2521653bbb1768b05889c5760031e688d9cd361f167489b89215e201b95\",\"urls\":[\"bzz-raw://d0abb99bb8bfc2bc0a89902b8ed1dc0442ad08cc78cee64c291b3df6a27bcccc\",\"dweb:/ipfs/QmP5NaEwZthQeM2ESz4WTT3osrP7jhbvu7ocbttBi2JAw6\"]},\"openzeppelin-solidity/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0xf6f89424e17870561dc23c5933c55c5726b66a68d51ad2a2c00c569a5f02f507\",\"urls\":[\"bzz-raw://005657a7ffbf6d12726ac0167b55be965dc473d43f061b605f883a54cc00ab4f\",\"dweb:/ipfs/QmaBzyvDQyNnn6DXQYewEtN9Go85orikSnW9PwNWqUGPEX\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0xf3358e5819ca73357abd6c90bdfffd0474af54364897f6b3e3234c4b71fbe9a1\",\"urls\":[\"bzz-raw://75ae8d04454d1511a2ed986cc8585736f05c5c25280683b3d24712a9f414a4bf\",\"dweb:/ipfs/Qmb3kNCoBUZdah1AgBBD4zMk898j5Qw8ahT1w5cCMYp5Y3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610aef380380610aef8339818101604052604081101561003357600080fd5b8101908080519060200190929190805190602001909291905050508181336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a381600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050505061094e806101a16000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b14610104578063cfb9cfba14610126578063f2fde38b14610170578063fc0c546a146101b45761007d565b80634a5f545614610082578063715018a6146100b05780638da5cb5b146100ba575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101fe565b005b6100b8610524565b005b6100c261065d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010c610686565b604051808215151515815260200191505060405180910390f35b61012e6106dd565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101b26004803603602081101561018657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610703565b005b6101bc610789565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610206610686565b610278576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663095ea7b3600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16846040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561034557600080fd5b505af1158015610359573d6000803e3d6000fd5b505050506040513d602081101561036f57600080fd5b81019080805190602001909291905050509050806103f5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f546f6b656e207472616e7366657220617070726f76616c206661696c6564000081525060200191505060405180910390fd5b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16638f4ffcb13084600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825260008152602001602001945050505050600060405180830381600087803b15801561050857600080fd5b505af115801561051c573d6000803e3d6000fd5b505050505050565b61052c610686565b61059e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b61070b610686565b61077d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b610786816107af565b50565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610835576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806108f46026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a72315820fd0066036c3862466dfb946d4a2631c83eab62037609219158f04bb8c0a0b59e64736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b14610104578063cfb9cfba14610126578063f2fde38b14610170578063fc0c546a146101b45761007d565b80634a5f545614610082578063715018a6146100b05780638da5cb5b146100ba575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101fe565b005b6100b8610524565b005b6100c261065d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010c610686565b604051808215151515815260200191505060405180910390f35b61012e6106dd565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101b26004803603602081101561018657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610703565b005b6101bc610789565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610206610686565b610278576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663095ea7b3600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16846040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561034557600080fd5b505af1158015610359573d6000803e3d6000fd5b505050506040513d602081101561036f57600080fd5b81019080805190602001909291905050509050806103f5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f546f6b656e207472616e7366657220617070726f76616c206661696c6564000081525060200191505060405180910390fd5b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16638f4ffcb13084600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825260008152602001602001945050505050600060405180830381600087803b15801561050857600080fd5b505af115801561051c573d6000803e3d6000fd5b505050505050565b61052c610686565b61059e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b61070b610686565b61077d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b610786816107af565b50565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610835576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806108f46026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a72315820fd0066036c3862466dfb946d4a2631c83eab62037609219158f04bb8c0a0b59e64736f6c63430005110032",
+  "sourceMap": "618:219:12:-;;;699:136;8:9:-1;5:2;;;30:1;27;20:12;5:2;699:136:12;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;699:136:12;;;;;;;;;;;;;;;;;;;;;;;;;805:6;813:14;666:10:95;657:6;;:19;;;;;;;;;;;;;;;;;;724:6;;;;;;;;;;;691:40;;720:1;691:40;;;;;;;;;;;;7984:6:53;7976:5;;:14;;;;;;;;;;;;;;;;;;8016;8000:13;;:30;;;;;;;;;;;;;;;;;;7901:136;;699::12;;618:219;;;;;;",
+  "deployedSourceMap": "618:219:12:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;618:219:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8043:349:53;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;8043:349:53;;;;;;;;;;;;;;;;;:::i;:::-;;1599:137:95;;;:::i;:::-;;814:77;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1165:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;7859:35:53;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1885:107:95;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1885:107:95;;;;;;;;;;;;;;;;;;;:::i;:::-;;7834:19:53;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;8043:349;1018:9:95;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8116:12:53;8131:5;;;;;;;;;;;:13;;;8153;;;;;;;;;;;8169:6;8131:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;8131:45:53;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;8131:45:53;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;8131:45:53;;;;;;;;;;;;;;;;8116:60;;8194:7;8186:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8255:13;;;;;;;;;;;:29;;;8306:4;8325:6;8353:5;;;;;;;;;;;8255:130;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;8255:130:53;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;8255:130:53;;;;1074:1:95;8043:349:53;:::o;1599:137:95:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1697:1;1660:40;;1681:6;;;;;;;;;;;1660:40;;;;;;;;;;;;1727:1;1710:6;;:19;;;;;;;;;;;;;;;;;;1599:137::o;814:77::-;852:7;878:6;;;;;;;;;;;871:13;;814:77;:::o;1165:90::-;1205:4;1242:6;;;;;;;;;;;1228:20;;:10;:20;;;1221:27;;1165:90;:::o;7859:35:53:-;;;;;;;;;;;;;:::o;1885:107:95:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1957:28;1976:8;1957:18;:28::i;:::-;1885:107;:::o;7834:19:53:-;;;;;;;;;;;;;:::o;2093:225:95:-;2186:1;2166:22;;:8;:22;;;;2158:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2275:8;2246:38;;2267:6;;;;;;;;;;;2246:38;;;;;;;;;;;;2303:8;2294:6;;:17;;;;;;;;;;;;;;;;;;2093:225;:::o",
+  "source": "pragma solidity 0.5.17;\n\nimport \"@keep-network/keep-core/contracts/PhasedEscrow.sol\";\n\n/// @title ECDSARewardsEscrowBeneficiary\n/// @notice Transfer the received tokens from PhasedEscrow to a designated\n///         ECDSARewards contract.\ncontract ECDSARewardsEscrowBeneficiary is StakerRewardsBeneficiary {\n    constructor(IERC20 _token, IStakerRewards _stakerRewards)\n        public\n        StakerRewardsBeneficiary(_token, _stakerRewards)\n    {}\n}\n\n/// @title ECDSABackportRewardsEscrowBeneficiary\n/// @notice Trasfer the received tokens from Phased Escrow to a designated\n///         ECDSABackportRewards contract.\ncontract ECDSABackportRewardsEscrowBeneficiary is StakerRewardsBeneficiary {\n    constructor(IERC20 _token, IStakerRewards _stakerRewards)\n        public\n        StakerRewardsBeneficiary(_token, _stakerRewards)\n    {}\n}\n",
+  "sourcePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/ECDSARewardsEscrowBeneficiary.sol",
+  "ast": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/ECDSARewardsEscrowBeneficiary.sol",
+    "exportedSymbols": {
+      "ECDSABackportRewardsEscrowBeneficiary": [
+        4566
+      ],
+      "ECDSARewardsEscrowBeneficiary": [
+        4551
+      ]
+    },
+    "id": 4567,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4535,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
+        "file": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
+        "id": 4536,
+        "nodeType": "ImportDirective",
+        "scope": 4567,
+        "sourceUnit": 9805,
+        "src": "25:60:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4537,
+              "name": "StakerRewardsBeneficiary",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 9774,
+              "src": "280:24:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9774",
+                "typeString": "contract StakerRewardsBeneficiary"
+              }
+            },
+            "id": 4538,
+            "nodeType": "InheritanceSpecifier",
+            "src": "280:24:12"
+          }
+        ],
+        "contractDependencies": [
+          9774,
+          21531
+        ],
+        "contractKind": "contract",
+        "documentation": "@title ECDSARewardsEscrowBeneficiary\n @notice Transfer the received tokens from PhasedEscrow to a designated\n         ECDSARewards contract.",
+        "fullyImplemented": true,
+        "id": 4551,
+        "linearizedBaseContracts": [
+          4551,
+          9774,
+          21531
+        ],
+        "name": "ECDSARewardsEscrowBeneficiary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4549,
+              "nodeType": "Block",
+              "src": "445:2:12",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4550,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 4545,
+                    "name": "_token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4540,
+                    "src": "417:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 4546,
+                    "name": "_stakerRewards",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4542,
+                    "src": "425:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  }
+                ],
+                "id": 4547,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4544,
+                  "name": "StakerRewardsBeneficiary",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 9774,
+                  "src": "392:24:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9774_$",
+                    "typeString": "type(contract StakerRewardsBeneficiary)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "392:48:12"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4543,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4540,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4550,
+                  "src": "323:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$22114",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4539,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 22114,
+                    "src": "323:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4542,
+                  "name": "_stakerRewards",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4550,
+                  "src": "338:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                    "typeString": "contract IStakerRewards"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4541,
+                    "name": "IStakerRewards",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9715,
+                    "src": "338:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "322:46:12"
+            },
+            "returnParameters": {
+              "id": 4548,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "445:0:12"
+            },
+            "scope": 4551,
+            "src": "311:136:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4567,
+        "src": "238:211:12"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4552,
+              "name": "StakerRewardsBeneficiary",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 9774,
+              "src": "668:24:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9774",
+                "typeString": "contract StakerRewardsBeneficiary"
+              }
+            },
+            "id": 4553,
+            "nodeType": "InheritanceSpecifier",
+            "src": "668:24:12"
+          }
+        ],
+        "contractDependencies": [
+          9774,
+          21531
+        ],
+        "contractKind": "contract",
+        "documentation": "@title ECDSABackportRewardsEscrowBeneficiary\n @notice Trasfer the received tokens from Phased Escrow to a designated\n         ECDSABackportRewards contract.",
+        "fullyImplemented": true,
+        "id": 4566,
+        "linearizedBaseContracts": [
+          4566,
+          9774,
+          21531
+        ],
+        "name": "ECDSABackportRewardsEscrowBeneficiary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4564,
+              "nodeType": "Block",
+              "src": "833:2:12",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4565,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 4560,
+                    "name": "_token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4555,
+                    "src": "805:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 4561,
+                    "name": "_stakerRewards",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4557,
+                    "src": "813:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  }
+                ],
+                "id": 4562,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4559,
+                  "name": "StakerRewardsBeneficiary",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 9774,
+                  "src": "780:24:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9774_$",
+                    "typeString": "type(contract StakerRewardsBeneficiary)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "780:48:12"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4555,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4565,
+                  "src": "711:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$22114",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4554,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 22114,
+                    "src": "711:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4557,
+                  "name": "_stakerRewards",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4565,
+                  "src": "726:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                    "typeString": "contract IStakerRewards"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4556,
+                    "name": "IStakerRewards",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9715,
+                    "src": "726:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:46:12"
+            },
+            "returnParameters": {
+              "id": 4563,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "833:0:12"
+            },
+            "scope": 4566,
+            "src": "699:136:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4567,
+        "src": "618:219:12"
+      }
+    ],
+    "src": "0:838:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/ECDSARewardsEscrowBeneficiary.sol",
+    "exportedSymbols": {
+      "ECDSABackportRewardsEscrowBeneficiary": [
+        4566
+      ],
+      "ECDSARewardsEscrowBeneficiary": [
+        4551
+      ]
+    },
+    "id": 4567,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4535,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "absolutePath": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
+        "file": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
+        "id": 4536,
+        "nodeType": "ImportDirective",
+        "scope": 4567,
+        "sourceUnit": 9805,
+        "src": "25:60:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4537,
+              "name": "StakerRewardsBeneficiary",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 9774,
+              "src": "280:24:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9774",
+                "typeString": "contract StakerRewardsBeneficiary"
+              }
+            },
+            "id": 4538,
+            "nodeType": "InheritanceSpecifier",
+            "src": "280:24:12"
+          }
+        ],
+        "contractDependencies": [
+          9774,
+          21531
+        ],
+        "contractKind": "contract",
+        "documentation": "@title ECDSARewardsEscrowBeneficiary\n @notice Transfer the received tokens from PhasedEscrow to a designated\n         ECDSARewards contract.",
+        "fullyImplemented": true,
+        "id": 4551,
+        "linearizedBaseContracts": [
+          4551,
+          9774,
+          21531
+        ],
+        "name": "ECDSARewardsEscrowBeneficiary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4549,
+              "nodeType": "Block",
+              "src": "445:2:12",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4550,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 4545,
+                    "name": "_token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4540,
+                    "src": "417:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 4546,
+                    "name": "_stakerRewards",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4542,
+                    "src": "425:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  }
+                ],
+                "id": 4547,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4544,
+                  "name": "StakerRewardsBeneficiary",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 9774,
+                  "src": "392:24:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9774_$",
+                    "typeString": "type(contract StakerRewardsBeneficiary)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "392:48:12"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4543,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4540,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4550,
+                  "src": "323:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$22114",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4539,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 22114,
+                    "src": "323:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4542,
+                  "name": "_stakerRewards",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4550,
+                  "src": "338:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                    "typeString": "contract IStakerRewards"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4541,
+                    "name": "IStakerRewards",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9715,
+                    "src": "338:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "322:46:12"
+            },
+            "returnParameters": {
+              "id": 4548,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "445:0:12"
+            },
+            "scope": 4551,
+            "src": "311:136:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4567,
+        "src": "238:211:12"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4552,
+              "name": "StakerRewardsBeneficiary",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 9774,
+              "src": "668:24:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9774",
+                "typeString": "contract StakerRewardsBeneficiary"
+              }
+            },
+            "id": 4553,
+            "nodeType": "InheritanceSpecifier",
+            "src": "668:24:12"
+          }
+        ],
+        "contractDependencies": [
+          9774,
+          21531
+        ],
+        "contractKind": "contract",
+        "documentation": "@title ECDSABackportRewardsEscrowBeneficiary\n @notice Trasfer the received tokens from Phased Escrow to a designated\n         ECDSABackportRewards contract.",
+        "fullyImplemented": true,
+        "id": 4566,
+        "linearizedBaseContracts": [
+          4566,
+          9774,
+          21531
+        ],
+        "name": "ECDSABackportRewardsEscrowBeneficiary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4564,
+              "nodeType": "Block",
+              "src": "833:2:12",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4565,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 4560,
+                    "name": "_token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4555,
+                    "src": "805:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 4561,
+                    "name": "_stakerRewards",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4557,
+                    "src": "813:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  }
+                ],
+                "id": 4562,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4559,
+                  "name": "StakerRewardsBeneficiary",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 9774,
+                  "src": "780:24:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9774_$",
+                    "typeString": "type(contract StakerRewardsBeneficiary)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "780:48:12"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4555,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4565,
+                  "src": "711:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$22114",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4554,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 22114,
+                    "src": "711:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$22114",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4557,
+                  "name": "_stakerRewards",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4565,
+                  "src": "726:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                    "typeString": "contract IStakerRewards"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 4556,
+                    "name": "IStakerRewards",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9715,
+                    "src": "726:14:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9715",
+                      "typeString": "contract IStakerRewards"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:46:12"
+            },
+            "returnParameters": {
+              "id": 4563,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "833:0:12"
+            },
+            "scope": 4566,
+            "src": "699:136:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4567,
+        "src": "618:219:12"
+      }
+    ],
+    "src": "0:838:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.284Z",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "ECDSABackportRewardsEscrowBeneficiary"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Trasfer the received tokens from Phased Escrow to a designated         ECDSABackportRewards contract."
+  }
+}

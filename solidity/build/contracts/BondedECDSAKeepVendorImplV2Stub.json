@@ -1,0 +1,1332 @@
+{
+  "contractName": "BondedECDSAKeepVendorImplV2Stub",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "shouldFail",
+          "type": "bool"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "initialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bool\",\"name\":\"shouldFail\",\"type\":\"bool\"}],\"name\":\"initialize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This contract is for testing purposes only.\",\"methods\":{},\"title\":\"Bonded ECDSA Keep Vendor Implementation V2 Stub\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV2Stub.sol\":\"BondedECDSAKeepVendorImplV2Stub\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV2Stub.sol\":{\"keccak256\":\"0x9db4ee11c4cd953bc65a151578f76d523d342d2b69f1af02b5edf3431d4e9b18\",\"urls\":[\"bzz-raw://7e1ee61d5f702ada89cc7aed8b94d94ef9834f8746e5e7310ef179b1a02f557b\",\"dweb:/ipfs/QmXwfR8EtMnFEUg45eV8dXUQjYW5mk1RK7n5mMzBZUpa89\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610328806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063158ef93e1461004657806354fd4d5014610068578063d53a822f146100eb575b600080fd5b61004e61011b565b604051808215151515815260200191505060405180910390f35b61007061016d565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b0578082015181840152602081019050610095565b50505050905090810190601f1680156100dd5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101196004803603602081101561010157600080fd5b810190808035151590602001909291905050506101aa565b005b60008060405180807f426f6e64656445434453414b65657056656e646f72496d706c56320000000000815250601b019050908152602001604051809103902060009054906101000a900460ff16905090565b60606040518060400160405280600281526020017f5632000000000000000000000000000000000000000000000000000000000000815250905090565b6101b261011b565b15610225576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f436f6e747261637420697320616c726561647920696e697469616c697a65642e81525060200191505060405180910390fd5b6001600060405180807f426f6e64656445434453414b65657056656e646f72496d706c56320000000000815250601b019050908152602001604051809103902060006101000a81548160ff02191690831515021790555080156102f0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f496e697469616c697a6174696f6e206661696c6564000000000000000000000081525060200191505060405180910390fd5b5056fea265627a7a723158209141dcd336521e7a647546d62c9a890a75bed806b4e3ea4b72e0d5c66ee71f8964736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063158ef93e1461004657806354fd4d5014610068578063d53a822f146100eb575b600080fd5b61004e61011b565b604051808215151515815260200191505060405180910390f35b61007061016d565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b0578082015181840152602081019050610095565b50505050905090810190601f1680156100dd5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101196004803603602081101561010157600080fd5b810190808035151590602001909291905050506101aa565b005b60008060405180807f426f6e64656445434453414b65657056656e646f72496d706c56320000000000815250601b019050908152602001604051809103902060009054906101000a900460ff16905090565b60606040518060400160405280600281526020017f5632000000000000000000000000000000000000000000000000000000000000815250905090565b6101b261011b565b15610225576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f436f6e747261637420697320616c726561647920696e697469616c697a65642e81525060200191505060405180910390fd5b6001600060405180807f426f6e64656445434453414b65657056656e646f72496d706c56320000000000815250601b019050908152602001604051809103902060006101000a81548160ff02191690831515021790555080156102f0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f496e697469616c697a6174696f6e206661696c6564000000000000000000000081525060200191505060405180910390fd5b5056fea265627a7a723158209141dcd336521e7a647546d62c9a890a75bed806b4e3ea4b72e0d5c66ee71f8964736f6c63430005110032",
+  "sourceMap": "137:549:31:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;137:549:31;;;;;;;",
+  "deployedSourceMap": "137:549:31:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;137:549:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;567:117;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;236:83;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;236:83:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;325:236;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;325:236:31;;;;;;;;;;;;;;;;;;;:::i;:::-;;567:117;611:4;634:12;:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;627:50;;567:117;:::o;236:83::-;276:13;301:11;;;;;;;;;;;;;;;;;;;236:83;:::o;325:236::-;388:13;:11;:13::i;:::-;387:14;379:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;494:4;448:12;:43;;;;;;;;;;;;;;;;;;;;;;;;;:50;;;;;;;;;;;;;;;;;;518:10;517:11;509:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;325:236;:::o",
+  "source": "pragma solidity 0.5.17;\n\n/// @title Bonded ECDSA Keep Vendor Implementation V2 Stub\n/// @dev This contract is for testing purposes only.\ncontract BondedECDSAKeepVendorImplV2Stub {\n    mapping(string => bool) internal _initialized;\n\n    function version() public view returns (string memory) {\n        return \"V2\";\n    }\n\n    function initialize(bool shouldFail) public {\n        require(!initialized(), \"Contract is already initialized.\");\n        _initialized[\"BondedECDSAKeepVendorImplV2\"] = true;\n\n        require(!shouldFail, \"Initialization failed\");\n    }\n\n    function initialized() public view returns (bool) {\n        return _initialized[\"BondedECDSAKeepVendorImplV2\"];\n    }\n}\n",
+  "sourcePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV2Stub.sol",
+  "ast": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV2Stub.sol",
+    "exportedSymbols": {
+      "BondedECDSAKeepVendorImplV2Stub": [
+        7189
+      ]
+    },
+    "id": 7190,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7141,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:31"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Bonded ECDSA Keep Vendor Implementation V2 Stub\n @dev This contract is for testing purposes only.",
+        "fullyImplemented": true,
+        "id": 7189,
+        "linearizedBaseContracts": [
+          7189
+        ],
+        "name": "BondedECDSAKeepVendorImplV2Stub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7145,
+            "name": "_initialized",
+            "nodeType": "VariableDeclaration",
+            "scope": 7189,
+            "src": "184:45:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+              "typeString": "mapping(string => bool)"
+            },
+            "typeName": {
+              "id": 7144,
+              "keyType": {
+                "id": 7142,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "192:6:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "184:23:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+                "typeString": "mapping(string => bool)"
+              },
+              "valueType": {
+                "id": 7143,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "202:4:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7152,
+              "nodeType": "Block",
+              "src": "291:28:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "5632",
+                    "id": 7150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "308:4:31",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_23d235efaf569b2b407d10f447247743508d1762a8e3a3aed85ccc0570dde35f",
+                      "typeString": "literal_string \"V2\""
+                    },
+                    "value": "V2"
+                  },
+                  "functionReturnParameters": 7149,
+                  "id": 7151,
+                  "nodeType": "Return",
+                  "src": "301:11:31"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7153,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "version",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "252:2:31"
+            },
+            "returnParameters": {
+              "id": 7149,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7148,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7153,
+                  "src": "276:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7147,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "276:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "275:15:31"
+            },
+            "scope": 7189,
+            "src": "236:83:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7177,
+              "nodeType": "Block",
+              "src": "369:192:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7161,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "387:14:31",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 7159,
+                            "name": "initialized",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 7188,
+                            "src": "388:11:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
+                              "typeString": "function () view returns (bool)"
+                            }
+                          },
+                          "id": 7160,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "388:13:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "436f6e747261637420697320616c726561647920696e697469616c697a65642e",
+                        "id": 7162,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "403:34:31",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6f62b02b7e28802cff74500734eb4021f1b0dcb85f330f4191553918cd60e3a0",
+                          "typeString": "literal_string \"Contract is already initialized.\""
+                        },
+                        "value": "Contract is already initialized."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6f62b02b7e28802cff74500734eb4021f1b0dcb85f330f4191553918cd60e3a0",
+                          "typeString": "literal_string \"Contract is already initialized.\""
+                        }
+                      ],
+                      "id": 7158,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        22402,
+                        22403
+                      ],
+                      "referencedDeclaration": 22403,
+                      "src": "379:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7163,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "379:59:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7164,
+                  "nodeType": "ExpressionStatement",
+                  "src": "379:59:31"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 7165,
+                        "name": "_initialized",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7145,
+                        "src": "448:12:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+                          "typeString": "mapping(string memory => bool)"
+                        }
+                      },
+                      "id": 7167,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "426f6e64656445434453414b65657056656e646f72496d706c5632",
+                        "id": 7166,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "461:29:31",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_685d2165754aeec830674a5eff5576459b3dc9eec89d024d7aaba5d2294061db",
+                          "typeString": "literal_string \"BondedECDSAKeepVendorImplV2\""
+                        },
+                        "value": "BondedECDSAKeepVendorImplV2"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "448:43:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 7168,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "494:4:31",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "448:50:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7170,
+                  "nodeType": "ExpressionStatement",
+                  "src": "448:50:31"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7173,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "517:11:31",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "id": 7172,
+                          "name": "shouldFail",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7155,
+                          "src": "518:10:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "496e697469616c697a6174696f6e206661696c6564",
+                        "id": 7174,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "530:23:31",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0ced64e7a7e72856969cefe00640aa7f13f8db705f9748f7d3003a20bc61daa4",
+                          "typeString": "literal_string \"Initialization failed\""
+                        },
+                        "value": "Initialization failed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_0ced64e7a7e72856969cefe00640aa7f13f8db705f9748f7d3003a20bc61daa4",
+                          "typeString": "literal_string \"Initialization failed\""
+                        }
+                      ],
+                      "id": 7171,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        22402,
+                        22403
+                      ],
+                      "referencedDeclaration": 22403,
+                      "src": "509:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7175,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "509:45:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7176,
+                  "nodeType": "ExpressionStatement",
+                  "src": "509:45:31"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7178,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7156,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7155,
+                  "name": "shouldFail",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7178,
+                  "src": "345:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7154,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:17:31"
+            },
+            "returnParameters": {
+              "id": 7157,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "369:0:31"
+            },
+            "scope": 7189,
+            "src": "325:236:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7187,
+              "nodeType": "Block",
+              "src": "617:67:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 7183,
+                      "name": "_initialized",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7145,
+                      "src": "634:12:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+                        "typeString": "mapping(string memory => bool)"
+                      }
+                    },
+                    "id": 7185,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "426f6e64656445434453414b65657056656e646f72496d706c5632",
+                      "id": 7184,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "647:29:31",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_685d2165754aeec830674a5eff5576459b3dc9eec89d024d7aaba5d2294061db",
+                        "typeString": "literal_string \"BondedECDSAKeepVendorImplV2\""
+                      },
+                      "value": "BondedECDSAKeepVendorImplV2"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "634:43:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 7182,
+                  "id": 7186,
+                  "nodeType": "Return",
+                  "src": "627:50:31"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7188,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialized",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7179,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "587:2:31"
+            },
+            "returnParameters": {
+              "id": 7182,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7181,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7188,
+                  "src": "611:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7180,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "611:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "610:6:31"
+            },
+            "scope": 7189,
+            "src": "567:117:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7190,
+        "src": "137:549:31"
+      }
+    ],
+    "src": "0:687:31"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/kowal/Projects/sovryn/keep-ecdsa/solidity/contracts/test/BondedECDSAKeepVendorImplV2Stub.sol",
+    "exportedSymbols": {
+      "BondedECDSAKeepVendorImplV2Stub": [
+        7189
+      ]
+    },
+    "id": 7190,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7141,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:31"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Bonded ECDSA Keep Vendor Implementation V2 Stub\n @dev This contract is for testing purposes only.",
+        "fullyImplemented": true,
+        "id": 7189,
+        "linearizedBaseContracts": [
+          7189
+        ],
+        "name": "BondedECDSAKeepVendorImplV2Stub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7145,
+            "name": "_initialized",
+            "nodeType": "VariableDeclaration",
+            "scope": 7189,
+            "src": "184:45:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+              "typeString": "mapping(string => bool)"
+            },
+            "typeName": {
+              "id": 7144,
+              "keyType": {
+                "id": 7142,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "192:6:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "184:23:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+                "typeString": "mapping(string => bool)"
+              },
+              "valueType": {
+                "id": 7143,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "202:4:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7152,
+              "nodeType": "Block",
+              "src": "291:28:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "5632",
+                    "id": 7150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "308:4:31",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_23d235efaf569b2b407d10f447247743508d1762a8e3a3aed85ccc0570dde35f",
+                      "typeString": "literal_string \"V2\""
+                    },
+                    "value": "V2"
+                  },
+                  "functionReturnParameters": 7149,
+                  "id": 7151,
+                  "nodeType": "Return",
+                  "src": "301:11:31"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7153,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "version",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "252:2:31"
+            },
+            "returnParameters": {
+              "id": 7149,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7148,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7153,
+                  "src": "276:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7147,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "276:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "275:15:31"
+            },
+            "scope": 7189,
+            "src": "236:83:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7177,
+              "nodeType": "Block",
+              "src": "369:192:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7161,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "387:14:31",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 7159,
+                            "name": "initialized",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 7188,
+                            "src": "388:11:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
+                              "typeString": "function () view returns (bool)"
+                            }
+                          },
+                          "id": 7160,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "388:13:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "436f6e747261637420697320616c726561647920696e697469616c697a65642e",
+                        "id": 7162,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "403:34:31",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6f62b02b7e28802cff74500734eb4021f1b0dcb85f330f4191553918cd60e3a0",
+                          "typeString": "literal_string \"Contract is already initialized.\""
+                        },
+                        "value": "Contract is already initialized."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6f62b02b7e28802cff74500734eb4021f1b0dcb85f330f4191553918cd60e3a0",
+                          "typeString": "literal_string \"Contract is already initialized.\""
+                        }
+                      ],
+                      "id": 7158,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        22402,
+                        22403
+                      ],
+                      "referencedDeclaration": 22403,
+                      "src": "379:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7163,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "379:59:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7164,
+                  "nodeType": "ExpressionStatement",
+                  "src": "379:59:31"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 7165,
+                        "name": "_initialized",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7145,
+                        "src": "448:12:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+                          "typeString": "mapping(string memory => bool)"
+                        }
+                      },
+                      "id": 7167,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "426f6e64656445434453414b65657056656e646f72496d706c5632",
+                        "id": 7166,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "461:29:31",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_685d2165754aeec830674a5eff5576459b3dc9eec89d024d7aaba5d2294061db",
+                          "typeString": "literal_string \"BondedECDSAKeepVendorImplV2\""
+                        },
+                        "value": "BondedECDSAKeepVendorImplV2"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "448:43:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 7168,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "494:4:31",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "448:50:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7170,
+                  "nodeType": "ExpressionStatement",
+                  "src": "448:50:31"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7173,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "517:11:31",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "id": 7172,
+                          "name": "shouldFail",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7155,
+                          "src": "518:10:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "496e697469616c697a6174696f6e206661696c6564",
+                        "id": 7174,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "530:23:31",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0ced64e7a7e72856969cefe00640aa7f13f8db705f9748f7d3003a20bc61daa4",
+                          "typeString": "literal_string \"Initialization failed\""
+                        },
+                        "value": "Initialization failed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_0ced64e7a7e72856969cefe00640aa7f13f8db705f9748f7d3003a20bc61daa4",
+                          "typeString": "literal_string \"Initialization failed\""
+                        }
+                      ],
+                      "id": 7171,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        22402,
+                        22403
+                      ],
+                      "referencedDeclaration": 22403,
+                      "src": "509:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7175,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "509:45:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7176,
+                  "nodeType": "ExpressionStatement",
+                  "src": "509:45:31"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7178,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7156,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7155,
+                  "name": "shouldFail",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7178,
+                  "src": "345:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7154,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:17:31"
+            },
+            "returnParameters": {
+              "id": 7157,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "369:0:31"
+            },
+            "scope": 7189,
+            "src": "325:236:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7187,
+              "nodeType": "Block",
+              "src": "617:67:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 7183,
+                      "name": "_initialized",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7145,
+                      "src": "634:12:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
+                        "typeString": "mapping(string memory => bool)"
+                      }
+                    },
+                    "id": 7185,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "426f6e64656445434453414b65657056656e646f72496d706c5632",
+                      "id": 7184,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "647:29:31",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_685d2165754aeec830674a5eff5576459b3dc9eec89d024d7aaba5d2294061db",
+                        "typeString": "literal_string \"BondedECDSAKeepVendorImplV2\""
+                      },
+                      "value": "BondedECDSAKeepVendorImplV2"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "634:43:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 7182,
+                  "id": 7186,
+                  "nodeType": "Return",
+                  "src": "627:50:31"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7188,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialized",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7179,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "587:2:31"
+            },
+            "returnParameters": {
+              "id": 7182,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7181,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7188,
+                  "src": "611:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7180,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "611:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "610:6:31"
+            },
+            "scope": 7189,
+            "src": "567:117:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7190,
+        "src": "137:549:31"
+      }
+    ],
+    "src": "0:687:31"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.328Z",
+  "devdoc": {
+    "details": "This contract is for testing purposes only.",
+    "methods": {},
+    "title": "Bonded ECDSA Keep Vendor Implementation V2 Stub"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

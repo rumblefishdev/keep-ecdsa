@@ -18,13 +18,15 @@ import "./api/IBondingManagement.sol";
 
 import "@keep-network/keep-core/contracts/KeepRegistry.sol";
 
+// import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
 /// @title Abstract Bonding
 /// @notice Contract holding deposits from keeps' operators.
 contract AbstractBonding is IBondingManagement {
     using SafeMath for uint256;
-
+    address public bondTokenAddress;
     // Registry contract with a list of approved factories (operator contracts).
     KeepRegistry internal registry;
 
@@ -72,24 +74,52 @@ contract AbstractBonding is IBondingManagement {
 
     /// @notice Initializes Keep Bonding contract.
     /// @param registryAddress Keep registry contract address.
-    constructor(address registryAddress) public {
+    constructor(address registryAddress, address _bondTokenAddress) public {
         registry = KeepRegistry(registryAddress);
+        bondTokenAddress = _bondTokenAddress;
     }
 
     /// @notice Add the provided value to operator's pool available for bonding.
     /// @param operator Address of the operator.
-    function deposit(address operator) public payable {
+    function deposit(address operator, uint256 _amount) public {
         address beneficiary = beneficiaryOf(operator);
         // Beneficiary has to be set (delegation exist) before an operator can
         // deposit wei. It protects from a situation when an operator wants
         // to withdraw funds which are transfered to beneficiary with zero
         // address.
+
         require(
             beneficiary != address(0),
             "Beneficiary not defined for the operator"
         );
-        unbondedValue[operator] = unbondedValue[operator].add(msg.value);
-        emit UnbondedValueDeposited(operator, beneficiary, msg.value);
+        ERC20 bondToken = ERC20(bondTokenAddress);
+        require(
+            bondToken.allowance(operator, address(this)) >= _amount,
+            "Allowance is too low"
+        );
+        bondToken.transferFrom(operator, address(this), _amount);
+        unbondedValue[operator] = unbondedValue[operator].add(_amount);
+        emit UnbondedValueDeposited(operator, beneficiary, _amount);
+    }
+    function depositFor(address operator, uint256 _amount, address _source) public {
+        address beneficiary = beneficiaryOf(operator);
+        // Beneficiary has to be set (delegation exist) before an operator can
+        // deposit wei. It protects from a situation when an operator wants
+        // to withdraw funds which are transfered to beneficiary with zero
+        // address.
+
+        require(
+            beneficiary != address(0),
+            "Beneficiary not defined for the operator"
+        );
+        ERC20 bondToken = ERC20(bondTokenAddress);
+        require(
+            bondToken.allowance(_source, address(this)) >= _amount,
+            "Allowance of _source is too low"
+        );
+        bondToken.transferFrom(_source, address(this), _amount);
+        unbondedValue[operator] = unbondedValue[operator].add(_amount);
+        emit UnbondedValueDeposited(operator, beneficiary, _amount);
     }
 
     /// @notice Withdraws amount from operator's value available for bonding.
@@ -250,11 +280,11 @@ contract AbstractBonding is IBondingManagement {
         address operator,
         uint256 referenceID,
         uint256 amount,
-        address payable destination
+        address destination
     ) public {
         require(amount > 0, "Requested amount should be greater than zero");
 
-        address payable holder = msg.sender;
+        address holder = msg.sender;
         bytes32 bondID =
             keccak256(abi.encodePacked(operator, holder, referenceID));
 
@@ -263,9 +293,10 @@ contract AbstractBonding is IBondingManagement {
             "Requested amount is greater than the bond"
         );
 
+        ERC20 bondToken = ERC20(bondTokenAddress);
         lockedBonds[bondID] = lockedBonds[bondID].sub(amount);
 
-        (bool success, ) = destination.call.value(amount)("");
+        bool success = bondToken.transfer(destination, amount);
         require(success, "Transfer failed");
 
         emit BondSeized(operator, referenceID, destination, amount);
@@ -343,8 +374,8 @@ contract AbstractBonding is IBondingManagement {
         unbondedValue[operator] = unbondedValue[operator].sub(amount);
 
         address beneficiary = beneficiaryOf(operator);
-
-        (bool success, ) = beneficiary.call.value(amount)("");
+        ERC20 bondToken = ERC20(bondTokenAddress);
+        bool success = bondToken.transfer(beneficiary, amount);
         require(success, "Transfer failed");
 
         emit UnbondedValueWithdrawn(operator, beneficiary, amount);

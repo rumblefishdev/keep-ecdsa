@@ -1,0 +1,349 @@
+{
+  "contractName": "IStaking",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "operatorContract",
+          "type": "address"
+        }
+      ],
+      "name": "eligibleStake",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operatorContract\",\"type\":\"address\"}],\"name\":\"eligibleStake\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"@keep-network/sortition-pools/contracts/api/IStaking.sol\":\"IStaking\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@keep-network/sortition-pools/contracts/api/IStaking.sol\":{\"keccak256\":\"0xf7cc15fb64346774c97f93b7f626d7adcf5a288377f44048906d93511c5ca3cd\",\"urls\":[\"bzz-raw://f9a04f30cad1f821488043c255ee5516c0d84645596f0a9b90fc4a90a03943ce\",\"dweb:/ipfs/QmPaoiRZfA1NpzHVT69sV79ygeXGEx1ZZ3rGdmV2Gvymv3\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.17;\n\ninterface IStaking {\n    // Gives the amount of KEEP tokens staked by the `operator`\n    // eligible for work selection in the specified `operatorContract`.\n    //\n    // If the operator doesn't exist or hasn't finished initializing,\n    // or the operator contract hasn't been authorized for the operator,\n    // returns 0.\n    function eligibleStake(\n        address operator,\n        address operatorContract\n    ) external view returns (uint256);\n}\n",
+  "sourcePath": "@keep-network/sortition-pools/contracts/api/IStaking.sol",
+  "ast": {
+    "absolutePath": "@keep-network/sortition-pools/contracts/api/IStaking.sol",
+    "exportedSymbols": {
+      "IStaking": [
+        20926
+      ]
+    },
+    "id": 20927,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20916,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:88"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20926,
+        "linearizedBaseContracts": [
+          20926
+        ],
+        "name": "IStaking",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 20925,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "eligibleStake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20921,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20918,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20925,
+                  "src": "386:16:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20917,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20920,
+                  "name": "operatorContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20925,
+                  "src": "412:24:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20919,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "412:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:66:88"
+            },
+            "returnParameters": {
+              "id": 20924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20923,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20925,
+                  "src": "466:7:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20922,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "466:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "465:9:88"
+            },
+            "scope": 20926,
+            "src": "354:121:88",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20927,
+        "src": "25:452:88"
+      }
+    ],
+    "src": "0:478:88"
+  },
+  "legacyAST": {
+    "absolutePath": "@keep-network/sortition-pools/contracts/api/IStaking.sol",
+    "exportedSymbols": {
+      "IStaking": [
+        20926
+      ]
+    },
+    "id": 20927,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20916,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:88"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20926,
+        "linearizedBaseContracts": [
+          20926
+        ],
+        "name": "IStaking",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 20925,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "eligibleStake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20921,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20918,
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20925,
+                  "src": "386:16:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20917,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20920,
+                  "name": "operatorContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20925,
+                  "src": "412:24:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20919,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "412:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:66:88"
+            },
+            "returnParameters": {
+              "id": 20924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20923,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20925,
+                  "src": "466:7:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20922,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "466:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "465:9:88"
+            },
+            "scope": 20926,
+            "src": "354:121:88",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20927,
+        "src": "25:452:88"
+      }
+    ],
+    "src": "0:478:88"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2021-01-29T17:35:44.467Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
