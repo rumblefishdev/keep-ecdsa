@@ -28,9 +28,9 @@ module.exports = {
     //
     local: {
       host: "127.0.0.1", // Localhost (default: none)
-      port: 8545, // Standard Ethereum port (default: none)
+      port: 8546,
       network_id: "*", // Any network (default: none)
-      websockets: true, //  Enable EventEmitter interface for web3 (default: false)
+      websockets: true,
     },
     sov: {
       provider: function () {
@@ -46,20 +46,20 @@ module.exports = {
       timeoutBlocks: 50,
       deploymentPollingInterval: 1000,
     },
-    local: {
-      provider: function () {
-        return new HDWalletProvider(
-          "4526476adb17c8f751fc4e71e23c4f5e7e2013cd62417b63825cb6cde8a42627",
-          "HTTP://127.0.0.1:7545"
-        )
-      },
-      gas: 6700000,
-      gasPrice: 80000000,
-      skipDryRun: false,
-      network_id: "*",
-      timeoutBlocks: 50,
-      deploymentPollingInterval: 1000,
-    },
+    // local: {
+    //   provider: function () {
+    //     return new HDWalletProvider(
+    //       "4526476adb17c8f751fc4e71e23c4f5e7e2013cd62417b63825cb6cde8a42627",
+    //       "HTTP://127.0.0.1:8545"
+    //     )
+    //   },
+    //   gas: 6700000,
+    //   gasPrice: 80000000,
+    //   skipDryRun: false,
+    //   network_id: "*",
+    //   timeoutBlocks: 50,
+    //   deploymentPollingInterval: 1000,
+    // },
     keep_dev: {
       provider: function () {
         return new HDWalletProvider(

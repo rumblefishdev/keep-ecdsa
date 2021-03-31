@@ -513,7 +513,7 @@ describe("BondedECDSAKeepFactory", function () {
     })
 
     it("updates operator if bonding value has changed above minimum", async () => {
-      keepBonding.deposit(members[0], {value: new BN(1)})
+      keepBonding.deposit(members[0], new BN(1))
       assert.isTrue(
         await keepFactory.isOperatorUpToDate(members[0], application),
         "unexpected status of the operator after bonding value change"

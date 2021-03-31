@@ -50,21 +50,28 @@ module.exports = async function (deployer, network) {
     initializationPeriod = 1
   }
 
-  // if (process.env.TEST) {
-  //   console.log(process.env.TEST)
-  //   TokenStakingStub = artifacts.require("TokenStakingStub")
-  //   TokenStakingAddress = (await TokenStakingStub.new()).address
+  
+  if (process.env.TEST) {
+    TokenStakingStub = artifacts.require("TokenStakingStub")
 
-  //   TokenGrantStub = artifacts.require("TokenGrantStub")
-  //   TokenGrantAddress = (await TokenGrantStub.new()).address
+    TokenStakingAddress = (await TokenStakingStub.new()).address
 
-  //   RandomBeaconStub = artifacts.require("RandomBeaconStub")
-  //   RandomBeaconAddress = (await RandomBeaconStub.new()).address
+    TokenGrantStub = artifacts.require("TokenGrantStub")
+    TokenGrantAddress = (await TokenGrantStub.new()).address
 
-  //   RegistryAddress = (await deployer.deploy(KeepRegistry)).address
-  // console.log('##')
-  // }
-  // console.log('122')
+    RandomBeaconStub = artifacts.require("RandomBeaconStub")
+    RandomBeaconAddress = (await RandomBeaconStub.new()).address
+
+    RegistryAddress = (await deployer.deploy(KeepRegistry)).address
+
+    const ERC20Stub = artifacts.require("ERC20Stub")
+    BondTokenAddress = (await deployer.deploy(ERC20Stub)).address
+  }
+
+  const BondERC20 = artifacts.require("BondERC20")
+  await deployer.deploy(BondERC20)
+  BondTokenAddress = (await BondERC20.deployed()).address
+
 
   // KEEP staking and ETH bonding
   await deployer.deploy(

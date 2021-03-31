@@ -97,7 +97,7 @@ contract AbstractBonding is IBondingManagement {
             bondToken.allowance(operator, address(this)) >= _amount,
             "Allowance is too low"
         );
-        bondToken.transferFrom(operator, address(this), _amount);
+        require(bondToken.transferFrom(operator, address(this), _amount), "Transfer failed");
         unbondedValue[operator] = unbondedValue[operator].add(_amount);
         emit UnbondedValueDeposited(operator, beneficiary, _amount);
     }
@@ -117,7 +117,7 @@ contract AbstractBonding is IBondingManagement {
             bondToken.allowance(_source, address(this)) >= _amount,
             "Allowance of _source is too low"
         );
-        bondToken.transferFrom(_source, address(this), _amount);
+        require(bondToken.transferFrom(_source, address(this), _amount), "Transfer failed");
         unbondedValue[operator] = unbondedValue[operator].add(_amount);
         emit UnbondedValueDeposited(operator, beneficiary, _amount);
     }

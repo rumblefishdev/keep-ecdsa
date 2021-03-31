@@ -1,5 +1,6 @@
 const BondedECDSAKeepFactory = artifacts.require("BondedECDSAKeepFactory")
 const KeepBonding = artifacts.require("KeepBonding")
+const BondERC20 = artifacts.require("BondERC20")
 
 const TokenStaking = artifacts.require(
   "@keep-network/keep-core/build/truffle/TokenStaking"
@@ -32,7 +33,7 @@ module.exports = async function () {
       try {
         await tokenStaking.authorizeOperatorContract(
           operator,
-          operatorContract,
+          operatorContract, 
           {from: operator}
         )
 
@@ -52,11 +53,17 @@ module.exports = async function () {
 
     const depositUnbondedValue = async (operator) => {
       try {
-        await keepBonding.deposit(operator, {value: bondingValue})
+        let bondTokenAddress = await keepBonding.bondTokenAddress()
+        let bondToken = await BondERC20.at(bondTokenAddress)
+
+        await bondToken.mint(operator, bondingValue)
+        await bondToken.approve(keepBonding.address, bondingValue, {from: operator})
+
+        await keepBonding.deposit(operator, bondingValue, {from: operator})
         console.log(
           `deposited ${web3.utils.fromWei(
             bondingValue
-          )} ETH bonding value for operator [${operator}]`
+          )} ERC20-token bonding value for operator [${operator}]`
         )
       } catch (err) {
         console.error(err)
@@ -66,8 +73,8 @@ module.exports = async function () {
 
     try {
       bondedECDSAKeepFactory = await BondedECDSAKeepFactory.deployed()
-      tokenStaking = await TokenStaking.at(TokenStakingAddress)
       keepBonding = await KeepBonding.deployed()
+      tokenStaking = await TokenStaking.at(TokenStakingAddress)
 
       operatorContract = bondedECDSAKeepFactory.address
     } catch (err) {
