@@ -40,7 +40,7 @@ value. To initialize the operator:
 1. Initialize token staking in keep-core:
     ```sh
     # Run from `keep-core/contracts/solidity` directory
-    truffle exec ./scripts/demo.js --network local
+    truffle exec ./scripts/demo.js --network sov
     ```
 
 2. Initialize operator for Bonded ECDSA keep factory.

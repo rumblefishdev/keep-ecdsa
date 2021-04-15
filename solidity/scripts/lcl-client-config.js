@@ -5,7 +5,7 @@ addresses.
 Example:
 KEEP_ECDSA_CONFIG_FILE_PATH=~go/src/github.com/keep-network/keep-ecdsa/configs/config.toml \
     CLIENT_APP_ADDRESS="0x2AA420Af8CB62888ACBD8C7fAd6B4DdcDD89BC82" \
-    truffle exec scripts/lcl-client-config.js --network local
+    truffle exec scripts/lcl-client-config.js --network sov
 */
 const fs = require("fs")
 const toml = require("toml")

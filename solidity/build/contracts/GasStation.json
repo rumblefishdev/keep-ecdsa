@@ -12,21 +12,21 @@
     "absolutePath": "@keep-network/sortition-pools/contracts/GasStation.sol",
     "exportedSymbols": {
       "GasStation": [
-        19172
+        19233
       ]
     },
-    "id": 19173,
+    "id": 19234,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 19109,
+        "id": 19170,
         "literals": [
           "solidity",
           "0.5",
           ".17"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:79"
+        "src": "0:23:80"
       },
       {
         "baseContracts": [],
@@ -34,20 +34,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 19172,
+        "id": 19233,
         "linearizedBaseContracts": [
-          19172
+          19233
         ],
         "name": "GasStation",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 19115,
+            "id": 19176,
             "name": "gasDeposits",
             "nodeType": "VariableDeclaration",
-            "scope": 19172,
-            "src": "49:59:79",
+            "scope": 19233,
+            "src": "49:59:80",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -55,46 +55,46 @@
               "typeString": "mapping(address => mapping(uint256 => uint256))"
             },
             "typeName": {
-              "id": 19114,
+              "id": 19175,
               "keyType": {
-                "id": 19110,
+                "id": 19171,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "57:7:79",
+                "src": "57:7:80",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "49:47:79",
+              "src": "49:47:80",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
                 "typeString": "mapping(address => mapping(uint256 => uint256))"
               },
               "valueType": {
-                "id": 19113,
+                "id": 19174,
                 "keyType": {
-                  "id": 19111,
+                  "id": 19172,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "76:7:79",
+                  "src": "76:7:80",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
                 "nodeType": "Mapping",
-                "src": "68:27:79",
+                "src": "68:27:80",
                 "typeDescriptions": {
                   "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                   "typeString": "mapping(uint256 => uint256)"
                 },
                 "valueType": {
-                  "id": 19112,
+                  "id": 19173,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "87:7:79",
+                  "src": "87:7:80",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -107,9 +107,9 @@
           },
           {
             "body": {
-              "id": 19125,
+              "id": 19186,
               "nodeType": "Block",
-              "src": "156:30:79",
+              "src": "156:30:80",
               "statements": [
                 {
                   "expression": {
@@ -117,12 +117,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 19121,
+                        "id": 19182,
                         "name": "addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 19117,
-                        "src": "173:4:79",
+                        "referencedDeclaration": 19178,
+                        "src": "173:4:80",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -131,14 +131,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 19122,
+                        "id": 19183,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "179:1:79",
+                        "src": "179:1:80",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_1_by_1",
@@ -158,18 +158,18 @@
                           "typeString": "int_const 1"
                         }
                       ],
-                      "id": 19120,
+                      "id": 19181,
                       "name": "setDeposit",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 19166,
-                      "src": "162:10:79",
+                      "referencedDeclaration": 19227,
+                      "src": "162:10:80",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 19123,
+                    "id": 19184,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -177,36 +177,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "162:19:79",
+                    "src": "162:19:80",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 19124,
+                  "id": 19185,
                   "nodeType": "ExpressionStatement",
-                  "src": "162:19:79"
+                  "src": "162:19:80"
                 }
               ]
             },
             "documentation": null,
-            "id": 19126,
+            "id": 19187,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "depositGas",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19118,
+              "id": 19179,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 19117,
+                  "id": 19178,
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19126,
-                  "src": "133:12:79",
+                  "scope": 19187,
+                  "src": "133:12:80",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -214,10 +214,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 19116,
+                    "id": 19177,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "133:7:79",
+                    "src": "133:7:80",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -228,25 +228,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "132:14:79"
+              "src": "132:14:80"
             },
             "returnParameters": {
-              "id": 19119,
+              "id": 19180,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "156:0:79"
+              "src": "156:0:80"
             },
-            "scope": 19172,
-            "src": "113:73:79",
+            "scope": 19233,
+            "src": "113:73:80",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 19136,
+              "id": 19197,
               "nodeType": "Block",
-              "src": "233:30:79",
+              "src": "233:30:80",
               "statements": [
                 {
                   "expression": {
@@ -254,12 +254,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 19132,
+                        "id": 19193,
                         "name": "addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 19128,
-                        "src": "250:4:79",
+                        "referencedDeclaration": 19189,
+                        "src": "250:4:80",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -268,14 +268,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 19133,
+                        "id": 19194,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "256:1:79",
+                        "src": "256:1:80",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
@@ -295,18 +295,18 @@
                           "typeString": "int_const 0"
                         }
                       ],
-                      "id": 19131,
+                      "id": 19192,
                       "name": "setDeposit",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 19166,
-                      "src": "239:10:79",
+                      "referencedDeclaration": 19227,
+                      "src": "239:10:80",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 19134,
+                    "id": 19195,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -314,36 +314,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "239:19:79",
+                    "src": "239:19:80",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 19135,
+                  "id": 19196,
                   "nodeType": "ExpressionStatement",
-                  "src": "239:19:79"
+                  "src": "239:19:80"
                 }
               ]
             },
             "documentation": null,
-            "id": 19137,
+            "id": 19198,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "releaseGas",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19129,
+              "id": 19190,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 19128,
+                  "id": 19189,
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19137,
-                  "src": "210:12:79",
+                  "scope": 19198,
+                  "src": "210:12:80",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -351,10 +351,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 19127,
+                    "id": 19188,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "210:7:79",
+                    "src": "210:7:80",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -365,36 +365,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "209:14:79"
+              "src": "209:14:80"
             },
             "returnParameters": {
-              "id": 19130,
+              "id": 19191,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "233:0:79"
+              "src": "233:0:80"
             },
-            "scope": 19172,
-            "src": "190:73:79",
+            "scope": 19233,
+            "src": "190:73:80",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 19165,
+              "id": 19226,
               "nodeType": "Block",
-              "src": "323:98:79",
+              "src": "323:98:80",
               "statements": [
                 {
                   "body": {
-                    "id": 19163,
+                    "id": 19224,
                     "nodeType": "Block",
-                    "src": "376:41:79",
+                    "src": "376:41:80",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 19161,
+                          "id": 19222,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -405,26 +405,26 @@
                               "argumentTypes": null,
                               "baseExpression": {
                                 "argumentTypes": null,
-                                "id": 19155,
+                                "id": 19216,
                                 "name": "gasDeposits",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 19115,
-                                "src": "384:11:79",
+                                "referencedDeclaration": 19176,
+                                "src": "384:11:80",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
                                   "typeString": "mapping(address => mapping(uint256 => uint256))"
                                 }
                               },
-                              "id": 19158,
+                              "id": 19219,
                               "indexExpression": {
                                 "argumentTypes": null,
-                                "id": 19156,
+                                "id": 19217,
                                 "name": "addr",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 19139,
-                                "src": "396:4:79",
+                                "referencedDeclaration": 19200,
+                                "src": "396:4:80",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -435,21 +435,21 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "384:17:79",
+                              "src": "384:17:80",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                                 "typeString": "mapping(uint256 => uint256)"
                               }
                             },
-                            "id": 19159,
+                            "id": 19220,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 19157,
+                              "id": 19218,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 19145,
-                              "src": "402:1:79",
+                              "referencedDeclaration": 19206,
+                              "src": "402:1:80",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -460,7 +460,7 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "384:20:79",
+                            "src": "384:20:80",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -470,26 +470,26 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 19160,
+                            "id": 19221,
                             "name": "val",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 19141,
-                            "src": "407:3:79",
+                            "referencedDeclaration": 19202,
+                            "src": "407:3:80",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             }
                           },
-                          "src": "384:26:79",
+                          "src": "384:26:80",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "id": 19162,
+                        "id": 19223,
                         "nodeType": "ExpressionStatement",
-                        "src": "384:26:79"
+                        "src": "384:26:80"
                       }
                     ]
                   },
@@ -499,19 +499,19 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 19151,
+                    "id": 19212,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 19148,
+                      "id": 19209,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 19145,
-                      "src": "349:1:79",
+                      "referencedDeclaration": 19206,
+                      "src": "349:1:80",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -524,18 +524,18 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 19149,
+                        "id": 19210,
                         "name": "gasDepositSize",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 19171,
-                        "src": "353:14:79",
+                        "referencedDeclaration": 19232,
+                        "src": "353:14:80",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$__$returns$_t_uint256_$",
                           "typeString": "function () pure returns (uint256)"
                         }
                       },
-                      "id": 19150,
+                      "id": 19211,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -543,31 +543,31 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "353:16:79",
+                      "src": "353:16:80",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "349:20:79",
+                    "src": "349:20:80",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 19164,
+                  "id": 19225,
                   "initializationExpression": {
                     "assignments": [
-                      19145
+                      19206
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 19145,
+                        "id": 19206,
                         "name": "i",
                         "nodeType": "VariableDeclaration",
-                        "scope": 19164,
-                        "src": "334:9:79",
+                        "scope": 19225,
+                        "src": "334:9:80",
                         "stateVariable": false,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -575,10 +575,10 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 19144,
+                          "id": 19205,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
-                          "src": "334:7:79",
+                          "src": "334:7:80",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -588,18 +588,18 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 19147,
+                    "id": 19208,
                     "initialValue": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 19146,
+                      "id": 19207,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "346:1:79",
+                      "src": "346:1:80",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
@@ -608,12 +608,12 @@
                       "value": "0"
                     },
                     "nodeType": "VariableDeclarationStatement",
-                    "src": "334:13:79"
+                    "src": "334:13:80"
                   },
                   "loopExpression": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 19153,
+                      "id": 19214,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -621,15 +621,15 @@
                       "nodeType": "UnaryOperation",
                       "operator": "++",
                       "prefix": false,
-                      "src": "371:3:79",
+                      "src": "371:3:80",
                       "subExpression": {
                         "argumentTypes": null,
-                        "id": 19152,
+                        "id": 19213,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 19145,
-                        "src": "371:1:79",
+                        "referencedDeclaration": 19206,
+                        "src": "371:1:80",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -640,33 +640,33 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 19154,
+                    "id": 19215,
                     "nodeType": "ExpressionStatement",
-                    "src": "371:3:79"
+                    "src": "371:3:80"
                   },
                   "nodeType": "ForStatement",
-                  "src": "329:88:79"
+                  "src": "329:88:80"
                 }
               ]
             },
             "documentation": null,
-            "id": 19166,
+            "id": 19227,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setDeposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19142,
+              "id": 19203,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 19139,
+                  "id": 19200,
                   "name": "addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19166,
-                  "src": "287:12:79",
+                  "scope": 19227,
+                  "src": "287:12:80",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -674,10 +674,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 19138,
+                    "id": 19199,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "287:7:79",
+                    "src": "287:7:80",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -689,11 +689,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 19141,
+                  "id": 19202,
                   "name": "val",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19166,
-                  "src": "301:11:79",
+                  "scope": 19227,
+                  "src": "301:11:80",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -701,10 +701,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 19140,
+                    "id": 19201,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "301:7:79",
+                    "src": "301:7:80",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -714,16 +714,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "286:27:79"
+              "src": "286:27:80"
             },
             "returnParameters": {
-              "id": 19143,
+              "id": 19204,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "323:0:79"
+              "src": "323:0:80"
             },
-            "scope": 19172,
-            "src": "267:154:79",
+            "scope": 19233,
+            "src": "267:154:80",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
@@ -731,29 +731,29 @@
           {
             "body": null,
             "documentation": null,
-            "id": 19171,
+            "id": 19232,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "gasDepositSize",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19167,
+              "id": 19228,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "448:2:79"
+              "src": "448:2:80"
             },
             "returnParameters": {
-              "id": 19170,
+              "id": 19231,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 19169,
+                  "id": 19230,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19171,
-                  "src": "474:7:79",
+                  "scope": 19232,
+                  "src": "474:7:80",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -761,10 +761,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 19168,
+                    "id": 19229,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "474:7:79",
+                    "src": "474:7:80",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -774,809 +774,904 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "473:9:79"
+              "src": "473:9:80"
             },
-            "scope": 19172,
-            "src": "425:58:79",
+            "scope": 19233,
+            "src": "425:58:80",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 19173,
-        "src": "25:460:79"
+        "scope": 19234,
+        "src": "25:460:80"
       }
     ],
-    "src": "0:486:79"
+    "src": "0:486:80"
   },
   "legacyAST": {
-    "absolutePath": "@keep-network/sortition-pools/contracts/GasStation.sol",
-    "exportedSymbols": {
-      "GasStation": [
-        19172
-      ]
+    "attributes": {
+      "absolutePath": "@keep-network/sortition-pools/contracts/GasStation.sol",
+      "exportedSymbols": {
+        "GasStation": [
+          19233
+        ]
+      }
     },
-    "id": 19173,
-    "nodeType": "SourceUnit",
-    "nodes": [
+    "children": [
       {
-        "id": 19109,
-        "literals": [
-          "solidity",
-          "0.5",
-          ".17"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "0:23:79"
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.5",
+            ".17"
+          ]
+        },
+        "id": 19170,
+        "name": "PragmaDirective",
+        "src": "0:23:80"
       },
       {
-        "baseContracts": [],
-        "contractDependencies": [],
-        "contractKind": "contract",
-        "documentation": null,
-        "fullyImplemented": false,
-        "id": 19172,
-        "linearizedBaseContracts": [
-          19172
-        ],
-        "name": "GasStation",
-        "nodeType": "ContractDefinition",
-        "nodes": [
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            19233
+          ],
+          "name": "GasStation",
+          "scope": 19234
+        },
+        "children": [
           {
-            "constant": false,
-            "id": 19115,
-            "name": "gasDeposits",
-            "nodeType": "VariableDeclaration",
-            "scope": 19172,
-            "src": "49:59:79",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
-              "typeString": "mapping(address => mapping(uint256 => uint256))"
+            "attributes": {
+              "constant": false,
+              "name": "gasDeposits",
+              "scope": 19233,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => mapping(uint256 => uint256))",
+              "value": null,
+              "visibility": "internal"
             },
-            "typeName": {
-              "id": 19114,
-              "keyType": {
-                "id": 19110,
-                "name": "address",
-                "nodeType": "ElementaryTypeName",
-                "src": "57:7:79",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_address",
-                  "typeString": "address"
-                }
-              },
-              "nodeType": "Mapping",
-              "src": "49:47:79",
-              "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
-                "typeString": "mapping(address => mapping(uint256 => uint256))"
-              },
-              "valueType": {
-                "id": 19113,
-                "keyType": {
-                  "id": 19111,
-                  "name": "uint256",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "76:7:79",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  }
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => mapping(uint256 => uint256))"
                 },
-                "nodeType": "Mapping",
-                "src": "68:27:79",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
-                  "typeString": "mapping(uint256 => uint256)"
-                },
-                "valueType": {
-                  "id": 19112,
-                  "name": "uint256",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "87:7:79",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 19171,
+                    "name": "ElementaryTypeName",
+                    "src": "57:7:80"
+                  },
+                  {
+                    "attributes": {
+                      "type": "mapping(uint256 => uint256)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 19172,
+                        "name": "ElementaryTypeName",
+                        "src": "76:7:80"
+                      },
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 19173,
+                        "name": "ElementaryTypeName",
+                        "src": "87:7:80"
+                      }
+                    ],
+                    "id": 19174,
+                    "name": "Mapping",
+                    "src": "68:27:80"
                   }
-                }
+                ],
+                "id": 19175,
+                "name": "Mapping",
+                "src": "49:47:80"
               }
-            },
-            "value": null,
-            "visibility": "internal"
+            ],
+            "id": 19176,
+            "name": "VariableDeclaration",
+            "src": "49:59:80"
           },
           {
-            "body": {
-              "id": 19125,
-              "nodeType": "Block",
-              "src": "156:30:79",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "depositGas",
+              "scope": 19233,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "addr",
+                      "scope": 19187,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
                       {
-                        "argumentTypes": null,
-                        "id": 19121,
-                        "name": "addr",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 19117,
-                        "src": "173:4:79",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "31",
-                        "id": 19122,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "number",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "179:1:79",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_rational_1_by_1",
-                          "typeString": "int_const 1"
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
                         },
-                        "value": "1"
+                        "id": 19177,
+                        "name": "ElementaryTypeName",
+                        "src": "133:7:80"
                       }
                     ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        },
-                        {
-                          "typeIdentifier": "t_rational_1_by_1",
-                          "typeString": "int_const 1"
-                        }
-                      ],
-                      "id": 19120,
-                      "name": "setDeposit",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 19166,
-                      "src": "162:10:79",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
-                        "typeString": "function (address,uint256)"
-                      }
-                    },
-                    "id": 19123,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "162:19:79",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 19124,
-                  "nodeType": "ExpressionStatement",
-                  "src": "162:19:79"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 19126,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "depositGas",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 19118,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 19117,
-                  "name": "addr",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 19126,
-                  "src": "133:12:79",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 19116,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "133:7:79",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "132:14:79"
-            },
-            "returnParameters": {
-              "id": 19119,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "156:0:79"
-            },
-            "scope": 19172,
-            "src": "113:73:79",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "internal"
-          },
-          {
-            "body": {
-              "id": 19136,
-              "nodeType": "Block",
-              "src": "233:30:79",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
+                    "id": 19178,
+                    "name": "VariableDeclaration",
+                    "src": "133:12:80"
+                  }
+                ],
+                "id": 19179,
+                "name": "ParameterList",
+                "src": "132:14:80"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 19180,
+                "name": "ParameterList",
+                "src": "156:0:80"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
                       {
-                        "argumentTypes": null,
-                        "id": 19132,
-                        "name": "addr",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 19128,
-                        "src": "250:4:79",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "30",
-                        "id": 19133,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "number",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "256:1:79",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_rational_0_by_1",
-                          "typeString": "int_const 0"
-                        },
-                        "value": "0"
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        },
-                        {
-                          "typeIdentifier": "t_rational_0_by_1",
-                          "typeString": "int_const 0"
-                        }
-                      ],
-                      "id": 19131,
-                      "name": "setDeposit",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 19166,
-                      "src": "239:10:79",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
-                        "typeString": "function (address,uint256)"
-                      }
-                    },
-                    "id": 19134,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "239:19:79",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 19135,
-                  "nodeType": "ExpressionStatement",
-                  "src": "239:19:79"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 19137,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "releaseGas",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 19129,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 19128,
-                  "name": "addr",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 19137,
-                  "src": "210:12:79",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 19127,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "210:7:79",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "209:14:79"
-            },
-            "returnParameters": {
-              "id": 19130,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "233:0:79"
-            },
-            "scope": 19172,
-            "src": "190:73:79",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "internal"
-          },
-          {
-            "body": {
-              "id": 19165,
-              "nodeType": "Block",
-              "src": "323:98:79",
-              "statements": [
-                {
-                  "body": {
-                    "id": 19163,
-                    "nodeType": "Block",
-                    "src": "376:41:79",
-                    "statements": [
-                      {
-                        "expression": {
+                        "attributes": {
                           "argumentTypes": null,
-                          "id": 19161,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_rational_1_by_1",
+                                  "typeString": "int_const 1"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19227,
+                              "type": "function (address,uint256)",
+                              "value": "setDeposit"
+                            },
+                            "id": 19181,
+                            "name": "Identifier",
+                            "src": "162:10:80"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19178,
+                              "type": "address",
+                              "value": "addr"
+                            },
+                            "id": 19182,
+                            "name": "Identifier",
+                            "src": "173:4:80"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 19183,
+                            "name": "Literal",
+                            "src": "179:1:80"
+                          }
+                        ],
+                        "id": 19184,
+                        "name": "FunctionCall",
+                        "src": "162:19:80"
+                      }
+                    ],
+                    "id": 19185,
+                    "name": "ExpressionStatement",
+                    "src": "162:19:80"
+                  }
+                ],
+                "id": 19186,
+                "name": "Block",
+                "src": "156:30:80"
+              }
+            ],
+            "id": 19187,
+            "name": "FunctionDefinition",
+            "src": "113:73:80"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "releaseGas",
+              "scope": 19233,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "addr",
+                      "scope": 19198,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 19188,
+                        "name": "ElementaryTypeName",
+                        "src": "210:7:80"
+                      }
+                    ],
+                    "id": 19189,
+                    "name": "VariableDeclaration",
+                    "src": "210:12:80"
+                  }
+                ],
+                "id": 19190,
+                "name": "ParameterList",
+                "src": "209:14:80"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 19191,
+                "name": "ParameterList",
+                "src": "233:0:80"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_rational_0_by_1",
+                                  "typeString": "int_const 0"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19227,
+                              "type": "function (address,uint256)",
+                              "value": "setDeposit"
+                            },
+                            "id": 19192,
+                            "name": "Identifier",
+                            "src": "239:10:80"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19189,
+                              "type": "address",
+                              "value": "addr"
+                            },
+                            "id": 19193,
+                            "name": "Identifier",
+                            "src": "250:4:80"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 19194,
+                            "name": "Literal",
+                            "src": "256:1:80"
+                          }
+                        ],
+                        "id": 19195,
+                        "name": "FunctionCall",
+                        "src": "239:19:80"
+                      }
+                    ],
+                    "id": 19196,
+                    "name": "ExpressionStatement",
+                    "src": "239:19:80"
+                  }
+                ],
+                "id": 19197,
+                "name": "Block",
+                "src": "233:30:80"
+              }
+            ],
+            "id": 19198,
+            "name": "FunctionDefinition",
+            "src": "190:73:80"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setDeposit",
+              "scope": 19233,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "addr",
+                      "scope": 19227,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 19199,
+                        "name": "ElementaryTypeName",
+                        "src": "287:7:80"
+                      }
+                    ],
+                    "id": 19200,
+                    "name": "VariableDeclaration",
+                    "src": "287:12:80"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "val",
+                      "scope": 19227,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 19201,
+                        "name": "ElementaryTypeName",
+                        "src": "301:7:80"
+                      }
+                    ],
+                    "id": 19202,
+                    "name": "VariableDeclaration",
+                    "src": "301:11:80"
+                  }
+                ],
+                "id": 19203,
+                "name": "ParameterList",
+                "src": "286:27:80"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 19204,
+                "name": "ParameterList",
+                "src": "323:0:80"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "assignments": [
+                            19206
+                          ]
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "constant": false,
+                              "name": "i",
+                              "scope": 19225,
+                              "stateVariable": false,
+                              "storageLocation": "default",
+                              "type": "uint256",
+                              "value": null,
+                              "visibility": "internal"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint256",
+                                  "type": "uint256"
+                                },
+                                "id": 19205,
+                                "name": "ElementaryTypeName",
+                                "src": "334:7:80"
+                              }
+                            ],
+                            "id": 19206,
+                            "name": "VariableDeclaration",
+                            "src": "334:9:80"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 19207,
+                            "name": "Literal",
+                            "src": "346:1:80"
+                          }
+                        ],
+                        "id": 19208,
+                        "name": "VariableDeclarationStatement",
+                        "src": "334:13:80"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "leftHandSide": {
-                            "argumentTypes": null,
-                            "baseExpression": {
+                          "operator": "<",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
                               "argumentTypes": null,
-                              "baseExpression": {
-                                "argumentTypes": null,
-                                "id": 19155,
-                                "name": "gasDeposits",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 19115,
-                                "src": "384:11:79",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
-                                  "typeString": "mapping(address => mapping(uint256 => uint256))"
-                                }
-                              },
-                              "id": 19158,
-                              "indexExpression": {
-                                "argumentTypes": null,
-                                "id": 19156,
-                                "name": "addr",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 19139,
-                                "src": "396:4:79",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_address",
-                                  "typeString": "address"
-                                }
-                              },
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19206,
+                              "type": "uint256",
+                              "value": "i"
+                            },
+                            "id": 19209,
+                            "name": "Identifier",
+                            "src": "349:1:80"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                null
+                              ],
                               "isConstant": false,
-                              "isLValue": true,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 19232,
+                                  "type": "function () pure returns (uint256)",
+                                  "value": "gasDepositSize"
+                                },
+                                "id": 19210,
+                                "name": "Identifier",
+                                "src": "353:14:80"
+                              }
+                            ],
+                            "id": 19211,
+                            "name": "FunctionCall",
+                            "src": "353:16:80"
+                          }
+                        ],
+                        "id": 19212,
+                        "name": "BinaryOperation",
+                        "src": "349:20:80"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
-                              "nodeType": "IndexAccess",
-                              "src": "384:17:79",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
-                                "typeString": "mapping(uint256 => uint256)"
-                              }
+                              "operator": "++",
+                              "prefix": false,
+                              "type": "uint256"
                             },
-                            "id": 19159,
-                            "indexExpression": {
-                              "argumentTypes": null,
-                              "id": 19157,
-                              "name": "i",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 19145,
-                              "src": "402:1:79",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 19206,
+                                  "type": "uint256",
+                                  "value": "i"
+                                },
+                                "id": 19213,
+                                "name": "Identifier",
+                                "src": "371:1:80"
                               }
-                            },
-                            "isConstant": false,
-                            "isLValue": true,
-                            "isPure": false,
-                            "lValueRequested": true,
-                            "nodeType": "IndexAccess",
-                            "src": "384:20:79",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "Assignment",
-                          "operator": "=",
-                          "rightHandSide": {
-                            "argumentTypes": null,
-                            "id": 19160,
-                            "name": "val",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 19141,
-                            "src": "407:3:79",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "384:26:79",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
+                            ],
+                            "id": 19214,
+                            "name": "UnaryOperation",
+                            "src": "371:3:80"
                           }
-                        },
-                        "id": 19162,
-                        "nodeType": "ExpressionStatement",
-                        "src": "384:26:79"
-                      }
-                    ]
-                  },
-                  "condition": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "id": 19151,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "id": 19148,
-                      "name": "i",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 19145,
-                      "src": "349:1:79",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": "<",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "arguments": [],
-                      "expression": {
-                        "argumentTypes": [],
-                        "id": 19149,
-                        "name": "gasDepositSize",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 19171,
-                        "src": "353:14:79",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_function_internal_pure$__$returns$_t_uint256_$",
-                          "typeString": "function () pure returns (uint256)"
-                        }
+                        ],
+                        "id": 19215,
+                        "name": "ExpressionStatement",
+                        "src": "371:3:80"
                       },
-                      "id": 19150,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "functionCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "353:16:79",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "349:20:79",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "id": 19164,
-                  "initializationExpression": {
-                    "assignments": [
-                      19145
-                    ],
-                    "declarations": [
                       {
-                        "constant": false,
-                        "id": 19145,
-                        "name": "i",
-                        "nodeType": "VariableDeclaration",
-                        "scope": 19164,
-                        "src": "334:9:79",
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        },
-                        "typeName": {
-                          "id": 19144,
-                          "name": "uint256",
-                          "nodeType": "ElementaryTypeName",
-                          "src": "334:7:79",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "mapping(uint256 => uint256)"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 19176,
+                                              "type": "mapping(address => mapping(uint256 => uint256))",
+                                              "value": "gasDeposits"
+                                            },
+                                            "id": 19216,
+                                            "name": "Identifier",
+                                            "src": "384:11:80"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 19200,
+                                              "type": "address",
+                                              "value": "addr"
+                                            },
+                                            "id": 19217,
+                                            "name": "Identifier",
+                                            "src": "396:4:80"
+                                          }
+                                        ],
+                                        "id": 19219,
+                                        "name": "IndexAccess",
+                                        "src": "384:17:80"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 19206,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 19218,
+                                        "name": "Identifier",
+                                        "src": "402:1:80"
+                                      }
+                                    ],
+                                    "id": 19220,
+                                    "name": "IndexAccess",
+                                    "src": "384:20:80"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 19202,
+                                      "type": "uint256",
+                                      "value": "val"
+                                    },
+                                    "id": 19221,
+                                    "name": "Identifier",
+                                    "src": "407:3:80"
+                                  }
+                                ],
+                                "id": 19222,
+                                "name": "Assignment",
+                                "src": "384:26:80"
+                              }
+                            ],
+                            "id": 19223,
+                            "name": "ExpressionStatement",
+                            "src": "384:26:80"
                           }
-                        },
-                        "value": null,
-                        "visibility": "internal"
+                        ],
+                        "id": 19224,
+                        "name": "Block",
+                        "src": "376:41:80"
                       }
                     ],
-                    "id": 19147,
-                    "initialValue": {
-                      "argumentTypes": null,
-                      "hexValue": "30",
-                      "id": 19146,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "346:1:79",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_0_by_1",
-                        "typeString": "int_const 0"
-                      },
-                      "value": "0"
-                    },
-                    "nodeType": "VariableDeclarationStatement",
-                    "src": "334:13:79"
-                  },
-                  "loopExpression": {
-                    "expression": {
-                      "argumentTypes": null,
-                      "id": 19153,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "nodeType": "UnaryOperation",
-                      "operator": "++",
-                      "prefix": false,
-                      "src": "371:3:79",
-                      "subExpression": {
-                        "argumentTypes": null,
-                        "id": 19152,
-                        "name": "i",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 19145,
-                        "src": "371:1:79",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "id": 19154,
-                    "nodeType": "ExpressionStatement",
-                    "src": "371:3:79"
-                  },
-                  "nodeType": "ForStatement",
-                  "src": "329:88:79"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 19166,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "setDeposit",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 19142,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 19139,
-                  "name": "addr",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 19166,
-                  "src": "287:12:79",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 19138,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "287:7:79",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 19141,
-                  "name": "val",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 19166,
-                  "src": "301:11:79",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 19140,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "301:7:79",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "286:27:79"
-            },
-            "returnParameters": {
-              "id": 19143,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "323:0:79"
-            },
-            "scope": 19172,
-            "src": "267:154:79",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "internal"
+                    "id": 19225,
+                    "name": "ForStatement",
+                    "src": "329:88:80"
+                  }
+                ],
+                "id": 19226,
+                "name": "Block",
+                "src": "323:98:80"
+              }
+            ],
+            "id": 19227,
+            "name": "FunctionDefinition",
+            "src": "267:154:80"
           },
           {
-            "body": null,
-            "documentation": null,
-            "id": 19171,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "gasDepositSize",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 19167,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "448:2:79"
-            },
-            "returnParameters": {
-              "id": 19170,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 19169,
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 19171,
-                  "src": "474:7:79",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 19168,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "474:7:79",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
               ],
-              "src": "473:9:79"
+              "name": "gasDepositSize",
+              "scope": 19233,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "internal"
             },
-            "scope": 19172,
-            "src": "425:58:79",
-            "stateMutability": "pure",
-            "superFunction": null,
-            "visibility": "internal"
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 19228,
+                "name": "ParameterList",
+                "src": "448:2:80"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 19232,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 19229,
+                        "name": "ElementaryTypeName",
+                        "src": "474:7:80"
+                      }
+                    ],
+                    "id": 19230,
+                    "name": "VariableDeclaration",
+                    "src": "474:7:80"
+                  }
+                ],
+                "id": 19231,
+                "name": "ParameterList",
+                "src": "473:9:80"
+              }
+            ],
+            "id": 19232,
+            "name": "FunctionDefinition",
+            "src": "425:58:80"
           }
         ],
-        "scope": 19173,
-        "src": "25:460:79"
+        "id": 19233,
+        "name": "ContractDefinition",
+        "src": "25:460:80"
       }
     ],
-    "src": "0:486:79"
+    "id": 19234,
+    "name": "SourceUnit",
+    "src": "0:486:80"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.22",
-  "updatedAt": "2021-01-29T17:35:44.455Z",
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-13T14:08:44.554Z",
   "devdoc": {
     "methods": {}
   },

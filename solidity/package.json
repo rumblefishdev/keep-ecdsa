@@ -16,7 +16,7 @@
     "build": "truffle compile",
     "compile": "truffle compile AbstractBonding.sol",
     "deploy": "truffle migrate --network sov",
-    "deploy:local": "truffle migrate --network local",
+    "deploy:local": "truffle migrate --network sov",
     "test": "npm run test:js",
     "test:temp": "mocha test/rewards --timeout 20000",
     "test:js": "truffle compile && mocha --exit --recursive --timeout 75000",
@@ -62,11 +62,12 @@
     "mocha": "^7.1.1",
     "prettier": "^2.0.2",
     "prettier-plugin-solidity": "^1.0.0-alpha.47",
+    "sha3": "^2.1.4",
     "solc": "0.5.17",
     "solium-config-keep": "github:keep-network/solium-config-keep#0.1.2",
     "toml": "^3.0.0",
     "tomlify-j0.4": "^3.0.0",
-    "truffle": "^5.1.10",
+    "truffle": "^5.1.63",
     "truffle-assertions": "^0.9.2"
   }
 }

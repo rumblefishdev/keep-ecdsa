@@ -10,7 +10,7 @@ environment variable.
 To execute this test run:
   KEEP_ADDRESS=<KEEP_ADDRESS> \
   KEEP_OWNER=<KEEP_OWNER> \
-  truffle exec integration/sign_with_existing_keep.js --network local
+  truffle exec integration/sign_with_existing_keep.js --network sov
 */
 
 module.exports = async function () {
