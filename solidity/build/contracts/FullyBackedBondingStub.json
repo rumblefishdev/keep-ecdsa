@@ -970,14 +970,14 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/FullyBackedBondingStub.sol",
     "exportedSymbols": {
       "FullyBackedBondingStub": [
-        7337
+        7343
       ]
     },
-    "id": 7338,
+    "id": 7344,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 7302,
+        "id": 7308,
         "literals": [
           "solidity",
           "0.5",
@@ -989,10 +989,10 @@
       {
         "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/fully-backed/FullyBackedBonding.sol",
         "file": "../fully-backed/FullyBackedBonding.sol",
-        "id": 7303,
+        "id": 7309,
         "nodeType": "ImportDirective",
-        "scope": 7338,
-        "sourceUnit": 6167,
+        "scope": 7344,
+        "sourceUnit": 6173,
         "src": "25:48:35",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1000,10 +1000,10 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/math/SafeMath.sol",
         "file": "openzeppelin-solidity/contracts/math/SafeMath.sol",
-        "id": 7304,
+        "id": 7310,
         "nodeType": "ImportDirective",
-        "scope": 7338,
-        "sourceUnit": 21482,
+        "scope": 7344,
+        "sourceUnit": 21488,
         "src": "75:59:35",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1014,58 +1014,58 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 7305,
+              "id": 7311,
               "name": "FullyBackedBonding",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 6166,
+              "referencedDeclaration": 6172,
               "src": "261:18:35",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FullyBackedBonding_$6166",
+                "typeIdentifier": "t_contract$_FullyBackedBonding_$6172",
                 "typeString": "contract FullyBackedBonding"
               }
             },
-            "id": 7306,
+            "id": 7312,
             "nodeType": "InheritanceSpecifier",
             "src": "261:18:35"
           }
         ],
         "contractDependencies": [
           1869,
-          5849,
-          6166,
-          8057,
-          8227,
-          11190,
-          20960,
-          20975
+          5855,
+          6172,
+          8063,
+          8233,
+          11196,
+          20966,
+          20981
         ],
         "contractKind": "contract",
         "documentation": "@title Fully Backed Bonding Stub\n @dev This contract is for testing purposes only.",
         "fullyImplemented": true,
-        "id": 7337,
+        "id": 7343,
         "linearizedBaseContracts": [
-          7337,
-          6166,
-          11190,
-          8227,
-          8057,
+          7343,
+          6172,
+          11196,
+          8233,
+          8063,
           1869,
-          5849,
-          20975,
-          20960
+          5855,
+          20981,
+          20966
         ],
         "name": "FullyBackedBondingStub",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 7320,
+              "id": 7326,
               "nodeType": "Block",
               "src": "675:2:35",
               "statements": []
             },
             "documentation": null,
-            "id": 7321,
+            "id": 7327,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -1073,24 +1073,24 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 7315,
+                    "id": 7321,
                     "name": "_keepRegistry",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 7308,
+                    "referencedDeclaration": 7314,
                     "src": "581:13:35",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_KeepRegistry_$8825",
+                      "typeIdentifier": "t_contract$_KeepRegistry_$8831",
                       "typeString": "contract KeepRegistry"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 7316,
+                    "id": 7322,
                     "name": "_initializationPeriod",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 7310,
+                    "referencedDeclaration": 7316,
                     "src": "608:21:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -1099,11 +1099,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 7317,
+                    "id": 7323,
                     "name": "_bondTokenAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 7312,
+                    "referencedDeclaration": 7318,
                     "src": "643:17:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1111,17 +1111,17 @@
                     }
                   }
                 ],
-                "id": 7318,
+                "id": 7324,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 7314,
+                  "id": 7320,
                   "name": "FullyBackedBonding",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 6166,
+                  "referencedDeclaration": 6172,
                   "src": "549:18:35",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_FullyBackedBonding_$6166_$",
+                    "typeIdentifier": "t_type$_t_contract$_FullyBackedBonding_$6172_$",
                     "typeString": "type(contract FullyBackedBonding)"
                   }
                 },
@@ -1132,31 +1132,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7313,
+              "id": 7319,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7308,
+                  "id": 7314,
                   "name": "_keepRegistry",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7321,
+                  "scope": 7327,
                   "src": "419:26:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_KeepRegistry_$8825",
+                    "typeIdentifier": "t_contract$_KeepRegistry_$8831",
                     "typeString": "contract KeepRegistry"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 7307,
+                    "id": 7313,
                     "name": "KeepRegistry",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 8825,
+                    "referencedDeclaration": 8831,
                     "src": "419:12:35",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_KeepRegistry_$8825",
+                      "typeIdentifier": "t_contract$_KeepRegistry_$8831",
                       "typeString": "contract KeepRegistry"
                     }
                   },
@@ -1165,10 +1165,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7310,
+                  "id": 7316,
                   "name": "_initializationPeriod",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7321,
+                  "scope": 7327,
                   "src": "455:29:35",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1177,7 +1177,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7309,
+                    "id": 7315,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "455:7:35",
@@ -1191,10 +1191,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7312,
+                  "id": 7318,
                   "name": "_bondTokenAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7321,
+                  "scope": 7327,
                   "src": "494:25:35",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1203,7 +1203,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7311,
+                    "id": 7317,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "494:7:35",
@@ -1220,12 +1220,12 @@
               "src": "409:116:35"
             },
             "returnParameters": {
-              "id": 7319,
+              "id": 7325,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "675:0:35"
             },
-            "scope": 7337,
+            "scope": 7343,
             "src": "398:279:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1233,14 +1233,14 @@
           },
           {
             "body": {
-              "id": 7335,
+              "id": 7341,
               "nodeType": "Block",
               "src": "775:64:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 7333,
+                    "id": 7339,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1251,25 +1251,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 7328,
+                          "id": 7334,
                           "name": "operators",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 11126,
+                          "referencedDeclaration": 11132,
                           "src": "785:9:35",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11135_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11141_storage_$",
                             "typeString": "mapping(address => struct StakeDelegatable.Operator storage ref)"
                           }
                         },
-                        "id": 7330,
+                        "id": 7336,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 7329,
+                          "id": 7335,
                           "name": "_operator",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 7323,
+                          "referencedDeclaration": 7329,
                           "src": "795:9:35",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1283,18 +1283,18 @@
                         "nodeType": "IndexAccess",
                         "src": "785:20:35",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Operator_$11135_storage",
+                          "typeIdentifier": "t_struct$_Operator_$11141_storage",
                           "typeString": "struct StakeDelegatable.Operator storage ref"
                         }
                       },
-                      "id": 7331,
+                      "id": 7337,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "beneficiary",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11132,
+                      "referencedDeclaration": 11138,
                       "src": "785:32:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
@@ -1305,11 +1305,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 7332,
+                      "id": 7338,
                       "name": "_beneficiary",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7325,
+                      "referencedDeclaration": 7331,
                       "src": "820:12:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
@@ -1322,29 +1322,29 @@
                       "typeString": "address payable"
                     }
                   },
-                  "id": 7334,
+                  "id": 7340,
                   "nodeType": "ExpressionStatement",
                   "src": "785:47:35"
                 }
               ]
             },
             "documentation": null,
-            "id": 7336,
+            "id": 7342,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setBeneficiary",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7326,
+              "id": 7332,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7323,
+                  "id": 7329,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7336,
+                  "scope": 7342,
                   "src": "707:17:35",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1353,7 +1353,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7322,
+                    "id": 7328,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "707:7:35",
@@ -1368,10 +1368,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7325,
+                  "id": 7331,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7336,
+                  "scope": 7342,
                   "src": "726:28:35",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1380,7 +1380,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 7324,
+                    "id": 7330,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "726:15:35",
@@ -1397,19 +1397,19 @@
               "src": "706:49:35"
             },
             "returnParameters": {
-              "id": 7327,
+              "id": 7333,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "775:0:35"
             },
-            "scope": 7337,
+            "scope": 7343,
             "src": "683:156:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7338,
+        "scope": 7344,
         "src": "226:615:35"
       }
     ],
@@ -1420,7 +1420,7 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/FullyBackedBondingStub.sol",
       "exportedSymbols": {
         "FullyBackedBondingStub": [
-          7337
+          7343
         ]
       }
     },
@@ -1433,37 +1433,37 @@
             ".17"
           ]
         },
-        "id": 7302,
+        "id": 7308,
         "name": "PragmaDirective",
         "src": "0:23:35"
       },
       {
         "attributes": {
-          "SourceUnit": 6167,
+          "SourceUnit": 6173,
           "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/fully-backed/FullyBackedBonding.sol",
           "file": "../fully-backed/FullyBackedBonding.sol",
-          "scope": 7338,
+          "scope": 7344,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7303,
+        "id": 7309,
         "name": "ImportDirective",
         "src": "25:48:35"
       },
       {
         "attributes": {
-          "SourceUnit": 21482,
+          "SourceUnit": 21488,
           "absolutePath": "openzeppelin-solidity/contracts/math/SafeMath.sol",
           "file": "openzeppelin-solidity/contracts/math/SafeMath.sol",
-          "scope": 7338,
+          "scope": 7344,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7304,
+        "id": 7310,
         "name": "ImportDirective",
         "src": "75:59:35"
       },
@@ -1471,30 +1471,30 @@
         "attributes": {
           "contractDependencies": [
             1869,
-            5849,
-            6166,
-            8057,
-            8227,
-            11190,
-            20960,
-            20975
+            5855,
+            6172,
+            8063,
+            8233,
+            11196,
+            20966,
+            20981
           ],
           "contractKind": "contract",
           "documentation": "@title Fully Backed Bonding Stub\n @dev This contract is for testing purposes only.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            7337,
-            6166,
-            11190,
-            8227,
-            8057,
+            7343,
+            6172,
+            11196,
+            8233,
+            8063,
             1869,
-            5849,
-            20975,
-            20960
+            5855,
+            20981,
+            20966
           ],
           "name": "FullyBackedBondingStub",
-          "scope": 7338
+          "scope": 7344
         },
         "children": [
           {
@@ -1506,15 +1506,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "FullyBackedBonding",
-                  "referencedDeclaration": 6166,
+                  "referencedDeclaration": 6172,
                   "type": "contract FullyBackedBonding"
                 },
-                "id": 7305,
+                "id": 7311,
                 "name": "UserDefinedTypeName",
                 "src": "261:18:35"
               }
             ],
-            "id": 7306,
+            "id": 7312,
             "name": "InheritanceSpecifier",
             "src": "261:18:35"
           },
@@ -1525,7 +1525,7 @@
               "isConstructor": true,
               "kind": "constructor",
               "name": "",
-              "scope": 7337,
+              "scope": 7343,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1537,7 +1537,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_keepRegistry",
-                      "scope": 7321,
+                      "scope": 7327,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract KeepRegistry",
@@ -1549,15 +1549,15 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "KeepRegistry",
-                          "referencedDeclaration": 8825,
+                          "referencedDeclaration": 8831,
                           "type": "contract KeepRegistry"
                         },
-                        "id": 7307,
+                        "id": 7313,
                         "name": "UserDefinedTypeName",
                         "src": "419:12:35"
                       }
                     ],
-                    "id": 7308,
+                    "id": 7314,
                     "name": "VariableDeclaration",
                     "src": "419:26:35"
                   },
@@ -1565,7 +1565,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_initializationPeriod",
-                      "scope": 7321,
+                      "scope": 7327,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1578,12 +1578,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7309,
+                        "id": 7315,
                         "name": "ElementaryTypeName",
                         "src": "455:7:35"
                       }
                     ],
-                    "id": 7310,
+                    "id": 7316,
                     "name": "VariableDeclaration",
                     "src": "455:29:35"
                   },
@@ -1591,7 +1591,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_bondTokenAddress",
-                      "scope": 7321,
+                      "scope": 7327,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1605,17 +1605,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7311,
+                        "id": 7317,
                         "name": "ElementaryTypeName",
                         "src": "494:7:35"
                       }
                     ],
-                    "id": 7312,
+                    "id": 7318,
                     "name": "VariableDeclaration",
                     "src": "494:25:35"
                   }
                 ],
-                "id": 7313,
+                "id": 7319,
                 "name": "ParameterList",
                 "src": "409:116:35"
               },
@@ -1626,7 +1626,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7319,
+                "id": 7325,
                 "name": "ParameterList",
                 "src": "675:0:35"
               },
@@ -1638,11 +1638,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 6166,
+                      "referencedDeclaration": 6172,
                       "type": "type(contract FullyBackedBonding)",
                       "value": "FullyBackedBonding"
                     },
-                    "id": 7314,
+                    "id": 7320,
                     "name": "Identifier",
                     "src": "549:18:35"
                   },
@@ -1652,11 +1652,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7308,
+                      "referencedDeclaration": 7314,
                       "type": "contract KeepRegistry",
                       "value": "_keepRegistry"
                     },
-                    "id": 7315,
+                    "id": 7321,
                     "name": "Identifier",
                     "src": "581:13:35"
                   },
@@ -1666,11 +1666,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7310,
+                      "referencedDeclaration": 7316,
                       "type": "uint256",
                       "value": "_initializationPeriod"
                     },
-                    "id": 7316,
+                    "id": 7322,
                     "name": "Identifier",
                     "src": "608:21:35"
                   },
@@ -1680,16 +1680,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7312,
+                      "referencedDeclaration": 7318,
                       "type": "address",
                       "value": "_bondTokenAddress"
                     },
-                    "id": 7317,
+                    "id": 7323,
                     "name": "Identifier",
                     "src": "643:17:35"
                   }
                 ],
-                "id": 7318,
+                "id": 7324,
                 "name": "ModifierInvocation",
                 "src": "549:121:35"
               },
@@ -1700,12 +1700,12 @@
                   ]
                 },
                 "children": [],
-                "id": 7320,
+                "id": 7326,
                 "name": "Block",
                 "src": "675:2:35"
               }
             ],
-            "id": 7321,
+            "id": 7327,
             "name": "FunctionDefinition",
             "src": "398:279:35"
           },
@@ -1719,7 +1719,7 @@
                 null
               ],
               "name": "setBeneficiary",
-              "scope": 7337,
+              "scope": 7343,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1731,7 +1731,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operator",
-                      "scope": 7336,
+                      "scope": 7342,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1745,12 +1745,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7322,
+                        "id": 7328,
                         "name": "ElementaryTypeName",
                         "src": "707:7:35"
                       }
                     ],
-                    "id": 7323,
+                    "id": 7329,
                     "name": "VariableDeclaration",
                     "src": "707:17:35"
                   },
@@ -1758,7 +1758,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_beneficiary",
-                      "scope": 7336,
+                      "scope": 7342,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -1772,17 +1772,17 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 7324,
+                        "id": 7330,
                         "name": "ElementaryTypeName",
                         "src": "726:15:35"
                       }
                     ],
-                    "id": 7325,
+                    "id": 7331,
                     "name": "VariableDeclaration",
                     "src": "726:28:35"
                   }
                 ],
-                "id": 7326,
+                "id": 7332,
                 "name": "ParameterList",
                 "src": "706:49:35"
               },
@@ -1793,7 +1793,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7327,
+                "id": 7333,
                 "name": "ParameterList",
                 "src": "775:0:35"
               },
@@ -1820,7 +1820,7 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "beneficiary",
-                              "referencedDeclaration": 11132,
+                              "referencedDeclaration": 11138,
                               "type": "address payable"
                             },
                             "children": [
@@ -1840,11 +1840,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 11126,
+                                      "referencedDeclaration": 11132,
                                       "type": "mapping(address => struct StakeDelegatable.Operator storage ref)",
                                       "value": "operators"
                                     },
-                                    "id": 7328,
+                                    "id": 7334,
                                     "name": "Identifier",
                                     "src": "785:9:35"
                                   },
@@ -1854,21 +1854,21 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 7323,
+                                      "referencedDeclaration": 7329,
                                       "type": "address",
                                       "value": "_operator"
                                     },
-                                    "id": 7329,
+                                    "id": 7335,
                                     "name": "Identifier",
                                     "src": "795:9:35"
                                   }
                                 ],
-                                "id": 7330,
+                                "id": 7336,
                                 "name": "IndexAccess",
                                 "src": "785:20:35"
                               }
                             ],
-                            "id": 7331,
+                            "id": 7337,
                             "name": "MemberAccess",
                             "src": "785:32:35"
                           },
@@ -1878,41 +1878,41 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7325,
+                              "referencedDeclaration": 7331,
                               "type": "address payable",
                               "value": "_beneficiary"
                             },
-                            "id": 7332,
+                            "id": 7338,
                             "name": "Identifier",
                             "src": "820:12:35"
                           }
                         ],
-                        "id": 7333,
+                        "id": 7339,
                         "name": "Assignment",
                         "src": "785:47:35"
                       }
                     ],
-                    "id": 7334,
+                    "id": 7340,
                     "name": "ExpressionStatement",
                     "src": "785:47:35"
                   }
                 ],
-                "id": 7335,
+                "id": 7341,
                 "name": "Block",
                 "src": "775:64:35"
               }
             ],
-            "id": 7336,
+            "id": 7342,
             "name": "FunctionDefinition",
             "src": "683:156:35"
           }
         ],
-        "id": 7337,
+        "id": 7343,
         "name": "ContractDefinition",
         "src": "226:615:35"
       }
     ],
-    "id": 7338,
+    "id": 7344,
     "name": "SourceUnit",
     "src": "0:842:35"
   },
@@ -1922,7 +1922,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.321Z",
+  "updatedAt": "2021-04-30T08:59:51.161Z",
   "devdoc": {
     "details": "This contract is for testing purposes only.",
     "methods": {

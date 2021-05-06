@@ -897,14 +897,14 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/ECDSARewardsStub.sol",
     "exportedSymbols": {
       "ECDSARewardsStub": [
-        7294
+        7300
       ]
     },
-    "id": 7295,
+    "id": 7301,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 7240,
+        "id": 7246,
         "literals": [
           "solidity",
           "0.5",
@@ -916,10 +916,10 @@
       {
         "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/ECDSARewards.sol",
         "file": "../../contracts/ECDSARewards.sol",
-        "id": 7241,
+        "id": 7247,
         "nodeType": "ImportDirective",
-        "scope": 7295,
-        "sourceUnit": 4234,
+        "scope": 7301,
+        "sourceUnit": 4240,
         "src": "25:42:33",
         "symbolAliases": [],
         "unitAlias": ""
@@ -930,48 +930,48 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 7242,
+              "id": 7248,
               "name": "ECDSARewards",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4233,
+              "referencedDeclaration": 4239,
               "src": "207:12:33",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ECDSARewards_$4233",
+                "typeIdentifier": "t_contract$_ECDSARewards_$4239",
                 "typeString": "contract ECDSARewards"
               }
             },
-            "id": 7243,
+            "id": 7249,
             "nodeType": "InheritanceSpecifier",
             "src": "207:12:33"
           }
         ],
         "contractDependencies": [
-          4233,
-          11116,
-          21592
+          4239,
+          11122,
+          21598
         ],
         "contractKind": "contract",
         "documentation": "@title ECDSA Rewards Stub for ecdsa rewards testing\n @dev This contract is for testing purposes only.",
         "fullyImplemented": true,
-        "id": 7294,
+        "id": 7300,
         "linearizedBaseContracts": [
-          7294,
-          4233,
-          11116,
-          21592
+          7300,
+          4239,
+          11122,
+          21598
         ],
         "name": "ECDSARewardsStub",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 7257,
+              "id": 7263,
               "nodeType": "Block",
               "src": "481:2:33",
               "statements": []
             },
             "documentation": null,
-            "id": 7258,
+            "id": 7264,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -979,11 +979,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 7252,
+                    "id": 7258,
                     "name": "_token",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 7245,
+                    "referencedDeclaration": 7251,
                     "src": "397:6:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -992,11 +992,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 7253,
+                    "id": 7259,
                     "name": "_factoryAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 7247,
+                    "referencedDeclaration": 7253,
                     "src": "417:15:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -1005,11 +1005,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 7254,
+                    "id": 7260,
                     "name": "_tokenStakingAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 7249,
+                    "referencedDeclaration": 7255,
                     "src": "446:20:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1017,17 +1017,17 @@
                     }
                   }
                 ],
-                "id": 7255,
+                "id": 7261,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 7251,
+                  "id": 7257,
                   "name": "ECDSARewards",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4233,
+                  "referencedDeclaration": 4239,
                   "src": "371:12:33",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ECDSARewards_$4233_$",
+                    "typeIdentifier": "t_type$_t_contract$_ECDSARewards_$4239_$",
                     "typeString": "type(contract ECDSARewards)"
                   }
                 },
@@ -1038,15 +1038,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7250,
+              "id": 7256,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7245,
+                  "id": 7251,
                   "name": "_token",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7258,
+                  "scope": 7264,
                   "src": "248:14:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1055,7 +1055,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7244,
+                    "id": 7250,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "248:7:33",
@@ -1070,10 +1070,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7247,
+                  "id": 7253,
                   "name": "_factoryAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7258,
+                  "scope": 7264,
                   "src": "272:31:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1082,7 +1082,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 7246,
+                    "id": 7252,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "272:15:33",
@@ -1097,10 +1097,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7249,
+                  "id": 7255,
                   "name": "_tokenStakingAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7258,
+                  "scope": 7264,
                   "src": "313:28:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1109,7 +1109,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7248,
+                    "id": 7254,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "313:7:33",
@@ -1126,12 +1126,12 @@
               "src": "238:109:33"
             },
             "returnParameters": {
-              "id": 7256,
+              "id": 7262,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "481:0:33"
             },
-            "scope": 7294,
+            "scope": 7300,
             "src": "227:256:33",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1139,25 +1139,25 @@
           },
           {
             "body": {
-              "id": 7267,
+              "id": 7273,
               "nodeType": "Block",
               "src": "560:61:33",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 7265,
+                    "id": 7271,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 7263,
+                      "id": 7269,
                       "name": "beneficiaryRewardCap",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3687,
+                      "referencedDeclaration": 3693,
                       "src": "570:20:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1168,11 +1168,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 7264,
+                      "id": 7270,
                       "name": "_beneficiaryRewardCap",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7260,
+                      "referencedDeclaration": 7266,
                       "src": "593:21:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1185,29 +1185,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 7266,
+                  "id": 7272,
                   "nodeType": "ExpressionStatement",
                   "src": "570:44:33"
                 }
               ]
             },
             "documentation": null,
-            "id": 7268,
+            "id": 7274,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setBeneficiaryRewardCap",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7261,
+              "id": 7267,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7260,
+                  "id": 7266,
                   "name": "_beneficiaryRewardCap",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7268,
+                  "scope": 7274,
                   "src": "522:29:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1216,7 +1216,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7259,
+                    "id": 7265,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "522:7:33",
@@ -1232,12 +1232,12 @@
               "src": "521:31:33"
             },
             "returnParameters": {
-              "id": 7262,
+              "id": 7268,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "560:0:33"
             },
-            "scope": 7294,
+            "scope": 7300,
             "src": "489:132:33",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1245,21 +1245,21 @@
           },
           {
             "body": {
-              "id": 7292,
+              "id": 7298,
               "nodeType": "Block",
               "src": "710:133:33",
               "statements": [
                 {
                   "assignments": [
-                    7278
+                    7284
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 7278,
+                      "id": 7284,
                       "name": "beneficiary",
                       "nodeType": "VariableDeclaration",
-                      "scope": 7292,
+                      "scope": 7298,
                       "src": "720:19:33",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1268,7 +1268,7 @@
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 7277,
+                        "id": 7283,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
                         "src": "720:7:33",
@@ -1282,17 +1282,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 7283,
+                  "id": 7289,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 7281,
+                        "id": 7287,
                         "name": "operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7270,
+                        "referencedDeclaration": 7276,
                         "src": "769:8:33",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1309,32 +1309,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 7279,
+                        "id": 7285,
                         "name": "tokenStaking",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3740,
+                        "referencedDeclaration": 3746,
                         "src": "742:12:33",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenStaking_$14190",
+                          "typeIdentifier": "t_contract$_TokenStaking_$14196",
                           "typeString": "contract TokenStaking"
                         }
                       },
-                      "id": 7280,
+                      "id": 7286,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "beneficiaryOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11176,
+                      "referencedDeclaration": 11182,
                       "src": "742:26:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_address_payable_$",
                         "typeString": "function (address) view external returns (address payable)"
                       }
                     },
-                    "id": 7282,
+                    "id": 7288,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1354,7 +1354,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 7290,
+                    "id": 7296,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1365,25 +1365,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 7284,
+                          "id": 7290,
                           "name": "allocatedRewards",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3730,
+                          "referencedDeclaration": 3736,
                           "src": "788:16:33",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
                             "typeString": "mapping(address => mapping(uint256 => uint256))"
                           }
                         },
-                        "id": 7287,
+                        "id": 7293,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 7285,
+                          "id": 7291,
                           "name": "beneficiary",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 7278,
+                          "referencedDeclaration": 7284,
                           "src": "805:11:33",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1401,14 +1401,14 @@
                           "typeString": "mapping(uint256 => uint256)"
                         }
                       },
-                      "id": 7288,
+                      "id": 7294,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 7286,
+                        "id": 7292,
                         "name": "interval",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7272,
+                        "referencedDeclaration": 7278,
                         "src": "818:8:33",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1430,11 +1430,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 7289,
+                      "id": 7295,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7274,
+                      "referencedDeclaration": 7280,
                       "src": "830:6:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1447,29 +1447,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 7291,
+                  "id": 7297,
                   "nodeType": "ExpressionStatement",
                   "src": "788:48:33"
                 }
               ]
             },
             "documentation": null,
-            "id": 7293,
+            "id": 7299,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "allocateReward",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7275,
+              "id": 7281,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7270,
+                  "id": 7276,
                   "name": "operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7293,
+                  "scope": 7299,
                   "src": "651:16:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1478,7 +1478,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7269,
+                    "id": 7275,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "651:7:33",
@@ -1493,10 +1493,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7272,
+                  "id": 7278,
                   "name": "interval",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7293,
+                  "scope": 7299,
                   "src": "669:16:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1505,7 +1505,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7271,
+                    "id": 7277,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "669:7:33",
@@ -1519,10 +1519,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7274,
+                  "id": 7280,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7293,
+                  "scope": 7299,
                   "src": "687:14:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1531,7 +1531,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7273,
+                    "id": 7279,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "687:7:33",
@@ -1547,19 +1547,19 @@
               "src": "650:52:33"
             },
             "returnParameters": {
-              "id": 7276,
+              "id": 7282,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "710:0:33"
             },
-            "scope": 7294,
+            "scope": 7300,
             "src": "627:216:33",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7295,
+        "scope": 7301,
         "src": "178:667:33"
       }
     ],
@@ -1570,7 +1570,7 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/ECDSARewardsStub.sol",
       "exportedSymbols": {
         "ECDSARewardsStub": [
-          7294
+          7300
         ]
       }
     },
@@ -1583,43 +1583,43 @@
             ".17"
           ]
         },
-        "id": 7240,
+        "id": 7246,
         "name": "PragmaDirective",
         "src": "0:23:33"
       },
       {
         "attributes": {
-          "SourceUnit": 4234,
+          "SourceUnit": 4240,
           "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/ECDSARewards.sol",
           "file": "../../contracts/ECDSARewards.sol",
-          "scope": 7295,
+          "scope": 7301,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7241,
+        "id": 7247,
         "name": "ImportDirective",
         "src": "25:42:33"
       },
       {
         "attributes": {
           "contractDependencies": [
-            4233,
-            11116,
-            21592
+            4239,
+            11122,
+            21598
           ],
           "contractKind": "contract",
           "documentation": "@title ECDSA Rewards Stub for ecdsa rewards testing\n @dev This contract is for testing purposes only.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            7294,
-            4233,
-            11116,
-            21592
+            7300,
+            4239,
+            11122,
+            21598
           ],
           "name": "ECDSARewardsStub",
-          "scope": 7295
+          "scope": 7301
         },
         "children": [
           {
@@ -1631,15 +1631,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ECDSARewards",
-                  "referencedDeclaration": 4233,
+                  "referencedDeclaration": 4239,
                   "type": "contract ECDSARewards"
                 },
-                "id": 7242,
+                "id": 7248,
                 "name": "UserDefinedTypeName",
                 "src": "207:12:33"
               }
             ],
-            "id": 7243,
+            "id": 7249,
             "name": "InheritanceSpecifier",
             "src": "207:12:33"
           },
@@ -1650,7 +1650,7 @@
               "isConstructor": true,
               "kind": "constructor",
               "name": "",
-              "scope": 7294,
+              "scope": 7300,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1662,7 +1662,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_token",
-                      "scope": 7258,
+                      "scope": 7264,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1676,12 +1676,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7244,
+                        "id": 7250,
                         "name": "ElementaryTypeName",
                         "src": "248:7:33"
                       }
                     ],
-                    "id": 7245,
+                    "id": 7251,
                     "name": "VariableDeclaration",
                     "src": "248:14:33"
                   },
@@ -1689,7 +1689,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_factoryAddress",
-                      "scope": 7258,
+                      "scope": 7264,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -1703,12 +1703,12 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 7246,
+                        "id": 7252,
                         "name": "ElementaryTypeName",
                         "src": "272:15:33"
                       }
                     ],
-                    "id": 7247,
+                    "id": 7253,
                     "name": "VariableDeclaration",
                     "src": "272:31:33"
                   },
@@ -1716,7 +1716,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_tokenStakingAddress",
-                      "scope": 7258,
+                      "scope": 7264,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1730,17 +1730,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7248,
+                        "id": 7254,
                         "name": "ElementaryTypeName",
                         "src": "313:7:33"
                       }
                     ],
-                    "id": 7249,
+                    "id": 7255,
                     "name": "VariableDeclaration",
                     "src": "313:28:33"
                   }
                 ],
-                "id": 7250,
+                "id": 7256,
                 "name": "ParameterList",
                 "src": "238:109:33"
               },
@@ -1751,7 +1751,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7256,
+                "id": 7262,
                 "name": "ParameterList",
                 "src": "481:0:33"
               },
@@ -1763,11 +1763,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4233,
+                      "referencedDeclaration": 4239,
                       "type": "type(contract ECDSARewards)",
                       "value": "ECDSARewards"
                     },
-                    "id": 7251,
+                    "id": 7257,
                     "name": "Identifier",
                     "src": "371:12:33"
                   },
@@ -1777,11 +1777,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7245,
+                      "referencedDeclaration": 7251,
                       "type": "address",
                       "value": "_token"
                     },
-                    "id": 7252,
+                    "id": 7258,
                     "name": "Identifier",
                     "src": "397:6:33"
                   },
@@ -1791,11 +1791,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7247,
+                      "referencedDeclaration": 7253,
                       "type": "address payable",
                       "value": "_factoryAddress"
                     },
-                    "id": 7253,
+                    "id": 7259,
                     "name": "Identifier",
                     "src": "417:15:33"
                   },
@@ -1805,16 +1805,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7249,
+                      "referencedDeclaration": 7255,
                       "type": "address",
                       "value": "_tokenStakingAddress"
                     },
-                    "id": 7254,
+                    "id": 7260,
                     "name": "Identifier",
                     "src": "446:20:33"
                   }
                 ],
-                "id": 7255,
+                "id": 7261,
                 "name": "ModifierInvocation",
                 "src": "371:105:33"
               },
@@ -1825,12 +1825,12 @@
                   ]
                 },
                 "children": [],
-                "id": 7257,
+                "id": 7263,
                 "name": "Block",
                 "src": "481:2:33"
               }
             ],
-            "id": 7258,
+            "id": 7264,
             "name": "FunctionDefinition",
             "src": "227:256:33"
           },
@@ -1844,7 +1844,7 @@
                 null
               ],
               "name": "setBeneficiaryRewardCap",
-              "scope": 7294,
+              "scope": 7300,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1856,7 +1856,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_beneficiaryRewardCap",
-                      "scope": 7268,
+                      "scope": 7274,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1869,17 +1869,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7259,
+                        "id": 7265,
                         "name": "ElementaryTypeName",
                         "src": "522:7:33"
                       }
                     ],
-                    "id": 7260,
+                    "id": 7266,
                     "name": "VariableDeclaration",
                     "src": "522:29:33"
                   }
                 ],
-                "id": 7261,
+                "id": 7267,
                 "name": "ParameterList",
                 "src": "521:31:33"
               },
@@ -1890,7 +1890,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7262,
+                "id": 7268,
                 "name": "ParameterList",
                 "src": "560:0:33"
               },
@@ -1915,11 +1915,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3687,
+                              "referencedDeclaration": 3693,
                               "type": "uint256",
                               "value": "beneficiaryRewardCap"
                             },
-                            "id": 7263,
+                            "id": 7269,
                             "name": "Identifier",
                             "src": "570:20:33"
                           },
@@ -1929,31 +1929,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7260,
+                              "referencedDeclaration": 7266,
                               "type": "uint256",
                               "value": "_beneficiaryRewardCap"
                             },
-                            "id": 7264,
+                            "id": 7270,
                             "name": "Identifier",
                             "src": "593:21:33"
                           }
                         ],
-                        "id": 7265,
+                        "id": 7271,
                         "name": "Assignment",
                         "src": "570:44:33"
                       }
                     ],
-                    "id": 7266,
+                    "id": 7272,
                     "name": "ExpressionStatement",
                     "src": "570:44:33"
                   }
                 ],
-                "id": 7267,
+                "id": 7273,
                 "name": "Block",
                 "src": "560:61:33"
               }
             ],
-            "id": 7268,
+            "id": 7274,
             "name": "FunctionDefinition",
             "src": "489:132:33"
           },
@@ -1967,7 +1967,7 @@
                 null
               ],
               "name": "allocateReward",
-              "scope": 7294,
+              "scope": 7300,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1979,7 +1979,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "operator",
-                      "scope": 7293,
+                      "scope": 7299,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1993,12 +1993,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7269,
+                        "id": 7275,
                         "name": "ElementaryTypeName",
                         "src": "651:7:33"
                       }
                     ],
-                    "id": 7270,
+                    "id": 7276,
                     "name": "VariableDeclaration",
                     "src": "651:16:33"
                   },
@@ -2006,7 +2006,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "interval",
-                      "scope": 7293,
+                      "scope": 7299,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2019,12 +2019,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7271,
+                        "id": 7277,
                         "name": "ElementaryTypeName",
                         "src": "669:7:33"
                       }
                     ],
-                    "id": 7272,
+                    "id": 7278,
                     "name": "VariableDeclaration",
                     "src": "669:16:33"
                   },
@@ -2032,7 +2032,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "amount",
-                      "scope": 7293,
+                      "scope": 7299,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2045,17 +2045,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7273,
+                        "id": 7279,
                         "name": "ElementaryTypeName",
                         "src": "687:7:33"
                       }
                     ],
-                    "id": 7274,
+                    "id": 7280,
                     "name": "VariableDeclaration",
                     "src": "687:14:33"
                   }
                 ],
-                "id": 7275,
+                "id": 7281,
                 "name": "ParameterList",
                 "src": "650:52:33"
               },
@@ -2066,7 +2066,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7276,
+                "id": 7282,
                 "name": "ParameterList",
                 "src": "710:0:33"
               },
@@ -2075,7 +2075,7 @@
                   {
                     "attributes": {
                       "assignments": [
-                        7278
+                        7284
                       ]
                     },
                     "children": [
@@ -2083,7 +2083,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "beneficiary",
-                          "scope": 7292,
+                          "scope": 7298,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "address",
@@ -2097,12 +2097,12 @@
                               "stateMutability": "nonpayable",
                               "type": "address"
                             },
-                            "id": 7277,
+                            "id": 7283,
                             "name": "ElementaryTypeName",
                             "src": "720:7:33"
                           }
                         ],
-                        "id": 7278,
+                        "id": 7284,
                         "name": "VariableDeclaration",
                         "src": "720:19:33"
                       },
@@ -2134,7 +2134,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "beneficiaryOf",
-                              "referencedDeclaration": 11176,
+                              "referencedDeclaration": 11182,
                               "type": "function (address) view external returns (address payable)"
                             },
                             "children": [
@@ -2144,16 +2144,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3740,
+                                  "referencedDeclaration": 3746,
                                   "type": "contract TokenStaking",
                                   "value": "tokenStaking"
                                 },
-                                "id": 7279,
+                                "id": 7285,
                                 "name": "Identifier",
                                 "src": "742:12:33"
                               }
                             ],
-                            "id": 7280,
+                            "id": 7286,
                             "name": "MemberAccess",
                             "src": "742:26:33"
                           },
@@ -2163,21 +2163,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7270,
+                              "referencedDeclaration": 7276,
                               "type": "address",
                               "value": "operator"
                             },
-                            "id": 7281,
+                            "id": 7287,
                             "name": "Identifier",
                             "src": "769:8:33"
                           }
                         ],
-                        "id": 7282,
+                        "id": 7288,
                         "name": "FunctionCall",
                         "src": "742:36:33"
                       }
                     ],
-                    "id": 7283,
+                    "id": 7289,
                     "name": "VariableDeclarationStatement",
                     "src": "720:58:33"
                   },
@@ -2220,11 +2220,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 3730,
+                                      "referencedDeclaration": 3736,
                                       "type": "mapping(address => mapping(uint256 => uint256))",
                                       "value": "allocatedRewards"
                                     },
-                                    "id": 7284,
+                                    "id": 7290,
                                     "name": "Identifier",
                                     "src": "788:16:33"
                                   },
@@ -2234,16 +2234,16 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 7278,
+                                      "referencedDeclaration": 7284,
                                       "type": "address",
                                       "value": "beneficiary"
                                     },
-                                    "id": 7285,
+                                    "id": 7291,
                                     "name": "Identifier",
                                     "src": "805:11:33"
                                   }
                                 ],
-                                "id": 7287,
+                                "id": 7293,
                                 "name": "IndexAccess",
                                 "src": "788:29:33"
                               },
@@ -2253,16 +2253,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7272,
+                                  "referencedDeclaration": 7278,
                                   "type": "uint256",
                                   "value": "interval"
                                 },
-                                "id": 7286,
+                                "id": 7292,
                                 "name": "Identifier",
                                 "src": "818:8:33"
                               }
                             ],
-                            "id": 7288,
+                            "id": 7294,
                             "name": "IndexAccess",
                             "src": "788:39:33"
                           },
@@ -2272,41 +2272,41 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7274,
+                              "referencedDeclaration": 7280,
                               "type": "uint256",
                               "value": "amount"
                             },
-                            "id": 7289,
+                            "id": 7295,
                             "name": "Identifier",
                             "src": "830:6:33"
                           }
                         ],
-                        "id": 7290,
+                        "id": 7296,
                         "name": "Assignment",
                         "src": "788:48:33"
                       }
                     ],
-                    "id": 7291,
+                    "id": 7297,
                     "name": "ExpressionStatement",
                     "src": "788:48:33"
                   }
                 ],
-                "id": 7292,
+                "id": 7298,
                 "name": "Block",
                 "src": "710:133:33"
               }
             ],
-            "id": 7293,
+            "id": 7299,
             "name": "FunctionDefinition",
             "src": "627:216:33"
           }
         ],
-        "id": 7294,
+        "id": 7300,
         "name": "ContractDefinition",
         "src": "178:667:33"
       }
     ],
-    "id": 7295,
+    "id": 7301,
     "name": "SourceUnit",
     "src": "0:846:33"
   },
@@ -2316,7 +2316,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.318Z",
+  "updatedAt": "2021-04-30T08:59:51.158Z",
   "devdoc": {
     "details": "This contract is for testing purposes only.",
     "methods": {

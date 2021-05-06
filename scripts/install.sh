@@ -32,8 +32,8 @@ printf "${LOG_START}Installing NPM dependencies...${LOG_END}"
 npm install
 
 printf "${LOG_START}Unlocking ethereum accounts...${LOG_END}"
-KEEP_ETHEREUM_PASSWORD=$KEEP_ETHEREUM_PASSWORD \
-    npx truffle exec scripts/unlock-eth-accounts.js --network sov
+# KEEP_ETHEREUM_PASSWORD=$KEEP_ETHEREUM_PASSWORD \
+#     npx truffle exec scripts/unlock-eth-accounts.js --network sov
 
 printf "${LOG_START}Finding current ethereum network ID...${LOG_END}"
 
@@ -48,6 +48,7 @@ NETWORKID=$NETWORKID \
 
 printf "${LOG_START}Migrating contracts...${LOG_END}"
 npm run clean
+npx truffle compile
 npx truffle migrate --reset --network sov
 
 printf "${LOG_START}Building keep-ecdsa client...${LOG_END}"

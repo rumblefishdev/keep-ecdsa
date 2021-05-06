@@ -635,14 +635,14 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/AbstractBondingStub.sol",
     "exportedSymbols": {
       "AbstractBondingStub": [
-        6787
+        6793
       ]
     },
-    "id": 6788,
+    "id": 6794,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6693,
+        "id": 6699,
         "literals": [
           "solidity",
           "0.5",
@@ -654,9 +654,9 @@
       {
         "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/AbstractBonding.sol",
         "file": "../../contracts/AbstractBonding.sol",
-        "id": 6694,
+        "id": 6700,
         "nodeType": "ImportDirective",
-        "scope": 6788,
+        "scope": 6794,
         "sourceUnit": 1870,
         "src": "25:45:26",
         "symbolAliases": [],
@@ -665,10 +665,10 @@
       {
         "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/StakingInfoStub.sol",
         "file": "./StakingInfoStub.sol",
-        "id": 6695,
+        "id": 6701,
         "nodeType": "ImportDirective",
-        "scope": 6788,
-        "sourceUnit": 7769,
+        "scope": 6794,
+        "sourceUnit": 7775,
         "src": "72:31:26",
         "symbolAliases": [],
         "unitAlias": ""
@@ -679,7 +679,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 6696,
+              "id": 6702,
               "name": "AbstractBonding",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 1869,
@@ -689,51 +689,51 @@
                 "typeString": "contract AbstractBonding"
               }
             },
-            "id": 6697,
+            "id": 6703,
             "nodeType": "InheritanceSpecifier",
             "src": "137:15:26"
           }
         ],
         "contractDependencies": [
           1869,
-          5849,
-          20960
+          5855,
+          20966
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6787,
+        "id": 6793,
         "linearizedBaseContracts": [
-          6787,
+          6793,
           1869,
-          5849,
-          20960
+          5855,
+          20966
         ],
         "name": "AbstractBondingStub",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 6699,
+            "id": 6705,
             "name": "stakingInfoStub",
             "nodeType": "VariableDeclaration",
-            "scope": 6787,
+            "scope": 6793,
             "src": "159:31:26",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+              "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
               "typeString": "contract StakingInfoStub"
             },
             "typeName": {
               "contractScope": null,
-              "id": 6698,
+              "id": 6704,
               "name": "StakingInfoStub",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7768,
+              "referencedDeclaration": 7774,
               "src": "159:15:26",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+                "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
                 "typeString": "contract StakingInfoStub"
               }
             },
@@ -742,28 +742,28 @@
           },
           {
             "body": {
-              "id": 6718,
+              "id": 6724,
               "nodeType": "Block",
               "src": "378:70:26",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6716,
+                    "id": 6722,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6712,
+                      "id": 6718,
                       "name": "stakingInfoStub",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6699,
+                      "referencedDeclaration": 6705,
                       "src": "388:15:26",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+                        "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
                         "typeString": "contract StakingInfoStub"
                       }
                     },
@@ -774,11 +774,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 6714,
+                          "id": 6720,
                           "name": "stakingInfoAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6703,
+                          "referencedDeclaration": 6709,
                           "src": "422:18:26",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -793,18 +793,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 6713,
+                        "id": 6719,
                         "name": "StakingInfoStub",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7768,
+                        "referencedDeclaration": 7774,
                         "src": "406:15:26",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_StakingInfoStub_$7768_$",
+                          "typeIdentifier": "t_type$_t_contract$_StakingInfoStub_$7774_$",
                           "typeString": "type(contract StakingInfoStub)"
                         }
                       },
-                      "id": 6715,
+                      "id": 6721,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -814,24 +814,24 @@
                       "nodeType": "FunctionCall",
                       "src": "406:35:26",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+                        "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
                         "typeString": "contract StakingInfoStub"
                       }
                     },
                     "src": "388:53:26",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+                      "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
                       "typeString": "contract StakingInfoStub"
                     }
                   },
-                  "id": 6717,
+                  "id": 6723,
                   "nodeType": "ExpressionStatement",
                   "src": "388:53:26"
                 }
               ]
             },
             "documentation": null,
-            "id": 6719,
+            "id": 6725,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -839,11 +839,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 6708,
+                    "id": 6714,
                     "name": "registryAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6701,
+                    "referencedDeclaration": 6707,
                     "src": "342:15:26",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -852,11 +852,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 6709,
+                    "id": 6715,
                     "name": "_bondTokenAddress",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6705,
+                    "referencedDeclaration": 6711,
                     "src": "359:17:26",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -864,10 +864,10 @@
                     }
                   }
                 ],
-                "id": 6710,
+                "id": 6716,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 6707,
+                  "id": 6713,
                   "name": "AbstractBonding",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
@@ -885,15 +885,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6706,
+              "id": 6712,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6701,
+                  "id": 6707,
                   "name": "registryAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6719,
+                  "scope": 6725,
                   "src": "218:23:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -902,7 +902,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6700,
+                    "id": 6706,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "218:7:26",
@@ -917,10 +917,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6703,
+                  "id": 6709,
                   "name": "stakingInfoAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6719,
+                  "scope": 6725,
                   "src": "251:26:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -929,7 +929,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6702,
+                    "id": 6708,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "251:7:26",
@@ -944,10 +944,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6705,
+                  "id": 6711,
                   "name": "_bondTokenAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6719,
+                  "scope": 6725,
                   "src": "287:25:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -956,7 +956,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6704,
+                    "id": 6710,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "287:7:26",
@@ -973,12 +973,12 @@
               "src": "208:110:26"
             },
             "returnParameters": {
-              "id": 6711,
+              "id": 6717,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "378:0:26"
             },
-            "scope": 6787,
+            "scope": 6793,
             "src": "197:251:26",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -986,7 +986,7 @@
           },
           {
             "body": {
-              "id": 6730,
+              "id": 6736,
               "nodeType": "Block",
               "src": "513:44:26",
               "statements": [
@@ -997,7 +997,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "61627374726163742066756e6374696f6e",
-                        "id": 6727,
+                        "id": 6733,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1020,21 +1020,21 @@
                           "typeString": "literal_string \"abstract function\""
                         }
                       ],
-                      "id": 6726,
+                      "id": 6732,
                       "name": "revert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        22465,
-                        22466
+                        22471,
+                        22472
                       ],
-                      "referencedDeclaration": 22466,
+                      "referencedDeclaration": 22472,
                       "src": "523:6:26",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory) pure"
                       }
                     },
-                    "id": 6728,
+                    "id": 6734,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1048,29 +1048,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6729,
+                  "id": 6735,
                   "nodeType": "ExpressionStatement",
                   "src": "523:27:26"
                 }
               ]
             },
             "documentation": null,
-            "id": 6731,
+            "id": 6737,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6724,
+              "id": 6730,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6721,
+                  "id": 6727,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6731,
+                  "scope": 6737,
                   "src": "472:14:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1079,7 +1079,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6720,
+                    "id": 6726,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "472:7:26",
@@ -1093,10 +1093,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6723,
+                  "id": 6729,
                   "name": "operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6731,
+                  "scope": 6737,
                   "src": "488:16:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1105,7 +1105,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6722,
+                    "id": 6728,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "488:7:26",
@@ -1122,12 +1122,12 @@
               "src": "471:34:26"
             },
             "returnParameters": {
-              "id": 6725,
+              "id": 6731,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "513:0:26"
             },
-            "scope": 6787,
+            "scope": 6793,
             "src": "454:103:26",
             "stateMutability": "nonpayable",
             "superFunction": 1361,
@@ -1135,7 +1135,7 @@
           },
           {
             "body": {
-              "id": 6743,
+              "id": 6749,
               "nodeType": "Block",
               "src": "633:47:26",
               "statements": [
@@ -1145,11 +1145,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6739,
+                        "id": 6745,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6733,
+                        "referencedDeclaration": 6739,
                         "src": "656:6:26",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1158,11 +1158,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6740,
+                        "id": 6746,
                         "name": "operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6735,
+                        "referencedDeclaration": 6741,
                         "src": "664:8:26",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1181,7 +1181,7 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 6738,
+                      "id": 6744,
                       "name": "withdrawBond",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -1192,7 +1192,7 @@
                         "typeString": "function (uint256,address)"
                       }
                     },
-                    "id": 6741,
+                    "id": 6747,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1206,29 +1206,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6742,
+                  "id": 6748,
                   "nodeType": "ExpressionStatement",
                   "src": "643:30:26"
                 }
               ]
             },
             "documentation": null,
-            "id": 6744,
+            "id": 6750,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "withdrawBondExposed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6736,
+              "id": 6742,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6733,
+                  "id": 6739,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6744,
+                  "scope": 6750,
                   "src": "592:14:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1237,7 +1237,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6732,
+                    "id": 6738,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "592:7:26",
@@ -1251,10 +1251,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6735,
+                  "id": 6741,
                   "name": "operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6744,
+                  "scope": 6750,
                   "src": "608:16:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1263,7 +1263,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6734,
+                    "id": 6740,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "608:7:26",
@@ -1280,12 +1280,12 @@
               "src": "591:34:26"
             },
             "returnParameters": {
-              "id": 6737,
+              "id": 6743,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "633:0:26"
             },
-            "scope": 6787,
+            "scope": 6793,
             "src": "563:117:26",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1293,7 +1293,7 @@
           },
           {
             "body": {
-              "id": 6759,
+              "id": 6765,
               "nodeType": "Block",
               "src": "814:151:26",
               "statements": [
@@ -1303,11 +1303,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6755,
+                        "id": 6761,
                         "name": "_operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6746,
+                        "referencedDeclaration": 6752,
                         "src": "900:9:26",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1316,11 +1316,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6756,
+                        "id": 6762,
                         "name": "_operatorContract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6748,
+                        "referencedDeclaration": 6754,
                         "src": "927:17:26",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1341,32 +1341,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 6753,
+                        "id": 6759,
                         "name": "stakingInfoStub",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6699,
+                        "referencedDeclaration": 6705,
                         "src": "843:15:26",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+                          "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
                           "typeString": "contract StakingInfoStub"
                         }
                       },
-                      "id": 6754,
+                      "id": 6760,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "isAuthorizedForOperator",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7689,
+                      "referencedDeclaration": 7695,
                       "src": "843:39:26",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
                         "typeString": "function (address,address) view external returns (bool)"
                       }
                     },
-                    "id": 6757,
+                    "id": 6763,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1380,30 +1380,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 6752,
-                  "id": 6758,
+                  "functionReturnParameters": 6758,
+                  "id": 6764,
                   "nodeType": "Return",
                   "src": "824:134:26"
                 }
               ]
             },
             "documentation": null,
-            "id": 6760,
+            "id": 6766,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isAuthorizedForOperator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6749,
+              "id": 6755,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6746,
+                  "id": 6752,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6760,
+                  "scope": 6766,
                   "src": "728:17:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1412,7 +1412,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6745,
+                    "id": 6751,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "728:7:26",
@@ -1427,10 +1427,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6748,
+                  "id": 6754,
                   "name": "_operatorContract",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6760,
+                  "scope": 6766,
                   "src": "755:25:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1439,7 +1439,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6747,
+                    "id": 6753,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "755:7:26",
@@ -1456,15 +1456,15 @@
               "src": "718:68:26"
             },
             "returnParameters": {
-              "id": 6752,
+              "id": 6758,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6751,
+                  "id": 6757,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6760,
+                  "scope": 6766,
                   "src": "808:4:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1473,7 +1473,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 6750,
+                    "id": 6756,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "808:4:26",
@@ -1488,7 +1488,7 @@
               ],
               "src": "807:6:26"
             },
-            "scope": 6787,
+            "scope": 6793,
             "src": "686:279:26",
             "stateMutability": "view",
             "superFunction": 1795,
@@ -1496,7 +1496,7 @@
           },
           {
             "body": {
-              "id": 6772,
+              "id": 6778,
               "nodeType": "Block",
               "src": "1042:63:26",
               "statements": [
@@ -1506,11 +1506,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6769,
+                        "id": 6775,
                         "name": "_operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6762,
+                        "referencedDeclaration": 6768,
                         "src": "1088:9:26",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1527,32 +1527,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 6767,
+                        "id": 6773,
                         "name": "stakingInfoStub",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6699,
+                        "referencedDeclaration": 6705,
                         "src": "1059:15:26",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+                          "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
                           "typeString": "contract StakingInfoStub"
                         }
                       },
-                      "id": 6768,
+                      "id": 6774,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "authorizerOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7741,
+                      "referencedDeclaration": 7747,
                       "src": "1059:28:26",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_address_$",
                         "typeString": "function (address) view external returns (address)"
                       }
                     },
-                    "id": 6770,
+                    "id": 6776,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1566,30 +1566,30 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 6766,
-                  "id": 6771,
+                  "functionReturnParameters": 6772,
+                  "id": 6777,
                   "nodeType": "Return",
                   "src": "1052:46:26"
                 }
               ]
             },
             "documentation": null,
-            "id": 6773,
+            "id": 6779,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "authorizerOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6763,
+              "id": 6769,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6762,
+                  "id": 6768,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6773,
+                  "scope": 6779,
                   "src": "993:17:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1598,7 +1598,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6761,
+                    "id": 6767,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "993:7:26",
@@ -1615,15 +1615,15 @@
               "src": "992:19:26"
             },
             "returnParameters": {
-              "id": 6766,
+              "id": 6772,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6765,
+                  "id": 6771,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6773,
+                  "scope": 6779,
                   "src": "1033:7:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1632,7 +1632,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6764,
+                    "id": 6770,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1033:7:26",
@@ -1648,7 +1648,7 @@
               ],
               "src": "1032:9:26"
             },
-            "scope": 6787,
+            "scope": 6793,
             "src": "971:134:26",
             "stateMutability": "view",
             "superFunction": 1802,
@@ -1656,7 +1656,7 @@
           },
           {
             "body": {
-              "id": 6785,
+              "id": 6791,
               "nodeType": "Block",
               "src": "1219:64:26",
               "statements": [
@@ -1666,11 +1666,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6782,
+                        "id": 6788,
                         "name": "_operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6775,
+                        "referencedDeclaration": 6781,
                         "src": "1266:9:26",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1687,32 +1687,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 6780,
+                        "id": 6786,
                         "name": "stakingInfoStub",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6699,
+                        "referencedDeclaration": 6705,
                         "src": "1236:15:26",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_StakingInfoStub_$7768",
+                          "typeIdentifier": "t_contract$_StakingInfoStub_$7774",
                           "typeString": "contract StakingInfoStub"
                         }
                       },
-                      "id": 6781,
+                      "id": 6787,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "beneficiaryOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7715,
+                      "referencedDeclaration": 7721,
                       "src": "1236:29:26",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_address_payable_$",
                         "typeString": "function (address) view external returns (address payable)"
                       }
                     },
-                    "id": 6783,
+                    "id": 6789,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1726,30 +1726,30 @@
                       "typeString": "address payable"
                     }
                   },
-                  "functionReturnParameters": 6779,
-                  "id": 6784,
+                  "functionReturnParameters": 6785,
+                  "id": 6790,
                   "nodeType": "Return",
                   "src": "1229:47:26"
                 }
               ]
             },
             "documentation": null,
-            "id": 6786,
+            "id": 6792,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "beneficiaryOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6776,
+              "id": 6782,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6775,
+                  "id": 6781,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6786,
+                  "scope": 6792,
                   "src": "1134:17:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1758,7 +1758,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6774,
+                    "id": 6780,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1134:7:26",
@@ -1775,15 +1775,15 @@
               "src": "1133:19:26"
             },
             "returnParameters": {
-              "id": 6779,
+              "id": 6785,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6778,
+                  "id": 6784,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6786,
+                  "scope": 6792,
                   "src": "1198:15:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1792,7 +1792,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 6777,
+                    "id": 6783,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1198:15:26",
@@ -1808,14 +1808,14 @@
               ],
               "src": "1197:17:26"
             },
-            "scope": 6787,
+            "scope": 6793,
             "src": "1111:172:26",
             "stateMutability": "view",
             "superFunction": 1809,
             "visibility": "public"
           }
         ],
-        "scope": 6788,
+        "scope": 6794,
         "src": "105:1180:26"
       }
     ],
@@ -1826,7 +1826,7 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/AbstractBondingStub.sol",
       "exportedSymbols": {
         "AbstractBondingStub": [
-          6787
+          6793
         ]
       }
     },
@@ -1839,7 +1839,7 @@
             ".17"
           ]
         },
-        "id": 6693,
+        "id": 6699,
         "name": "PragmaDirective",
         "src": "0:23:26"
       },
@@ -1848,28 +1848,28 @@
           "SourceUnit": 1870,
           "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/AbstractBonding.sol",
           "file": "../../contracts/AbstractBonding.sol",
-          "scope": 6788,
+          "scope": 6794,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 6694,
+        "id": 6700,
         "name": "ImportDirective",
         "src": "25:45:26"
       },
       {
         "attributes": {
-          "SourceUnit": 7769,
+          "SourceUnit": 7775,
           "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/StakingInfoStub.sol",
           "file": "./StakingInfoStub.sol",
-          "scope": 6788,
+          "scope": 6794,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 6695,
+        "id": 6701,
         "name": "ImportDirective",
         "src": "72:31:26"
       },
@@ -1877,20 +1877,20 @@
         "attributes": {
           "contractDependencies": [
             1869,
-            5849,
-            20960
+            5855,
+            20966
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            6787,
+            6793,
             1869,
-            5849,
-            20960
+            5855,
+            20966
           ],
           "name": "AbstractBondingStub",
-          "scope": 6788
+          "scope": 6794
         },
         "children": [
           {
@@ -1905,12 +1905,12 @@
                   "referencedDeclaration": 1869,
                   "type": "contract AbstractBonding"
                 },
-                "id": 6696,
+                "id": 6702,
                 "name": "UserDefinedTypeName",
                 "src": "137:15:26"
               }
             ],
-            "id": 6697,
+            "id": 6703,
             "name": "InheritanceSpecifier",
             "src": "137:15:26"
           },
@@ -1918,7 +1918,7 @@
             "attributes": {
               "constant": false,
               "name": "stakingInfoStub",
-              "scope": 6787,
+              "scope": 6793,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "contract StakingInfoStub",
@@ -1930,15 +1930,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "StakingInfoStub",
-                  "referencedDeclaration": 7768,
+                  "referencedDeclaration": 7774,
                   "type": "contract StakingInfoStub"
                 },
-                "id": 6698,
+                "id": 6704,
                 "name": "UserDefinedTypeName",
                 "src": "159:15:26"
               }
             ],
-            "id": 6699,
+            "id": 6705,
             "name": "VariableDeclaration",
             "src": "159:31:26"
           },
@@ -1949,7 +1949,7 @@
               "isConstructor": true,
               "kind": "constructor",
               "name": "",
-              "scope": 6787,
+              "scope": 6793,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1961,7 +1961,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "registryAddress",
-                      "scope": 6719,
+                      "scope": 6725,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1975,12 +1975,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6700,
+                        "id": 6706,
                         "name": "ElementaryTypeName",
                         "src": "218:7:26"
                       }
                     ],
-                    "id": 6701,
+                    "id": 6707,
                     "name": "VariableDeclaration",
                     "src": "218:23:26"
                   },
@@ -1988,7 +1988,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "stakingInfoAddress",
-                      "scope": 6719,
+                      "scope": 6725,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2002,12 +2002,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6702,
+                        "id": 6708,
                         "name": "ElementaryTypeName",
                         "src": "251:7:26"
                       }
                     ],
-                    "id": 6703,
+                    "id": 6709,
                     "name": "VariableDeclaration",
                     "src": "251:26:26"
                   },
@@ -2015,7 +2015,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_bondTokenAddress",
-                      "scope": 6719,
+                      "scope": 6725,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2029,17 +2029,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6704,
+                        "id": 6710,
                         "name": "ElementaryTypeName",
                         "src": "287:7:26"
                       }
                     ],
-                    "id": 6705,
+                    "id": 6711,
                     "name": "VariableDeclaration",
                     "src": "287:25:26"
                   }
                 ],
-                "id": 6706,
+                "id": 6712,
                 "name": "ParameterList",
                 "src": "208:110:26"
               },
@@ -2050,7 +2050,7 @@
                   ]
                 },
                 "children": [],
-                "id": 6711,
+                "id": 6717,
                 "name": "ParameterList",
                 "src": "378:0:26"
               },
@@ -2066,7 +2066,7 @@
                       "type": "type(contract AbstractBonding)",
                       "value": "AbstractBonding"
                     },
-                    "id": 6707,
+                    "id": 6713,
                     "name": "Identifier",
                     "src": "326:15:26"
                   },
@@ -2076,11 +2076,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 6701,
+                      "referencedDeclaration": 6707,
                       "type": "address",
                       "value": "registryAddress"
                     },
-                    "id": 6708,
+                    "id": 6714,
                     "name": "Identifier",
                     "src": "342:15:26"
                   },
@@ -2090,16 +2090,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 6705,
+                      "referencedDeclaration": 6711,
                       "type": "address",
                       "value": "_bondTokenAddress"
                     },
-                    "id": 6709,
+                    "id": 6715,
                     "name": "Identifier",
                     "src": "359:17:26"
                   }
                 ],
-                "id": 6710,
+                "id": 6716,
                 "name": "ModifierInvocation",
                 "src": "326:51:26"
               },
@@ -2124,11 +2124,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6699,
+                              "referencedDeclaration": 6705,
                               "type": "contract StakingInfoStub",
                               "value": "stakingInfoStub"
                             },
-                            "id": 6712,
+                            "id": 6718,
                             "name": "Identifier",
                             "src": "388:15:26"
                           },
@@ -2158,11 +2158,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7768,
+                                  "referencedDeclaration": 7774,
                                   "type": "type(contract StakingInfoStub)",
                                   "value": "StakingInfoStub"
                                 },
-                                "id": 6713,
+                                "id": 6719,
                                 "name": "Identifier",
                                 "src": "406:15:26"
                               },
@@ -2172,36 +2172,36 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 6703,
+                                  "referencedDeclaration": 6709,
                                   "type": "address",
                                   "value": "stakingInfoAddress"
                                 },
-                                "id": 6714,
+                                "id": 6720,
                                 "name": "Identifier",
                                 "src": "422:18:26"
                               }
                             ],
-                            "id": 6715,
+                            "id": 6721,
                             "name": "FunctionCall",
                             "src": "406:35:26"
                           }
                         ],
-                        "id": 6716,
+                        "id": 6722,
                         "name": "Assignment",
                         "src": "388:53:26"
                       }
                     ],
-                    "id": 6717,
+                    "id": 6723,
                     "name": "ExpressionStatement",
                     "src": "388:53:26"
                   }
                 ],
-                "id": 6718,
+                "id": 6724,
                 "name": "Block",
                 "src": "378:70:26"
               }
             ],
-            "id": 6719,
+            "id": 6725,
             "name": "FunctionDefinition",
             "src": "197:251:26"
           },
@@ -2215,7 +2215,7 @@
                 null
               ],
               "name": "withdraw",
-              "scope": 6787,
+              "scope": 6793,
               "stateMutability": "nonpayable",
               "superFunction": 1361,
               "visibility": "public"
@@ -2227,7 +2227,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "amount",
-                      "scope": 6731,
+                      "scope": 6737,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2240,12 +2240,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6720,
+                        "id": 6726,
                         "name": "ElementaryTypeName",
                         "src": "472:7:26"
                       }
                     ],
-                    "id": 6721,
+                    "id": 6727,
                     "name": "VariableDeclaration",
                     "src": "472:14:26"
                   },
@@ -2253,7 +2253,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "operator",
-                      "scope": 6731,
+                      "scope": 6737,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2267,17 +2267,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6722,
+                        "id": 6728,
                         "name": "ElementaryTypeName",
                         "src": "488:7:26"
                       }
                     ],
-                    "id": 6723,
+                    "id": 6729,
                     "name": "VariableDeclaration",
                     "src": "488:16:26"
                   }
                 ],
-                "id": 6724,
+                "id": 6730,
                 "name": "ParameterList",
                 "src": "471:34:26"
               },
@@ -2288,7 +2288,7 @@
                   ]
                 },
                 "children": [],
-                "id": 6725,
+                "id": 6731,
                 "name": "ParameterList",
                 "src": "513:0:26"
               },
@@ -2320,14 +2320,14 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                22465,
-                                22466
+                                22471,
+                                22472
                               ],
-                              "referencedDeclaration": 22466,
+                              "referencedDeclaration": 22472,
                               "type": "function (string memory) pure",
                               "value": "revert"
                             },
-                            "id": 6726,
+                            "id": 6732,
                             "name": "Identifier",
                             "src": "523:6:26"
                           },
@@ -2344,27 +2344,27 @@
                               "type": "literal_string \"abstract function\"",
                               "value": "abstract function"
                             },
-                            "id": 6727,
+                            "id": 6733,
                             "name": "Literal",
                             "src": "530:19:26"
                           }
                         ],
-                        "id": 6728,
+                        "id": 6734,
                         "name": "FunctionCall",
                         "src": "523:27:26"
                       }
                     ],
-                    "id": 6729,
+                    "id": 6735,
                     "name": "ExpressionStatement",
                     "src": "523:27:26"
                   }
                 ],
-                "id": 6730,
+                "id": 6736,
                 "name": "Block",
                 "src": "513:44:26"
               }
             ],
-            "id": 6731,
+            "id": 6737,
             "name": "FunctionDefinition",
             "src": "454:103:26"
           },
@@ -2378,7 +2378,7 @@
                 null
               ],
               "name": "withdrawBondExposed",
-              "scope": 6787,
+              "scope": 6793,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2390,7 +2390,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "amount",
-                      "scope": 6744,
+                      "scope": 6750,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2403,12 +2403,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6732,
+                        "id": 6738,
                         "name": "ElementaryTypeName",
                         "src": "592:7:26"
                       }
                     ],
-                    "id": 6733,
+                    "id": 6739,
                     "name": "VariableDeclaration",
                     "src": "592:14:26"
                   },
@@ -2416,7 +2416,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "operator",
-                      "scope": 6744,
+                      "scope": 6750,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2430,17 +2430,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6734,
+                        "id": 6740,
                         "name": "ElementaryTypeName",
                         "src": "608:7:26"
                       }
                     ],
-                    "id": 6735,
+                    "id": 6741,
                     "name": "VariableDeclaration",
                     "src": "608:16:26"
                   }
                 ],
-                "id": 6736,
+                "id": 6742,
                 "name": "ParameterList",
                 "src": "591:34:26"
               },
@@ -2451,7 +2451,7 @@
                   ]
                 },
                 "children": [],
-                "id": 6737,
+                "id": 6743,
                 "name": "ParameterList",
                 "src": "633:0:26"
               },
@@ -2493,7 +2493,7 @@
                               "type": "function (uint256,address)",
                               "value": "withdrawBond"
                             },
-                            "id": 6738,
+                            "id": 6744,
                             "name": "Identifier",
                             "src": "643:12:26"
                           },
@@ -2503,11 +2503,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6733,
+                              "referencedDeclaration": 6739,
                               "type": "uint256",
                               "value": "amount"
                             },
-                            "id": 6739,
+                            "id": 6745,
                             "name": "Identifier",
                             "src": "656:6:26"
                           },
@@ -2517,31 +2517,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6735,
+                              "referencedDeclaration": 6741,
                               "type": "address",
                               "value": "operator"
                             },
-                            "id": 6740,
+                            "id": 6746,
                             "name": "Identifier",
                             "src": "664:8:26"
                           }
                         ],
-                        "id": 6741,
+                        "id": 6747,
                         "name": "FunctionCall",
                         "src": "643:30:26"
                       }
                     ],
-                    "id": 6742,
+                    "id": 6748,
                     "name": "ExpressionStatement",
                     "src": "643:30:26"
                   }
                 ],
-                "id": 6743,
+                "id": 6749,
                 "name": "Block",
                 "src": "633:47:26"
               }
             ],
-            "id": 6744,
+            "id": 6750,
             "name": "FunctionDefinition",
             "src": "563:117:26"
           },
@@ -2555,7 +2555,7 @@
                 null
               ],
               "name": "isAuthorizedForOperator",
-              "scope": 6787,
+              "scope": 6793,
               "stateMutability": "view",
               "superFunction": 1795,
               "visibility": "public"
@@ -2567,7 +2567,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operator",
-                      "scope": 6760,
+                      "scope": 6766,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2581,12 +2581,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6745,
+                        "id": 6751,
                         "name": "ElementaryTypeName",
                         "src": "728:7:26"
                       }
                     ],
-                    "id": 6746,
+                    "id": 6752,
                     "name": "VariableDeclaration",
                     "src": "728:17:26"
                   },
@@ -2594,7 +2594,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operatorContract",
-                      "scope": 6760,
+                      "scope": 6766,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2608,17 +2608,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6747,
+                        "id": 6753,
                         "name": "ElementaryTypeName",
                         "src": "755:7:26"
                       }
                     ],
-                    "id": 6748,
+                    "id": 6754,
                     "name": "VariableDeclaration",
                     "src": "755:25:26"
                   }
                 ],
-                "id": 6749,
+                "id": 6755,
                 "name": "ParameterList",
                 "src": "718:68:26"
               },
@@ -2628,7 +2628,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 6760,
+                      "scope": 6766,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -2641,17 +2641,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 6750,
+                        "id": 6756,
                         "name": "ElementaryTypeName",
                         "src": "808:4:26"
                       }
                     ],
-                    "id": 6751,
+                    "id": 6757,
                     "name": "VariableDeclaration",
                     "src": "808:4:26"
                   }
                 ],
-                "id": 6752,
+                "id": 6758,
                 "name": "ParameterList",
                 "src": "807:6:26"
               },
@@ -2659,7 +2659,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 6752
+                      "functionReturnParameters": 6758
                     },
                     "children": [
                       {
@@ -2694,7 +2694,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "isAuthorizedForOperator",
-                              "referencedDeclaration": 7689,
+                              "referencedDeclaration": 7695,
                               "type": "function (address,address) view external returns (bool)"
                             },
                             "children": [
@@ -2704,16 +2704,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 6699,
+                                  "referencedDeclaration": 6705,
                                   "type": "contract StakingInfoStub",
                                   "value": "stakingInfoStub"
                                 },
-                                "id": 6753,
+                                "id": 6759,
                                 "name": "Identifier",
                                 "src": "843:15:26"
                               }
                             ],
-                            "id": 6754,
+                            "id": 6760,
                             "name": "MemberAccess",
                             "src": "843:39:26"
                           },
@@ -2723,11 +2723,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6746,
+                              "referencedDeclaration": 6752,
                               "type": "address",
                               "value": "_operator"
                             },
-                            "id": 6755,
+                            "id": 6761,
                             "name": "Identifier",
                             "src": "900:9:26"
                           },
@@ -2737,31 +2737,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6748,
+                              "referencedDeclaration": 6754,
                               "type": "address",
                               "value": "_operatorContract"
                             },
-                            "id": 6756,
+                            "id": 6762,
                             "name": "Identifier",
                             "src": "927:17:26"
                           }
                         ],
-                        "id": 6757,
+                        "id": 6763,
                         "name": "FunctionCall",
                         "src": "843:115:26"
                       }
                     ],
-                    "id": 6758,
+                    "id": 6764,
                     "name": "Return",
                     "src": "824:134:26"
                   }
                 ],
-                "id": 6759,
+                "id": 6765,
                 "name": "Block",
                 "src": "814:151:26"
               }
             ],
-            "id": 6760,
+            "id": 6766,
             "name": "FunctionDefinition",
             "src": "686:279:26"
           },
@@ -2775,7 +2775,7 @@
                 null
               ],
               "name": "authorizerOf",
-              "scope": 6787,
+              "scope": 6793,
               "stateMutability": "view",
               "superFunction": 1802,
               "visibility": "public"
@@ -2787,7 +2787,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operator",
-                      "scope": 6773,
+                      "scope": 6779,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2801,17 +2801,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6761,
+                        "id": 6767,
                         "name": "ElementaryTypeName",
                         "src": "993:7:26"
                       }
                     ],
-                    "id": 6762,
+                    "id": 6768,
                     "name": "VariableDeclaration",
                     "src": "993:17:26"
                   }
                 ],
-                "id": 6763,
+                "id": 6769,
                 "name": "ParameterList",
                 "src": "992:19:26"
               },
@@ -2821,7 +2821,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 6773,
+                      "scope": 6779,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2835,17 +2835,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6764,
+                        "id": 6770,
                         "name": "ElementaryTypeName",
                         "src": "1033:7:26"
                       }
                     ],
-                    "id": 6765,
+                    "id": 6771,
                     "name": "VariableDeclaration",
                     "src": "1033:7:26"
                   }
                 ],
-                "id": 6766,
+                "id": 6772,
                 "name": "ParameterList",
                 "src": "1032:9:26"
               },
@@ -2853,7 +2853,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 6766
+                      "functionReturnParameters": 6772
                     },
                     "children": [
                       {
@@ -2884,7 +2884,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "authorizerOf",
-                              "referencedDeclaration": 7741,
+                              "referencedDeclaration": 7747,
                               "type": "function (address) view external returns (address)"
                             },
                             "children": [
@@ -2894,16 +2894,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 6699,
+                                  "referencedDeclaration": 6705,
                                   "type": "contract StakingInfoStub",
                                   "value": "stakingInfoStub"
                                 },
-                                "id": 6767,
+                                "id": 6773,
                                 "name": "Identifier",
                                 "src": "1059:15:26"
                               }
                             ],
-                            "id": 6768,
+                            "id": 6774,
                             "name": "MemberAccess",
                             "src": "1059:28:26"
                           },
@@ -2913,31 +2913,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6762,
+                              "referencedDeclaration": 6768,
                               "type": "address",
                               "value": "_operator"
                             },
-                            "id": 6769,
+                            "id": 6775,
                             "name": "Identifier",
                             "src": "1088:9:26"
                           }
                         ],
-                        "id": 6770,
+                        "id": 6776,
                         "name": "FunctionCall",
                         "src": "1059:39:26"
                       }
                     ],
-                    "id": 6771,
+                    "id": 6777,
                     "name": "Return",
                     "src": "1052:46:26"
                   }
                 ],
-                "id": 6772,
+                "id": 6778,
                 "name": "Block",
                 "src": "1042:63:26"
               }
             ],
-            "id": 6773,
+            "id": 6779,
             "name": "FunctionDefinition",
             "src": "971:134:26"
           },
@@ -2951,7 +2951,7 @@
                 null
               ],
               "name": "beneficiaryOf",
-              "scope": 6787,
+              "scope": 6793,
               "stateMutability": "view",
               "superFunction": 1809,
               "visibility": "public"
@@ -2963,7 +2963,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operator",
-                      "scope": 6786,
+                      "scope": 6792,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2977,17 +2977,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6774,
+                        "id": 6780,
                         "name": "ElementaryTypeName",
                         "src": "1134:7:26"
                       }
                     ],
-                    "id": 6775,
+                    "id": 6781,
                     "name": "VariableDeclaration",
                     "src": "1134:17:26"
                   }
                 ],
-                "id": 6776,
+                "id": 6782,
                 "name": "ParameterList",
                 "src": "1133:19:26"
               },
@@ -2997,7 +2997,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 6786,
+                      "scope": 6792,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -3011,17 +3011,17 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 6777,
+                        "id": 6783,
                         "name": "ElementaryTypeName",
                         "src": "1198:15:26"
                       }
                     ],
-                    "id": 6778,
+                    "id": 6784,
                     "name": "VariableDeclaration",
                     "src": "1198:15:26"
                   }
                 ],
-                "id": 6779,
+                "id": 6785,
                 "name": "ParameterList",
                 "src": "1197:17:26"
               },
@@ -3029,7 +3029,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 6779
+                      "functionReturnParameters": 6785
                     },
                     "children": [
                       {
@@ -3060,7 +3060,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "beneficiaryOf",
-                              "referencedDeclaration": 7715,
+                              "referencedDeclaration": 7721,
                               "type": "function (address) view external returns (address payable)"
                             },
                             "children": [
@@ -3070,16 +3070,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 6699,
+                                  "referencedDeclaration": 6705,
                                   "type": "contract StakingInfoStub",
                                   "value": "stakingInfoStub"
                                 },
-                                "id": 6780,
+                                "id": 6786,
                                 "name": "Identifier",
                                 "src": "1236:15:26"
                               }
                             ],
-                            "id": 6781,
+                            "id": 6787,
                             "name": "MemberAccess",
                             "src": "1236:29:26"
                           },
@@ -3089,41 +3089,41 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6775,
+                              "referencedDeclaration": 6781,
                               "type": "address",
                               "value": "_operator"
                             },
-                            "id": 6782,
+                            "id": 6788,
                             "name": "Identifier",
                             "src": "1266:9:26"
                           }
                         ],
-                        "id": 6783,
+                        "id": 6789,
                         "name": "FunctionCall",
                         "src": "1236:40:26"
                       }
                     ],
-                    "id": 6784,
+                    "id": 6790,
                     "name": "Return",
                     "src": "1229:47:26"
                   }
                 ],
-                "id": 6785,
+                "id": 6791,
                 "name": "Block",
                 "src": "1219:64:26"
               }
             ],
-            "id": 6786,
+            "id": 6792,
             "name": "FunctionDefinition",
             "src": "1111:172:26"
           }
         ],
-        "id": 6787,
+        "id": 6793,
         "name": "ContractDefinition",
         "src": "105:1180:26"
       }
     ],
-    "id": 6788,
+    "id": 6794,
     "name": "SourceUnit",
     "src": "0:1286:26"
   },
@@ -3133,7 +3133,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.305Z",
+  "updatedAt": "2021-04-30T08:59:51.145Z",
   "devdoc": {
     "methods": {
       "authorizeSortitionPoolContract(address,address)": {

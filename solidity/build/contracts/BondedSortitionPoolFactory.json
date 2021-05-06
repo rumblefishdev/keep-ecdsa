@@ -54,14 +54,14 @@
     "absolutePath": "@keep-network/sortition-pools/contracts/BondedSortitionPoolFactory.sol",
     "exportedSymbols": {
       "BondedSortitionPoolFactory": [
-        18143
+        18149
       ]
     },
-    "id": 18144,
+    "id": 18150,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 18110,
+        "id": 18116,
         "literals": [
           "solidity",
           "0.5",
@@ -73,10 +73,10 @@
       {
         "absolutePath": "@keep-network/sortition-pools/contracts/BondedSortitionPool.sol",
         "file": "./BondedSortitionPool.sol",
-        "id": 18111,
+        "id": 18117,
         "nodeType": "ImportDirective",
-        "scope": 18144,
-        "sourceUnit": 18109,
+        "scope": 18150,
+        "sourceUnit": 18115,
         "src": "25:35:75",
         "symbolAliases": [],
         "unitAlias": ""
@@ -84,10 +84,10 @@
       {
         "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
         "file": "./api/IBonding.sol",
-        "id": 18112,
+        "id": 18118,
         "nodeType": "ImportDirective",
-        "scope": 18144,
-        "sourceUnit": 20961,
+        "scope": 18150,
+        "sourceUnit": 20967,
         "src": "61:28:75",
         "symbolAliases": [],
         "unitAlias": ""
@@ -95,10 +95,10 @@
       {
         "absolutePath": "@keep-network/sortition-pools/contracts/api/IStaking.sol",
         "file": "./api/IStaking.sol",
-        "id": 18113,
+        "id": 18119,
         "nodeType": "ImportDirective",
-        "scope": 18144,
-        "sourceUnit": 20988,
+        "scope": 18150,
+        "sourceUnit": 20994,
         "src": "90:28:75",
         "symbolAliases": [],
         "unitAlias": ""
@@ -106,21 +106,21 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          18108
+          18114
         ],
         "contractKind": "contract",
         "documentation": "@title Bonded Sortition Pool Factory\n @notice Factory for the creation of new bonded sortition pools.",
         "fullyImplemented": true,
-        "id": 18143,
+        "id": 18149,
         "linearizedBaseContracts": [
-          18143
+          18149
         ],
         "name": "BondedSortitionPoolFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 18141,
+              "id": 18147,
               "nodeType": "Block",
               "src": "610:241:75",
               "statements": [
@@ -133,37 +133,37 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 18131,
+                            "id": 18137,
                             "name": "stakingContract",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18115,
+                            "referencedDeclaration": 18121,
                             "src": "681:15:75",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IStaking_$20987",
+                              "typeIdentifier": "t_contract$_IStaking_$20993",
                               "typeString": "contract IStaking"
                             }
                           },
                           {
                             "argumentTypes": null,
-                            "id": 18132,
+                            "id": 18138,
                             "name": "bondingContract",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18117,
+                            "referencedDeclaration": 18123,
                             "src": "708:15:75",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IBonding_$20960",
+                              "typeIdentifier": "t_contract$_IBonding_$20966",
                               "typeString": "contract IBonding"
                             }
                           },
                           {
                             "argumentTypes": null,
-                            "id": 18133,
+                            "id": 18139,
                             "name": "minimumStake",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18119,
+                            "referencedDeclaration": 18125,
                             "src": "735:12:75",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -172,11 +172,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 18134,
+                            "id": 18140,
                             "name": "initialMinimumBond",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18121,
+                            "referencedDeclaration": 18127,
                             "src": "759:18:75",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -185,11 +185,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 18135,
+                            "id": 18141,
                             "name": "poolWeightDivisor",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18123,
+                            "referencedDeclaration": 18129,
                             "src": "789:17:75",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -200,18 +200,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 18136,
+                              "id": 18142,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 22460,
+                              "referencedDeclaration": 22466,
                               "src": "818:3:75",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 18137,
+                            "id": 18143,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -229,11 +229,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_IStaking_$20987",
+                              "typeIdentifier": "t_contract$_IStaking_$20993",
                               "typeString": "contract IStaking"
                             },
                             {
-                              "typeIdentifier": "t_contract$_IBonding_$20960",
+                              "typeIdentifier": "t_contract$_IBonding_$20966",
                               "typeString": "contract IBonding"
                             },
                             {
@@ -253,7 +253,7 @@
                               "typeString": "address payable"
                             }
                           ],
-                          "id": 18130,
+                          "id": 18136,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -261,23 +261,23 @@
                           "nodeType": "NewExpression",
                           "src": "646:23:75",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_IStaking_$20987_$_t_contract$_IBonding_$20960_$_t_uint256_$_t_uint256_$_t_uint256_$_t_address_$returns$_t_contract$_BondedSortitionPool_$18108_$",
+                            "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_IStaking_$20993_$_t_contract$_IBonding_$20966_$_t_uint256_$_t_uint256_$_t_uint256_$_t_address_$returns$_t_contract$_BondedSortitionPool_$18114_$",
                             "typeString": "function (contract IStaking,contract IBonding,uint256,uint256,uint256,address) returns (contract BondedSortitionPool)"
                           },
                           "typeName": {
                             "contractScope": null,
-                            "id": 18129,
+                            "id": 18135,
                             "name": "BondedSortitionPool",
                             "nodeType": "UserDefinedTypeName",
-                            "referencedDeclaration": 18108,
+                            "referencedDeclaration": 18114,
                             "src": "650:19:75",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_BondedSortitionPool_$18108",
+                              "typeIdentifier": "t_contract$_BondedSortitionPool_$18114",
                               "typeString": "contract BondedSortitionPool"
                             }
                           }
                         },
-                        "id": 18138,
+                        "id": 18144,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -287,7 +287,7 @@
                         "nodeType": "FunctionCall",
                         "src": "646:192:75",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BondedSortitionPool_$18108",
+                          "typeIdentifier": "t_contract$_BondedSortitionPool_$18114",
                           "typeString": "contract BondedSortitionPool"
                         }
                       }
@@ -295,11 +295,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_BondedSortitionPool_$18108",
+                          "typeIdentifier": "t_contract$_BondedSortitionPool_$18114",
                           "typeString": "contract BondedSortitionPool"
                         }
                       ],
-                      "id": 18128,
+                      "id": 18134,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -312,7 +312,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 18139,
+                    "id": 18145,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -326,46 +326,46 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 18127,
-                  "id": 18140,
+                  "functionReturnParameters": 18133,
+                  "id": 18146,
                   "nodeType": "Return",
                   "src": "616:230:75"
                 }
               ]
             },
             "documentation": "@notice Creates a new bonded sortition pool instance.\n @return Address of the new bonded sortition pool contract instance.",
-            "id": 18142,
+            "id": 18148,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createSortitionPool",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18124,
+              "id": 18130,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18115,
+                  "id": 18121,
                   "name": "stakingContract",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18142,
+                  "scope": 18148,
                   "src": "437:24:75",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IStaking_$20987",
+                    "typeIdentifier": "t_contract$_IStaking_$20993",
                     "typeString": "contract IStaking"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 18114,
+                    "id": 18120,
                     "name": "IStaking",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 20987,
+                    "referencedDeclaration": 20993,
                     "src": "437:8:75",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IStaking_$20987",
+                      "typeIdentifier": "t_contract$_IStaking_$20993",
                       "typeString": "contract IStaking"
                     }
                   },
@@ -374,26 +374,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 18117,
+                  "id": 18123,
                   "name": "bondingContract",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18142,
+                  "scope": 18148,
                   "src": "467:24:75",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IBonding_$20960",
+                    "typeIdentifier": "t_contract$_IBonding_$20966",
                     "typeString": "contract IBonding"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 18116,
+                    "id": 18122,
                     "name": "IBonding",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 20960,
+                    "referencedDeclaration": 20966,
                     "src": "467:8:75",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IBonding_$20960",
+                      "typeIdentifier": "t_contract$_IBonding_$20966",
                       "typeString": "contract IBonding"
                     }
                   },
@@ -402,10 +402,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18119,
+                  "id": 18125,
                   "name": "minimumStake",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18142,
+                  "scope": 18148,
                   "src": "497:20:75",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -414,7 +414,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18118,
+                    "id": 18124,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "497:7:75",
@@ -428,10 +428,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18121,
+                  "id": 18127,
                   "name": "initialMinimumBond",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18142,
+                  "scope": 18148,
                   "src": "523:26:75",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -440,7 +440,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18120,
+                    "id": 18126,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "523:7:75",
@@ -454,10 +454,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18123,
+                  "id": 18129,
                   "name": "poolWeightDivisor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18142,
+                  "scope": 18148,
                   "src": "555:25:75",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -466,7 +466,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18122,
+                    "id": 18128,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "555:7:75",
@@ -482,15 +482,15 @@
               "src": "431:153:75"
             },
             "returnParameters": {
-              "id": 18127,
+              "id": 18133,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18126,
+                  "id": 18132,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18142,
+                  "scope": 18148,
                   "src": "601:7:75",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -499,7 +499,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 18125,
+                    "id": 18131,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "601:7:75",
@@ -515,14 +515,14 @@
               ],
               "src": "600:9:75"
             },
-            "scope": 18143,
+            "scope": 18149,
             "src": "403:448:75",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 18144,
+        "scope": 18150,
         "src": "229:624:75"
       }
     ],
@@ -533,7 +533,7 @@
       "absolutePath": "@keep-network/sortition-pools/contracts/BondedSortitionPoolFactory.sol",
       "exportedSymbols": {
         "BondedSortitionPoolFactory": [
-          18143
+          18149
         ]
       }
     },
@@ -546,52 +546,52 @@
             ".17"
           ]
         },
-        "id": 18110,
+        "id": 18116,
         "name": "PragmaDirective",
         "src": "0:23:75"
       },
       {
         "attributes": {
-          "SourceUnit": 18109,
+          "SourceUnit": 18115,
           "absolutePath": "@keep-network/sortition-pools/contracts/BondedSortitionPool.sol",
           "file": "./BondedSortitionPool.sol",
-          "scope": 18144,
+          "scope": 18150,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 18111,
+        "id": 18117,
         "name": "ImportDirective",
         "src": "25:35:75"
       },
       {
         "attributes": {
-          "SourceUnit": 20961,
+          "SourceUnit": 20967,
           "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
           "file": "./api/IBonding.sol",
-          "scope": 18144,
+          "scope": 18150,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 18112,
+        "id": 18118,
         "name": "ImportDirective",
         "src": "61:28:75"
       },
       {
         "attributes": {
-          "SourceUnit": 20988,
+          "SourceUnit": 20994,
           "absolutePath": "@keep-network/sortition-pools/contracts/api/IStaking.sol",
           "file": "./api/IStaking.sol",
-          "scope": 18144,
+          "scope": 18150,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 18113,
+        "id": 18119,
         "name": "ImportDirective",
         "src": "90:28:75"
       },
@@ -601,16 +601,16 @@
             null
           ],
           "contractDependencies": [
-            18108
+            18114
           ],
           "contractKind": "contract",
           "documentation": "@title Bonded Sortition Pool Factory\n @notice Factory for the creation of new bonded sortition pools.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            18143
+            18149
           ],
           "name": "BondedSortitionPoolFactory",
-          "scope": 18144
+          "scope": 18150
         },
         "children": [
           {
@@ -623,7 +623,7 @@
                 null
               ],
               "name": "createSortitionPool",
-              "scope": 18143,
+              "scope": 18149,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -635,7 +635,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "stakingContract",
-                      "scope": 18142,
+                      "scope": 18148,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IStaking",
@@ -647,15 +647,15 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IStaking",
-                          "referencedDeclaration": 20987,
+                          "referencedDeclaration": 20993,
                           "type": "contract IStaking"
                         },
-                        "id": 18114,
+                        "id": 18120,
                         "name": "UserDefinedTypeName",
                         "src": "437:8:75"
                       }
                     ],
-                    "id": 18115,
+                    "id": 18121,
                     "name": "VariableDeclaration",
                     "src": "437:24:75"
                   },
@@ -663,7 +663,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "bondingContract",
-                      "scope": 18142,
+                      "scope": 18148,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IBonding",
@@ -675,15 +675,15 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IBonding",
-                          "referencedDeclaration": 20960,
+                          "referencedDeclaration": 20966,
                           "type": "contract IBonding"
                         },
-                        "id": 18116,
+                        "id": 18122,
                         "name": "UserDefinedTypeName",
                         "src": "467:8:75"
                       }
                     ],
-                    "id": 18117,
+                    "id": 18123,
                     "name": "VariableDeclaration",
                     "src": "467:24:75"
                   },
@@ -691,7 +691,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "minimumStake",
-                      "scope": 18142,
+                      "scope": 18148,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -704,12 +704,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18118,
+                        "id": 18124,
                         "name": "ElementaryTypeName",
                         "src": "497:7:75"
                       }
                     ],
-                    "id": 18119,
+                    "id": 18125,
                     "name": "VariableDeclaration",
                     "src": "497:20:75"
                   },
@@ -717,7 +717,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "initialMinimumBond",
-                      "scope": 18142,
+                      "scope": 18148,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -730,12 +730,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18120,
+                        "id": 18126,
                         "name": "ElementaryTypeName",
                         "src": "523:7:75"
                       }
                     ],
-                    "id": 18121,
+                    "id": 18127,
                     "name": "VariableDeclaration",
                     "src": "523:26:75"
                   },
@@ -743,7 +743,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "poolWeightDivisor",
-                      "scope": 18142,
+                      "scope": 18148,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -756,17 +756,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18122,
+                        "id": 18128,
                         "name": "ElementaryTypeName",
                         "src": "555:7:75"
                       }
                     ],
-                    "id": 18123,
+                    "id": 18129,
                     "name": "VariableDeclaration",
                     "src": "555:25:75"
                   }
                 ],
-                "id": 18124,
+                "id": 18130,
                 "name": "ParameterList",
                 "src": "431:153:75"
               },
@@ -776,7 +776,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 18142,
+                      "scope": 18148,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -790,17 +790,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 18125,
+                        "id": 18131,
                         "name": "ElementaryTypeName",
                         "src": "601:7:75"
                       }
                     ],
-                    "id": 18126,
+                    "id": 18132,
                     "name": "VariableDeclaration",
                     "src": "601:7:75"
                   }
                 ],
-                "id": 18127,
+                "id": 18133,
                 "name": "ParameterList",
                 "src": "600:9:75"
               },
@@ -808,7 +808,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 18127
+                      "functionReturnParameters": 18133
                     },
                     "children": [
                       {
@@ -830,7 +830,7 @@
                             "attributes": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_BondedSortitionPool_$18108",
+                                  "typeIdentifier": "t_contract$_BondedSortitionPool_$18114",
                                   "typeString": "contract BondedSortitionPool"
                                 }
                               ],
@@ -841,7 +841,7 @@
                               "type": "type(address)",
                               "value": "address"
                             },
-                            "id": 18128,
+                            "id": 18134,
                             "name": "ElementaryTypeNameExpression",
                             "src": "629:7:75"
                           },
@@ -864,11 +864,11 @@
                                 "attributes": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_contract$_IStaking_$20987",
+                                      "typeIdentifier": "t_contract$_IStaking_$20993",
                                       "typeString": "contract IStaking"
                                     },
                                     {
-                                      "typeIdentifier": "t_contract$_IBonding_$20960",
+                                      "typeIdentifier": "t_contract$_IBonding_$20966",
                                       "typeString": "contract IBonding"
                                     },
                                     {
@@ -899,15 +899,15 @@
                                     "attributes": {
                                       "contractScope": null,
                                       "name": "BondedSortitionPool",
-                                      "referencedDeclaration": 18108,
+                                      "referencedDeclaration": 18114,
                                       "type": "contract BondedSortitionPool"
                                     },
-                                    "id": 18129,
+                                    "id": 18135,
                                     "name": "UserDefinedTypeName",
                                     "src": "650:19:75"
                                   }
                                 ],
-                                "id": 18130,
+                                "id": 18136,
                                 "name": "NewExpression",
                                 "src": "646:23:75"
                               },
@@ -917,11 +917,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18115,
+                                  "referencedDeclaration": 18121,
                                   "type": "contract IStaking",
                                   "value": "stakingContract"
                                 },
-                                "id": 18131,
+                                "id": 18137,
                                 "name": "Identifier",
                                 "src": "681:15:75"
                               },
@@ -931,11 +931,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18117,
+                                  "referencedDeclaration": 18123,
                                   "type": "contract IBonding",
                                   "value": "bondingContract"
                                 },
-                                "id": 18132,
+                                "id": 18138,
                                 "name": "Identifier",
                                 "src": "708:15:75"
                               },
@@ -945,11 +945,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18119,
+                                  "referencedDeclaration": 18125,
                                   "type": "uint256",
                                   "value": "minimumStake"
                                 },
-                                "id": 18133,
+                                "id": 18139,
                                 "name": "Identifier",
                                 "src": "735:12:75"
                               },
@@ -959,11 +959,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18121,
+                                  "referencedDeclaration": 18127,
                                   "type": "uint256",
                                   "value": "initialMinimumBond"
                                 },
-                                "id": 18134,
+                                "id": 18140,
                                 "name": "Identifier",
                                 "src": "759:18:75"
                               },
@@ -973,11 +973,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18123,
+                                  "referencedDeclaration": 18129,
                                   "type": "uint256",
                                   "value": "poolWeightDivisor"
                                 },
-                                "id": 18135,
+                                "id": 18141,
                                 "name": "Identifier",
                                 "src": "789:17:75"
                               },
@@ -999,51 +999,51 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 22460,
+                                      "referencedDeclaration": 22466,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 18136,
+                                    "id": 18142,
                                     "name": "Identifier",
                                     "src": "818:3:75"
                                   }
                                 ],
-                                "id": 18137,
+                                "id": 18143,
                                 "name": "MemberAccess",
                                 "src": "818:10:75"
                               }
                             ],
-                            "id": 18138,
+                            "id": 18144,
                             "name": "FunctionCall",
                             "src": "646:192:75"
                           }
                         ],
-                        "id": 18139,
+                        "id": 18145,
                         "name": "FunctionCall",
                         "src": "629:217:75"
                       }
                     ],
-                    "id": 18140,
+                    "id": 18146,
                     "name": "Return",
                     "src": "616:230:75"
                   }
                 ],
-                "id": 18141,
+                "id": 18147,
                 "name": "Block",
                 "src": "610:241:75"
               }
             ],
-            "id": 18142,
+            "id": 18148,
             "name": "FunctionDefinition",
             "src": "403:448:75"
           }
         ],
-        "id": 18143,
+        "id": 18149,
         "name": "ContractDefinition",
         "src": "229:624:75"
       }
     ],
-    "id": 18144,
+    "id": 18150,
     "name": "SourceUnit",
     "src": "0:854:75"
   },
@@ -1055,14 +1055,14 @@
     "31": {
       "events": {},
       "links": {
-        "StackLib": "0xF6bb2e0358F8E6A44B58C8BA82e77FAA358050C8"
+        "StackLib": "0x214054DFAf852eC52E4CA8e038262bA0598AC46c"
       },
-      "address": "0xC15F347A06cf4670195D61EB6e3996aB34124C2f",
-      "transactionHash": "0xee0101899e89b653bc06728e105e36d3fda175a6147aa641bb984b3f3b30d829"
+      "address": "0x192f57Ad7a394874ccAEBc4D63b404BaB4D7c97E",
+      "transactionHash": "0x218fd6e175e495e453ceb66ab2aab8afcf595ae3e953ed7010835ba87fa63bb1"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:32:09.279Z",
+  "updatedAt": "2021-04-30T09:22:53.705Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {

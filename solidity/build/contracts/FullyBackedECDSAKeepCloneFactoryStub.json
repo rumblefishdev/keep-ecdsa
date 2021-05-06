@@ -150,14 +150,14 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/FullyBackedECDSAKeepCloneFactoryStub.sol",
     "exportedSymbols": {
       "FullyBackedECDSAKeepCloneFactoryStub": [
-        7441
+        7447
       ]
     },
-    "id": 7442,
+    "id": 7448,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 7339,
+        "id": 7345,
         "literals": [
           "solidity",
           "0.5",
@@ -169,10 +169,10 @@
       {
         "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/fully-backed/FullyBackedECDSAKeep.sol",
         "file": "../../contracts/fully-backed/FullyBackedECDSAKeep.sol",
-        "id": 7340,
+        "id": 7346,
         "nodeType": "ImportDirective",
-        "scope": 7442,
-        "sourceUnit": 6246,
+        "scope": 7448,
+        "sourceUnit": 6252,
         "src": "25:63:36",
         "symbolAliases": [],
         "unitAlias": ""
@@ -180,10 +180,10 @@
       {
         "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/CloneFactory.sol",
         "file": "../../contracts/CloneFactory.sol",
-        "id": 7341,
+        "id": 7347,
         "nodeType": "ImportDirective",
-        "scope": 7442,
-        "sourceUnit": 3451,
+        "scope": 7448,
+        "sourceUnit": 3457,
         "src": "89:42:36",
         "symbolAliases": [],
         "unitAlias": ""
@@ -191,14 +191,14 @@
       {
         "absolutePath": "@keep-network/keep-core/contracts/Authorizations.sol",
         "file": "@keep-network/keep-core/contracts/Authorizations.sol",
-        "id": 7343,
+        "id": 7349,
         "nodeType": "ImportDirective",
-        "scope": 7442,
-        "sourceUnit": 8228,
+        "scope": 7448,
+        "sourceUnit": 8234,
         "src": "133:94:36",
         "symbolAliases": [
           {
-            "foreign": 7342,
+            "foreign": 7348,
             "local": null
           }
         ],
@@ -210,17 +210,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 7344,
+              "id": 7350,
               "name": "CloneFactory",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3450,
+              "referencedDeclaration": 3456,
               "src": "411:12:36",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CloneFactory_$3450",
+                "typeIdentifier": "t_contract$_CloneFactory_$3456",
                 "typeString": "contract CloneFactory"
               }
             },
-            "id": 7345,
+            "id": 7351,
             "nodeType": "InheritanceSpecifier",
             "src": "411:12:36"
           },
@@ -228,43 +228,43 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 7346,
+              "id": 7352,
               "name": "AuthorityDelegator",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 8049,
+              "referencedDeclaration": 8055,
               "src": "429:18:36",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_AuthorityDelegator_$8049",
+                "typeIdentifier": "t_contract$_AuthorityDelegator_$8055",
                 "typeString": "contract AuthorityDelegator"
               }
             },
-            "id": 7347,
+            "id": 7353,
             "nodeType": "InheritanceSpecifier",
             "src": "429:18:36"
           }
         ],
         "contractDependencies": [
-          3450,
-          8049
+          3456,
+          8055
         ],
         "contractKind": "contract",
         "documentation": "@title Fully Backed Bonded ECDSA Keep Factory Stub using clone factory.\n @dev This contract is for testing purposes only.",
         "fullyImplemented": true,
-        "id": 7441,
+        "id": 7447,
         "linearizedBaseContracts": [
-          7441,
-          8049,
-          3450
+          7447,
+          8055,
+          3456
         ],
         "name": "FullyBackedECDSAKeepCloneFactoryStub",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 7349,
+            "id": 7355,
             "name": "masterKeepAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 7441,
+            "scope": 7447,
             "src": "454:32:36",
             "stateVariable": true,
             "storageLocation": "default",
@@ -273,7 +273,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 7348,
+              "id": 7354,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "454:7:36",
@@ -288,10 +288,10 @@
           },
           {
             "constant": false,
-            "id": 7353,
+            "id": 7359,
             "name": "banKeepMembersCalledCount",
             "nodeType": "VariableDeclaration",
-            "scope": 7441,
+            "scope": 7447,
             "src": "493:60:36",
             "stateVariable": true,
             "storageLocation": "default",
@@ -300,9 +300,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 7352,
+              "id": 7358,
               "keyType": {
-                "id": 7350,
+                "id": 7356,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "501:7:36",
@@ -318,7 +318,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 7351,
+                "id": 7357,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "512:7:36",
@@ -333,25 +333,25 @@
           },
           {
             "body": {
-              "id": 7362,
+              "id": 7368,
               "nodeType": "Block",
               "src": "607:55:36",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 7360,
+                    "id": 7366,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 7358,
+                      "id": 7364,
                       "name": "masterKeepAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7349,
+                      "referencedDeclaration": 7355,
                       "src": "617:17:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -362,11 +362,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 7359,
+                      "id": 7365,
                       "name": "_masterKeepAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7355,
+                      "referencedDeclaration": 7361,
                       "src": "637:18:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -379,29 +379,29 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 7361,
+                  "id": 7367,
                   "nodeType": "ExpressionStatement",
                   "src": "617:38:36"
                 }
               ]
             },
             "documentation": null,
-            "id": 7363,
+            "id": 7369,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7356,
+              "id": 7362,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7355,
+                  "id": 7361,
                   "name": "_masterKeepAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7363,
+                  "scope": 7369,
                   "src": "572:26:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -410,7 +410,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7354,
+                    "id": 7360,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "572:7:36",
@@ -427,12 +427,12 @@
               "src": "571:28:36"
             },
             "returnParameters": {
-              "id": 7357,
+              "id": 7363,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "607:0:36"
             },
-            "scope": 7441,
+            "scope": 7447,
             "src": "560:102:36",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -441,20 +441,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 7367,
+            "id": 7373,
             "name": "FullyBackedECDSAKeepCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 7366,
+              "id": 7372,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7365,
+                  "id": 7371,
                   "indexed": false,
                   "name": "keepAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7367,
+                  "scope": 7373,
                   "src": "702:19:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -463,7 +463,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7364,
+                    "id": 7370,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "702:7:36",
@@ -483,25 +483,25 @@
           },
           {
             "body": {
-              "id": 7419,
+              "id": 7425,
               "nodeType": "Block",
               "src": "997:436:36",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 7389,
+                    "id": 7395,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 7385,
+                      "id": 7391,
                       "name": "keepAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7383,
+                      "referencedDeclaration": 7389,
                       "src": "1007:11:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -515,11 +515,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 7387,
+                          "id": 7393,
                           "name": "masterKeepAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 7349,
+                          "referencedDeclaration": 7355,
                           "src": "1033:17:36",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -534,18 +534,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 7386,
+                        "id": 7392,
                         "name": "createClone",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3432,
+                        "referencedDeclaration": 3438,
                         "src": "1021:11:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_address_$",
                           "typeString": "function (address) returns (address)"
                         }
                       },
-                      "id": 7388,
+                      "id": 7394,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -565,7 +565,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 7390,
+                  "id": 7396,
                   "nodeType": "ExpressionStatement",
                   "src": "1007:44:36"
                 },
@@ -578,11 +578,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 7393,
+                            "id": 7399,
                             "name": "masterKeepAddress",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 7349,
+                            "referencedDeclaration": 7355,
                             "src": "1076:17:36",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -591,11 +591,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 7394,
+                            "id": 7400,
                             "name": "keepAddress",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 7383,
+                            "referencedDeclaration": 7389,
                             "src": "1095:11:36",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -614,18 +614,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 7392,
+                          "id": 7398,
                           "name": "isClone",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3449,
+                          "referencedDeclaration": 3455,
                           "src": "1068:7:36",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_address_$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address,address) view returns (bool)"
                           }
                         },
-                        "id": 7395,
+                        "id": 7401,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -647,18 +647,18 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 7391,
+                      "id": 7397,
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22449,
+                      "referencedDeclaration": 22455,
                       "src": "1061:6:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 7396,
+                    "id": 7402,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -672,37 +672,37 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 7397,
+                  "id": 7403,
                   "nodeType": "ExpressionStatement",
                   "src": "1061:47:36"
                 },
                 {
                   "assignments": [
-                    7399
+                    7405
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 7399,
+                      "id": 7405,
                       "name": "keep",
                       "nodeType": "VariableDeclaration",
-                      "scope": 7419,
+                      "scope": 7425,
                       "src": "1119:25:36",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6245",
+                        "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6251",
                         "typeString": "contract FullyBackedECDSAKeep"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 7398,
+                        "id": 7404,
                         "name": "FullyBackedECDSAKeep",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 6245,
+                        "referencedDeclaration": 6251,
                         "src": "1119:20:36",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6245",
+                          "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6251",
                           "typeString": "contract FullyBackedECDSAKeep"
                         }
                       },
@@ -710,17 +710,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 7403,
+                  "id": 7409,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 7401,
+                        "id": 7407,
                         "name": "keepAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7383,
+                        "referencedDeclaration": 7389,
                         "src": "1168:11:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -735,18 +735,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 7400,
+                      "id": 7406,
                       "name": "FullyBackedECDSAKeep",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6245,
+                      "referencedDeclaration": 6251,
                       "src": "1147:20:36",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_FullyBackedECDSAKeep_$6245_$",
+                        "typeIdentifier": "t_type$_t_contract$_FullyBackedECDSAKeep_$6251_$",
                         "typeString": "type(contract FullyBackedECDSAKeep)"
                       }
                     },
-                    "id": 7402,
+                    "id": 7408,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -756,7 +756,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1147:33:36",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6245",
+                      "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6251",
                       "typeString": "contract FullyBackedECDSAKeep"
                     }
                   },
@@ -769,11 +769,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 7407,
+                        "id": 7413,
                         "name": "_owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7369,
+                        "referencedDeclaration": 7375,
                         "src": "1219:6:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -782,11 +782,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 7408,
+                        "id": 7414,
                         "name": "_members",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7372,
+                        "referencedDeclaration": 7378,
                         "src": "1239:8:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
@@ -795,11 +795,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 7409,
+                        "id": 7415,
                         "name": "_honestThreshold",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7374,
+                        "referencedDeclaration": 7380,
                         "src": "1261:16:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -808,11 +808,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 7410,
+                        "id": 7416,
                         "name": "_keepBonding",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7376,
+                        "referencedDeclaration": 7382,
                         "src": "1291:12:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -821,11 +821,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 7411,
+                        "id": 7417,
                         "name": "_keepFactory",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7378,
+                        "referencedDeclaration": 7384,
                         "src": "1317:12:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
@@ -834,11 +834,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 7412,
+                        "id": 7418,
                         "name": "_bondTokenAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7380,
+                        "referencedDeclaration": 7386,
                         "src": "1343:17:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -875,32 +875,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 7404,
+                        "id": 7410,
                         "name": "keep",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7399,
+                        "referencedDeclaration": 7405,
                         "src": "1190:4:36",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6245",
+                          "typeIdentifier": "t_contract$_FullyBackedECDSAKeep_$6251",
                           "typeString": "contract FullyBackedECDSAKeep"
                         }
                       },
-                      "id": 7406,
+                      "id": 7412,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "initialize",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6222,
+                      "referencedDeclaration": 6228,
                       "src": "1190:15:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_array$_t_address_$dyn_memory_ptr_$_t_uint256_$_t_address_$_t_address_payable_$_t_address_$returns$__$",
                         "typeString": "function (address,address[] memory,uint256,address,address payable,address) external"
                       }
                     },
-                    "id": 7413,
+                    "id": 7419,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -914,7 +914,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 7414,
+                  "id": 7420,
                   "nodeType": "ExpressionStatement",
                   "src": "1190:180:36"
                 },
@@ -924,11 +924,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 7416,
+                        "id": 7422,
                         "name": "keepAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7383,
+                        "referencedDeclaration": 7389,
                         "src": "1414:11:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -943,18 +943,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 7415,
+                      "id": 7421,
                       "name": "FullyBackedECDSAKeepCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7367,
+                      "referencedDeclaration": 7373,
                       "src": "1386:27:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 7417,
+                    "id": 7423,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -968,29 +968,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 7418,
+                  "id": 7424,
                   "nodeType": "EmitStatement",
                   "src": "1381:45:36"
                 }
               ]
             },
             "documentation": null,
-            "id": 7420,
+            "id": 7426,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "newKeep",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7381,
+              "id": 7387,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7369,
+                  "id": 7375,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7420,
+                  "scope": 7426,
                   "src": "755:14:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -999,7 +999,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7368,
+                    "id": 7374,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "755:7:36",
@@ -1014,10 +1014,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7372,
+                  "id": 7378,
                   "name": "_members",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7420,
+                  "scope": 7426,
                   "src": "779:27:36",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -1027,7 +1027,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 7370,
+                      "id": 7376,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "779:7:36",
@@ -1037,7 +1037,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 7371,
+                    "id": 7377,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "779:9:36",
@@ -1051,10 +1051,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7374,
+                  "id": 7380,
                   "name": "_honestThreshold",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7420,
+                  "scope": 7426,
                   "src": "816:24:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1063,7 +1063,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7373,
+                    "id": 7379,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "816:7:36",
@@ -1077,10 +1077,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7376,
+                  "id": 7382,
                   "name": "_keepBonding",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7420,
+                  "scope": 7426,
                   "src": "850:20:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1089,7 +1089,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7375,
+                    "id": 7381,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "850:7:36",
@@ -1104,10 +1104,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7378,
+                  "id": 7384,
                   "name": "_keepFactory",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7420,
+                  "scope": 7426,
                   "src": "880:28:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1116,7 +1116,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 7377,
+                    "id": 7383,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "880:15:36",
@@ -1131,10 +1131,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 7380,
+                  "id": 7386,
                   "name": "_bondTokenAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7420,
+                  "scope": 7426,
                   "src": "918:25:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1143,7 +1143,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7379,
+                    "id": 7385,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "918:7:36",
@@ -1160,15 +1160,15 @@
               "src": "745:204:36"
             },
             "returnParameters": {
-              "id": 7384,
+              "id": 7390,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7383,
+                  "id": 7389,
                   "name": "keepAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7420,
+                  "scope": 7426,
                   "src": "976:19:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1177,7 +1177,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7382,
+                    "id": 7388,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "976:7:36",
@@ -1193,7 +1193,7 @@
               ],
               "src": "975:21:36"
             },
-            "scope": 7441,
+            "scope": 7447,
             "src": "729:704:36",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1201,7 +1201,7 @@
           },
           {
             "body": {
-              "id": 7429,
+              "id": 7435,
               "nodeType": "Block",
               "src": "1545:28:36",
               "statements": [
@@ -1209,7 +1209,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 7427,
+                    "id": 7433,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1224,30 +1224,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 7426,
-                  "id": 7428,
+                  "functionReturnParameters": 7432,
+                  "id": 7434,
                   "nodeType": "Return",
                   "src": "1555:11:36"
                 }
               ]
             },
             "documentation": null,
-            "id": 7430,
+            "id": 7436,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "__isRecognized",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7423,
+              "id": 7429,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7422,
+                  "id": 7428,
                   "name": "_delegatedAuthorityRecipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7430,
+                  "scope": 7436,
                   "src": "1463:36:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1256,7 +1256,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7421,
+                    "id": 7427,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1463:7:36",
@@ -1273,15 +1273,15 @@
               "src": "1462:38:36"
             },
             "returnParameters": {
-              "id": 7426,
+              "id": 7432,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7425,
+                  "id": 7431,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7430,
+                  "scope": 7436,
                   "src": "1535:4:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1290,7 +1290,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 7424,
+                    "id": 7430,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1535:4:36",
@@ -1305,22 +1305,22 @@
               ],
               "src": "1534:6:36"
             },
-            "scope": 7441,
+            "scope": 7447,
             "src": "1439:134:36",
             "stateMutability": "nonpayable",
-            "superFunction": 8048,
+            "superFunction": 8054,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 7439,
+              "id": 7445,
               "nodeType": "Block",
               "src": "1612:56:36",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 7437,
+                    "id": 7443,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1333,34 +1333,34 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 7433,
+                        "id": 7439,
                         "name": "banKeepMembersCalledCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7353,
+                        "referencedDeclaration": 7359,
                         "src": "1622:25:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 7436,
+                      "id": 7442,
                       "indexExpression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 7434,
+                          "id": 7440,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 22460,
+                          "referencedDeclaration": 22466,
                           "src": "1648:3:36",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 7435,
+                        "id": 7441,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1390,39 +1390,39 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 7438,
+                  "id": 7444,
                   "nodeType": "ExpressionStatement",
                   "src": "1622:39:36"
                 }
               ]
             },
             "documentation": null,
-            "id": 7440,
+            "id": 7446,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "banKeepMembers",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7431,
+              "id": 7437,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1602:2:36"
             },
             "returnParameters": {
-              "id": 7432,
+              "id": 7438,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1612:0:36"
             },
-            "scope": 7441,
+            "scope": 7447,
             "src": "1579:89:36",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7442,
+        "scope": 7448,
         "src": "358:1312:36"
       }
     ],
@@ -1433,7 +1433,7 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/FullyBackedECDSAKeepCloneFactoryStub.sol",
       "exportedSymbols": {
         "FullyBackedECDSAKeepCloneFactoryStub": [
-          7441
+          7447
         ]
       }
     },
@@ -1446,74 +1446,74 @@
             ".17"
           ]
         },
-        "id": 7339,
+        "id": 7345,
         "name": "PragmaDirective",
         "src": "0:23:36"
       },
       {
         "attributes": {
-          "SourceUnit": 6246,
+          "SourceUnit": 6252,
           "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/fully-backed/FullyBackedECDSAKeep.sol",
           "file": "../../contracts/fully-backed/FullyBackedECDSAKeep.sol",
-          "scope": 7442,
+          "scope": 7448,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7340,
+        "id": 7346,
         "name": "ImportDirective",
         "src": "25:63:36"
       },
       {
         "attributes": {
-          "SourceUnit": 3451,
+          "SourceUnit": 3457,
           "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/CloneFactory.sol",
           "file": "../../contracts/CloneFactory.sol",
-          "scope": 7442,
+          "scope": 7448,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7341,
+        "id": 7347,
         "name": "ImportDirective",
         "src": "89:42:36"
       },
       {
         "attributes": {
-          "SourceUnit": 8228,
+          "SourceUnit": 8234,
           "absolutePath": "@keep-network/keep-core/contracts/Authorizations.sol",
           "file": "@keep-network/keep-core/contracts/Authorizations.sol",
-          "scope": 7442,
+          "scope": 7448,
           "symbolAliases": [
             {
-              "foreign": 7342,
+              "foreign": 7348,
               "local": null
             }
           ],
           "unitAlias": ""
         },
-        "id": 7343,
+        "id": 7349,
         "name": "ImportDirective",
         "src": "133:94:36"
       },
       {
         "attributes": {
           "contractDependencies": [
-            3450,
-            8049
+            3456,
+            8055
           ],
           "contractKind": "contract",
           "documentation": "@title Fully Backed Bonded ECDSA Keep Factory Stub using clone factory.\n @dev This contract is for testing purposes only.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            7441,
-            8049,
-            3450
+            7447,
+            8055,
+            3456
           ],
           "name": "FullyBackedECDSAKeepCloneFactoryStub",
-          "scope": 7442
+          "scope": 7448
         },
         "children": [
           {
@@ -1525,15 +1525,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "CloneFactory",
-                  "referencedDeclaration": 3450,
+                  "referencedDeclaration": 3456,
                   "type": "contract CloneFactory"
                 },
-                "id": 7344,
+                "id": 7350,
                 "name": "UserDefinedTypeName",
                 "src": "411:12:36"
               }
             ],
-            "id": 7345,
+            "id": 7351,
             "name": "InheritanceSpecifier",
             "src": "411:12:36"
           },
@@ -1546,15 +1546,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "AuthorityDelegator",
-                  "referencedDeclaration": 8049,
+                  "referencedDeclaration": 8055,
                   "type": "contract AuthorityDelegator"
                 },
-                "id": 7346,
+                "id": 7352,
                 "name": "UserDefinedTypeName",
                 "src": "429:18:36"
               }
             ],
-            "id": 7347,
+            "id": 7353,
             "name": "InheritanceSpecifier",
             "src": "429:18:36"
           },
@@ -1562,7 +1562,7 @@
             "attributes": {
               "constant": false,
               "name": "masterKeepAddress",
-              "scope": 7441,
+              "scope": 7447,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -1576,12 +1576,12 @@
                   "stateMutability": "nonpayable",
                   "type": "address"
                 },
-                "id": 7348,
+                "id": 7354,
                 "name": "ElementaryTypeName",
                 "src": "454:7:36"
               }
             ],
-            "id": 7349,
+            "id": 7355,
             "name": "VariableDeclaration",
             "src": "454:32:36"
           },
@@ -1589,7 +1589,7 @@
             "attributes": {
               "constant": false,
               "name": "banKeepMembersCalledCount",
-              "scope": 7441,
+              "scope": 7447,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => uint256)",
@@ -1607,7 +1607,7 @@
                       "name": "address",
                       "type": "address"
                     },
-                    "id": 7350,
+                    "id": 7356,
                     "name": "ElementaryTypeName",
                     "src": "501:7:36"
                   },
@@ -1616,17 +1616,17 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 7351,
+                    "id": 7357,
                     "name": "ElementaryTypeName",
                     "src": "512:7:36"
                   }
                 ],
-                "id": 7352,
+                "id": 7358,
                 "name": "Mapping",
                 "src": "493:27:36"
               }
             ],
-            "id": 7353,
+            "id": 7359,
             "name": "VariableDeclaration",
             "src": "493:60:36"
           },
@@ -1640,7 +1640,7 @@
                 null
               ],
               "name": "",
-              "scope": 7441,
+              "scope": 7447,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1652,7 +1652,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_masterKeepAddress",
-                      "scope": 7363,
+                      "scope": 7369,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1666,17 +1666,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7354,
+                        "id": 7360,
                         "name": "ElementaryTypeName",
                         "src": "572:7:36"
                       }
                     ],
-                    "id": 7355,
+                    "id": 7361,
                     "name": "VariableDeclaration",
                     "src": "572:26:36"
                   }
                 ],
-                "id": 7356,
+                "id": 7362,
                 "name": "ParameterList",
                 "src": "571:28:36"
               },
@@ -1687,7 +1687,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7357,
+                "id": 7363,
                 "name": "ParameterList",
                 "src": "607:0:36"
               },
@@ -1712,11 +1712,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7349,
+                              "referencedDeclaration": 7355,
                               "type": "address",
                               "value": "masterKeepAddress"
                             },
-                            "id": 7358,
+                            "id": 7364,
                             "name": "Identifier",
                             "src": "617:17:36"
                           },
@@ -1726,31 +1726,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7355,
+                              "referencedDeclaration": 7361,
                               "type": "address",
                               "value": "_masterKeepAddress"
                             },
-                            "id": 7359,
+                            "id": 7365,
                             "name": "Identifier",
                             "src": "637:18:36"
                           }
                         ],
-                        "id": 7360,
+                        "id": 7366,
                         "name": "Assignment",
                         "src": "617:38:36"
                       }
                     ],
-                    "id": 7361,
+                    "id": 7367,
                     "name": "ExpressionStatement",
                     "src": "617:38:36"
                   }
                 ],
-                "id": 7362,
+                "id": 7368,
                 "name": "Block",
                 "src": "607:55:36"
               }
             ],
-            "id": 7363,
+            "id": 7369,
             "name": "FunctionDefinition",
             "src": "560:102:36"
           },
@@ -1768,7 +1768,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "keepAddress",
-                      "scope": 7367,
+                      "scope": 7373,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1782,22 +1782,22 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7364,
+                        "id": 7370,
                         "name": "ElementaryTypeName",
                         "src": "702:7:36"
                       }
                     ],
-                    "id": 7365,
+                    "id": 7371,
                     "name": "VariableDeclaration",
                     "src": "702:19:36"
                   }
                 ],
-                "id": 7366,
+                "id": 7372,
                 "name": "ParameterList",
                 "src": "701:21:36"
               }
             ],
-            "id": 7367,
+            "id": 7373,
             "name": "EventDefinition",
             "src": "668:55:36"
           },
@@ -1811,7 +1811,7 @@
                 null
               ],
               "name": "newKeep",
-              "scope": 7441,
+              "scope": 7447,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "external"
@@ -1823,7 +1823,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_owner",
-                      "scope": 7420,
+                      "scope": 7426,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1837,12 +1837,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7368,
+                        "id": 7374,
                         "name": "ElementaryTypeName",
                         "src": "755:7:36"
                       }
                     ],
-                    "id": 7369,
+                    "id": 7375,
                     "name": "VariableDeclaration",
                     "src": "755:14:36"
                   },
@@ -1850,7 +1850,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_members",
-                      "scope": 7420,
+                      "scope": 7426,
                       "stateVariable": false,
                       "storageLocation": "calldata",
                       "type": "address[]",
@@ -1870,17 +1870,17 @@
                               "stateMutability": "nonpayable",
                               "type": "address"
                             },
-                            "id": 7370,
+                            "id": 7376,
                             "name": "ElementaryTypeName",
                             "src": "779:7:36"
                           }
                         ],
-                        "id": 7371,
+                        "id": 7377,
                         "name": "ArrayTypeName",
                         "src": "779:9:36"
                       }
                     ],
-                    "id": 7372,
+                    "id": 7378,
                     "name": "VariableDeclaration",
                     "src": "779:27:36"
                   },
@@ -1888,7 +1888,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_honestThreshold",
-                      "scope": 7420,
+                      "scope": 7426,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1901,12 +1901,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7373,
+                        "id": 7379,
                         "name": "ElementaryTypeName",
                         "src": "816:7:36"
                       }
                     ],
-                    "id": 7374,
+                    "id": 7380,
                     "name": "VariableDeclaration",
                     "src": "816:24:36"
                   },
@@ -1914,7 +1914,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_keepBonding",
-                      "scope": 7420,
+                      "scope": 7426,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1928,12 +1928,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7375,
+                        "id": 7381,
                         "name": "ElementaryTypeName",
                         "src": "850:7:36"
                       }
                     ],
-                    "id": 7376,
+                    "id": 7382,
                     "name": "VariableDeclaration",
                     "src": "850:20:36"
                   },
@@ -1941,7 +1941,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_keepFactory",
-                      "scope": 7420,
+                      "scope": 7426,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -1955,12 +1955,12 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 7377,
+                        "id": 7383,
                         "name": "ElementaryTypeName",
                         "src": "880:15:36"
                       }
                     ],
-                    "id": 7378,
+                    "id": 7384,
                     "name": "VariableDeclaration",
                     "src": "880:28:36"
                   },
@@ -1968,7 +1968,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_bondTokenAddress",
-                      "scope": 7420,
+                      "scope": 7426,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1982,17 +1982,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7379,
+                        "id": 7385,
                         "name": "ElementaryTypeName",
                         "src": "918:7:36"
                       }
                     ],
-                    "id": 7380,
+                    "id": 7386,
                     "name": "VariableDeclaration",
                     "src": "918:25:36"
                   }
                 ],
-                "id": 7381,
+                "id": 7387,
                 "name": "ParameterList",
                 "src": "745:204:36"
               },
@@ -2002,7 +2002,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "keepAddress",
-                      "scope": 7420,
+                      "scope": 7426,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2016,17 +2016,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7382,
+                        "id": 7388,
                         "name": "ElementaryTypeName",
                         "src": "976:7:36"
                       }
                     ],
-                    "id": 7383,
+                    "id": 7389,
                     "name": "VariableDeclaration",
                     "src": "976:19:36"
                   }
                 ],
-                "id": 7384,
+                "id": 7390,
                 "name": "ParameterList",
                 "src": "975:21:36"
               },
@@ -2051,11 +2051,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7383,
+                              "referencedDeclaration": 7389,
                               "type": "address",
                               "value": "keepAddress"
                             },
-                            "id": 7385,
+                            "id": 7391,
                             "name": "Identifier",
                             "src": "1007:11:36"
                           },
@@ -2085,11 +2085,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3432,
+                                  "referencedDeclaration": 3438,
                                   "type": "function (address) returns (address)",
                                   "value": "createClone"
                                 },
-                                "id": 7386,
+                                "id": 7392,
                                 "name": "Identifier",
                                 "src": "1021:11:36"
                               },
@@ -2099,26 +2099,26 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7349,
+                                  "referencedDeclaration": 7355,
                                   "type": "address",
                                   "value": "masterKeepAddress"
                                 },
-                                "id": 7387,
+                                "id": 7393,
                                 "name": "Identifier",
                                 "src": "1033:17:36"
                               }
                             ],
-                            "id": 7388,
+                            "id": 7394,
                             "name": "FunctionCall",
                             "src": "1021:30:36"
                           }
                         ],
-                        "id": 7389,
+                        "id": 7395,
                         "name": "Assignment",
                         "src": "1007:44:36"
                       }
                     ],
-                    "id": 7390,
+                    "id": 7396,
                     "name": "ExpressionStatement",
                     "src": "1007:44:36"
                   },
@@ -2150,11 +2150,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 22449,
+                              "referencedDeclaration": 22455,
                               "type": "function (bool) pure",
                               "value": "assert"
                             },
-                            "id": 7391,
+                            "id": 7397,
                             "name": "Identifier",
                             "src": "1061:6:36"
                           },
@@ -2188,11 +2188,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3449,
+                                  "referencedDeclaration": 3455,
                                   "type": "function (address,address) view returns (bool)",
                                   "value": "isClone"
                                 },
-                                "id": 7392,
+                                "id": 7398,
                                 "name": "Identifier",
                                 "src": "1068:7:36"
                               },
@@ -2202,11 +2202,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7349,
+                                  "referencedDeclaration": 7355,
                                   "type": "address",
                                   "value": "masterKeepAddress"
                                 },
-                                "id": 7393,
+                                "id": 7399,
                                 "name": "Identifier",
                                 "src": "1076:17:36"
                               },
@@ -2216,33 +2216,33 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7383,
+                                  "referencedDeclaration": 7389,
                                   "type": "address",
                                   "value": "keepAddress"
                                 },
-                                "id": 7394,
+                                "id": 7400,
                                 "name": "Identifier",
                                 "src": "1095:11:36"
                               }
                             ],
-                            "id": 7395,
+                            "id": 7401,
                             "name": "FunctionCall",
                             "src": "1068:39:36"
                           }
                         ],
-                        "id": 7396,
+                        "id": 7402,
                         "name": "FunctionCall",
                         "src": "1061:47:36"
                       }
                     ],
-                    "id": 7397,
+                    "id": 7403,
                     "name": "ExpressionStatement",
                     "src": "1061:47:36"
                   },
                   {
                     "attributes": {
                       "assignments": [
-                        7399
+                        7405
                       ]
                     },
                     "children": [
@@ -2250,7 +2250,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "keep",
-                          "scope": 7419,
+                          "scope": 7425,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "contract FullyBackedECDSAKeep",
@@ -2262,15 +2262,15 @@
                             "attributes": {
                               "contractScope": null,
                               "name": "FullyBackedECDSAKeep",
-                              "referencedDeclaration": 6245,
+                              "referencedDeclaration": 6251,
                               "type": "contract FullyBackedECDSAKeep"
                             },
-                            "id": 7398,
+                            "id": 7404,
                             "name": "UserDefinedTypeName",
                             "src": "1119:20:36"
                           }
                         ],
-                        "id": 7399,
+                        "id": 7405,
                         "name": "VariableDeclaration",
                         "src": "1119:25:36"
                       },
@@ -2300,11 +2300,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6245,
+                              "referencedDeclaration": 6251,
                               "type": "type(contract FullyBackedECDSAKeep)",
                               "value": "FullyBackedECDSAKeep"
                             },
-                            "id": 7400,
+                            "id": 7406,
                             "name": "Identifier",
                             "src": "1147:20:36"
                           },
@@ -2314,21 +2314,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7383,
+                              "referencedDeclaration": 7389,
                               "type": "address",
                               "value": "keepAddress"
                             },
-                            "id": 7401,
+                            "id": 7407,
                             "name": "Identifier",
                             "src": "1168:11:36"
                           }
                         ],
-                        "id": 7402,
+                        "id": 7408,
                         "name": "FunctionCall",
                         "src": "1147:33:36"
                       }
                     ],
-                    "id": 7403,
+                    "id": 7409,
                     "name": "VariableDeclarationStatement",
                     "src": "1119:61:36"
                   },
@@ -2382,7 +2382,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "initialize",
-                              "referencedDeclaration": 6222,
+                              "referencedDeclaration": 6228,
                               "type": "function (address,address[] memory,uint256,address,address payable,address) external"
                             },
                             "children": [
@@ -2392,16 +2392,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7399,
+                                  "referencedDeclaration": 7405,
                                   "type": "contract FullyBackedECDSAKeep",
                                   "value": "keep"
                                 },
-                                "id": 7404,
+                                "id": 7410,
                                 "name": "Identifier",
                                 "src": "1190:4:36"
                               }
                             ],
-                            "id": 7406,
+                            "id": 7412,
                             "name": "MemberAccess",
                             "src": "1190:15:36"
                           },
@@ -2411,11 +2411,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7369,
+                              "referencedDeclaration": 7375,
                               "type": "address",
                               "value": "_owner"
                             },
-                            "id": 7407,
+                            "id": 7413,
                             "name": "Identifier",
                             "src": "1219:6:36"
                           },
@@ -2425,11 +2425,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7372,
+                              "referencedDeclaration": 7378,
                               "type": "address[] calldata",
                               "value": "_members"
                             },
-                            "id": 7408,
+                            "id": 7414,
                             "name": "Identifier",
                             "src": "1239:8:36"
                           },
@@ -2439,11 +2439,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7374,
+                              "referencedDeclaration": 7380,
                               "type": "uint256",
                               "value": "_honestThreshold"
                             },
-                            "id": 7409,
+                            "id": 7415,
                             "name": "Identifier",
                             "src": "1261:16:36"
                           },
@@ -2453,11 +2453,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7376,
+                              "referencedDeclaration": 7382,
                               "type": "address",
                               "value": "_keepBonding"
                             },
-                            "id": 7410,
+                            "id": 7416,
                             "name": "Identifier",
                             "src": "1291:12:36"
                           },
@@ -2467,11 +2467,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7378,
+                              "referencedDeclaration": 7384,
                               "type": "address payable",
                               "value": "_keepFactory"
                             },
-                            "id": 7411,
+                            "id": 7417,
                             "name": "Identifier",
                             "src": "1317:12:36"
                           },
@@ -2481,21 +2481,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7380,
+                              "referencedDeclaration": 7386,
                               "type": "address",
                               "value": "_bondTokenAddress"
                             },
-                            "id": 7412,
+                            "id": 7418,
                             "name": "Identifier",
                             "src": "1343:17:36"
                           }
                         ],
-                        "id": 7413,
+                        "id": 7419,
                         "name": "FunctionCall",
                         "src": "1190:180:36"
                       }
                     ],
-                    "id": 7414,
+                    "id": 7420,
                     "name": "ExpressionStatement",
                     "src": "1190:180:36"
                   },
@@ -2527,11 +2527,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7367,
+                              "referencedDeclaration": 7373,
                               "type": "function (address)",
                               "value": "FullyBackedECDSAKeepCreated"
                             },
-                            "id": 7415,
+                            "id": 7421,
                             "name": "Identifier",
                             "src": "1386:27:36"
                           },
@@ -2541,31 +2541,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7383,
+                              "referencedDeclaration": 7389,
                               "type": "address",
                               "value": "keepAddress"
                             },
-                            "id": 7416,
+                            "id": 7422,
                             "name": "Identifier",
                             "src": "1414:11:36"
                           }
                         ],
-                        "id": 7417,
+                        "id": 7423,
                         "name": "FunctionCall",
                         "src": "1386:40:36"
                       }
                     ],
-                    "id": 7418,
+                    "id": 7424,
                     "name": "EmitStatement",
                     "src": "1381:45:36"
                   }
                 ],
-                "id": 7419,
+                "id": 7425,
                 "name": "Block",
                 "src": "997:436:36"
               }
             ],
-            "id": 7420,
+            "id": 7426,
             "name": "FunctionDefinition",
             "src": "729:704:36"
           },
@@ -2579,9 +2579,9 @@
                 null
               ],
               "name": "__isRecognized",
-              "scope": 7441,
+              "scope": 7447,
               "stateMutability": "nonpayable",
-              "superFunction": 8048,
+              "superFunction": 8054,
               "visibility": "external"
             },
             "children": [
@@ -2591,7 +2591,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_delegatedAuthorityRecipient",
-                      "scope": 7430,
+                      "scope": 7436,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2605,17 +2605,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 7421,
+                        "id": 7427,
                         "name": "ElementaryTypeName",
                         "src": "1463:7:36"
                       }
                     ],
-                    "id": 7422,
+                    "id": 7428,
                     "name": "VariableDeclaration",
                     "src": "1463:36:36"
                   }
                 ],
-                "id": 7423,
+                "id": 7429,
                 "name": "ParameterList",
                 "src": "1462:38:36"
               },
@@ -2625,7 +2625,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 7430,
+                      "scope": 7436,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -2638,17 +2638,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 7424,
+                        "id": 7430,
                         "name": "ElementaryTypeName",
                         "src": "1535:4:36"
                       }
                     ],
-                    "id": 7425,
+                    "id": 7431,
                     "name": "VariableDeclaration",
                     "src": "1535:4:36"
                   }
                 ],
-                "id": 7426,
+                "id": 7432,
                 "name": "ParameterList",
                 "src": "1534:6:36"
               },
@@ -2656,7 +2656,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 7426
+                      "functionReturnParameters": 7432
                     },
                     "children": [
                       {
@@ -2672,22 +2672,22 @@
                           "type": "bool",
                           "value": "true"
                         },
-                        "id": 7427,
+                        "id": 7433,
                         "name": "Literal",
                         "src": "1562:4:36"
                       }
                     ],
-                    "id": 7428,
+                    "id": 7434,
                     "name": "Return",
                     "src": "1555:11:36"
                   }
                 ],
-                "id": 7429,
+                "id": 7435,
                 "name": "Block",
                 "src": "1545:28:36"
               }
             ],
-            "id": 7430,
+            "id": 7436,
             "name": "FunctionDefinition",
             "src": "1439:134:36"
           },
@@ -2701,7 +2701,7 @@
                 null
               ],
               "name": "banKeepMembers",
-              "scope": 7441,
+              "scope": 7447,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2714,7 +2714,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7431,
+                "id": 7437,
                 "name": "ParameterList",
                 "src": "1602:2:36"
               },
@@ -2725,7 +2725,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7432,
+                "id": 7438,
                 "name": "ParameterList",
                 "src": "1612:0:36"
               },
@@ -2761,11 +2761,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7353,
+                                  "referencedDeclaration": 7359,
                                   "type": "mapping(address => uint256)",
                                   "value": "banKeepMembersCalledCount"
                                 },
-                                "id": 7433,
+                                "id": 7439,
                                 "name": "Identifier",
                                 "src": "1622:25:36"
                               },
@@ -2787,51 +2787,51 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 22460,
+                                      "referencedDeclaration": 22466,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 7434,
+                                    "id": 7440,
                                     "name": "Identifier",
                                     "src": "1648:3:36"
                                   }
                                 ],
-                                "id": 7435,
+                                "id": 7441,
                                 "name": "MemberAccess",
                                 "src": "1648:10:36"
                               }
                             ],
-                            "id": 7436,
+                            "id": 7442,
                             "name": "IndexAccess",
                             "src": "1622:37:36"
                           }
                         ],
-                        "id": 7437,
+                        "id": 7443,
                         "name": "UnaryOperation",
                         "src": "1622:39:36"
                       }
                     ],
-                    "id": 7438,
+                    "id": 7444,
                     "name": "ExpressionStatement",
                     "src": "1622:39:36"
                   }
                 ],
-                "id": 7439,
+                "id": 7445,
                 "name": "Block",
                 "src": "1612:56:36"
               }
             ],
-            "id": 7440,
+            "id": 7446,
             "name": "FunctionDefinition",
             "src": "1579:89:36"
           }
         ],
-        "id": 7441,
+        "id": 7447,
         "name": "ContractDefinition",
         "src": "358:1312:36"
       }
     ],
-    "id": 7442,
+    "id": 7448,
     "name": "SourceUnit",
     "src": "0:1671:36"
   },
@@ -2841,7 +2841,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.322Z",
+  "updatedAt": "2021-04-30T08:59:51.163Z",
   "devdoc": {
     "details": "This contract is for testing purposes only.",
     "methods": {},

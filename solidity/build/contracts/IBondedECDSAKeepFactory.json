@@ -115,14 +115,14 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepFactory.sol",
     "exportedSymbols": {
       "IBondedECDSAKeepFactory": [
-        5759
+        5765
       ]
     },
-    "id": 5760,
+    "id": 5766,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5722,
+        "id": 5728,
         "literals": [
           "solidity",
           "0.5",
@@ -137,9 +137,9 @@
         "contractKind": "interface",
         "documentation": "@title Bonded ECDSA Keep Factory\n @notice Factory for Bonded ECDSA Keeps.",
         "fullyImplemented": false,
-        "id": 5759,
+        "id": 5765,
         "linearizedBaseContracts": [
-          5759
+          5765
         ],
         "name": "IBondedECDSAKeepFactory",
         "nodeType": "ContractDefinition",
@@ -147,22 +147,22 @@
           {
             "body": null,
             "documentation": "@notice Open a new ECDSA Keep.\n @param _groupSize Number of members in the keep.\n @param _honestThreshold Minimum number of honest keep members.\n @param _owner Address of the keep owner.\n @param _bond Value of ETH bond required from the keep.\n @param _stakeLockDuration Stake lock duration in seconds.\n @return Address of the opened keep.",
-            "id": 5737,
+            "id": 5743,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "openKeep",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5733,
+              "id": 5739,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5724,
+                  "id": 5730,
                   "name": "_groupSize",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5737,
+                  "scope": 5743,
                   "src": "2399:18:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -171,7 +171,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5723,
+                    "id": 5729,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2399:7:20",
@@ -185,10 +185,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5726,
+                  "id": 5732,
                   "name": "_honestThreshold",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5737,
+                  "scope": 5743,
                   "src": "2427:24:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -197,7 +197,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5725,
+                    "id": 5731,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2427:7:20",
@@ -211,10 +211,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5728,
+                  "id": 5734,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5737,
+                  "scope": 5743,
                   "src": "2461:14:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -223,7 +223,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5727,
+                    "id": 5733,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2461:7:20",
@@ -238,10 +238,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5730,
+                  "id": 5736,
                   "name": "_bond",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5737,
+                  "scope": 5743,
                   "src": "2485:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -250,7 +250,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5729,
+                    "id": 5735,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2485:7:20",
@@ -264,10 +264,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5732,
+                  "id": 5738,
                   "name": "_stakeLockDuration",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5737,
+                  "scope": 5743,
                   "src": "2508:26:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -276,7 +276,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5731,
+                    "id": 5737,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2508:7:20",
@@ -292,15 +292,15 @@
               "src": "2389:151:20"
             },
             "returnParameters": {
-              "id": 5736,
+              "id": 5742,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5735,
+                  "id": 5741,
                   "name": "keepAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5737,
+                  "scope": 5743,
                   "src": "2567:19:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -309,7 +309,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5734,
+                    "id": 5740,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2567:7:20",
@@ -325,7 +325,7 @@
               ],
               "src": "2566:21:20"
             },
-            "scope": 5759,
+            "scope": 5765,
             "src": "2372:216:20",
             "stateMutability": "payable",
             "superFunction": null,
@@ -334,28 +334,28 @@
           {
             "body": null,
             "documentation": "@notice Gets a fee estimate for opening a new keep.\n @return Uint256 estimate.",
-            "id": 5742,
+            "id": 5748,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "openKeepFeeEstimate",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5738,
+              "id": 5744,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2716:2:20"
             },
             "returnParameters": {
-              "id": 5741,
+              "id": 5747,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5740,
+                  "id": 5746,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5742,
+                  "scope": 5748,
                   "src": "2742:7:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -364,7 +364,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5739,
+                    "id": 5745,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2742:7:20",
@@ -379,7 +379,7 @@
               ],
               "src": "2741:9:20"
             },
-            "scope": 5759,
+            "scope": 5765,
             "src": "2688:63:20",
             "stateMutability": "view",
             "superFunction": null,
@@ -388,22 +388,22 @@
           {
             "body": null,
             "documentation": "@notice Gets the total weight of operators\n in the sortition pool for the given application.\n @param _application Address of the application.\n @return The sum of all registered operators' weights in the pool.\n Reverts if sortition pool for the application does not exist.",
-            "id": 5749,
+            "id": 5755,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getSortitionPoolWeight",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5745,
+              "id": 5751,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5744,
+                  "id": 5750,
                   "name": "_application",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5749,
+                  "scope": 5755,
                   "src": "3097:20:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -412,7 +412,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5743,
+                    "id": 5749,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3097:7:20",
@@ -429,15 +429,15 @@
               "src": "3096:22:20"
             },
             "returnParameters": {
-              "id": 5748,
+              "id": 5754,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5747,
+                  "id": 5753,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5749,
+                  "scope": 5755,
                   "src": "3166:7:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -446,7 +446,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5746,
+                    "id": 5752,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3166:7:20",
@@ -461,7 +461,7 @@
               ],
               "src": "3165:9:20"
             },
-            "scope": 5759,
+            "scope": 5765,
             "src": "3065:110:20",
             "stateMutability": "view",
             "superFunction": null,
@@ -470,22 +470,22 @@
           {
             "body": null,
             "documentation": "@notice Sets the minimum bondable value required from the operator to\n join the sortition pool of the given application. It is up to the\n application to specify a reasonable minimum bond for operators trying to\n join the pool to prevent griefing by operators joining without enough\n bondable value.\n @dev The default minimum bond value for each sortition pool created\n is 20 ETH.\n @param _minimumBondableValue The minimum unbonded value the application\n requires from a single keep.\n @param _groupSize Number of signers in the keep.\n @param _honestThreshold Minimum number of honest keep signers.",
-            "id": 5758,
+            "id": 5764,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setMinimumBondableValue",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5756,
+              "id": 5762,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5751,
+                  "id": 5757,
                   "name": "_minimumBondableValue",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5758,
+                  "scope": 5764,
                   "src": "3898:29:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -494,7 +494,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5750,
+                    "id": 5756,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3898:7:20",
@@ -508,10 +508,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5753,
+                  "id": 5759,
                   "name": "_groupSize",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5758,
+                  "scope": 5764,
                   "src": "3937:18:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -520,7 +520,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5752,
+                    "id": 5758,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3937:7:20",
@@ -534,10 +534,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5755,
+                  "id": 5761,
                   "name": "_honestThreshold",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5758,
+                  "scope": 5764,
                   "src": "3965:24:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -546,7 +546,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5754,
+                    "id": 5760,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3965:7:20",
@@ -562,19 +562,19 @@
               "src": "3888:107:20"
             },
             "returnParameters": {
-              "id": 5757,
+              "id": 5763,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "4004:0:20"
             },
-            "scope": 5759,
+            "scope": 5765,
             "src": "3856:149:20",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 5760,
+        "scope": 5766,
         "src": "1943:2064:20"
       }
     ],
@@ -585,7 +585,7 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeepFactory.sol",
       "exportedSymbols": {
         "IBondedECDSAKeepFactory": [
-          5759
+          5765
         ]
       }
     },
@@ -598,7 +598,7 @@
             ".17"
           ]
         },
-        "id": 5722,
+        "id": 5728,
         "name": "PragmaDirective",
         "src": "1837:23:20"
       },
@@ -614,10 +614,10 @@
           "documentation": "@title Bonded ECDSA Keep Factory\n @notice Factory for Bonded ECDSA Keeps.",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            5759
+            5765
           ],
           "name": "IBondedECDSAKeepFactory",
-          "scope": 5760
+          "scope": 5766
         },
         "children": [
           {
@@ -631,7 +631,7 @@
                 null
               ],
               "name": "openKeep",
-              "scope": 5759,
+              "scope": 5765,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "external"
@@ -643,86 +643,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_groupSize",
-                      "scope": 5737,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 5723,
-                        "name": "ElementaryTypeName",
-                        "src": "2399:7:20"
-                      }
-                    ],
-                    "id": 5724,
-                    "name": "VariableDeclaration",
-                    "src": "2399:18:20"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_honestThreshold",
-                      "scope": 5737,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 5725,
-                        "name": "ElementaryTypeName",
-                        "src": "2427:7:20"
-                      }
-                    ],
-                    "id": 5726,
-                    "name": "VariableDeclaration",
-                    "src": "2427:24:20"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_owner",
-                      "scope": 5737,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 5727,
-                        "name": "ElementaryTypeName",
-                        "src": "2461:7:20"
-                      }
-                    ],
-                    "id": 5728,
-                    "name": "VariableDeclaration",
-                    "src": "2461:14:20"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_bond",
-                      "scope": 5737,
+                      "scope": 5743,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -737,18 +658,18 @@
                         },
                         "id": 5729,
                         "name": "ElementaryTypeName",
-                        "src": "2485:7:20"
+                        "src": "2399:7:20"
                       }
                     ],
                     "id": 5730,
                     "name": "VariableDeclaration",
-                    "src": "2485:13:20"
+                    "src": "2399:18:20"
                   },
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "_stakeLockDuration",
-                      "scope": 5737,
+                      "name": "_honestThreshold",
+                      "scope": 5743,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -763,25 +684,18 @@
                         },
                         "id": 5731,
                         "name": "ElementaryTypeName",
-                        "src": "2508:7:20"
+                        "src": "2427:7:20"
                       }
                     ],
                     "id": 5732,
                     "name": "VariableDeclaration",
-                    "src": "2508:26:20"
-                  }
-                ],
-                "id": 5733,
-                "name": "ParameterList",
-                "src": "2389:151:20"
-              },
-              {
-                "children": [
+                    "src": "2427:24:20"
+                  },
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "keepAddress",
-                      "scope": 5737,
+                      "name": "_owner",
+                      "scope": 5743,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -795,22 +709,108 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 5734,
+                        "id": 5733,
+                        "name": "ElementaryTypeName",
+                        "src": "2461:7:20"
+                      }
+                    ],
+                    "id": 5734,
+                    "name": "VariableDeclaration",
+                    "src": "2461:14:20"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_bond",
+                      "scope": 5743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5735,
+                        "name": "ElementaryTypeName",
+                        "src": "2485:7:20"
+                      }
+                    ],
+                    "id": 5736,
+                    "name": "VariableDeclaration",
+                    "src": "2485:13:20"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_stakeLockDuration",
+                      "scope": 5743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5737,
+                        "name": "ElementaryTypeName",
+                        "src": "2508:7:20"
+                      }
+                    ],
+                    "id": 5738,
+                    "name": "VariableDeclaration",
+                    "src": "2508:26:20"
+                  }
+                ],
+                "id": 5739,
+                "name": "ParameterList",
+                "src": "2389:151:20"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "keepAddress",
+                      "scope": 5743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 5740,
                         "name": "ElementaryTypeName",
                         "src": "2567:7:20"
                       }
                     ],
-                    "id": 5735,
+                    "id": 5741,
                     "name": "VariableDeclaration",
                     "src": "2567:19:20"
                   }
                 ],
-                "id": 5736,
+                "id": 5742,
                 "name": "ParameterList",
                 "src": "2566:21:20"
               }
             ],
-            "id": 5737,
+            "id": 5743,
             "name": "FunctionDefinition",
             "src": "2372:216:20"
           },
@@ -825,7 +825,7 @@
                 null
               ],
               "name": "openKeepFeeEstimate",
-              "scope": 5759,
+              "scope": 5765,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
@@ -838,7 +838,7 @@
                   ]
                 },
                 "children": [],
-                "id": 5738,
+                "id": 5744,
                 "name": "ParameterList",
                 "src": "2716:2:20"
               },
@@ -848,7 +848,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 5742,
+                      "scope": 5748,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -861,22 +861,22 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 5739,
+                        "id": 5745,
                         "name": "ElementaryTypeName",
                         "src": "2742:7:20"
                       }
                     ],
-                    "id": 5740,
+                    "id": 5746,
                     "name": "VariableDeclaration",
                     "src": "2742:7:20"
                   }
                 ],
-                "id": 5741,
+                "id": 5747,
                 "name": "ParameterList",
                 "src": "2741:9:20"
               }
             ],
-            "id": 5742,
+            "id": 5748,
             "name": "FunctionDefinition",
             "src": "2688:63:20"
           },
@@ -891,7 +891,7 @@
                 null
               ],
               "name": "getSortitionPoolWeight",
-              "scope": 5759,
+              "scope": 5765,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
@@ -903,7 +903,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_application",
-                      "scope": 5749,
+                      "scope": 5755,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -917,17 +917,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 5743,
+                        "id": 5749,
                         "name": "ElementaryTypeName",
                         "src": "3097:7:20"
                       }
                     ],
-                    "id": 5744,
+                    "id": 5750,
                     "name": "VariableDeclaration",
                     "src": "3097:20:20"
                   }
                 ],
-                "id": 5745,
+                "id": 5751,
                 "name": "ParameterList",
                 "src": "3096:22:20"
               },
@@ -937,88 +937,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 5749,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 5746,
-                        "name": "ElementaryTypeName",
-                        "src": "3166:7:20"
-                      }
-                    ],
-                    "id": 5747,
-                    "name": "VariableDeclaration",
-                    "src": "3166:7:20"
-                  }
-                ],
-                "id": 5748,
-                "name": "ParameterList",
-                "src": "3165:9:20"
-              }
-            ],
-            "id": 5749,
-            "name": "FunctionDefinition",
-            "src": "3065:110:20"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "documentation": "@notice Sets the minimum bondable value required from the operator to\n join the sortition pool of the given application. It is up to the\n application to specify a reasonable minimum bond for operators trying to\n join the pool to prevent griefing by operators joining without enough\n bondable value.\n @dev The default minimum bond value for each sortition pool created\n is 20 ETH.\n @param _minimumBondableValue The minimum unbonded value the application\n requires from a single keep.\n @param _groupSize Number of signers in the keep.\n @param _honestThreshold Minimum number of honest keep signers.",
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "setMinimumBondableValue",
-              "scope": 5759,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_minimumBondableValue",
-                      "scope": 5758,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 5750,
-                        "name": "ElementaryTypeName",
-                        "src": "3898:7:20"
-                      }
-                    ],
-                    "id": 5751,
-                    "name": "VariableDeclaration",
-                    "src": "3898:29:20"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_groupSize",
-                      "scope": 5758,
+                      "scope": 5755,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1033,18 +952,47 @@
                         },
                         "id": 5752,
                         "name": "ElementaryTypeName",
-                        "src": "3937:7:20"
+                        "src": "3166:7:20"
                       }
                     ],
                     "id": 5753,
                     "name": "VariableDeclaration",
-                    "src": "3937:18:20"
-                  },
+                    "src": "3166:7:20"
+                  }
+                ],
+                "id": 5754,
+                "name": "ParameterList",
+                "src": "3165:9:20"
+              }
+            ],
+            "id": 5755,
+            "name": "FunctionDefinition",
+            "src": "3065:110:20"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@notice Sets the minimum bondable value required from the operator to\n join the sortition pool of the given application. It is up to the\n application to specify a reasonable minimum bond for operators trying to\n join the pool to prevent griefing by operators joining without enough\n bondable value.\n @dev The default minimum bond value for each sortition pool created\n is 20 ETH.\n @param _minimumBondableValue The minimum unbonded value the application\n requires from a single keep.\n @param _groupSize Number of signers in the keep.\n @param _honestThreshold Minimum number of honest keep signers.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setMinimumBondableValue",
+              "scope": 5765,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "_honestThreshold",
-                      "scope": 5758,
+                      "name": "_minimumBondableValue",
+                      "scope": 5764,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1057,17 +1005,69 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 5754,
+                        "id": 5756,
+                        "name": "ElementaryTypeName",
+                        "src": "3898:7:20"
+                      }
+                    ],
+                    "id": 5757,
+                    "name": "VariableDeclaration",
+                    "src": "3898:29:20"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_groupSize",
+                      "scope": 5764,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5758,
+                        "name": "ElementaryTypeName",
+                        "src": "3937:7:20"
+                      }
+                    ],
+                    "id": 5759,
+                    "name": "VariableDeclaration",
+                    "src": "3937:18:20"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_honestThreshold",
+                      "scope": 5764,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5760,
                         "name": "ElementaryTypeName",
                         "src": "3965:7:20"
                       }
                     ],
-                    "id": 5755,
+                    "id": 5761,
                     "name": "VariableDeclaration",
                     "src": "3965:24:20"
                   }
                 ],
-                "id": 5756,
+                "id": 5762,
                 "name": "ParameterList",
                 "src": "3888:107:20"
               },
@@ -1078,22 +1078,22 @@
                   ]
                 },
                 "children": [],
-                "id": 5757,
+                "id": 5763,
                 "name": "ParameterList",
                 "src": "4004:0:20"
               }
             ],
-            "id": 5758,
+            "id": 5764,
             "name": "FunctionDefinition",
             "src": "3856:149:20"
           }
         ],
-        "id": 5759,
+        "id": 5765,
         "name": "ContractDefinition",
         "src": "1943:2064:20"
       }
     ],
-    "id": 5760,
+    "id": 5766,
     "name": "SourceUnit",
     "src": "1837:2171:20"
   },
@@ -1103,7 +1103,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.284Z",
+  "updatedAt": "2021-04-30T08:59:51.127Z",
   "devdoc": {
     "methods": {
       "getSortitionPoolWeight(address)": {

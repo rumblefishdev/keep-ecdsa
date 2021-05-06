@@ -17,10 +17,13 @@ module.exports = async function () {
     // 50 ETH / 3 members = 16,67 ETH of unbonded value for each member.
     // Here we set the bonding value to bigger value so members can handle
     // multiple keeps.
-    const bondingValue = web3.utils.toWei("5000", "ether")
+    const bondingValue = web3.utils.toWei("50000", "ether")
+    const mintingValue = web3.utils.toWei("50000", "ether")
 
     const accounts = await web3.eth.getAccounts()
-    const operators = [accounts[1], accounts[2], accounts[3], accounts[4]]
+
+    console.log(accounts)
+    const operators = [accounts[0], accounts[1], accounts[2], accounts[3], accounts[4]]
     const application = TBTCSystemAddress
 
     let sortitionPoolAddress
@@ -56,7 +59,7 @@ module.exports = async function () {
         let bondTokenAddress = await keepBonding.bondTokenAddress()
         let bondToken = await BondERC20.at(bondTokenAddress)
 
-        await bondToken.mint(operator, bondingValue)
+        await bondToken.mint(operator, mintingValue)
         await bondToken.approve(keepBonding.address, bondingValue, {from: operator})
 
         await keepBonding.deposit(operator, bondingValue, {from: operator})

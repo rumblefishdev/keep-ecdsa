@@ -30,7 +30,7 @@ module.exports = async function () {
     try {
       const fileContent = toml.parse(fs.readFileSync(configFilePath, "utf8"))
 
-      fileContent.ethereum.URL = web3.currentProvider.connection._url
+      fileContent.ethereum.URL = web3.currentProvider.connection ? web3.currentProvider.connection._url : ""
 
       fileContent.ethereum.ContractAddresses.BondedECDSAKeepFactory = keepFactoryAddress
 

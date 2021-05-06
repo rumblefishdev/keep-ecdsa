@@ -12,14 +12,14 @@
     "absolutePath": "@keep-network/sortition-pools/contracts/Branch.sol",
     "exportedSymbols": {
       "Branch": [
-        18366
+        18372
       ]
     },
-    "id": 18367,
+    "id": 18373,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 18145,
+        "id": 18151,
         "literals": [
           "solidity",
           "0.5",
@@ -34,19 +34,19 @@
         "contractKind": "library",
         "documentation": "@notice The implicit 8-ary trees of the sortition pool\n rely on packing 8 \"slots\" of 32-bit values into each uint256.\n The Branch library permits efficient calculations on these slots.",
         "fullyImplemented": true,
-        "id": 18366,
+        "id": 18372,
         "linearizedBaseContracts": [
-          18366
+          18372
         ],
         "name": "Branch",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 18148,
+            "id": 18154,
             "name": "SLOT_BITS",
             "nodeType": "VariableDeclaration",
-            "scope": 18366,
+            "scope": 18372,
             "src": "469:30:76",
             "stateVariable": true,
             "storageLocation": "default",
@@ -55,7 +55,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 18146,
+              "id": 18152,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "469:7:76",
@@ -67,7 +67,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "33",
-              "id": 18147,
+              "id": 18153,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -86,10 +86,10 @@
           },
           {
             "constant": true,
-            "id": 18153,
+            "id": 18159,
             "name": "SLOT_COUNT",
             "nodeType": "VariableDeclaration",
-            "scope": 18366,
+            "scope": 18372,
             "src": "699:42:76",
             "stateVariable": true,
             "storageLocation": "default",
@@ -98,7 +98,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 18149,
+              "id": 18155,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "699:7:76",
@@ -113,7 +113,7 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 18152,
+              "id": 18158,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -121,7 +121,7 @@
               "leftExpression": {
                 "argumentTypes": null,
                 "hexValue": "32",
-                "id": 18150,
+                "id": 18156,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -140,11 +140,11 @@
               "operator": "**",
               "rightExpression": {
                 "argumentTypes": null,
-                "id": 18151,
+                "id": 18157,
                 "name": "SLOT_BITS",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 18148,
+                "referencedDeclaration": 18154,
                 "src": "732:9:76",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
@@ -161,10 +161,10 @@
           },
           {
             "constant": true,
-            "id": 18158,
+            "id": 18164,
             "name": "SLOT_WIDTH",
             "nodeType": "VariableDeclaration",
-            "scope": 18366,
+            "scope": 18372,
             "src": "745:46:76",
             "stateVariable": true,
             "storageLocation": "default",
@@ -173,7 +173,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 18154,
+              "id": 18160,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "745:7:76",
@@ -188,7 +188,7 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 18157,
+              "id": 18163,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -196,7 +196,7 @@
               "leftExpression": {
                 "argumentTypes": null,
                 "hexValue": "323536",
-                "id": 18155,
+                "id": 18161,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -215,11 +215,11 @@
               "operator": "/",
               "rightExpression": {
                 "argumentTypes": null,
-                "id": 18156,
+                "id": 18162,
                 "name": "SLOT_COUNT",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 18153,
+                "referencedDeclaration": 18159,
                 "src": "781:10:76",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
@@ -236,10 +236,10 @@
           },
           {
             "constant": true,
-            "id": 18163,
+            "id": 18169,
             "name": "LAST_SLOT",
             "nodeType": "VariableDeclaration",
-            "scope": 18366,
+            "scope": 18372,
             "src": "795:43:76",
             "stateVariable": true,
             "storageLocation": "default",
@@ -248,7 +248,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 18159,
+              "id": 18165,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "795:7:76",
@@ -263,18 +263,18 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 18162,
+              "id": 18168,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "lValueRequested": false,
               "leftExpression": {
                 "argumentTypes": null,
-                "id": 18160,
+                "id": 18166,
                 "name": "SLOT_COUNT",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 18153,
+                "referencedDeclaration": 18159,
                 "src": "824:10:76",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
@@ -286,7 +286,7 @@
               "rightExpression": {
                 "argumentTypes": null,
                 "hexValue": "31",
-                "id": 18161,
+                "id": 18167,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -311,10 +311,10 @@
           },
           {
             "constant": true,
-            "id": 18171,
+            "id": 18177,
             "name": "SLOT_MAX",
             "nodeType": "VariableDeclaration",
-            "scope": 18366,
+            "scope": 18372,
             "src": "842:47:76",
             "stateVariable": true,
             "storageLocation": "default",
@@ -323,7 +323,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 18164,
+              "id": 18170,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "842:7:76",
@@ -338,7 +338,7 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 18170,
+              "id": 18176,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -352,7 +352,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18167,
+                    "id": 18173,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -360,7 +360,7 @@
                     "leftExpression": {
                       "argumentTypes": null,
                       "hexValue": "32",
-                      "id": 18165,
+                      "id": 18171,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -379,11 +379,11 @@
                     "operator": "**",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18166,
+                      "id": 18172,
                       "name": "SLOT_WIDTH",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18158,
+                      "referencedDeclaration": 18164,
                       "src": "874:10:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -397,7 +397,7 @@
                     }
                   }
                 ],
-                "id": 18168,
+                "id": 18174,
                 "isConstant": false,
                 "isInlineArray": false,
                 "isLValue": false,
@@ -415,7 +415,7 @@
               "rightExpression": {
                 "argumentTypes": null,
                 "hexValue": "31",
-                "id": 18169,
+                "id": 18175,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -440,7 +440,7 @@
           },
           {
             "body": {
-              "id": 18182,
+              "id": 18188,
               "nodeType": "Block",
               "src": "1402:39:76",
               "statements": [
@@ -451,18 +451,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18180,
+                    "id": 18186,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18178,
+                      "id": 18184,
                       "name": "position",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18173,
+                      "referencedDeclaration": 18179,
                       "src": "1415:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -473,11 +473,11 @@
                     "operator": "*",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18179,
+                      "id": 18185,
                       "name": "SLOT_WIDTH",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18158,
+                      "referencedDeclaration": 18164,
                       "src": "1426:10:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -490,30 +490,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 18177,
-                  "id": 18181,
+                  "functionReturnParameters": 18183,
+                  "id": 18187,
                   "nodeType": "Return",
                   "src": "1408:28:76"
                 }
               ]
             },
             "documentation": "/////////////////////////////////////////////////////////////////////////\n @notice Calculate the right shift required\n to make the 32 least significant bits of an uint256\n be the bits of the `position`th slot\n when treating the uint256 as a uint32[8].\n\n  /// @dev Not used for efficiency reasons,\n but left to illustrate the meaning of a common pattern.\n I wish solidity had macros, even C macros.",
-            "id": 18183,
+            "id": 18189,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "slotShift",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18174,
+              "id": 18180,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18173,
+                  "id": 18179,
                   "name": "position",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18183,
+                  "scope": 18189,
                   "src": "1352:16:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -522,7 +522,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18172,
+                    "id": 18178,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1352:7:76",
@@ -538,15 +538,15 @@
               "src": "1351:18:76"
             },
             "returnParameters": {
-              "id": 18177,
+              "id": 18183,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18176,
+                  "id": 18182,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18183,
+                  "scope": 18189,
                   "src": "1393:7:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -555,7 +555,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18175,
+                    "id": 18181,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1393:7:76",
@@ -570,7 +570,7 @@
               ],
               "src": "1392:9:76"
             },
-            "scope": 18366,
+            "scope": 18372,
             "src": "1333:108:76",
             "stateMutability": "pure",
             "superFunction": null,
@@ -578,21 +578,21 @@
           },
           {
             "body": {
-              "id": 18205,
+              "id": 18211,
               "nodeType": "Block",
               "src": "1637:333:76",
               "statements": [
                 {
                   "assignments": [
-                    18193
+                    18199
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18193,
+                      "id": 18199,
                       "name": "shiftBits",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18205,
+                      "scope": 18211,
                       "src": "1643:17:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -601,7 +601,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18192,
+                        "id": 18198,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "1643:7:76",
@@ -614,25 +614,25 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18197,
+                  "id": 18203,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18196,
+                    "id": 18202,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18194,
+                      "id": 18200,
                       "name": "position",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18187,
+                      "referencedDeclaration": 18193,
                       "src": "1663:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -643,11 +643,11 @@
                     "operator": "*",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18195,
+                      "id": 18201,
                       "name": "SLOT_WIDTH",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18158,
+                      "referencedDeclaration": 18164,
                       "src": "1674:10:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -670,7 +670,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18203,
+                    "id": 18209,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -684,18 +684,18 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 18200,
+                          "id": 18206,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "argumentTypes": null,
-                            "id": 18198,
+                            "id": 18204,
                             "name": "node",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18185,
+                            "referencedDeclaration": 18191,
                             "src": "1936:4:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -706,11 +706,11 @@
                           "operator": ">>",
                           "rightExpression": {
                             "argumentTypes": null,
-                            "id": 18199,
+                            "id": 18205,
                             "name": "shiftBits",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18193,
+                            "referencedDeclaration": 18199,
                             "src": "1944:9:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -724,7 +724,7 @@
                           }
                         }
                       ],
-                      "id": 18201,
+                      "id": 18207,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -741,11 +741,11 @@
                     "operator": "&",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18202,
+                      "id": 18208,
                       "name": "SLOT_MAX",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18171,
+                      "referencedDeclaration": 18177,
                       "src": "1957:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -758,30 +758,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 18191,
-                  "id": 18204,
+                  "functionReturnParameters": 18197,
+                  "id": 18210,
                   "nodeType": "Return",
                   "src": "1928:37:76"
                 }
               ]
             },
             "documentation": "@notice Return the `position`th slot of the `node`,\n treating `node` as a uint32[32].",
-            "id": 18206,
+            "id": 18212,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getSlot",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18188,
+              "id": 18194,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18185,
+                  "id": 18191,
                   "name": "node",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18206,
+                  "scope": 18212,
                   "src": "1559:12:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -790,7 +790,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18184,
+                    "id": 18190,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1559:7:76",
@@ -804,10 +804,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18187,
+                  "id": 18193,
                   "name": "position",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18206,
+                  "scope": 18212,
                   "src": "1573:16:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -816,7 +816,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18186,
+                    "id": 18192,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1573:7:76",
@@ -832,15 +832,15 @@
               "src": "1558:32:76"
             },
             "returnParameters": {
-              "id": 18191,
+              "id": 18197,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18190,
+                  "id": 18196,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18206,
+                  "scope": 18212,
                   "src": "1626:7:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -849,7 +849,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18189,
+                    "id": 18195,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1626:7:76",
@@ -864,7 +864,7 @@
               ],
               "src": "1625:9:76"
             },
-            "scope": 18366,
+            "scope": 18372,
             "src": "1542:428:76",
             "stateMutability": "pure",
             "superFunction": null,
@@ -872,21 +872,21 @@
           },
           {
             "body": {
-              "id": 18229,
+              "id": 18235,
               "nodeType": "Block",
               "src": "2139:574:76",
               "statements": [
                 {
                   "assignments": [
-                    18216
+                    18222
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18216,
+                      "id": 18222,
                       "name": "shiftBits",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18229,
+                      "scope": 18235,
                       "src": "2145:17:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -895,7 +895,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18215,
+                        "id": 18221,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "2145:7:76",
@@ -908,25 +908,25 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18220,
+                  "id": 18226,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18219,
+                    "id": 18225,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18217,
+                      "id": 18223,
                       "name": "position",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18210,
+                      "referencedDeclaration": 18216,
                       "src": "2165:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -937,11 +937,11 @@
                     "operator": "*",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18218,
+                      "id": 18224,
                       "name": "SLOT_WIDTH",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18158,
+                      "referencedDeclaration": 18164,
                       "src": "2176:10:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -964,18 +964,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18227,
+                    "id": 18233,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18221,
+                      "id": 18227,
                       "name": "node",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18208,
+                      "referencedDeclaration": 18214,
                       "src": "2677:4:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -986,7 +986,7 @@
                     "operator": "&",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18226,
+                      "id": 18232,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1004,18 +1004,18 @@
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 18224,
+                            "id": 18230,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 18222,
+                              "id": 18228,
                               "name": "SLOT_MAX",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18171,
+                              "referencedDeclaration": 18177,
                               "src": "2686:8:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1026,11 +1026,11 @@
                             "operator": "<<",
                             "rightExpression": {
                               "argumentTypes": null,
-                              "id": 18223,
+                              "id": 18229,
                               "name": "shiftBits",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18216,
+                              "referencedDeclaration": 18222,
                               "src": "2698:9:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1044,7 +1044,7 @@
                             }
                           }
                         ],
-                        "id": 18225,
+                        "id": 18231,
                         "isConstant": false,
                         "isInlineArray": false,
                         "isLValue": false,
@@ -1068,30 +1068,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 18214,
-                  "id": 18228,
+                  "functionReturnParameters": 18220,
+                  "id": 18234,
                   "nodeType": "Return",
                   "src": "2670:38:76"
                 }
               ]
             },
             "documentation": "@notice Return `node` with the `position`th slot set to zero.",
-            "id": 18230,
+            "id": 18236,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "clearSlot",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18211,
+              "id": 18217,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18208,
+                  "id": 18214,
                   "name": "node",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18230,
+                  "scope": 18236,
                   "src": "2061:12:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1100,7 +1100,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18207,
+                    "id": 18213,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2061:7:76",
@@ -1114,10 +1114,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18210,
+                  "id": 18216,
                   "name": "position",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18230,
+                  "scope": 18236,
                   "src": "2075:16:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1126,7 +1126,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18209,
+                    "id": 18215,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2075:7:76",
@@ -1142,15 +1142,15 @@
               "src": "2060:32:76"
             },
             "returnParameters": {
-              "id": 18214,
+              "id": 18220,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18213,
+                  "id": 18219,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18230,
+                  "scope": 18236,
                   "src": "2128:7:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1159,7 +1159,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18212,
+                    "id": 18218,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2128:7:76",
@@ -1174,7 +1174,7 @@
               ],
               "src": "2127:9:76"
             },
-            "scope": 18366,
+            "scope": 18372,
             "src": "2042:671:76",
             "stateMutability": "pure",
             "superFunction": null,
@@ -1182,21 +1182,21 @@
           },
           {
             "body": {
-              "id": 18270,
+              "id": 18276,
               "nodeType": "Block",
               "src": "3075:769:76",
               "statements": [
                 {
                   "assignments": [
-                    18242
+                    18248
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18242,
+                      "id": 18248,
                       "name": "shiftBits",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18270,
+                      "scope": 18276,
                       "src": "3081:17:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1205,7 +1205,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18241,
+                        "id": 18247,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "3081:7:76",
@@ -1218,25 +1218,25 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18246,
+                  "id": 18252,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18245,
+                    "id": 18251,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18243,
+                      "id": 18249,
                       "name": "position",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18234,
+                      "referencedDeclaration": 18240,
                       "src": "3101:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1247,11 +1247,11 @@
                     "operator": "*",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18244,
+                      "id": 18250,
                       "name": "SLOT_WIDTH",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18158,
+                      "referencedDeclaration": 18164,
                       "src": "3112:10:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1269,15 +1269,15 @@
                 },
                 {
                   "assignments": [
-                    18248
+                    18254
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18248,
+                      "id": 18254,
                       "name": "clearedNode",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18270,
+                      "scope": 18276,
                       "src": "3186:19:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1286,7 +1286,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18247,
+                        "id": 18253,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "3186:7:76",
@@ -1299,25 +1299,25 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18256,
+                  "id": 18262,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18255,
+                    "id": 18261,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18249,
+                      "id": 18255,
                       "name": "node",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18232,
+                      "referencedDeclaration": 18238,
                       "src": "3208:4:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1328,7 +1328,7 @@
                     "operator": "&",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18254,
+                      "id": 18260,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1346,18 +1346,18 @@
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 18252,
+                            "id": 18258,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 18250,
+                              "id": 18256,
                               "name": "SLOT_MAX",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18171,
+                              "referencedDeclaration": 18177,
                               "src": "3217:8:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1368,11 +1368,11 @@
                             "operator": "<<",
                             "rightExpression": {
                               "argumentTypes": null,
-                              "id": 18251,
+                              "id": 18257,
                               "name": "shiftBits",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18242,
+                              "referencedDeclaration": 18248,
                               "src": "3229:9:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1386,7 +1386,7 @@
                             }
                           }
                         ],
-                        "id": 18253,
+                        "id": 18259,
                         "isConstant": false,
                         "isInlineArray": false,
                         "isLValue": false,
@@ -1415,15 +1415,15 @@
                 },
                 {
                   "assignments": [
-                    18258
+                    18264
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18258,
+                      "id": 18264,
                       "name": "shiftedWeight",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18270,
+                      "scope": 18276,
                       "src": "3542:21:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1432,7 +1432,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18257,
+                        "id": 18263,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "3542:7:76",
@@ -1445,14 +1445,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18265,
+                  "id": 18271,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18264,
+                    "id": 18270,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1466,18 +1466,18 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 18261,
+                          "id": 18267,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "argumentTypes": null,
-                            "id": 18259,
+                            "id": 18265,
                             "name": "weight",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18236,
+                            "referencedDeclaration": 18242,
                             "src": "3567:6:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1488,11 +1488,11 @@
                           "operator": "&",
                           "rightExpression": {
                             "argumentTypes": null,
-                            "id": 18260,
+                            "id": 18266,
                             "name": "SLOT_MAX",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18171,
+                            "referencedDeclaration": 18177,
                             "src": "3576:8:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1506,7 +1506,7 @@
                           }
                         }
                       ],
-                      "id": 18262,
+                      "id": 18268,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -1523,11 +1523,11 @@
                     "operator": "<<",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18263,
+                      "id": 18269,
                       "name": "shiftBits",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18242,
+                      "referencedDeclaration": 18248,
                       "src": "3589:9:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1550,18 +1550,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18268,
+                    "id": 18274,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18266,
+                      "id": 18272,
                       "name": "clearedNode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18248,
+                      "referencedDeclaration": 18254,
                       "src": "3812:11:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1572,11 +1572,11 @@
                     "operator": "|",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18267,
+                      "id": 18273,
                       "name": "shiftedWeight",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18258,
+                      "referencedDeclaration": 18264,
                       "src": "3826:13:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1589,30 +1589,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 18240,
-                  "id": 18269,
+                  "functionReturnParameters": 18246,
+                  "id": 18275,
                   "nodeType": "Return",
                   "src": "3805:34:76"
                 }
               ]
             },
             "documentation": "@notice Return `node` with the `position`th slot set to `weight`.\n\n  /// @param weight The weight of of the node.\n Safely truncated to a 32-bit number,\n but this should never be called with an overflowing weight regardless.",
-            "id": 18271,
+            "id": 18277,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setSlot",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18237,
+              "id": 18243,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18232,
+                  "id": 18238,
                   "name": "node",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18271,
+                  "scope": 18277,
                   "src": "2984:12:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1621,7 +1621,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18231,
+                    "id": 18237,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2984:7:76",
@@ -1635,10 +1635,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18234,
+                  "id": 18240,
                   "name": "position",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18271,
+                  "scope": 18277,
                   "src": "3002:16:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1647,7 +1647,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18233,
+                    "id": 18239,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3002:7:76",
@@ -1661,10 +1661,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18236,
+                  "id": 18242,
                   "name": "weight",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18271,
+                  "scope": 18277,
                   "src": "3024:14:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1673,7 +1673,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18235,
+                    "id": 18241,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3024:7:76",
@@ -1689,15 +1689,15 @@
               "src": "2978:64:76"
             },
             "returnParameters": {
-              "id": 18240,
+              "id": 18246,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18239,
+                  "id": 18245,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18271,
+                  "scope": 18277,
                   "src": "3066:7:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1706,7 +1706,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18238,
+                    "id": 18244,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3066:7:76",
@@ -1721,7 +1721,7 @@
               ],
               "src": "3065:9:76"
             },
-            "scope": 18366,
+            "scope": 18372,
             "src": "2962:882:76",
             "stateMutability": "pure",
             "superFunction": null,
@@ -1729,25 +1729,25 @@
           },
           {
             "body": {
-              "id": 18310,
+              "id": 18316,
               "nodeType": "Block",
               "src": "3987:349:76",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 18282,
+                    "id": 18288,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 18278,
+                      "id": 18284,
                       "name": "sum",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18276,
+                      "referencedDeclaration": 18282,
                       "src": "3993:3:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1762,18 +1762,18 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 18281,
+                      "id": 18287,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 18279,
+                        "id": 18285,
                         "name": "node",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 18273,
+                        "referencedDeclaration": 18279,
                         "src": "3999:4:76",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1784,11 +1784,11 @@
                       "operator": "&",
                       "rightExpression": {
                         "argumentTypes": null,
-                        "id": 18280,
+                        "id": 18286,
                         "name": "SLOT_MAX",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 18171,
+                        "referencedDeclaration": 18177,
                         "src": "4006:8:76",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1807,21 +1807,21 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 18283,
+                  "id": 18289,
                   "nodeType": "ExpressionStatement",
                   "src": "3993:21:76"
                 },
                 {
                   "assignments": [
-                    18285
+                    18291
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18285,
+                      "id": 18291,
                       "name": "newNode",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18310,
+                      "scope": 18316,
                       "src": "4173:15:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1830,7 +1830,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18284,
+                        "id": 18290,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "4173:7:76",
@@ -1843,25 +1843,25 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18289,
+                  "id": 18295,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18288,
+                    "id": 18294,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18286,
+                      "id": 18292,
                       "name": "node",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18273,
+                      "referencedDeclaration": 18279,
                       "src": "4191:4:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1872,11 +1872,11 @@
                     "operator": ">>",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18287,
+                      "id": 18293,
                       "name": "SLOT_WIDTH",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18158,
+                      "referencedDeclaration": 18164,
                       "src": "4199:10:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1894,25 +1894,25 @@
                 },
                 {
                   "body": {
-                    "id": 18306,
+                    "id": 18312,
                     "nodeType": "Block",
                     "src": "4235:81:76",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 18298,
+                          "id": 18304,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 18293,
+                            "id": 18299,
                             "name": "sum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18276,
+                            "referencedDeclaration": 18282,
                             "src": "4243:3:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1930,18 +1930,18 @@
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 },
-                                "id": 18296,
+                                "id": 18302,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "leftExpression": {
                                   "argumentTypes": null,
-                                  "id": 18294,
+                                  "id": 18300,
                                   "name": "newNode",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 18285,
+                                  "referencedDeclaration": 18291,
                                   "src": "4251:7:76",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -1952,11 +1952,11 @@
                                 "operator": "&",
                                 "rightExpression": {
                                   "argumentTypes": null,
-                                  "id": 18295,
+                                  "id": 18301,
                                   "name": "SLOT_MAX",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 18171,
+                                  "referencedDeclaration": 18177,
                                   "src": "4261:8:76",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -1970,7 +1970,7 @@
                                 }
                               }
                             ],
-                            "id": 18297,
+                            "id": 18303,
                             "isConstant": false,
                             "isInlineArray": false,
                             "isLValue": false,
@@ -1989,25 +1989,25 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 18299,
+                        "id": 18305,
                         "nodeType": "ExpressionStatement",
                         "src": "4243:27:76"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 18304,
+                          "id": 18310,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 18300,
+                            "id": 18306,
                             "name": "newNode",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18285,
+                            "referencedDeclaration": 18291,
                             "src": "4278:7:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2022,18 +2022,18 @@
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 18303,
+                            "id": 18309,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 18301,
+                              "id": 18307,
                               "name": "newNode",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18285,
+                              "referencedDeclaration": 18291,
                               "src": "4288:7:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2044,11 +2044,11 @@
                             "operator": ">>",
                             "rightExpression": {
                               "argumentTypes": null,
-                              "id": 18302,
+                              "id": 18308,
                               "name": "SLOT_WIDTH",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18158,
+                              "referencedDeclaration": 18164,
                               "src": "4299:10:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2067,7 +2067,7 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 18305,
+                        "id": 18311,
                         "nodeType": "ExpressionStatement",
                         "src": "4278:31:76"
                       }
@@ -2079,18 +2079,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18292,
+                    "id": 18298,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18290,
+                      "id": 18296,
                       "name": "newNode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18285,
+                      "referencedDeclaration": 18291,
                       "src": "4222:7:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2102,7 +2102,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 18291,
+                      "id": 18297,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2123,48 +2123,48 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 18307,
+                  "id": 18313,
                   "nodeType": "WhileStatement",
                   "src": "4215:101:76"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 18308,
+                    "id": 18314,
                     "name": "sum",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 18276,
+                    "referencedDeclaration": 18282,
                     "src": "4328:3:76",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 18277,
-                  "id": 18309,
+                  "functionReturnParameters": 18283,
+                  "id": 18315,
                   "nodeType": "Return",
                   "src": "4321:10:76"
                 }
               ]
             },
             "documentation": "@notice Calculate the summed weight of all slots in the `node`.",
-            "id": 18311,
+            "id": 18317,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "sumWeight",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18274,
+              "id": 18280,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18273,
+                  "id": 18279,
                   "name": "node",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18311,
+                  "scope": 18317,
                   "src": "3937:12:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2173,7 +2173,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18272,
+                    "id": 18278,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3937:7:76",
@@ -2189,15 +2189,15 @@
               "src": "3936:14:76"
             },
             "returnParameters": {
-              "id": 18277,
+              "id": 18283,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18276,
+                  "id": 18282,
                   "name": "sum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18311,
+                  "scope": 18317,
                   "src": "3974:11:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2206,7 +2206,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18275,
+                    "id": 18281,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3974:7:76",
@@ -2221,7 +2221,7 @@
               ],
               "src": "3973:13:76"
             },
-            "scope": 18366,
+            "scope": 18372,
             "src": "3918:418:76",
             "stateMutability": "pure",
             "superFunction": null,
@@ -2229,25 +2229,25 @@
           },
           {
             "body": {
-              "id": 18364,
+              "id": 18370,
               "nodeType": "Block",
               "src": "5202:322:76",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 18324,
+                    "id": 18330,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 18322,
+                      "id": 18328,
                       "name": "newIndex",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18320,
+                      "referencedDeclaration": 18326,
                       "src": "5208:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2258,11 +2258,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 18323,
+                      "id": 18329,
                       "name": "index",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18315,
+                      "referencedDeclaration": 18321,
                       "src": "5219:5:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2275,21 +2275,21 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 18325,
+                  "id": 18331,
                   "nodeType": "ExpressionStatement",
                   "src": "5208:16:76"
                 },
                 {
                   "assignments": [
-                    18327
+                    18333
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18327,
+                      "id": 18333,
                       "name": "newNode",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18364,
+                      "scope": 18370,
                       "src": "5230:15:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2298,7 +2298,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18326,
+                        "id": 18332,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "5230:7:76",
@@ -2311,14 +2311,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18329,
+                  "id": 18335,
                   "initialValue": {
                     "argumentTypes": null,
-                    "id": 18328,
+                    "id": 18334,
                     "name": "node",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 18313,
+                    "referencedDeclaration": 18319,
                     "src": "5248:4:76",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -2330,15 +2330,15 @@
                 },
                 {
                   "assignments": [
-                    18331
+                    18337
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 18331,
+                      "id": 18337,
                       "name": "currentSlotWeight",
                       "nodeType": "VariableDeclaration",
-                      "scope": 18364,
+                      "scope": 18370,
                       "src": "5258:25:76",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2347,7 +2347,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 18330,
+                        "id": 18336,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "5258:7:76",
@@ -2360,25 +2360,25 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 18335,
+                  "id": 18341,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18334,
+                    "id": 18340,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18332,
+                      "id": 18338,
                       "name": "newNode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18327,
+                      "referencedDeclaration": 18333,
                       "src": "5286:7:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2389,11 +2389,11 @@
                     "operator": "&",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18333,
+                      "id": 18339,
                       "name": "SLOT_MAX",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18171,
+                      "referencedDeclaration": 18177,
                       "src": "5296:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2411,25 +2411,25 @@
                 },
                 {
                   "body": {
-                    "id": 18358,
+                    "id": 18364,
                     "nodeType": "Block",
                     "src": "5348:143:76",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 18341,
+                          "id": 18347,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 18339,
+                            "id": 18345,
                             "name": "newIndex",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18320,
+                            "referencedDeclaration": 18326,
                             "src": "5356:8:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2440,11 +2440,11 @@
                           "operator": "-=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 18340,
+                            "id": 18346,
                             "name": "currentSlotWeight",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18331,
+                            "referencedDeclaration": 18337,
                             "src": "5368:17:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2457,14 +2457,14 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 18342,
+                        "id": 18348,
                         "nodeType": "ExpressionStatement",
                         "src": "5356:29:76"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 18344,
+                          "id": 18350,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2475,11 +2475,11 @@
                           "src": "5393:6:76",
                           "subExpression": {
                             "argumentTypes": null,
-                            "id": 18343,
+                            "id": 18349,
                             "name": "slot",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18318,
+                            "referencedDeclaration": 18324,
                             "src": "5393:4:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2491,87 +2491,9 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 18345,
-                        "nodeType": "ExpressionStatement",
-                        "src": "5393:6:76"
-                      },
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 18350,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftHandSide": {
-                            "argumentTypes": null,
-                            "id": 18346,
-                            "name": "newNode",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 18327,
-                            "src": "5407:7:76",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "Assignment",
-                          "operator": "=",
-                          "rightHandSide": {
-                            "argumentTypes": null,
-                            "commonType": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            },
-                            "id": 18349,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftExpression": {
-                              "argumentTypes": null,
-                              "id": 18347,
-                              "name": "newNode",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 18327,
-                              "src": "5417:7:76",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "nodeType": "BinaryOperation",
-                            "operator": ">>",
-                            "rightExpression": {
-                              "argumentTypes": null,
-                              "id": 18348,
-                              "name": "SLOT_WIDTH",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 18158,
-                              "src": "5428:10:76",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "src": "5417:21:76",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "5407:31:76",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
                         "id": 18351,
                         "nodeType": "ExpressionStatement",
-                        "src": "5407:31:76"
+                        "src": "5393:6:76"
                       },
                       {
                         "expression": {
@@ -2584,11 +2506,11 @@
                           "leftHandSide": {
                             "argumentTypes": null,
                             "id": 18352,
-                            "name": "currentSlotWeight",
+                            "name": "newNode",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18331,
-                            "src": "5446:17:76",
+                            "referencedDeclaration": 18333,
+                            "src": "5407:7:76",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2613,7 +2535,85 @@
                               "name": "newNode",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18327,
+                              "referencedDeclaration": 18333,
+                              "src": "5417:7:76",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": ">>",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 18354,
+                              "name": "SLOT_WIDTH",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18164,
+                              "src": "5428:10:76",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "5417:21:76",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "5407:31:76",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 18357,
+                        "nodeType": "ExpressionStatement",
+                        "src": "5407:31:76"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 18362,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 18358,
+                            "name": "currentSlotWeight",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 18337,
+                            "src": "5446:17:76",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 18361,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 18359,
+                              "name": "newNode",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18333,
                               "src": "5466:7:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2624,11 +2624,11 @@
                             "operator": "&",
                             "rightExpression": {
                               "argumentTypes": null,
-                              "id": 18354,
+                              "id": 18360,
                               "name": "SLOT_MAX",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18171,
+                              "referencedDeclaration": 18177,
                               "src": "5476:8:76",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2647,7 +2647,7 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 18357,
+                        "id": 18363,
                         "nodeType": "ExpressionStatement",
                         "src": "5446:38:76"
                       }
@@ -2659,18 +2659,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 18338,
+                    "id": 18344,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 18336,
+                      "id": 18342,
                       "name": "newIndex",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18320,
+                      "referencedDeclaration": 18326,
                       "src": "5317:8:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2681,11 +2681,11 @@
                     "operator": ">=",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 18337,
+                      "id": 18343,
                       "name": "currentSlotWeight",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18331,
+                      "referencedDeclaration": 18337,
                       "src": "5329:17:76",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2698,7 +2698,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 18359,
+                  "id": 18365,
                   "nodeType": "WhileStatement",
                   "src": "5310:181:76"
                 },
@@ -2708,11 +2708,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 18360,
+                        "id": 18366,
                         "name": "slot",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 18318,
+                        "referencedDeclaration": 18324,
                         "src": "5504:4:76",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2721,11 +2721,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 18361,
+                        "id": 18367,
                         "name": "newIndex",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 18320,
+                        "referencedDeclaration": 18326,
                         "src": "5510:8:76",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2733,7 +2733,7 @@
                         }
                       }
                     ],
-                    "id": 18362,
+                    "id": 18368,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2746,30 +2746,30 @@
                       "typeString": "tuple(uint256,uint256)"
                     }
                   },
-                  "functionReturnParameters": 18321,
-                  "id": 18363,
+                  "functionReturnParameters": 18327,
+                  "id": 18369,
                   "nodeType": "Return",
                   "src": "5496:23:76"
                 }
               ]
             },
             "documentation": "@notice Pick a slot in `node` that corresponds to `index`.\n Treats the node like an array of virtual stakers,\n the number of virtual stakers in each slot corresponding to its weight,\n and picks which slot contains the `index`th virtual staker.\n\n  /// @dev Requires that `index` be lower than `sumWeight(node)`.\n However, this is not enforced for performance reasons.\n If `index` exceeds the permitted range,\n `pickWeightedSlot()` returns the rightmost slot\n and an excessively high `newIndex`.\n\n  /// @return slot The slot of `node` containing the `index`th virtual staker.\n\n  /// @return newIndex The index of the `index`th virtual staker of `node`\n within the returned slot.",
-            "id": 18365,
+            "id": 18371,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "pickWeightedSlot",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18316,
+              "id": 18322,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18313,
+                  "id": 18319,
                   "name": "node",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18365,
+                  "scope": 18371,
                   "src": "5104:12:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2778,7 +2778,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18312,
+                    "id": 18318,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "5104:7:76",
@@ -2792,10 +2792,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18315,
+                  "id": 18321,
                   "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18365,
+                  "scope": 18371,
                   "src": "5118:13:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2804,7 +2804,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18314,
+                    "id": 18320,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "5118:7:76",
@@ -2820,15 +2820,15 @@
               "src": "5103:29:76"
             },
             "returnParameters": {
-              "id": 18321,
+              "id": 18327,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18318,
+                  "id": 18324,
                   "name": "slot",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18365,
+                  "scope": 18371,
                   "src": "5168:12:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2837,7 +2837,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18317,
+                    "id": 18323,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "5168:7:76",
@@ -2851,10 +2851,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 18320,
+                  "id": 18326,
                   "name": "newIndex",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18365,
+                  "scope": 18371,
                   "src": "5182:16:76",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2863,7 +2863,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 18319,
+                    "id": 18325,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "5182:7:76",
@@ -2878,14 +2878,14 @@
               ],
               "src": "5167:32:76"
             },
-            "scope": 18366,
+            "scope": 18372,
             "src": "5078:446:76",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 18367,
+        "scope": 18373,
         "src": "220:5306:76"
       }
     ],
@@ -2896,7 +2896,7 @@
       "absolutePath": "@keep-network/sortition-pools/contracts/Branch.sol",
       "exportedSymbols": {
         "Branch": [
-          18366
+          18372
         ]
       }
     },
@@ -2909,7 +2909,7 @@
             ".17"
           ]
         },
-        "id": 18145,
+        "id": 18151,
         "name": "PragmaDirective",
         "src": "0:23:76"
       },
@@ -2925,17 +2925,17 @@
           "documentation": "@notice The implicit 8-ary trees of the sortition pool\n rely on packing 8 \"slots\" of 32-bit values into each uint256.\n The Branch library permits efficient calculations on these slots.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            18366
+            18372
           ],
           "name": "Branch",
-          "scope": 18367
+          "scope": 18373
         },
         "children": [
           {
             "attributes": {
               "constant": true,
               "name": "SLOT_BITS",
-              "scope": 18366,
+              "scope": 18372,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -2947,7 +2947,7 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 18146,
+                "id": 18152,
                 "name": "ElementaryTypeName",
                 "src": "469:7:76"
               },
@@ -2964,12 +2964,12 @@
                   "type": "int_const 3",
                   "value": "3"
                 },
-                "id": 18147,
+                "id": 18153,
                 "name": "Literal",
                 "src": "498:1:76"
               }
             ],
-            "id": 18148,
+            "id": 18154,
             "name": "VariableDeclaration",
             "src": "469:30:76"
           },
@@ -2977,7 +2977,7 @@
             "attributes": {
               "constant": true,
               "name": "SLOT_COUNT",
-              "scope": 18366,
+              "scope": 18372,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -2989,7 +2989,7 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 18149,
+                "id": 18155,
                 "name": "ElementaryTypeName",
                 "src": "699:7:76"
               },
@@ -3021,7 +3021,7 @@
                       "type": "int_const 2",
                       "value": "2"
                     },
-                    "id": 18150,
+                    "id": 18156,
                     "name": "Literal",
                     "src": "729:1:76"
                   },
@@ -3031,21 +3031,21 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 18148,
+                      "referencedDeclaration": 18154,
                       "type": "uint256",
                       "value": "SLOT_BITS"
                     },
-                    "id": 18151,
+                    "id": 18157,
                     "name": "Identifier",
                     "src": "732:9:76"
                   }
                 ],
-                "id": 18152,
+                "id": 18158,
                 "name": "BinaryOperation",
                 "src": "729:12:76"
               }
             ],
-            "id": 18153,
+            "id": 18159,
             "name": "VariableDeclaration",
             "src": "699:42:76"
           },
@@ -3053,7 +3053,7 @@
             "attributes": {
               "constant": true,
               "name": "SLOT_WIDTH",
-              "scope": 18366,
+              "scope": 18372,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -3065,7 +3065,7 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 18154,
+                "id": 18160,
                 "name": "ElementaryTypeName",
                 "src": "745:7:76"
               },
@@ -3097,7 +3097,7 @@
                       "type": "int_const 256",
                       "value": "256"
                     },
-                    "id": 18155,
+                    "id": 18161,
                     "name": "Literal",
                     "src": "775:3:76"
                   },
@@ -3107,21 +3107,21 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 18153,
+                      "referencedDeclaration": 18159,
                       "type": "uint256",
                       "value": "SLOT_COUNT"
                     },
-                    "id": 18156,
+                    "id": 18162,
                     "name": "Identifier",
                     "src": "781:10:76"
                   }
                 ],
-                "id": 18157,
+                "id": 18163,
                 "name": "BinaryOperation",
                 "src": "775:16:76"
               }
             ],
-            "id": 18158,
+            "id": 18164,
             "name": "VariableDeclaration",
             "src": "745:46:76"
           },
@@ -3129,7 +3129,7 @@
             "attributes": {
               "constant": true,
               "name": "LAST_SLOT",
-              "scope": 18366,
+              "scope": 18372,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -3141,7 +3141,7 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 18159,
+                "id": 18165,
                 "name": "ElementaryTypeName",
                 "src": "795:7:76"
               },
@@ -3166,11 +3166,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 18153,
+                      "referencedDeclaration": 18159,
                       "type": "uint256",
                       "value": "SLOT_COUNT"
                     },
-                    "id": 18160,
+                    "id": 18166,
                     "name": "Identifier",
                     "src": "824:10:76"
                   },
@@ -3187,17 +3187,17 @@
                       "type": "int_const 1",
                       "value": "1"
                     },
-                    "id": 18161,
+                    "id": 18167,
                     "name": "Literal",
                     "src": "837:1:76"
                   }
                 ],
-                "id": 18162,
+                "id": 18168,
                 "name": "BinaryOperation",
                 "src": "824:14:76"
               }
             ],
-            "id": 18163,
+            "id": 18169,
             "name": "VariableDeclaration",
             "src": "795:43:76"
           },
@@ -3205,7 +3205,7 @@
             "attributes": {
               "constant": true,
               "name": "SLOT_MAX",
-              "scope": 18366,
+              "scope": 18372,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -3217,7 +3217,7 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 18164,
+                "id": 18170,
                 "name": "ElementaryTypeName",
                 "src": "842:7:76"
               },
@@ -3275,7 +3275,7 @@
                               "type": "int_const 2",
                               "value": "2"
                             },
-                            "id": 18165,
+                            "id": 18171,
                             "name": "Literal",
                             "src": "871:1:76"
                           },
@@ -3285,21 +3285,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18158,
+                              "referencedDeclaration": 18164,
                               "type": "uint256",
                               "value": "SLOT_WIDTH"
                             },
-                            "id": 18166,
+                            "id": 18172,
                             "name": "Identifier",
                             "src": "874:10:76"
                           }
                         ],
-                        "id": 18167,
+                        "id": 18173,
                         "name": "BinaryOperation",
                         "src": "871:13:76"
                       }
                     ],
-                    "id": 18168,
+                    "id": 18174,
                     "name": "TupleExpression",
                     "src": "870:15:76"
                   },
@@ -3316,17 +3316,17 @@
                       "type": "int_const 1",
                       "value": "1"
                     },
-                    "id": 18169,
+                    "id": 18175,
                     "name": "Literal",
                     "src": "888:1:76"
                   }
                 ],
-                "id": 18170,
+                "id": 18176,
                 "name": "BinaryOperation",
                 "src": "870:19:76"
               }
             ],
-            "id": 18171,
+            "id": 18177,
             "name": "VariableDeclaration",
             "src": "842:47:76"
           },
@@ -3340,7 +3340,7 @@
                 null
               ],
               "name": "slotShift",
-              "scope": 18366,
+              "scope": 18372,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "internal"
@@ -3352,7 +3352,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "position",
-                      "scope": 18183,
+                      "scope": 18189,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3365,17 +3365,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18172,
+                        "id": 18178,
                         "name": "ElementaryTypeName",
                         "src": "1352:7:76"
                       }
                     ],
-                    "id": 18173,
+                    "id": 18179,
                     "name": "VariableDeclaration",
                     "src": "1352:16:76"
                   }
                 ],
-                "id": 18174,
+                "id": 18180,
                 "name": "ParameterList",
                 "src": "1351:18:76"
               },
@@ -3385,7 +3385,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 18183,
+                      "scope": 18189,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3398,17 +3398,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18175,
+                        "id": 18181,
                         "name": "ElementaryTypeName",
                         "src": "1393:7:76"
                       }
                     ],
-                    "id": 18176,
+                    "id": 18182,
                     "name": "VariableDeclaration",
                     "src": "1393:7:76"
                   }
                 ],
-                "id": 18177,
+                "id": 18183,
                 "name": "ParameterList",
                 "src": "1392:9:76"
               },
@@ -3416,7 +3416,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 18177
+                      "functionReturnParameters": 18183
                     },
                     "children": [
                       {
@@ -3440,11 +3440,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18173,
+                              "referencedDeclaration": 18179,
                               "type": "uint256",
                               "value": "position"
                             },
-                            "id": 18178,
+                            "id": 18184,
                             "name": "Identifier",
                             "src": "1415:8:76"
                           },
@@ -3454,31 +3454,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18158,
+                              "referencedDeclaration": 18164,
                               "type": "uint256",
                               "value": "SLOT_WIDTH"
                             },
-                            "id": 18179,
+                            "id": 18185,
                             "name": "Identifier",
                             "src": "1426:10:76"
                           }
                         ],
-                        "id": 18180,
+                        "id": 18186,
                         "name": "BinaryOperation",
                         "src": "1415:21:76"
                       }
                     ],
-                    "id": 18181,
+                    "id": 18187,
                     "name": "Return",
                     "src": "1408:28:76"
                   }
                 ],
-                "id": 18182,
+                "id": 18188,
                 "name": "Block",
                 "src": "1402:39:76"
               }
             ],
-            "id": 18183,
+            "id": 18189,
             "name": "FunctionDefinition",
             "src": "1333:108:76"
           },
@@ -3492,7 +3492,7 @@
                 null
               ],
               "name": "getSlot",
-              "scope": 18366,
+              "scope": 18372,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "internal"
@@ -3504,7 +3504,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "node",
-                      "scope": 18206,
+                      "scope": 18212,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3517,12 +3517,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18184,
+                        "id": 18190,
                         "name": "ElementaryTypeName",
                         "src": "1559:7:76"
                       }
                     ],
-                    "id": 18185,
+                    "id": 18191,
                     "name": "VariableDeclaration",
                     "src": "1559:12:76"
                   },
@@ -3530,7 +3530,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "position",
-                      "scope": 18206,
+                      "scope": 18212,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3543,17 +3543,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18186,
+                        "id": 18192,
                         "name": "ElementaryTypeName",
                         "src": "1573:7:76"
                       }
                     ],
-                    "id": 18187,
+                    "id": 18193,
                     "name": "VariableDeclaration",
                     "src": "1573:16:76"
                   }
                 ],
-                "id": 18188,
+                "id": 18194,
                 "name": "ParameterList",
                 "src": "1558:32:76"
               },
@@ -3563,7 +3563,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 18206,
+                      "scope": 18212,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3576,17 +3576,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18189,
+                        "id": 18195,
                         "name": "ElementaryTypeName",
                         "src": "1626:7:76"
                       }
                     ],
-                    "id": 18190,
+                    "id": 18196,
                     "name": "VariableDeclaration",
                     "src": "1626:7:76"
                   }
                 ],
-                "id": 18191,
+                "id": 18197,
                 "name": "ParameterList",
                 "src": "1625:9:76"
               },
@@ -3595,7 +3595,7 @@
                   {
                     "attributes": {
                       "assignments": [
-                        18193
+                        18199
                       ]
                     },
                     "children": [
@@ -3603,7 +3603,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "shiftBits",
-                          "scope": 18205,
+                          "scope": 18211,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -3616,12 +3616,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18192,
+                            "id": 18198,
                             "name": "ElementaryTypeName",
                             "src": "1643:7:76"
                           }
                         ],
-                        "id": 18193,
+                        "id": 18199,
                         "name": "VariableDeclaration",
                         "src": "1643:17:76"
                       },
@@ -3646,11 +3646,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18187,
+                              "referencedDeclaration": 18193,
                               "type": "uint256",
                               "value": "position"
                             },
-                            "id": 18194,
+                            "id": 18200,
                             "name": "Identifier",
                             "src": "1663:8:76"
                           },
@@ -3660,27 +3660,27 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18158,
+                              "referencedDeclaration": 18164,
                               "type": "uint256",
                               "value": "SLOT_WIDTH"
                             },
-                            "id": 18195,
+                            "id": 18201,
                             "name": "Identifier",
                             "src": "1674:10:76"
                           }
                         ],
-                        "id": 18196,
+                        "id": 18202,
                         "name": "BinaryOperation",
                         "src": "1663:21:76"
                       }
                     ],
-                    "id": 18197,
+                    "id": 18203,
                     "name": "VariableDeclarationStatement",
                     "src": "1643:41:76"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 18191
+                      "functionReturnParameters": 18197
                     },
                     "children": [
                       {
@@ -3730,11 +3730,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18185,
+                                      "referencedDeclaration": 18191,
                                       "type": "uint256",
                                       "value": "node"
                                     },
-                                    "id": 18198,
+                                    "id": 18204,
                                     "name": "Identifier",
                                     "src": "1936:4:76"
                                   },
@@ -3744,21 +3744,21 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18193,
+                                      "referencedDeclaration": 18199,
                                       "type": "uint256",
                                       "value": "shiftBits"
                                     },
-                                    "id": 18199,
+                                    "id": 18205,
                                     "name": "Identifier",
                                     "src": "1944:9:76"
                                   }
                                 ],
-                                "id": 18200,
+                                "id": 18206,
                                 "name": "BinaryOperation",
                                 "src": "1936:17:76"
                               }
                             ],
-                            "id": 18201,
+                            "id": 18207,
                             "name": "TupleExpression",
                             "src": "1935:19:76"
                           },
@@ -3768,31 +3768,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18171,
+                              "referencedDeclaration": 18177,
                               "type": "uint256",
                               "value": "SLOT_MAX"
                             },
-                            "id": 18202,
+                            "id": 18208,
                             "name": "Identifier",
                             "src": "1957:8:76"
                           }
                         ],
-                        "id": 18203,
+                        "id": 18209,
                         "name": "BinaryOperation",
                         "src": "1935:30:76"
                       }
                     ],
-                    "id": 18204,
+                    "id": 18210,
                     "name": "Return",
                     "src": "1928:37:76"
                   }
                 ],
-                "id": 18205,
+                "id": 18211,
                 "name": "Block",
                 "src": "1637:333:76"
               }
             ],
-            "id": 18206,
+            "id": 18212,
             "name": "FunctionDefinition",
             "src": "1542:428:76"
           },
@@ -3806,7 +3806,7 @@
                 null
               ],
               "name": "clearSlot",
-              "scope": 18366,
+              "scope": 18372,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "internal"
@@ -3818,7 +3818,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "node",
-                      "scope": 18230,
+                      "scope": 18236,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3831,12 +3831,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18207,
+                        "id": 18213,
                         "name": "ElementaryTypeName",
                         "src": "2061:7:76"
                       }
                     ],
-                    "id": 18208,
+                    "id": 18214,
                     "name": "VariableDeclaration",
                     "src": "2061:12:76"
                   },
@@ -3844,7 +3844,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "position",
-                      "scope": 18230,
+                      "scope": 18236,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3857,17 +3857,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18209,
+                        "id": 18215,
                         "name": "ElementaryTypeName",
                         "src": "2075:7:76"
                       }
                     ],
-                    "id": 18210,
+                    "id": 18216,
                     "name": "VariableDeclaration",
                     "src": "2075:16:76"
                   }
                 ],
-                "id": 18211,
+                "id": 18217,
                 "name": "ParameterList",
                 "src": "2060:32:76"
               },
@@ -3877,7 +3877,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 18230,
+                      "scope": 18236,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3890,17 +3890,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18212,
+                        "id": 18218,
                         "name": "ElementaryTypeName",
                         "src": "2128:7:76"
                       }
                     ],
-                    "id": 18213,
+                    "id": 18219,
                     "name": "VariableDeclaration",
                     "src": "2128:7:76"
                   }
                 ],
-                "id": 18214,
+                "id": 18220,
                 "name": "ParameterList",
                 "src": "2127:9:76"
               },
@@ -3909,7 +3909,7 @@
                   {
                     "attributes": {
                       "assignments": [
-                        18216
+                        18222
                       ]
                     },
                     "children": [
@@ -3917,7 +3917,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "shiftBits",
-                          "scope": 18229,
+                          "scope": 18235,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -3930,12 +3930,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18215,
+                            "id": 18221,
                             "name": "ElementaryTypeName",
                             "src": "2145:7:76"
                           }
                         ],
-                        "id": 18216,
+                        "id": 18222,
                         "name": "VariableDeclaration",
                         "src": "2145:17:76"
                       },
@@ -3960,11 +3960,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18210,
+                              "referencedDeclaration": 18216,
                               "type": "uint256",
                               "value": "position"
                             },
-                            "id": 18217,
+                            "id": 18223,
                             "name": "Identifier",
                             "src": "2165:8:76"
                           },
@@ -3974,27 +3974,27 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18158,
+                              "referencedDeclaration": 18164,
                               "type": "uint256",
                               "value": "SLOT_WIDTH"
                             },
-                            "id": 18218,
+                            "id": 18224,
                             "name": "Identifier",
                             "src": "2176:10:76"
                           }
                         ],
-                        "id": 18219,
+                        "id": 18225,
                         "name": "BinaryOperation",
                         "src": "2165:21:76"
                       }
                     ],
-                    "id": 18220,
+                    "id": 18226,
                     "name": "VariableDeclarationStatement",
                     "src": "2145:41:76"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 18214
+                      "functionReturnParameters": 18220
                     },
                     "children": [
                       {
@@ -4018,11 +4018,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18208,
+                              "referencedDeclaration": 18214,
                               "type": "uint256",
                               "value": "node"
                             },
-                            "id": 18221,
+                            "id": 18227,
                             "name": "Identifier",
                             "src": "2677:4:76"
                           },
@@ -4070,11 +4070,11 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18171,
+                                          "referencedDeclaration": 18177,
                                           "type": "uint256",
                                           "value": "SLOT_MAX"
                                         },
-                                        "id": 18222,
+                                        "id": 18228,
                                         "name": "Identifier",
                                         "src": "2686:8:76"
                                       },
@@ -4084,46 +4084,46 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18216,
+                                          "referencedDeclaration": 18222,
                                           "type": "uint256",
                                           "value": "shiftBits"
                                         },
-                                        "id": 18223,
+                                        "id": 18229,
                                         "name": "Identifier",
                                         "src": "2698:9:76"
                                       }
                                     ],
-                                    "id": 18224,
+                                    "id": 18230,
                                     "name": "BinaryOperation",
                                     "src": "2686:21:76"
                                   }
                                 ],
-                                "id": 18225,
+                                "id": 18231,
                                 "name": "TupleExpression",
                                 "src": "2685:23:76"
                               }
                             ],
-                            "id": 18226,
+                            "id": 18232,
                             "name": "UnaryOperation",
                             "src": "2684:24:76"
                           }
                         ],
-                        "id": 18227,
+                        "id": 18233,
                         "name": "BinaryOperation",
                         "src": "2677:31:76"
                       }
                     ],
-                    "id": 18228,
+                    "id": 18234,
                     "name": "Return",
                     "src": "2670:38:76"
                   }
                 ],
-                "id": 18229,
+                "id": 18235,
                 "name": "Block",
                 "src": "2139:574:76"
               }
             ],
-            "id": 18230,
+            "id": 18236,
             "name": "FunctionDefinition",
             "src": "2042:671:76"
           },
@@ -4137,7 +4137,7 @@
                 null
               ],
               "name": "setSlot",
-              "scope": 18366,
+              "scope": 18372,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "internal"
@@ -4149,7 +4149,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "node",
-                      "scope": 18271,
+                      "scope": 18277,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -4162,12 +4162,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18231,
+                        "id": 18237,
                         "name": "ElementaryTypeName",
                         "src": "2984:7:76"
                       }
                     ],
-                    "id": 18232,
+                    "id": 18238,
                     "name": "VariableDeclaration",
                     "src": "2984:12:76"
                   },
@@ -4175,7 +4175,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "position",
-                      "scope": 18271,
+                      "scope": 18277,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -4188,12 +4188,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18233,
+                        "id": 18239,
                         "name": "ElementaryTypeName",
                         "src": "3002:7:76"
                       }
                     ],
-                    "id": 18234,
+                    "id": 18240,
                     "name": "VariableDeclaration",
                     "src": "3002:16:76"
                   },
@@ -4201,7 +4201,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "weight",
-                      "scope": 18271,
+                      "scope": 18277,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -4214,17 +4214,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18235,
+                        "id": 18241,
                         "name": "ElementaryTypeName",
                         "src": "3024:7:76"
                       }
                     ],
-                    "id": 18236,
+                    "id": 18242,
                     "name": "VariableDeclaration",
                     "src": "3024:14:76"
                   }
                 ],
-                "id": 18237,
+                "id": 18243,
                 "name": "ParameterList",
                 "src": "2978:64:76"
               },
@@ -4234,7 +4234,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 18271,
+                      "scope": 18277,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -4247,17 +4247,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18238,
+                        "id": 18244,
                         "name": "ElementaryTypeName",
                         "src": "3066:7:76"
                       }
                     ],
-                    "id": 18239,
+                    "id": 18245,
                     "name": "VariableDeclaration",
                     "src": "3066:7:76"
                   }
                 ],
-                "id": 18240,
+                "id": 18246,
                 "name": "ParameterList",
                 "src": "3065:9:76"
               },
@@ -4266,7 +4266,7 @@
                   {
                     "attributes": {
                       "assignments": [
-                        18242
+                        18248
                       ]
                     },
                     "children": [
@@ -4274,7 +4274,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "shiftBits",
-                          "scope": 18270,
+                          "scope": 18276,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -4287,12 +4287,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18241,
+                            "id": 18247,
                             "name": "ElementaryTypeName",
                             "src": "3081:7:76"
                           }
                         ],
-                        "id": 18242,
+                        "id": 18248,
                         "name": "VariableDeclaration",
                         "src": "3081:17:76"
                       },
@@ -4317,11 +4317,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18234,
+                              "referencedDeclaration": 18240,
                               "type": "uint256",
                               "value": "position"
                             },
-                            "id": 18243,
+                            "id": 18249,
                             "name": "Identifier",
                             "src": "3101:8:76"
                           },
@@ -4331,28 +4331,28 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18158,
+                              "referencedDeclaration": 18164,
                               "type": "uint256",
                               "value": "SLOT_WIDTH"
                             },
-                            "id": 18244,
+                            "id": 18250,
                             "name": "Identifier",
                             "src": "3112:10:76"
                           }
                         ],
-                        "id": 18245,
+                        "id": 18251,
                         "name": "BinaryOperation",
                         "src": "3101:21:76"
                       }
                     ],
-                    "id": 18246,
+                    "id": 18252,
                     "name": "VariableDeclarationStatement",
                     "src": "3081:41:76"
                   },
                   {
                     "attributes": {
                       "assignments": [
-                        18248
+                        18254
                       ]
                     },
                     "children": [
@@ -4360,7 +4360,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "clearedNode",
-                          "scope": 18270,
+                          "scope": 18276,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -4373,12 +4373,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18247,
+                            "id": 18253,
                             "name": "ElementaryTypeName",
                             "src": "3186:7:76"
                           }
                         ],
-                        "id": 18248,
+                        "id": 18254,
                         "name": "VariableDeclaration",
                         "src": "3186:19:76"
                       },
@@ -4403,11 +4403,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18232,
+                              "referencedDeclaration": 18238,
                               "type": "uint256",
                               "value": "node"
                             },
-                            "id": 18249,
+                            "id": 18255,
                             "name": "Identifier",
                             "src": "3208:4:76"
                           },
@@ -4455,11 +4455,11 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18171,
+                                          "referencedDeclaration": 18177,
                                           "type": "uint256",
                                           "value": "SLOT_MAX"
                                         },
-                                        "id": 18250,
+                                        "id": 18256,
                                         "name": "Identifier",
                                         "src": "3217:8:76"
                                       },
@@ -4469,43 +4469,43 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18242,
+                                          "referencedDeclaration": 18248,
                                           "type": "uint256",
                                           "value": "shiftBits"
                                         },
-                                        "id": 18251,
+                                        "id": 18257,
                                         "name": "Identifier",
                                         "src": "3229:9:76"
                                       }
                                     ],
-                                    "id": 18252,
+                                    "id": 18258,
                                     "name": "BinaryOperation",
                                     "src": "3217:21:76"
                                   }
                                 ],
-                                "id": 18253,
+                                "id": 18259,
                                 "name": "TupleExpression",
                                 "src": "3216:23:76"
                               }
                             ],
-                            "id": 18254,
+                            "id": 18260,
                             "name": "UnaryOperation",
                             "src": "3215:24:76"
                           }
                         ],
-                        "id": 18255,
+                        "id": 18261,
                         "name": "BinaryOperation",
                         "src": "3208:31:76"
                       }
                     ],
-                    "id": 18256,
+                    "id": 18262,
                     "name": "VariableDeclarationStatement",
                     "src": "3186:53:76"
                   },
                   {
                     "attributes": {
                       "assignments": [
-                        18258
+                        18264
                       ]
                     },
                     "children": [
@@ -4513,7 +4513,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "shiftedWeight",
-                          "scope": 18270,
+                          "scope": 18276,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -4526,12 +4526,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18257,
+                            "id": 18263,
                             "name": "ElementaryTypeName",
                             "src": "3542:7:76"
                           }
                         ],
-                        "id": 18258,
+                        "id": 18264,
                         "name": "VariableDeclaration",
                         "src": "3542:21:76"
                       },
@@ -4582,11 +4582,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18236,
+                                      "referencedDeclaration": 18242,
                                       "type": "uint256",
                                       "value": "weight"
                                     },
-                                    "id": 18259,
+                                    "id": 18265,
                                     "name": "Identifier",
                                     "src": "3567:6:76"
                                   },
@@ -4596,21 +4596,21 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18171,
+                                      "referencedDeclaration": 18177,
                                       "type": "uint256",
                                       "value": "SLOT_MAX"
                                     },
-                                    "id": 18260,
+                                    "id": 18266,
                                     "name": "Identifier",
                                     "src": "3576:8:76"
                                   }
                                 ],
-                                "id": 18261,
+                                "id": 18267,
                                 "name": "BinaryOperation",
                                 "src": "3567:17:76"
                               }
                             ],
-                            "id": 18262,
+                            "id": 18268,
                             "name": "TupleExpression",
                             "src": "3566:19:76"
                           },
@@ -4620,27 +4620,27 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18242,
+                              "referencedDeclaration": 18248,
                               "type": "uint256",
                               "value": "shiftBits"
                             },
-                            "id": 18263,
+                            "id": 18269,
                             "name": "Identifier",
                             "src": "3589:9:76"
                           }
                         ],
-                        "id": 18264,
+                        "id": 18270,
                         "name": "BinaryOperation",
                         "src": "3566:32:76"
                       }
                     ],
-                    "id": 18265,
+                    "id": 18271,
                     "name": "VariableDeclarationStatement",
                     "src": "3542:56:76"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 18240
+                      "functionReturnParameters": 18246
                     },
                     "children": [
                       {
@@ -4664,11 +4664,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18248,
+                              "referencedDeclaration": 18254,
                               "type": "uint256",
                               "value": "clearedNode"
                             },
-                            "id": 18266,
+                            "id": 18272,
                             "name": "Identifier",
                             "src": "3812:11:76"
                           },
@@ -4678,31 +4678,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18258,
+                              "referencedDeclaration": 18264,
                               "type": "uint256",
                               "value": "shiftedWeight"
                             },
-                            "id": 18267,
+                            "id": 18273,
                             "name": "Identifier",
                             "src": "3826:13:76"
                           }
                         ],
-                        "id": 18268,
+                        "id": 18274,
                         "name": "BinaryOperation",
                         "src": "3812:27:76"
                       }
                     ],
-                    "id": 18269,
+                    "id": 18275,
                     "name": "Return",
                     "src": "3805:34:76"
                   }
                 ],
-                "id": 18270,
+                "id": 18276,
                 "name": "Block",
                 "src": "3075:769:76"
               }
             ],
-            "id": 18271,
+            "id": 18277,
             "name": "FunctionDefinition",
             "src": "2962:882:76"
           },
@@ -4716,7 +4716,7 @@
                 null
               ],
               "name": "sumWeight",
-              "scope": 18366,
+              "scope": 18372,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "internal"
@@ -4728,7 +4728,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "node",
-                      "scope": 18311,
+                      "scope": 18317,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -4741,17 +4741,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18272,
+                        "id": 18278,
                         "name": "ElementaryTypeName",
                         "src": "3937:7:76"
                       }
                     ],
-                    "id": 18273,
+                    "id": 18279,
                     "name": "VariableDeclaration",
                     "src": "3937:12:76"
                   }
                 ],
-                "id": 18274,
+                "id": 18280,
                 "name": "ParameterList",
                 "src": "3936:14:76"
               },
@@ -4761,7 +4761,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "sum",
-                      "scope": 18311,
+                      "scope": 18317,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -4774,17 +4774,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18275,
+                        "id": 18281,
                         "name": "ElementaryTypeName",
                         "src": "3974:7:76"
                       }
                     ],
-                    "id": 18276,
+                    "id": 18282,
                     "name": "VariableDeclaration",
                     "src": "3974:11:76"
                   }
                 ],
-                "id": 18277,
+                "id": 18283,
                 "name": "ParameterList",
                 "src": "3973:13:76"
               },
@@ -4809,11 +4809,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18276,
+                              "referencedDeclaration": 18282,
                               "type": "uint256",
                               "value": "sum"
                             },
-                            "id": 18278,
+                            "id": 18284,
                             "name": "Identifier",
                             "src": "3993:3:76"
                           },
@@ -4838,11 +4838,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18273,
+                                  "referencedDeclaration": 18279,
                                   "type": "uint256",
                                   "value": "node"
                                 },
-                                "id": 18279,
+                                "id": 18285,
                                 "name": "Identifier",
                                 "src": "3999:4:76"
                               },
@@ -4852,33 +4852,33 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18171,
+                                  "referencedDeclaration": 18177,
                                   "type": "uint256",
                                   "value": "SLOT_MAX"
                                 },
-                                "id": 18280,
+                                "id": 18286,
                                 "name": "Identifier",
                                 "src": "4006:8:76"
                               }
                             ],
-                            "id": 18281,
+                            "id": 18287,
                             "name": "BinaryOperation",
                             "src": "3999:15:76"
                           }
                         ],
-                        "id": 18282,
+                        "id": 18288,
                         "name": "Assignment",
                         "src": "3993:21:76"
                       }
                     ],
-                    "id": 18283,
+                    "id": 18289,
                     "name": "ExpressionStatement",
                     "src": "3993:21:76"
                   },
                   {
                     "attributes": {
                       "assignments": [
-                        18285
+                        18291
                       ]
                     },
                     "children": [
@@ -4886,7 +4886,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "newNode",
-                          "scope": 18310,
+                          "scope": 18316,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -4899,12 +4899,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18284,
+                            "id": 18290,
                             "name": "ElementaryTypeName",
                             "src": "4173:7:76"
                           }
                         ],
-                        "id": 18285,
+                        "id": 18291,
                         "name": "VariableDeclaration",
                         "src": "4173:15:76"
                       },
@@ -4929,11 +4929,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18273,
+                              "referencedDeclaration": 18279,
                               "type": "uint256",
                               "value": "node"
                             },
-                            "id": 18286,
+                            "id": 18292,
                             "name": "Identifier",
                             "src": "4191:4:76"
                           },
@@ -4943,21 +4943,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18158,
+                              "referencedDeclaration": 18164,
                               "type": "uint256",
                               "value": "SLOT_WIDTH"
                             },
-                            "id": 18287,
+                            "id": 18293,
                             "name": "Identifier",
                             "src": "4199:10:76"
                           }
                         ],
-                        "id": 18288,
+                        "id": 18294,
                         "name": "BinaryOperation",
                         "src": "4191:18:76"
                       }
                     ],
-                    "id": 18289,
+                    "id": 18295,
                     "name": "VariableDeclarationStatement",
                     "src": "4173:36:76"
                   },
@@ -4984,11 +4984,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18285,
+                              "referencedDeclaration": 18291,
                               "type": "uint256",
                               "value": "newNode"
                             },
-                            "id": 18290,
+                            "id": 18296,
                             "name": "Identifier",
                             "src": "4222:7:76"
                           },
@@ -5005,12 +5005,12 @@
                               "type": "int_const 0",
                               "value": "0"
                             },
-                            "id": 18291,
+                            "id": 18297,
                             "name": "Literal",
                             "src": "4232:1:76"
                           }
                         ],
-                        "id": 18292,
+                        "id": 18298,
                         "name": "BinaryOperation",
                         "src": "4222:11:76"
                       },
@@ -5035,11 +5035,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18276,
+                                      "referencedDeclaration": 18282,
                                       "type": "uint256",
                                       "value": "sum"
                                     },
-                                    "id": 18293,
+                                    "id": 18299,
                                     "name": "Identifier",
                                     "src": "4243:3:76"
                                   },
@@ -5075,11 +5075,11 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 18285,
+                                              "referencedDeclaration": 18291,
                                               "type": "uint256",
                                               "value": "newNode"
                                             },
-                                            "id": 18294,
+                                            "id": 18300,
                                             "name": "Identifier",
                                             "src": "4251:7:76"
                                           },
@@ -5089,31 +5089,31 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 18171,
+                                              "referencedDeclaration": 18177,
                                               "type": "uint256",
                                               "value": "SLOT_MAX"
                                             },
-                                            "id": 18295,
+                                            "id": 18301,
                                             "name": "Identifier",
                                             "src": "4261:8:76"
                                           }
                                         ],
-                                        "id": 18296,
+                                        "id": 18302,
                                         "name": "BinaryOperation",
                                         "src": "4251:18:76"
                                       }
                                     ],
-                                    "id": 18297,
+                                    "id": 18303,
                                     "name": "TupleExpression",
                                     "src": "4250:20:76"
                                   }
                                 ],
-                                "id": 18298,
+                                "id": 18304,
                                 "name": "Assignment",
                                 "src": "4243:27:76"
                               }
                             ],
-                            "id": 18299,
+                            "id": 18305,
                             "name": "ExpressionStatement",
                             "src": "4243:27:76"
                           },
@@ -5136,11 +5136,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18285,
+                                      "referencedDeclaration": 18291,
                                       "type": "uint256",
                                       "value": "newNode"
                                     },
-                                    "id": 18300,
+                                    "id": 18306,
                                     "name": "Identifier",
                                     "src": "4278:7:76"
                                   },
@@ -5165,11 +5165,11 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18285,
+                                          "referencedDeclaration": 18291,
                                           "type": "uint256",
                                           "value": "newNode"
                                         },
-                                        "id": 18301,
+                                        "id": 18307,
                                         "name": "Identifier",
                                         "src": "4288:7:76"
                                       },
@@ -5179,42 +5179,42 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18158,
+                                          "referencedDeclaration": 18164,
                                           "type": "uint256",
                                           "value": "SLOT_WIDTH"
                                         },
-                                        "id": 18302,
+                                        "id": 18308,
                                         "name": "Identifier",
                                         "src": "4299:10:76"
                                       }
                                     ],
-                                    "id": 18303,
+                                    "id": 18309,
                                     "name": "BinaryOperation",
                                     "src": "4288:21:76"
                                   }
                                 ],
-                                "id": 18304,
+                                "id": 18310,
                                 "name": "Assignment",
                                 "src": "4278:31:76"
                               }
                             ],
-                            "id": 18305,
+                            "id": 18311,
                             "name": "ExpressionStatement",
                             "src": "4278:31:76"
                           }
                         ],
-                        "id": 18306,
+                        "id": 18312,
                         "name": "Block",
                         "src": "4235:81:76"
                       }
                     ],
-                    "id": 18307,
+                    "id": 18313,
                     "name": "WhileStatement",
                     "src": "4215:101:76"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 18277
+                      "functionReturnParameters": 18283
                     },
                     "children": [
                       {
@@ -5223,26 +5223,26 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 18276,
+                          "referencedDeclaration": 18282,
                           "type": "uint256",
                           "value": "sum"
                         },
-                        "id": 18308,
+                        "id": 18314,
                         "name": "Identifier",
                         "src": "4328:3:76"
                       }
                     ],
-                    "id": 18309,
+                    "id": 18315,
                     "name": "Return",
                     "src": "4321:10:76"
                   }
                 ],
-                "id": 18310,
+                "id": 18316,
                 "name": "Block",
                 "src": "3987:349:76"
               }
             ],
-            "id": 18311,
+            "id": 18317,
             "name": "FunctionDefinition",
             "src": "3918:418:76"
           },
@@ -5256,7 +5256,7 @@
                 null
               ],
               "name": "pickWeightedSlot",
-              "scope": 18366,
+              "scope": 18372,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "internal"
@@ -5268,7 +5268,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "node",
-                      "scope": 18365,
+                      "scope": 18371,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -5281,12 +5281,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18312,
+                        "id": 18318,
                         "name": "ElementaryTypeName",
                         "src": "5104:7:76"
                       }
                     ],
-                    "id": 18313,
+                    "id": 18319,
                     "name": "VariableDeclaration",
                     "src": "5104:12:76"
                   },
@@ -5294,7 +5294,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "index",
-                      "scope": 18365,
+                      "scope": 18371,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -5307,17 +5307,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18314,
+                        "id": 18320,
                         "name": "ElementaryTypeName",
                         "src": "5118:7:76"
                       }
                     ],
-                    "id": 18315,
+                    "id": 18321,
                     "name": "VariableDeclaration",
                     "src": "5118:13:76"
                   }
                 ],
-                "id": 18316,
+                "id": 18322,
                 "name": "ParameterList",
                 "src": "5103:29:76"
               },
@@ -5327,7 +5327,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "slot",
-                      "scope": 18365,
+                      "scope": 18371,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -5340,12 +5340,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18317,
+                        "id": 18323,
                         "name": "ElementaryTypeName",
                         "src": "5168:7:76"
                       }
                     ],
-                    "id": 18318,
+                    "id": 18324,
                     "name": "VariableDeclaration",
                     "src": "5168:12:76"
                   },
@@ -5353,7 +5353,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "newIndex",
-                      "scope": 18365,
+                      "scope": 18371,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -5366,17 +5366,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 18319,
+                        "id": 18325,
                         "name": "ElementaryTypeName",
                         "src": "5182:7:76"
                       }
                     ],
-                    "id": 18320,
+                    "id": 18326,
                     "name": "VariableDeclaration",
                     "src": "5182:16:76"
                   }
                 ],
-                "id": 18321,
+                "id": 18327,
                 "name": "ParameterList",
                 "src": "5167:32:76"
               },
@@ -5401,11 +5401,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18320,
+                              "referencedDeclaration": 18326,
                               "type": "uint256",
                               "value": "newIndex"
                             },
-                            "id": 18322,
+                            "id": 18328,
                             "name": "Identifier",
                             "src": "5208:8:76"
                           },
@@ -5415,28 +5415,28 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18315,
+                              "referencedDeclaration": 18321,
                               "type": "uint256",
                               "value": "index"
                             },
-                            "id": 18323,
+                            "id": 18329,
                             "name": "Identifier",
                             "src": "5219:5:76"
                           }
                         ],
-                        "id": 18324,
+                        "id": 18330,
                         "name": "Assignment",
                         "src": "5208:16:76"
                       }
                     ],
-                    "id": 18325,
+                    "id": 18331,
                     "name": "ExpressionStatement",
                     "src": "5208:16:76"
                   },
                   {
                     "attributes": {
                       "assignments": [
-                        18327
+                        18333
                       ]
                     },
                     "children": [
@@ -5444,7 +5444,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "newNode",
-                          "scope": 18364,
+                          "scope": 18370,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -5457,12 +5457,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18326,
+                            "id": 18332,
                             "name": "ElementaryTypeName",
                             "src": "5230:7:76"
                           }
                         ],
-                        "id": 18327,
+                        "id": 18333,
                         "name": "VariableDeclaration",
                         "src": "5230:15:76"
                       },
@@ -5472,23 +5472,23 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 18313,
+                          "referencedDeclaration": 18319,
                           "type": "uint256",
                           "value": "node"
                         },
-                        "id": 18328,
+                        "id": 18334,
                         "name": "Identifier",
                         "src": "5248:4:76"
                       }
                     ],
-                    "id": 18329,
+                    "id": 18335,
                     "name": "VariableDeclarationStatement",
                     "src": "5230:22:76"
                   },
                   {
                     "attributes": {
                       "assignments": [
-                        18331
+                        18337
                       ]
                     },
                     "children": [
@@ -5496,7 +5496,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "currentSlotWeight",
-                          "scope": 18364,
+                          "scope": 18370,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -5509,12 +5509,12 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 18330,
+                            "id": 18336,
                             "name": "ElementaryTypeName",
                             "src": "5258:7:76"
                           }
                         ],
-                        "id": 18331,
+                        "id": 18337,
                         "name": "VariableDeclaration",
                         "src": "5258:25:76"
                       },
@@ -5539,11 +5539,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18327,
+                              "referencedDeclaration": 18333,
                               "type": "uint256",
                               "value": "newNode"
                             },
-                            "id": 18332,
+                            "id": 18338,
                             "name": "Identifier",
                             "src": "5286:7:76"
                           },
@@ -5553,21 +5553,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18171,
+                              "referencedDeclaration": 18177,
                               "type": "uint256",
                               "value": "SLOT_MAX"
                             },
-                            "id": 18333,
+                            "id": 18339,
                             "name": "Identifier",
                             "src": "5296:8:76"
                           }
                         ],
-                        "id": 18334,
+                        "id": 18340,
                         "name": "BinaryOperation",
                         "src": "5286:18:76"
                       }
                     ],
-                    "id": 18335,
+                    "id": 18341,
                     "name": "VariableDeclarationStatement",
                     "src": "5258:46:76"
                   },
@@ -5594,11 +5594,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18320,
+                              "referencedDeclaration": 18326,
                               "type": "uint256",
                               "value": "newIndex"
                             },
-                            "id": 18336,
+                            "id": 18342,
                             "name": "Identifier",
                             "src": "5317:8:76"
                           },
@@ -5608,16 +5608,16 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18331,
+                              "referencedDeclaration": 18337,
                               "type": "uint256",
                               "value": "currentSlotWeight"
                             },
-                            "id": 18337,
+                            "id": 18343,
                             "name": "Identifier",
                             "src": "5329:17:76"
                           }
                         ],
-                        "id": 18338,
+                        "id": 18344,
                         "name": "BinaryOperation",
                         "src": "5317:29:76"
                       },
@@ -5642,11 +5642,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18320,
+                                      "referencedDeclaration": 18326,
                                       "type": "uint256",
                                       "value": "newIndex"
                                     },
-                                    "id": 18339,
+                                    "id": 18345,
                                     "name": "Identifier",
                                     "src": "5356:8:76"
                                   },
@@ -5656,21 +5656,21 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18331,
+                                      "referencedDeclaration": 18337,
                                       "type": "uint256",
                                       "value": "currentSlotWeight"
                                     },
-                                    "id": 18340,
+                                    "id": 18346,
                                     "name": "Identifier",
                                     "src": "5368:17:76"
                                   }
                                 ],
-                                "id": 18341,
+                                "id": 18347,
                                 "name": "Assignment",
                                 "src": "5356:29:76"
                               }
                             ],
-                            "id": 18342,
+                            "id": 18348,
                             "name": "ExpressionStatement",
                             "src": "5356:29:76"
                           },
@@ -5694,21 +5694,21 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18318,
+                                      "referencedDeclaration": 18324,
                                       "type": "uint256",
                                       "value": "slot"
                                     },
-                                    "id": 18343,
+                                    "id": 18349,
                                     "name": "Identifier",
                                     "src": "5393:4:76"
                                   }
                                 ],
-                                "id": 18344,
+                                "id": 18350,
                                 "name": "UnaryOperation",
                                 "src": "5393:6:76"
                               }
                             ],
-                            "id": 18345,
+                            "id": 18351,
                             "name": "ExpressionStatement",
                             "src": "5393:6:76"
                           },
@@ -5731,11 +5731,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18327,
+                                      "referencedDeclaration": 18333,
                                       "type": "uint256",
                                       "value": "newNode"
                                     },
-                                    "id": 18346,
+                                    "id": 18352,
                                     "name": "Identifier",
                                     "src": "5407:7:76"
                                   },
@@ -5760,11 +5760,11 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18327,
+                                          "referencedDeclaration": 18333,
                                           "type": "uint256",
                                           "value": "newNode"
                                         },
-                                        "id": 18347,
+                                        "id": 18353,
                                         "name": "Identifier",
                                         "src": "5417:7:76"
                                       },
@@ -5774,26 +5774,26 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18158,
+                                          "referencedDeclaration": 18164,
                                           "type": "uint256",
                                           "value": "SLOT_WIDTH"
                                         },
-                                        "id": 18348,
+                                        "id": 18354,
                                         "name": "Identifier",
                                         "src": "5428:10:76"
                                       }
                                     ],
-                                    "id": 18349,
+                                    "id": 18355,
                                     "name": "BinaryOperation",
                                     "src": "5417:21:76"
                                   }
                                 ],
-                                "id": 18350,
+                                "id": 18356,
                                 "name": "Assignment",
                                 "src": "5407:31:76"
                               }
                             ],
-                            "id": 18351,
+                            "id": 18357,
                             "name": "ExpressionStatement",
                             "src": "5407:31:76"
                           },
@@ -5816,11 +5816,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18331,
+                                      "referencedDeclaration": 18337,
                                       "type": "uint256",
                                       "value": "currentSlotWeight"
                                     },
-                                    "id": 18352,
+                                    "id": 18358,
                                     "name": "Identifier",
                                     "src": "5446:17:76"
                                   },
@@ -5845,11 +5845,11 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18327,
+                                          "referencedDeclaration": 18333,
                                           "type": "uint256",
                                           "value": "newNode"
                                         },
-                                        "id": 18353,
+                                        "id": 18359,
                                         "name": "Identifier",
                                         "src": "5466:7:76"
                                       },
@@ -5859,42 +5859,42 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 18171,
+                                          "referencedDeclaration": 18177,
                                           "type": "uint256",
                                           "value": "SLOT_MAX"
                                         },
-                                        "id": 18354,
+                                        "id": 18360,
                                         "name": "Identifier",
                                         "src": "5476:8:76"
                                       }
                                     ],
-                                    "id": 18355,
+                                    "id": 18361,
                                     "name": "BinaryOperation",
                                     "src": "5466:18:76"
                                   }
                                 ],
-                                "id": 18356,
+                                "id": 18362,
                                 "name": "Assignment",
                                 "src": "5446:38:76"
                               }
                             ],
-                            "id": 18357,
+                            "id": 18363,
                             "name": "ExpressionStatement",
                             "src": "5446:38:76"
                           }
                         ],
-                        "id": 18358,
+                        "id": 18364,
                         "name": "Block",
                         "src": "5348:143:76"
                       }
                     ],
-                    "id": 18359,
+                    "id": 18365,
                     "name": "WhileStatement",
                     "src": "5310:181:76"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 18321
+                      "functionReturnParameters": 18327
                     },
                     "children": [
                       {
@@ -5914,11 +5914,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18318,
+                              "referencedDeclaration": 18324,
                               "type": "uint256",
                               "value": "slot"
                             },
-                            "id": 18360,
+                            "id": 18366,
                             "name": "Identifier",
                             "src": "5504:4:76"
                           },
@@ -5928,41 +5928,41 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18320,
+                              "referencedDeclaration": 18326,
                               "type": "uint256",
                               "value": "newIndex"
                             },
-                            "id": 18361,
+                            "id": 18367,
                             "name": "Identifier",
                             "src": "5510:8:76"
                           }
                         ],
-                        "id": 18362,
+                        "id": 18368,
                         "name": "TupleExpression",
                         "src": "5503:16:76"
                       }
                     ],
-                    "id": 18363,
+                    "id": 18369,
                     "name": "Return",
                     "src": "5496:23:76"
                   }
                 ],
-                "id": 18364,
+                "id": 18370,
                 "name": "Block",
                 "src": "5202:322:76"
               }
             ],
-            "id": 18365,
+            "id": 18371,
             "name": "FunctionDefinition",
             "src": "5078:446:76"
           }
         ],
-        "id": 18366,
+        "id": 18372,
         "name": "ContractDefinition",
         "src": "220:5306:76"
       }
     ],
-    "id": 18367,
+    "id": 18373,
     "name": "SourceUnit",
     "src": "0:5527:76"
   },
@@ -5974,12 +5974,12 @@
     "31": {
       "events": {},
       "links": {},
-      "address": "0xFDc4C0Cc0913DC5b2a32e2a5f12b98945b49e166",
-      "transactionHash": "0x49aa35855fd46da689164ad350a7b2125b188ba7eaefdc3675faf4cabd16368f"
+      "address": "0xCe47D5B819465d49886A70D01380F71187f53FF2",
+      "transactionHash": "0xb1afe05a60f2341a9bb1bbe1a3302cb44b918c1bb3123b3680f48eff6770c866"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:16:19.355Z",
+  "updatedAt": "2021-04-30T09:07:11.059Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

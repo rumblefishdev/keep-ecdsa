@@ -45,7 +45,7 @@ module.exports = {
           5
         )
       },
-      websocket: true,
+      websockets: true,
       gas: 6700000,
       gasPrice: 70000000,
       skipDryRun: false,

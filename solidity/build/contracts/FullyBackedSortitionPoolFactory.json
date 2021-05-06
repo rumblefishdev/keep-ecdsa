@@ -44,14 +44,14 @@
     "absolutePath": "@keep-network/sortition-pools/contracts/FullyBackedSortitionPoolFactory.sol",
     "exportedSymbols": {
       "FullyBackedSortitionPoolFactory": [
-        19168
+        19174
       ]
     },
-    "id": 19169,
+    "id": 19175,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 19141,
+        "id": 19147,
         "literals": [
           "solidity",
           "0.5",
@@ -63,10 +63,10 @@
       {
         "absolutePath": "@keep-network/sortition-pools/contracts/FullyBackedSortitionPool.sol",
         "file": "./FullyBackedSortitionPool.sol",
-        "id": 19142,
+        "id": 19148,
         "nodeType": "ImportDirective",
-        "scope": 19169,
-        "sourceUnit": 19140,
+        "scope": 19175,
+        "sourceUnit": 19146,
         "src": "25:40:79",
         "symbolAliases": [],
         "unitAlias": ""
@@ -74,10 +74,10 @@
       {
         "absolutePath": "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol",
         "file": "./api/IFullyBackedBonding.sol",
-        "id": 19143,
+        "id": 19149,
         "nodeType": "ImportDirective",
-        "scope": 19169,
-        "sourceUnit": 20976,
+        "scope": 19175,
+        "sourceUnit": 20982,
         "src": "66:39:79",
         "symbolAliases": [],
         "unitAlias": ""
@@ -85,10 +85,10 @@
       {
         "absolutePath": "@keep-network/sortition-pools/contracts/api/IStaking.sol",
         "file": "./api/IStaking.sol",
-        "id": 19144,
+        "id": 19150,
         "nodeType": "ImportDirective",
-        "scope": 19169,
-        "sourceUnit": 20988,
+        "scope": 19175,
+        "sourceUnit": 20994,
         "src": "106:28:79",
         "symbolAliases": [],
         "unitAlias": ""
@@ -96,21 +96,21 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          19139
+          19145
         ],
         "contractKind": "contract",
         "documentation": "@title Fully-Backed Sortition Pool Factory\n @notice Factory for the creation of fully-backed sortition pools.",
         "fullyImplemented": true,
-        "id": 19168,
+        "id": 19174,
         "linearizedBaseContracts": [
-          19168
+          19174
         ],
         "name": "FullyBackedSortitionPoolFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 19166,
+              "id": 19172,
               "nodeType": "Block",
               "src": "907:197:79",
               "statements": [
@@ -123,24 +123,24 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 19158,
+                            "id": 19164,
                             "name": "bondingContract",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 19146,
+                            "referencedDeclaration": 19152,
                             "src": "983:15:79",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IFullyBackedBonding_$20975",
+                              "typeIdentifier": "t_contract$_IFullyBackedBonding_$20981",
                               "typeString": "contract IFullyBackedBonding"
                             }
                           },
                           {
                             "argumentTypes": null,
-                            "id": 19159,
+                            "id": 19165,
                             "name": "minimumBondableValue",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 19148,
+                            "referencedDeclaration": 19154,
                             "src": "1010:20:79",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -149,11 +149,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 19160,
+                            "id": 19166,
                             "name": "bondWeightDivisor",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 19150,
+                            "referencedDeclaration": 19156,
                             "src": "1042:17:79",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -164,18 +164,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 19161,
+                              "id": 19167,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 22460,
+                              "referencedDeclaration": 22466,
                               "src": "1071:3:79",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 19162,
+                            "id": 19168,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -193,7 +193,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_IFullyBackedBonding_$20975",
+                              "typeIdentifier": "t_contract$_IFullyBackedBonding_$20981",
                               "typeString": "contract IFullyBackedBonding"
                             },
                             {
@@ -209,7 +209,7 @@
                               "typeString": "address payable"
                             }
                           ],
-                          "id": 19157,
+                          "id": 19163,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -217,23 +217,23 @@
                           "nodeType": "NewExpression",
                           "src": "943:28:79",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_IFullyBackedBonding_$20975_$_t_uint256_$_t_uint256_$_t_address_$returns$_t_contract$_FullyBackedSortitionPool_$19139_$",
+                            "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_IFullyBackedBonding_$20981_$_t_uint256_$_t_uint256_$_t_address_$returns$_t_contract$_FullyBackedSortitionPool_$19145_$",
                             "typeString": "function (contract IFullyBackedBonding,uint256,uint256,address) returns (contract FullyBackedSortitionPool)"
                           },
                           "typeName": {
                             "contractScope": null,
-                            "id": 19156,
+                            "id": 19162,
                             "name": "FullyBackedSortitionPool",
                             "nodeType": "UserDefinedTypeName",
-                            "referencedDeclaration": 19139,
+                            "referencedDeclaration": 19145,
                             "src": "947:24:79",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19139",
+                              "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19145",
                               "typeString": "contract FullyBackedSortitionPool"
                             }
                           }
                         },
-                        "id": 19163,
+                        "id": 19169,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -243,7 +243,7 @@
                         "nodeType": "FunctionCall",
                         "src": "943:148:79",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19139",
+                          "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19145",
                           "typeString": "contract FullyBackedSortitionPool"
                         }
                       }
@@ -251,11 +251,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19139",
+                          "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19145",
                           "typeString": "contract FullyBackedSortitionPool"
                         }
                       ],
-                      "id": 19155,
+                      "id": 19161,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -268,7 +268,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 19164,
+                    "id": 19170,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -282,46 +282,46 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 19154,
-                  "id": 19165,
+                  "functionReturnParameters": 19160,
+                  "id": 19171,
                   "nodeType": "Return",
                   "src": "913:186:79"
                 }
               ]
             },
             "documentation": "@notice Creates a new fully-backed sortition pool instance.\n @param bondingContract Fully Backed Bonding contract reference.\n @param minimumBondableValue Minimum unbonded value making the operator\n eligible to join the network.\n @param bondWeightDivisor Constant divisor for the available bond used to\n evalate the applicable weight.\n @return Address of the new fully-backed sortition pool contract instance.",
-            "id": 19167,
+            "id": 19173,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createSortitionPool",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19151,
+              "id": 19157,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 19146,
+                  "id": 19152,
                   "name": "bondingContract",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19167,
+                  "scope": 19173,
                   "src": "777:35:79",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IFullyBackedBonding_$20975",
+                    "typeIdentifier": "t_contract$_IFullyBackedBonding_$20981",
                     "typeString": "contract IFullyBackedBonding"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 19145,
+                    "id": 19151,
                     "name": "IFullyBackedBonding",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 20975,
+                    "referencedDeclaration": 20981,
                     "src": "777:19:79",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IFullyBackedBonding_$20975",
+                      "typeIdentifier": "t_contract$_IFullyBackedBonding_$20981",
                       "typeString": "contract IFullyBackedBonding"
                     }
                   },
@@ -330,10 +330,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 19148,
+                  "id": 19154,
                   "name": "minimumBondableValue",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19167,
+                  "scope": 19173,
                   "src": "818:28:79",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -342,7 +342,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 19147,
+                    "id": 19153,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "818:7:79",
@@ -356,10 +356,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 19150,
+                  "id": 19156,
                   "name": "bondWeightDivisor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19167,
+                  "scope": 19173,
                   "src": "852:25:79",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -368,7 +368,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 19149,
+                    "id": 19155,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "852:7:79",
@@ -384,15 +384,15 @@
               "src": "771:110:79"
             },
             "returnParameters": {
-              "id": 19154,
+              "id": 19160,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 19153,
+                  "id": 19159,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19167,
+                  "scope": 19173,
                   "src": "898:7:79",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -401,7 +401,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 19152,
+                    "id": 19158,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "898:7:79",
@@ -417,14 +417,14 @@
               ],
               "src": "897:9:79"
             },
-            "scope": 19168,
+            "scope": 19174,
             "src": "743:361:79",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 19169,
+        "scope": 19175,
         "src": "253:853:79"
       }
     ],
@@ -435,7 +435,7 @@
       "absolutePath": "@keep-network/sortition-pools/contracts/FullyBackedSortitionPoolFactory.sol",
       "exportedSymbols": {
         "FullyBackedSortitionPoolFactory": [
-          19168
+          19174
         ]
       }
     },
@@ -448,52 +448,52 @@
             ".17"
           ]
         },
-        "id": 19141,
+        "id": 19147,
         "name": "PragmaDirective",
         "src": "0:23:79"
       },
       {
         "attributes": {
-          "SourceUnit": 19140,
+          "SourceUnit": 19146,
           "absolutePath": "@keep-network/sortition-pools/contracts/FullyBackedSortitionPool.sol",
           "file": "./FullyBackedSortitionPool.sol",
-          "scope": 19169,
+          "scope": 19175,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 19142,
+        "id": 19148,
         "name": "ImportDirective",
         "src": "25:40:79"
       },
       {
         "attributes": {
-          "SourceUnit": 20976,
+          "SourceUnit": 20982,
           "absolutePath": "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol",
           "file": "./api/IFullyBackedBonding.sol",
-          "scope": 19169,
+          "scope": 19175,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 19143,
+        "id": 19149,
         "name": "ImportDirective",
         "src": "66:39:79"
       },
       {
         "attributes": {
-          "SourceUnit": 20988,
+          "SourceUnit": 20994,
           "absolutePath": "@keep-network/sortition-pools/contracts/api/IStaking.sol",
           "file": "./api/IStaking.sol",
-          "scope": 19169,
+          "scope": 19175,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 19144,
+        "id": 19150,
         "name": "ImportDirective",
         "src": "106:28:79"
       },
@@ -503,16 +503,16 @@
             null
           ],
           "contractDependencies": [
-            19139
+            19145
           ],
           "contractKind": "contract",
           "documentation": "@title Fully-Backed Sortition Pool Factory\n @notice Factory for the creation of fully-backed sortition pools.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            19168
+            19174
           ],
           "name": "FullyBackedSortitionPoolFactory",
-          "scope": 19169
+          "scope": 19175
         },
         "children": [
           {
@@ -525,7 +525,7 @@
                 null
               ],
               "name": "createSortitionPool",
-              "scope": 19168,
+              "scope": 19174,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -537,7 +537,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "bondingContract",
-                      "scope": 19167,
+                      "scope": 19173,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IFullyBackedBonding",
@@ -549,15 +549,15 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IFullyBackedBonding",
-                          "referencedDeclaration": 20975,
+                          "referencedDeclaration": 20981,
                           "type": "contract IFullyBackedBonding"
                         },
-                        "id": 19145,
+                        "id": 19151,
                         "name": "UserDefinedTypeName",
                         "src": "777:19:79"
                       }
                     ],
-                    "id": 19146,
+                    "id": 19152,
                     "name": "VariableDeclaration",
                     "src": "777:35:79"
                   },
@@ -565,7 +565,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "minimumBondableValue",
-                      "scope": 19167,
+                      "scope": 19173,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -578,12 +578,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 19147,
+                        "id": 19153,
                         "name": "ElementaryTypeName",
                         "src": "818:7:79"
                       }
                     ],
-                    "id": 19148,
+                    "id": 19154,
                     "name": "VariableDeclaration",
                     "src": "818:28:79"
                   },
@@ -591,7 +591,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "bondWeightDivisor",
-                      "scope": 19167,
+                      "scope": 19173,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -604,17 +604,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 19149,
+                        "id": 19155,
                         "name": "ElementaryTypeName",
                         "src": "852:7:79"
                       }
                     ],
-                    "id": 19150,
+                    "id": 19156,
                     "name": "VariableDeclaration",
                     "src": "852:25:79"
                   }
                 ],
-                "id": 19151,
+                "id": 19157,
                 "name": "ParameterList",
                 "src": "771:110:79"
               },
@@ -624,7 +624,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 19167,
+                      "scope": 19173,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -638,17 +638,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 19152,
+                        "id": 19158,
                         "name": "ElementaryTypeName",
                         "src": "898:7:79"
                       }
                     ],
-                    "id": 19153,
+                    "id": 19159,
                     "name": "VariableDeclaration",
                     "src": "898:7:79"
                   }
                 ],
-                "id": 19154,
+                "id": 19160,
                 "name": "ParameterList",
                 "src": "897:9:79"
               },
@@ -656,7 +656,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 19154
+                      "functionReturnParameters": 19160
                     },
                     "children": [
                       {
@@ -678,7 +678,7 @@
                             "attributes": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19139",
+                                  "typeIdentifier": "t_contract$_FullyBackedSortitionPool_$19145",
                                   "typeString": "contract FullyBackedSortitionPool"
                                 }
                               ],
@@ -689,7 +689,7 @@
                               "type": "type(address)",
                               "value": "address"
                             },
-                            "id": 19155,
+                            "id": 19161,
                             "name": "ElementaryTypeNameExpression",
                             "src": "926:7:79"
                           },
@@ -712,7 +712,7 @@
                                 "attributes": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_contract$_IFullyBackedBonding_$20975",
+                                      "typeIdentifier": "t_contract$_IFullyBackedBonding_$20981",
                                       "typeString": "contract IFullyBackedBonding"
                                     },
                                     {
@@ -739,15 +739,15 @@
                                     "attributes": {
                                       "contractScope": null,
                                       "name": "FullyBackedSortitionPool",
-                                      "referencedDeclaration": 19139,
+                                      "referencedDeclaration": 19145,
                                       "type": "contract FullyBackedSortitionPool"
                                     },
-                                    "id": 19156,
+                                    "id": 19162,
                                     "name": "UserDefinedTypeName",
                                     "src": "947:24:79"
                                   }
                                 ],
-                                "id": 19157,
+                                "id": 19163,
                                 "name": "NewExpression",
                                 "src": "943:28:79"
                               },
@@ -757,11 +757,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 19146,
+                                  "referencedDeclaration": 19152,
                                   "type": "contract IFullyBackedBonding",
                                   "value": "bondingContract"
                                 },
-                                "id": 19158,
+                                "id": 19164,
                                 "name": "Identifier",
                                 "src": "983:15:79"
                               },
@@ -771,11 +771,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 19148,
+                                  "referencedDeclaration": 19154,
                                   "type": "uint256",
                                   "value": "minimumBondableValue"
                                 },
-                                "id": 19159,
+                                "id": 19165,
                                 "name": "Identifier",
                                 "src": "1010:20:79"
                               },
@@ -785,11 +785,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 19150,
+                                  "referencedDeclaration": 19156,
                                   "type": "uint256",
                                   "value": "bondWeightDivisor"
                                 },
-                                "id": 19160,
+                                "id": 19166,
                                 "name": "Identifier",
                                 "src": "1042:17:79"
                               },
@@ -811,51 +811,51 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 22460,
+                                      "referencedDeclaration": 22466,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 19161,
+                                    "id": 19167,
                                     "name": "Identifier",
                                     "src": "1071:3:79"
                                   }
                                 ],
-                                "id": 19162,
+                                "id": 19168,
                                 "name": "MemberAccess",
                                 "src": "1071:10:79"
                               }
                             ],
-                            "id": 19163,
+                            "id": 19169,
                             "name": "FunctionCall",
                             "src": "943:148:79"
                           }
                         ],
-                        "id": 19164,
+                        "id": 19170,
                         "name": "FunctionCall",
                         "src": "926:173:79"
                       }
                     ],
-                    "id": 19165,
+                    "id": 19171,
                     "name": "Return",
                     "src": "913:186:79"
                   }
                 ],
-                "id": 19166,
+                "id": 19172,
                 "name": "Block",
                 "src": "907:197:79"
               }
             ],
-            "id": 19167,
+            "id": 19173,
             "name": "FunctionDefinition",
             "src": "743:361:79"
           }
         ],
-        "id": 19168,
+        "id": 19174,
         "name": "ContractDefinition",
         "src": "253:853:79"
       }
     ],
-    "id": 19169,
+    "id": 19175,
     "name": "SourceUnit",
     "src": "0:1107:79"
   },
@@ -867,14 +867,14 @@
     "31": {
       "events": {},
       "links": {
-        "StackLib": "0xF6bb2e0358F8E6A44B58C8BA82e77FAA358050C8"
+        "StackLib": "0x214054DFAf852eC52E4CA8e038262bA0598AC46c"
       },
-      "address": "0x59634428e1359D2079A9aD265211D3ED629811CB",
-      "transactionHash": "0xd26a51066c580eac82e5a2a7f6b6e130ec36a90e700e81629d1e8e80824443e7"
+      "address": "0x2B19f021Ff7d184205b9e72d99Df7C9C37Af0844",
+      "transactionHash": "0x5630ec8d56cec0568d4d05448d1f9f3e88d067c1a8ea3dc90080eb60ecb801d3"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:32:09.282Z",
+  "updatedAt": "2021-04-30T09:22:53.707Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {

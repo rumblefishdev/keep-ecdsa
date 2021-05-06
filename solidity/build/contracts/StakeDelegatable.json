@@ -97,14 +97,14 @@
     "absolutePath": "@keep-network/keep-core/contracts/StakeDelegatable.sol",
     "exportedSymbols": {
       "StakeDelegatable": [
-        11190
+        11196
       ]
     },
-    "id": 11191,
+    "id": 11197,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11118,
+        "id": 11124,
         "literals": [
           "solidity",
           "0.5",
@@ -116,10 +116,10 @@
       {
         "absolutePath": "@keep-network/keep-core/contracts/utils/OperatorParams.sol",
         "file": "./utils/OperatorParams.sol",
-        "id": 11119,
+        "id": 11125,
         "nodeType": "ImportDirective",
-        "scope": 11191,
-        "sourceUnit": 17126,
+        "scope": 11197,
+        "sourceUnit": 17132,
         "src": "1862:36:56",
         "symbolAliases": [],
         "unitAlias": ""
@@ -130,31 +130,31 @@
         "contractKind": "contract",
         "documentation": "@title Stake Delegatable\n @notice A base contract to allow stake delegation for staking contracts.",
         "fullyImplemented": true,
-        "id": 11190,
+        "id": 11196,
         "linearizedBaseContracts": [
-          11190
+          11196
         ],
         "name": "StakeDelegatable",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 11122,
+            "id": 11128,
             "libraryName": {
               "contractScope": null,
-              "id": 11120,
+              "id": 11126,
               "name": "OperatorParams",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 17125,
+              "referencedDeclaration": 17131,
               "src": "2044:14:56",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_OperatorParams_$17125",
+                "typeIdentifier": "t_contract$_OperatorParams_$17131",
                 "typeString": "library OperatorParams"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "2038:33:56",
             "typeName": {
-              "id": 11121,
+              "id": 11127,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "2063:7:56",
@@ -166,21 +166,21 @@
           },
           {
             "constant": false,
-            "id": 11126,
+            "id": 11132,
             "name": "operators",
             "nodeType": "VariableDeclaration",
-            "scope": 11190,
+            "scope": 11196,
             "src": "2077:47:56",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11135_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11141_storage_$",
               "typeString": "mapping(address => struct StakeDelegatable.Operator)"
             },
             "typeName": {
-              "id": 11125,
+              "id": 11131,
               "keyType": {
-                "id": 11123,
+                "id": 11129,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "2085:7:56",
@@ -192,18 +192,18 @@
               "nodeType": "Mapping",
               "src": "2077:28:56",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11135_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11141_storage_$",
                 "typeString": "mapping(address => struct StakeDelegatable.Operator)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 11124,
+                "id": 11130,
                 "name": "Operator",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 11135,
+                "referencedDeclaration": 11141,
                 "src": "2096:8:56",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Operator_$11135_storage_ptr",
+                  "typeIdentifier": "t_struct$_Operator_$11141_storage_ptr",
                   "typeString": "struct StakeDelegatable.Operator"
                 }
               }
@@ -213,14 +213,14 @@
           },
           {
             "canonicalName": "StakeDelegatable.Operator",
-            "id": 11135,
+            "id": 11141,
             "members": [
               {
                 "constant": false,
-                "id": 11128,
+                "id": 11134,
                 "name": "packedParams",
                 "nodeType": "VariableDeclaration",
-                "scope": 11135,
+                "scope": 11141,
                 "src": "2157:20:56",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -229,7 +229,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11127,
+                  "id": 11133,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2157:7:56",
@@ -243,10 +243,10 @@
               },
               {
                 "constant": false,
-                "id": 11130,
+                "id": 11136,
                 "name": "owner",
                 "nodeType": "VariableDeclaration",
-                "scope": 11135,
+                "scope": 11141,
                 "src": "2187:13:56",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -255,7 +255,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 11129,
+                  "id": 11135,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "2187:7:56",
@@ -270,10 +270,10 @@
               },
               {
                 "constant": false,
-                "id": 11132,
+                "id": 11138,
                 "name": "beneficiary",
                 "nodeType": "VariableDeclaration",
-                "scope": 11135,
+                "scope": 11141,
                 "src": "2210:27:56",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -282,7 +282,7 @@
                   "typeString": "address payable"
                 },
                 "typeName": {
-                  "id": 11131,
+                  "id": 11137,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "2210:15:56",
@@ -297,10 +297,10 @@
               },
               {
                 "constant": false,
-                "id": 11134,
+                "id": 11140,
                 "name": "authorizer",
                 "nodeType": "VariableDeclaration",
-                "scope": 11135,
+                "scope": 11141,
                 "src": "2247:18:56",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -309,7 +309,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 11133,
+                  "id": 11139,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "2247:7:56",
@@ -325,13 +325,13 @@
             ],
             "name": "Operator",
             "nodeType": "StructDefinition",
-            "scope": 11190,
+            "scope": 11196,
             "src": "2131:141:56",
             "visibility": "public"
           },
           {
             "body": {
-              "id": 11149,
+              "id": 11155,
               "nodeType": "Block",
               "src": "2560:68:56",
               "statements": [
@@ -347,25 +347,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 11142,
+                            "id": 11148,
                             "name": "operators",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11126,
+                            "referencedDeclaration": 11132,
                             "src": "2577:9:56",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11135_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11141_storage_$",
                               "typeString": "mapping(address => struct StakeDelegatable.Operator storage ref)"
                             }
                           },
-                          "id": 11144,
+                          "id": 11150,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 11143,
+                            "id": 11149,
                             "name": "_address",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11137,
+                            "referencedDeclaration": 11143,
                             "src": "2587:8:56",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -379,39 +379,39 @@
                           "nodeType": "IndexAccess",
                           "src": "2577:19:56",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Operator_$11135_storage",
+                            "typeIdentifier": "t_struct$_Operator_$11141_storage",
                             "typeString": "struct StakeDelegatable.Operator storage ref"
                           }
                         },
-                        "id": 11145,
+                        "id": 11151,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "packedParams",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 11128,
+                        "referencedDeclaration": 11134,
                         "src": "2577:32:56",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "id": 11146,
+                      "id": 11152,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "getAmount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 17017,
+                      "referencedDeclaration": 17023,
                       "src": "2577:42:56",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
                         "typeString": "function (uint256) pure returns (uint256)"
                       }
                     },
-                    "id": 11147,
+                    "id": 11153,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -425,30 +425,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 11141,
-                  "id": 11148,
+                  "functionReturnParameters": 11147,
+                  "id": 11154,
                   "nodeType": "Return",
                   "src": "2570:51:56"
                 }
               ]
             },
             "documentation": "@notice Gets the stake balance of the specified address.\n @param _address The address to query the balance of.\n @return An uint256 representing the amount staked by the passed address.",
-            "id": 11150,
+            "id": 11156,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "balanceOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11138,
+              "id": 11144,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11137,
+                  "id": 11143,
                   "name": "_address",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11150,
+                  "scope": 11156,
                   "src": "2504:16:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -457,7 +457,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11136,
+                    "id": 11142,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2504:7:56",
@@ -474,15 +474,15 @@
               "src": "2503:18:56"
             },
             "returnParameters": {
-              "id": 11141,
+              "id": 11147,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11140,
+                  "id": 11146,
                   "name": "balance",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11150,
+                  "scope": 11156,
                   "src": "2543:15:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -491,7 +491,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11139,
+                    "id": 11145,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2543:7:56",
@@ -506,7 +506,7 @@
               ],
               "src": "2542:17:56"
             },
-            "scope": 11190,
+            "scope": 11196,
             "src": "2485:143:56",
             "stateMutability": "view",
             "superFunction": null,
@@ -514,7 +514,7 @@
           },
           {
             "body": {
-              "id": 11162,
+              "id": 11168,
               "nodeType": "Block",
               "src": "2810:50:56",
               "statements": [
@@ -525,25 +525,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 11157,
+                        "id": 11163,
                         "name": "operators",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11126,
+                        "referencedDeclaration": 11132,
                         "src": "2827:9:56",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11135_storage_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11141_storage_$",
                           "typeString": "mapping(address => struct StakeDelegatable.Operator storage ref)"
                         }
                       },
-                      "id": 11159,
+                      "id": 11165,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 11158,
+                        "id": 11164,
                         "name": "_operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11152,
+                        "referencedDeclaration": 11158,
                         "src": "2837:9:56",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -557,48 +557,48 @@
                       "nodeType": "IndexAccess",
                       "src": "2827:20:56",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Operator_$11135_storage",
+                        "typeIdentifier": "t_struct$_Operator_$11141_storage",
                         "typeString": "struct StakeDelegatable.Operator storage ref"
                       }
                     },
-                    "id": 11160,
+                    "id": 11166,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "owner",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 11130,
+                    "referencedDeclaration": 11136,
                     "src": "2827:26:56",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 11156,
-                  "id": 11161,
+                  "functionReturnParameters": 11162,
+                  "id": 11167,
                   "nodeType": "Return",
                   "src": "2820:33:56"
                 }
               ]
             },
             "documentation": "@notice Gets the stake owner for the specified operator address.\n @return Stake owner address.",
-            "id": 11163,
+            "id": 11169,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "ownerOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11153,
+              "id": 11159,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11152,
+                  "id": 11158,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11163,
+                  "scope": 11169,
                   "src": "2761:17:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -607,7 +607,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11151,
+                    "id": 11157,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2761:7:56",
@@ -624,15 +624,15 @@
               "src": "2760:19:56"
             },
             "returnParameters": {
-              "id": 11156,
+              "id": 11162,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11155,
+                  "id": 11161,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11163,
+                  "scope": 11169,
                   "src": "2801:7:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -641,7 +641,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11154,
+                    "id": 11160,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2801:7:56",
@@ -657,7 +657,7 @@
               ],
               "src": "2800:9:56"
             },
-            "scope": 11190,
+            "scope": 11196,
             "src": "2744:116:56",
             "stateMutability": "view",
             "superFunction": null,
@@ -665,7 +665,7 @@
           },
           {
             "body": {
-              "id": 11175,
+              "id": 11181,
               "nodeType": "Block",
               "src": "3084:56:56",
               "statements": [
@@ -676,25 +676,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 11170,
+                        "id": 11176,
                         "name": "operators",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11126,
+                        "referencedDeclaration": 11132,
                         "src": "3101:9:56",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11135_storage_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11141_storage_$",
                           "typeString": "mapping(address => struct StakeDelegatable.Operator storage ref)"
                         }
                       },
-                      "id": 11172,
+                      "id": 11178,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 11171,
+                        "id": 11177,
                         "name": "_operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11165,
+                        "referencedDeclaration": 11171,
                         "src": "3111:9:56",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -708,48 +708,48 @@
                       "nodeType": "IndexAccess",
                       "src": "3101:20:56",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Operator_$11135_storage",
+                        "typeIdentifier": "t_struct$_Operator_$11141_storage",
                         "typeString": "struct StakeDelegatable.Operator storage ref"
                       }
                     },
-                    "id": 11173,
+                    "id": 11179,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "beneficiary",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 11132,
+                    "referencedDeclaration": 11138,
                     "src": "3101:32:56",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
                       "typeString": "address payable"
                     }
                   },
-                  "functionReturnParameters": 11169,
-                  "id": 11174,
+                  "functionReturnParameters": 11175,
+                  "id": 11180,
                   "nodeType": "Return",
                   "src": "3094:39:56"
                 }
               ]
             },
             "documentation": "@notice Gets the beneficiary for the specified operator address.\n @return Beneficiary address.",
-            "id": 11176,
+            "id": 11182,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "beneficiaryOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11166,
+              "id": 11172,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11165,
+                  "id": 11171,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11176,
+                  "scope": 11182,
                   "src": "2999:17:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -758,7 +758,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11164,
+                    "id": 11170,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2999:7:56",
@@ -775,15 +775,15 @@
               "src": "2998:19:56"
             },
             "returnParameters": {
-              "id": 11169,
+              "id": 11175,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11168,
+                  "id": 11174,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11176,
+                  "scope": 11182,
                   "src": "3063:15:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -792,7 +792,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 11167,
+                    "id": 11173,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3063:15:56",
@@ -808,7 +808,7 @@
               ],
               "src": "3062:17:56"
             },
-            "scope": 11190,
+            "scope": 11196,
             "src": "2976:164:56",
             "stateMutability": "view",
             "superFunction": 1809,
@@ -816,7 +816,7 @@
           },
           {
             "body": {
-              "id": 11188,
+              "id": 11194,
               "nodeType": "Block",
               "src": "3325:55:56",
               "statements": [
@@ -827,25 +827,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 11183,
+                        "id": 11189,
                         "name": "operators",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11126,
+                        "referencedDeclaration": 11132,
                         "src": "3342:9:56",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11135_storage_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Operator_$11141_storage_$",
                           "typeString": "mapping(address => struct StakeDelegatable.Operator storage ref)"
                         }
                       },
-                      "id": 11185,
+                      "id": 11191,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 11184,
+                        "id": 11190,
                         "name": "_operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11178,
+                        "referencedDeclaration": 11184,
                         "src": "3352:9:56",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -859,48 +859,48 @@
                       "nodeType": "IndexAccess",
                       "src": "3342:20:56",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Operator_$11135_storage",
+                        "typeIdentifier": "t_struct$_Operator_$11141_storage",
                         "typeString": "struct StakeDelegatable.Operator storage ref"
                       }
                     },
-                    "id": 11186,
+                    "id": 11192,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "authorizer",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 11134,
+                    "referencedDeclaration": 11140,
                     "src": "3342:31:56",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 11182,
-                  "id": 11187,
+                  "functionReturnParameters": 11188,
+                  "id": 11193,
                   "nodeType": "Return",
                   "src": "3335:38:56"
                 }
               ]
             },
             "documentation": "@notice Gets the authorizer for the specified operator address.\n @return Authorizer address.",
-            "id": 11189,
+            "id": 11195,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "authorizerOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11179,
+              "id": 11185,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11178,
+                  "id": 11184,
                   "name": "_operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11189,
+                  "scope": 11195,
                   "src": "3276:17:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -909,7 +909,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11177,
+                    "id": 11183,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3276:7:56",
@@ -926,15 +926,15 @@
               "src": "3275:19:56"
             },
             "returnParameters": {
-              "id": 11182,
+              "id": 11188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11181,
+                  "id": 11187,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11189,
+                  "scope": 11195,
                   "src": "3316:7:56",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -943,7 +943,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11180,
+                    "id": 11186,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3316:7:56",
@@ -959,14 +959,14 @@
               ],
               "src": "3315:9:56"
             },
-            "scope": 11190,
+            "scope": 11196,
             "src": "3254:126:56",
             "stateMutability": "view",
-            "superFunction": 8101,
+            "superFunction": 8107,
             "visibility": "public"
           }
         ],
-        "scope": 11191,
+        "scope": 11197,
         "src": "2006:1376:56"
       }
     ],
@@ -977,7 +977,7 @@
       "absolutePath": "@keep-network/keep-core/contracts/StakeDelegatable.sol",
       "exportedSymbols": {
         "StakeDelegatable": [
-          11190
+          11196
         ]
       }
     },
@@ -990,22 +990,22 @@
             ".17"
           ]
         },
-        "id": 11118,
+        "id": 11124,
         "name": "PragmaDirective",
         "src": "1837:23:56"
       },
       {
         "attributes": {
-          "SourceUnit": 17126,
+          "SourceUnit": 17132,
           "absolutePath": "@keep-network/keep-core/contracts/utils/OperatorParams.sol",
           "file": "./utils/OperatorParams.sol",
-          "scope": 11191,
+          "scope": 11197,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 11119,
+        "id": 11125,
         "name": "ImportDirective",
         "src": "1862:36:56"
       },
@@ -1021,10 +1021,10 @@
           "documentation": "@title Stake Delegatable\n @notice A base contract to allow stake delegation for staking contracts.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            11190
+            11196
           ],
           "name": "StakeDelegatable",
-          "scope": 11191
+          "scope": 11197
         },
         "children": [
           {
@@ -1033,10 +1033,10 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "OperatorParams",
-                  "referencedDeclaration": 17125,
+                  "referencedDeclaration": 17131,
                   "type": "library OperatorParams"
                 },
-                "id": 11120,
+                "id": 11126,
                 "name": "UserDefinedTypeName",
                 "src": "2044:14:56"
               },
@@ -1045,12 +1045,12 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 11121,
+                "id": 11127,
                 "name": "ElementaryTypeName",
                 "src": "2063:7:56"
               }
             ],
-            "id": 11122,
+            "id": 11128,
             "name": "UsingForDirective",
             "src": "2038:33:56"
           },
@@ -1058,7 +1058,7 @@
             "attributes": {
               "constant": false,
               "name": "operators",
-              "scope": 11190,
+              "scope": 11196,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => struct StakeDelegatable.Operator)",
@@ -1076,7 +1076,7 @@
                       "name": "address",
                       "type": "address"
                     },
-                    "id": 11123,
+                    "id": 11129,
                     "name": "ElementaryTypeName",
                     "src": "2085:7:56"
                   },
@@ -1084,20 +1084,20 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Operator",
-                      "referencedDeclaration": 11135,
+                      "referencedDeclaration": 11141,
                       "type": "struct StakeDelegatable.Operator"
                     },
-                    "id": 11124,
+                    "id": 11130,
                     "name": "UserDefinedTypeName",
                     "src": "2096:8:56"
                   }
                 ],
-                "id": 11125,
+                "id": 11131,
                 "name": "Mapping",
                 "src": "2077:28:56"
               }
             ],
-            "id": 11126,
+            "id": 11132,
             "name": "VariableDeclaration",
             "src": "2077:47:56"
           },
@@ -1105,7 +1105,7 @@
             "attributes": {
               "canonicalName": "StakeDelegatable.Operator",
               "name": "Operator",
-              "scope": 11190,
+              "scope": 11196,
               "visibility": "public"
             },
             "children": [
@@ -1113,7 +1113,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "packedParams",
-                  "scope": 11135,
+                  "scope": 11141,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1126,12 +1126,12 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 11127,
+                    "id": 11133,
                     "name": "ElementaryTypeName",
                     "src": "2157:7:56"
                   }
                 ],
-                "id": 11128,
+                "id": 11134,
                 "name": "VariableDeclaration",
                 "src": "2157:20:56"
               },
@@ -1139,7 +1139,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "owner",
-                  "scope": 11135,
+                  "scope": 11141,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address",
@@ -1153,12 +1153,12 @@
                       "stateMutability": "nonpayable",
                       "type": "address"
                     },
-                    "id": 11129,
+                    "id": 11135,
                     "name": "ElementaryTypeName",
                     "src": "2187:7:56"
                   }
                 ],
-                "id": 11130,
+                "id": 11136,
                 "name": "VariableDeclaration",
                 "src": "2187:13:56"
               },
@@ -1166,7 +1166,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "beneficiary",
-                  "scope": 11135,
+                  "scope": 11141,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address payable",
@@ -1180,12 +1180,12 @@
                       "stateMutability": "payable",
                       "type": "address payable"
                     },
-                    "id": 11131,
+                    "id": 11137,
                     "name": "ElementaryTypeName",
                     "src": "2210:15:56"
                   }
                 ],
-                "id": 11132,
+                "id": 11138,
                 "name": "VariableDeclaration",
                 "src": "2210:27:56"
               },
@@ -1193,7 +1193,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "authorizer",
-                  "scope": 11135,
+                  "scope": 11141,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address",
@@ -1207,17 +1207,17 @@
                       "stateMutability": "nonpayable",
                       "type": "address"
                     },
-                    "id": 11133,
+                    "id": 11139,
                     "name": "ElementaryTypeName",
                     "src": "2247:7:56"
                   }
                 ],
-                "id": 11134,
+                "id": 11140,
                 "name": "VariableDeclaration",
                 "src": "2247:18:56"
               }
             ],
-            "id": 11135,
+            "id": 11141,
             "name": "StructDefinition",
             "src": "2131:141:56"
           },
@@ -1231,7 +1231,7 @@
                 null
               ],
               "name": "balanceOf",
-              "scope": 11190,
+              "scope": 11196,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -1243,7 +1243,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_address",
-                      "scope": 11150,
+                      "scope": 11156,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1257,17 +1257,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 11136,
+                        "id": 11142,
                         "name": "ElementaryTypeName",
                         "src": "2504:7:56"
                       }
                     ],
-                    "id": 11137,
+                    "id": 11143,
                     "name": "VariableDeclaration",
                     "src": "2504:16:56"
                   }
                 ],
-                "id": 11138,
+                "id": 11144,
                 "name": "ParameterList",
                 "src": "2503:18:56"
               },
@@ -1277,7 +1277,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "balance",
-                      "scope": 11150,
+                      "scope": 11156,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1290,17 +1290,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 11139,
+                        "id": 11145,
                         "name": "ElementaryTypeName",
                         "src": "2543:7:56"
                       }
                     ],
-                    "id": 11140,
+                    "id": 11146,
                     "name": "VariableDeclaration",
                     "src": "2543:15:56"
                   }
                 ],
-                "id": 11141,
+                "id": 11147,
                 "name": "ParameterList",
                 "src": "2542:17:56"
               },
@@ -1308,7 +1308,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 11141
+                      "functionReturnParameters": 11147
                     },
                     "children": [
                       {
@@ -1339,7 +1339,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "getAmount",
-                              "referencedDeclaration": 17017,
+                              "referencedDeclaration": 17023,
                               "type": "function (uint256) pure returns (uint256)"
                             },
                             "children": [
@@ -1351,7 +1351,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "packedParams",
-                                  "referencedDeclaration": 11128,
+                                  "referencedDeclaration": 11134,
                                   "type": "uint256"
                                 },
                                 "children": [
@@ -1371,11 +1371,11 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 11126,
+                                          "referencedDeclaration": 11132,
                                           "type": "mapping(address => struct StakeDelegatable.Operator storage ref)",
                                           "value": "operators"
                                         },
-                                        "id": 11142,
+                                        "id": 11148,
                                         "name": "Identifier",
                                         "src": "2577:9:56"
                                       },
@@ -1385,46 +1385,46 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 11137,
+                                          "referencedDeclaration": 11143,
                                           "type": "address",
                                           "value": "_address"
                                         },
-                                        "id": 11143,
+                                        "id": 11149,
                                         "name": "Identifier",
                                         "src": "2587:8:56"
                                       }
                                     ],
-                                    "id": 11144,
+                                    "id": 11150,
                                     "name": "IndexAccess",
                                     "src": "2577:19:56"
                                   }
                                 ],
-                                "id": 11145,
+                                "id": 11151,
                                 "name": "MemberAccess",
                                 "src": "2577:32:56"
                               }
                             ],
-                            "id": 11146,
+                            "id": 11152,
                             "name": "MemberAccess",
                             "src": "2577:42:56"
                           }
                         ],
-                        "id": 11147,
+                        "id": 11153,
                         "name": "FunctionCall",
                         "src": "2577:44:56"
                       }
                     ],
-                    "id": 11148,
+                    "id": 11154,
                     "name": "Return",
                     "src": "2570:51:56"
                   }
                 ],
-                "id": 11149,
+                "id": 11155,
                 "name": "Block",
                 "src": "2560:68:56"
               }
             ],
-            "id": 11150,
+            "id": 11156,
             "name": "FunctionDefinition",
             "src": "2485:143:56"
           },
@@ -1438,7 +1438,7 @@
                 null
               ],
               "name": "ownerOf",
-              "scope": 11190,
+              "scope": 11196,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -1450,7 +1450,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operator",
-                      "scope": 11163,
+                      "scope": 11169,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1464,17 +1464,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 11151,
+                        "id": 11157,
                         "name": "ElementaryTypeName",
                         "src": "2761:7:56"
                       }
                     ],
-                    "id": 11152,
+                    "id": 11158,
                     "name": "VariableDeclaration",
                     "src": "2761:17:56"
                   }
                 ],
-                "id": 11153,
+                "id": 11159,
                 "name": "ParameterList",
                 "src": "2760:19:56"
               },
@@ -1484,7 +1484,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 11163,
+                      "scope": 11169,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1498,17 +1498,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 11154,
+                        "id": 11160,
                         "name": "ElementaryTypeName",
                         "src": "2801:7:56"
                       }
                     ],
-                    "id": 11155,
+                    "id": 11161,
                     "name": "VariableDeclaration",
                     "src": "2801:7:56"
                   }
                 ],
-                "id": 11156,
+                "id": 11162,
                 "name": "ParameterList",
                 "src": "2800:9:56"
               },
@@ -1516,7 +1516,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 11156
+                      "functionReturnParameters": 11162
                     },
                     "children": [
                       {
@@ -1527,7 +1527,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "member_name": "owner",
-                          "referencedDeclaration": 11130,
+                          "referencedDeclaration": 11136,
                           "type": "address"
                         },
                         "children": [
@@ -1547,11 +1547,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11126,
+                                  "referencedDeclaration": 11132,
                                   "type": "mapping(address => struct StakeDelegatable.Operator storage ref)",
                                   "value": "operators"
                                 },
-                                "id": 11157,
+                                "id": 11163,
                                 "name": "Identifier",
                                 "src": "2827:9:56"
                               },
@@ -1561,36 +1561,36 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11152,
+                                  "referencedDeclaration": 11158,
                                   "type": "address",
                                   "value": "_operator"
                                 },
-                                "id": 11158,
+                                "id": 11164,
                                 "name": "Identifier",
                                 "src": "2837:9:56"
                               }
                             ],
-                            "id": 11159,
+                            "id": 11165,
                             "name": "IndexAccess",
                             "src": "2827:20:56"
                           }
                         ],
-                        "id": 11160,
+                        "id": 11166,
                         "name": "MemberAccess",
                         "src": "2827:26:56"
                       }
                     ],
-                    "id": 11161,
+                    "id": 11167,
                     "name": "Return",
                     "src": "2820:33:56"
                   }
                 ],
-                "id": 11162,
+                "id": 11168,
                 "name": "Block",
                 "src": "2810:50:56"
               }
             ],
-            "id": 11163,
+            "id": 11169,
             "name": "FunctionDefinition",
             "src": "2744:116:56"
           },
@@ -1604,7 +1604,7 @@
                 null
               ],
               "name": "beneficiaryOf",
-              "scope": 11190,
+              "scope": 11196,
               "stateMutability": "view",
               "superFunction": 1809,
               "visibility": "public"
@@ -1616,7 +1616,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operator",
-                      "scope": 11176,
+                      "scope": 11182,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1630,17 +1630,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 11164,
+                        "id": 11170,
                         "name": "ElementaryTypeName",
                         "src": "2999:7:56"
                       }
                     ],
-                    "id": 11165,
+                    "id": 11171,
                     "name": "VariableDeclaration",
                     "src": "2999:17:56"
                   }
                 ],
-                "id": 11166,
+                "id": 11172,
                 "name": "ParameterList",
                 "src": "2998:19:56"
               },
@@ -1650,7 +1650,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 11176,
+                      "scope": 11182,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -1664,17 +1664,17 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 11167,
+                        "id": 11173,
                         "name": "ElementaryTypeName",
                         "src": "3063:15:56"
                       }
                     ],
-                    "id": 11168,
+                    "id": 11174,
                     "name": "VariableDeclaration",
                     "src": "3063:15:56"
                   }
                 ],
-                "id": 11169,
+                "id": 11175,
                 "name": "ParameterList",
                 "src": "3062:17:56"
               },
@@ -1682,7 +1682,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 11169
+                      "functionReturnParameters": 11175
                     },
                     "children": [
                       {
@@ -1693,7 +1693,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "member_name": "beneficiary",
-                          "referencedDeclaration": 11132,
+                          "referencedDeclaration": 11138,
                           "type": "address payable"
                         },
                         "children": [
@@ -1713,11 +1713,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11126,
+                                  "referencedDeclaration": 11132,
                                   "type": "mapping(address => struct StakeDelegatable.Operator storage ref)",
                                   "value": "operators"
                                 },
-                                "id": 11170,
+                                "id": 11176,
                                 "name": "Identifier",
                                 "src": "3101:9:56"
                               },
@@ -1727,36 +1727,36 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11165,
+                                  "referencedDeclaration": 11171,
                                   "type": "address",
                                   "value": "_operator"
                                 },
-                                "id": 11171,
+                                "id": 11177,
                                 "name": "Identifier",
                                 "src": "3111:9:56"
                               }
                             ],
-                            "id": 11172,
+                            "id": 11178,
                             "name": "IndexAccess",
                             "src": "3101:20:56"
                           }
                         ],
-                        "id": 11173,
+                        "id": 11179,
                         "name": "MemberAccess",
                         "src": "3101:32:56"
                       }
                     ],
-                    "id": 11174,
+                    "id": 11180,
                     "name": "Return",
                     "src": "3094:39:56"
                   }
                 ],
-                "id": 11175,
+                "id": 11181,
                 "name": "Block",
                 "src": "3084:56:56"
               }
             ],
-            "id": 11176,
+            "id": 11182,
             "name": "FunctionDefinition",
             "src": "2976:164:56"
           },
@@ -1770,9 +1770,9 @@
                 null
               ],
               "name": "authorizerOf",
-              "scope": 11190,
+              "scope": 11196,
               "stateMutability": "view",
-              "superFunction": 8101,
+              "superFunction": 8107,
               "visibility": "public"
             },
             "children": [
@@ -1782,7 +1782,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_operator",
-                      "scope": 11189,
+                      "scope": 11195,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1796,17 +1796,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 11177,
+                        "id": 11183,
                         "name": "ElementaryTypeName",
                         "src": "3276:7:56"
                       }
                     ],
-                    "id": 11178,
+                    "id": 11184,
                     "name": "VariableDeclaration",
                     "src": "3276:17:56"
                   }
                 ],
-                "id": 11179,
+                "id": 11185,
                 "name": "ParameterList",
                 "src": "3275:19:56"
               },
@@ -1816,7 +1816,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 11189,
+                      "scope": 11195,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1830,17 +1830,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 11180,
+                        "id": 11186,
                         "name": "ElementaryTypeName",
                         "src": "3316:7:56"
                       }
                     ],
-                    "id": 11181,
+                    "id": 11187,
                     "name": "VariableDeclaration",
                     "src": "3316:7:56"
                   }
                 ],
-                "id": 11182,
+                "id": 11188,
                 "name": "ParameterList",
                 "src": "3315:9:56"
               },
@@ -1848,7 +1848,7 @@
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 11182
+                      "functionReturnParameters": 11188
                     },
                     "children": [
                       {
@@ -1859,7 +1859,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "member_name": "authorizer",
-                          "referencedDeclaration": 11134,
+                          "referencedDeclaration": 11140,
                           "type": "address"
                         },
                         "children": [
@@ -1879,11 +1879,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11126,
+                                  "referencedDeclaration": 11132,
                                   "type": "mapping(address => struct StakeDelegatable.Operator storage ref)",
                                   "value": "operators"
                                 },
-                                "id": 11183,
+                                "id": 11189,
                                 "name": "Identifier",
                                 "src": "3342:9:56"
                               },
@@ -1893,46 +1893,46 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11178,
+                                  "referencedDeclaration": 11184,
                                   "type": "address",
                                   "value": "_operator"
                                 },
-                                "id": 11184,
+                                "id": 11190,
                                 "name": "Identifier",
                                 "src": "3352:9:56"
                               }
                             ],
-                            "id": 11185,
+                            "id": 11191,
                             "name": "IndexAccess",
                             "src": "3342:20:56"
                           }
                         ],
-                        "id": 11186,
+                        "id": 11192,
                         "name": "MemberAccess",
                         "src": "3342:31:56"
                       }
                     ],
-                    "id": 11187,
+                    "id": 11193,
                     "name": "Return",
                     "src": "3335:38:56"
                   }
                 ],
-                "id": 11188,
+                "id": 11194,
                 "name": "Block",
                 "src": "3325:55:56"
               }
             ],
-            "id": 11189,
+            "id": 11195,
             "name": "FunctionDefinition",
             "src": "3254:126:56"
           }
         ],
-        "id": 11190,
+        "id": 11196,
         "name": "ContractDefinition",
         "src": "2006:1376:56"
       }
     ],
-    "id": 11191,
+    "id": 11197,
     "name": "SourceUnit",
     "src": "1837:1546:56"
   },
@@ -1942,7 +1942,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.435Z",
+  "updatedAt": "2021-04-30T08:59:51.277Z",
   "devdoc": {
     "methods": {
       "authorizerOf(address)": {

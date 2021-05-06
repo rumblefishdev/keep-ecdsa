@@ -161,14 +161,14 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeep.sol",
     "exportedSymbols": {
       "IBondedECDSAKeep": [
-        5720
+        5726
       ]
     },
-    "id": 5721,
+    "id": 5727,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5668,
+        "id": 5674,
         "literals": [
           "solidity",
           "0.5",
@@ -183,9 +183,9 @@
         "contractKind": "contract",
         "documentation": "@title ECDSA Keep\n @notice Contract reflecting an ECDSA keep.",
         "fullyImplemented": false,
-        "id": 5720,
+        "id": 5726,
         "linearizedBaseContracts": [
-          5720
+          5726
         ],
         "name": "IBondedECDSAKeep",
         "nodeType": "ContractDefinition",
@@ -193,28 +193,28 @@
           {
             "body": null,
             "documentation": "@notice Returns public key of this keep.\n @return Keeps's public key.",
-            "id": 5673,
+            "id": 5679,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getPublicKey",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5669,
+              "id": 5675,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2069:2:19"
             },
             "returnParameters": {
-              "id": 5672,
+              "id": 5678,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5671,
+                  "id": 5677,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5673,
+                  "scope": 5679,
                   "src": "2095:12:19",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -223,7 +223,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 5670,
+                    "id": 5676,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2095:5:19",
@@ -238,7 +238,7 @@
               ],
               "src": "2094:14:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "2048:61:19",
             "stateMutability": "view",
             "superFunction": null,
@@ -247,28 +247,28 @@
           {
             "body": null,
             "documentation": "@notice Returns the amount of the keep's ETH bond in wei.\n @return The amount of the keep's ETH bond in wei.",
-            "id": 5678,
+            "id": 5684,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "checkBondAmount",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5674,
+              "id": 5680,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2263:2:19"
             },
             "returnParameters": {
-              "id": 5677,
+              "id": 5683,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5676,
+                  "id": 5682,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5678,
+                  "scope": 5684,
                   "src": "2289:7:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -277,7 +277,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5675,
+                    "id": 5681,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2289:7:19",
@@ -292,7 +292,7 @@
               ],
               "src": "2288:9:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "2239:59:19",
             "stateMutability": "view",
             "superFunction": null,
@@ -301,22 +301,22 @@
           {
             "body": null,
             "documentation": "@notice Calculates a signature over provided digest by the keep. Note that\n signatures from the keep not explicitly requested by calling `sign`\n will be provable as fraud via `submitSignatureFraud`.\n @param _digest Digest to be signed.",
-            "id": 5683,
+            "id": 5689,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "sign",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5681,
+              "id": 5687,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5680,
+                  "id": 5686,
                   "name": "_digest",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5683,
+                  "scope": 5689,
                   "src": "2583:15:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -325,7 +325,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5679,
+                    "id": 5685,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2583:7:19",
@@ -341,12 +341,12 @@
               "src": "2582:17:19"
             },
             "returnParameters": {
-              "id": 5682,
+              "id": 5688,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2608:0:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "2569:40:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -355,25 +355,25 @@
           {
             "body": null,
             "documentation": "@notice Distributes ETH reward evenly across keep signer beneficiaries.\n @dev Only the value passed to this function is distributed.",
-            "id": 5686,
+            "id": 5692,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "distributeETHReward",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5684,
+              "id": 5690,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2791:2:19"
             },
             "returnParameters": {
-              "id": 5685,
+              "id": 5691,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2810:0:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "2763:48:19",
             "stateMutability": "payable",
             "superFunction": null,
@@ -382,22 +382,22 @@
           {
             "body": null,
             "documentation": "@notice Distributes ERC20 reward evenly across keep signer beneficiaries.\n @dev This works with any ERC20 token that implements a transferFrom\n function.\n This function only has authority over pre-approved\n token amount. We don't explicitly check for allowance, SafeMath\n subtraction overflow is enough protection.\n @param _tokenAddress Address of the ERC20 token to distribute.\n @param _value Amount of ERC20 token to distribute.",
-            "id": 5693,
+            "id": 5699,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "distributeERC20Reward",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5691,
+              "id": 5697,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5688,
+                  "id": 5694,
                   "name": "_tokenAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5693,
+                  "scope": 5699,
                   "src": "3336:21:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -406,7 +406,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5687,
+                    "id": 5693,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3336:7:19",
@@ -421,10 +421,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5690,
+                  "id": 5696,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5693,
+                  "scope": 5699,
                   "src": "3359:14:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -433,7 +433,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5689,
+                    "id": 5695,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3359:7:19",
@@ -449,12 +449,12 @@
               "src": "3335:39:19"
             },
             "returnParameters": {
-              "id": 5692,
+              "id": 5698,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3391:0:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "3305:87:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -463,25 +463,25 @@
           {
             "body": null,
             "documentation": "@notice Seizes the signers' ETH bonds. After seizing bonds keep is\n terminated so it will no longer respond to signing requests. Bonds can\n be seized only when there is no signing in progress or requested signing\n process has timed out. This function seizes all of signers' bonds.\n The application may decide to return part of bonds later after they are\n processed using returnPartialSignerBonds function.",
-            "id": 5696,
+            "id": 5702,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "seizeSignerBonds",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5694,
+              "id": 5700,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3872:2:19"
             },
             "returnParameters": {
-              "id": 5695,
+              "id": 5701,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3883:0:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "3847:37:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -490,22 +490,22 @@
           {
             "body": null,
             "documentation": "@notice Returns partial signer's ETH bonds to the pool as an unbounded\n value. This function is called after bonds have been seized and processed\n by the privileged application after calling seizeSignerBonds function.\n It is entirely up to the application if a part of signers' bonds is\n returned. The application may decide for that but may also decide to\n seize bonds and do not return anything.",
-            "id": 5701,
+            "id": 5707,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "returnPartialSignerBonds",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5699,
+              "id": 5705,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5698,
+                  "id": 5704,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5701,
+                  "scope": 5707,
                   "src": "4365:15:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -514,7 +514,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5697,
+                    "id": 5703,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4365:7:19",
@@ -530,12 +530,12 @@
               "src": "4364:17:19"
             },
             "returnParameters": {
-              "id": 5700,
+              "id": 5706,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "4390:0:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "4331:60:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -544,22 +544,22 @@
           {
             "body": null,
             "documentation": "@notice Submits a fraud proof for a valid signature from this keep that was\n not first approved via a call to sign.\n @dev The function expects the signed digest to be calculated as a sha256\n hash of the preimage: `sha256(_preimage)`.\n @param _v Signature's header byte: `27 + recoveryID`.\n @param _r R part of ECDSA signature.\n @param _s S part of ECDSA signature.\n @param _signedDigest Digest for the provided signature. Result of hashing\n the preimage.\n @param _preimage Preimage of the hashed message.\n @return True if fraud, error otherwise.",
-            "id": 5716,
+            "id": 5722,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "submitSignatureFraud",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5712,
+              "id": 5718,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5703,
+                  "id": 5709,
                   "name": "_v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5716,
+                  "scope": 5722,
                   "src": "5060:8:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -568,7 +568,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 5702,
+                    "id": 5708,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "5060:5:19",
@@ -582,10 +582,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5705,
+                  "id": 5711,
                   "name": "_r",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5716,
+                  "scope": 5722,
                   "src": "5078:10:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -594,7 +594,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5704,
+                    "id": 5710,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "5078:7:19",
@@ -608,10 +608,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5707,
+                  "id": 5713,
                   "name": "_s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5716,
+                  "scope": 5722,
                   "src": "5098:10:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -620,7 +620,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5706,
+                    "id": 5712,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "5098:7:19",
@@ -634,10 +634,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5709,
+                  "id": 5715,
                   "name": "_signedDigest",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5716,
+                  "scope": 5722,
                   "src": "5118:21:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -646,7 +646,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 5708,
+                    "id": 5714,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "5118:7:19",
@@ -660,10 +660,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5711,
+                  "id": 5717,
                   "name": "_preimage",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5716,
+                  "scope": 5722,
                   "src": "5149:24:19",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -672,7 +672,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 5710,
+                    "id": 5716,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "5149:5:19",
@@ -688,15 +688,15 @@
               "src": "5050:129:19"
             },
             "returnParameters": {
-              "id": 5715,
+              "id": 5721,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5714,
+                  "id": 5720,
                   "name": "_isFraud",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5716,
+                  "scope": 5722,
                   "src": "5206:13:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -705,7 +705,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 5713,
+                    "id": 5719,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "5206:4:19",
@@ -720,7 +720,7 @@
               ],
               "src": "5205:15:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "5021:200:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -729,32 +729,32 @@
           {
             "body": null,
             "documentation": "@notice Closes keep when no longer needed. Releases bonds to the keep\n members. Keep can be closed only when there is no signing in progress or\n requested signing process has timed out.\n @dev The function can be called only by the owner of the keep and only\n if the keep has not been already closed.",
-            "id": 5719,
+            "id": 5725,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "closeKeep",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5717,
+              "id": 5723,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5581:2:19"
             },
             "returnParameters": {
-              "id": 5718,
+              "id": 5724,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5592:0:19"
             },
-            "scope": 5720,
+            "scope": 5726,
             "src": "5563:30:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 5721,
+        "scope": 5727,
         "src": "1931:3664:19"
       }
     ],
@@ -765,7 +765,7 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/api/IBondedECDSAKeep.sol",
       "exportedSymbols": {
         "IBondedECDSAKeep": [
-          5720
+          5726
         ]
       }
     },
@@ -778,7 +778,7 @@
             ".17"
           ]
         },
-        "id": 5668,
+        "id": 5674,
         "name": "PragmaDirective",
         "src": "1837:23:19"
       },
@@ -794,10 +794,10 @@
           "documentation": "@title ECDSA Keep\n @notice Contract reflecting an ECDSA keep.",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            5720
+            5726
           ],
           "name": "IBondedECDSAKeep",
-          "scope": 5721
+          "scope": 5727
         },
         "children": [
           {
@@ -811,7 +811,7 @@
                 null
               ],
               "name": "getPublicKey",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
@@ -824,7 +824,7 @@
                   ]
                 },
                 "children": [],
-                "id": 5669,
+                "id": 5675,
                 "name": "ParameterList",
                 "src": "2069:2:19"
               },
@@ -834,7 +834,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 5673,
+                      "scope": 5679,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "bytes",
@@ -847,22 +847,22 @@
                           "name": "bytes",
                           "type": "bytes"
                         },
-                        "id": 5670,
+                        "id": 5676,
                         "name": "ElementaryTypeName",
                         "src": "2095:5:19"
                       }
                     ],
-                    "id": 5671,
+                    "id": 5677,
                     "name": "VariableDeclaration",
                     "src": "2095:12:19"
                   }
                 ],
-                "id": 5672,
+                "id": 5678,
                 "name": "ParameterList",
                 "src": "2094:14:19"
               }
             ],
-            "id": 5673,
+            "id": 5679,
             "name": "FunctionDefinition",
             "src": "2048:61:19"
           },
@@ -877,7 +877,7 @@
                 null
               ],
               "name": "checkBondAmount",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
@@ -890,7 +890,7 @@
                   ]
                 },
                 "children": [],
-                "id": 5674,
+                "id": 5680,
                 "name": "ParameterList",
                 "src": "2263:2:19"
               },
@@ -900,7 +900,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 5678,
+                      "scope": 5684,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -913,22 +913,22 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 5675,
+                        "id": 5681,
                         "name": "ElementaryTypeName",
                         "src": "2289:7:19"
                       }
                     ],
-                    "id": 5676,
+                    "id": 5682,
                     "name": "VariableDeclaration",
                     "src": "2289:7:19"
                   }
                 ],
-                "id": 5677,
+                "id": 5683,
                 "name": "ParameterList",
                 "src": "2288:9:19"
               }
             ],
-            "id": 5678,
+            "id": 5684,
             "name": "FunctionDefinition",
             "src": "2239:59:19"
           },
@@ -943,7 +943,7 @@
                 null
               ],
               "name": "sign",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -955,7 +955,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_digest",
-                      "scope": 5683,
+                      "scope": 5689,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -968,17 +968,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 5679,
+                        "id": 5685,
                         "name": "ElementaryTypeName",
                         "src": "2583:7:19"
                       }
                     ],
-                    "id": 5680,
+                    "id": 5686,
                     "name": "VariableDeclaration",
                     "src": "2583:15:19"
                   }
                 ],
-                "id": 5681,
+                "id": 5687,
                 "name": "ParameterList",
                 "src": "2582:17:19"
               },
@@ -989,12 +989,12 @@
                   ]
                 },
                 "children": [],
-                "id": 5682,
+                "id": 5688,
                 "name": "ParameterList",
                 "src": "2608:0:19"
               }
             ],
-            "id": 5683,
+            "id": 5689,
             "name": "FunctionDefinition",
             "src": "2569:40:19"
           },
@@ -1009,7 +1009,7 @@
                 null
               ],
               "name": "distributeETHReward",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "external"
@@ -1022,7 +1022,7 @@
                   ]
                 },
                 "children": [],
-                "id": 5684,
+                "id": 5690,
                 "name": "ParameterList",
                 "src": "2791:2:19"
               },
@@ -1033,12 +1033,12 @@
                   ]
                 },
                 "children": [],
-                "id": 5685,
+                "id": 5691,
                 "name": "ParameterList",
                 "src": "2810:0:19"
               }
             ],
-            "id": 5686,
+            "id": 5692,
             "name": "FunctionDefinition",
             "src": "2763:48:19"
           },
@@ -1053,7 +1053,7 @@
                 null
               ],
               "name": "distributeERC20Reward",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1065,7 +1065,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_tokenAddress",
-                      "scope": 5693,
+                      "scope": 5699,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1079,12 +1079,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 5687,
+                        "id": 5693,
                         "name": "ElementaryTypeName",
                         "src": "3336:7:19"
                       }
                     ],
-                    "id": 5688,
+                    "id": 5694,
                     "name": "VariableDeclaration",
                     "src": "3336:21:19"
                   },
@@ -1092,7 +1092,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_value",
-                      "scope": 5693,
+                      "scope": 5699,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1105,17 +1105,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 5689,
+                        "id": 5695,
                         "name": "ElementaryTypeName",
                         "src": "3359:7:19"
                       }
                     ],
-                    "id": 5690,
+                    "id": 5696,
                     "name": "VariableDeclaration",
                     "src": "3359:14:19"
                   }
                 ],
-                "id": 5691,
+                "id": 5697,
                 "name": "ParameterList",
                 "src": "3335:39:19"
               },
@@ -1126,12 +1126,12 @@
                   ]
                 },
                 "children": [],
-                "id": 5692,
+                "id": 5698,
                 "name": "ParameterList",
                 "src": "3391:0:19"
               }
             ],
-            "id": 5693,
+            "id": 5699,
             "name": "FunctionDefinition",
             "src": "3305:87:19"
           },
@@ -1146,7 +1146,7 @@
                 null
               ],
               "name": "seizeSignerBonds",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1159,7 +1159,7 @@
                   ]
                 },
                 "children": [],
-                "id": 5694,
+                "id": 5700,
                 "name": "ParameterList",
                 "src": "3872:2:19"
               },
@@ -1170,12 +1170,12 @@
                   ]
                 },
                 "children": [],
-                "id": 5695,
+                "id": 5701,
                 "name": "ParameterList",
                 "src": "3883:0:19"
               }
             ],
-            "id": 5696,
+            "id": 5702,
             "name": "FunctionDefinition",
             "src": "3847:37:19"
           },
@@ -1190,7 +1190,7 @@
                 null
               ],
               "name": "returnPartialSignerBonds",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1202,7 +1202,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_amount",
-                      "scope": 5701,
+                      "scope": 5707,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1215,17 +1215,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 5697,
+                        "id": 5703,
                         "name": "ElementaryTypeName",
                         "src": "4365:7:19"
                       }
                     ],
-                    "id": 5698,
+                    "id": 5704,
                     "name": "VariableDeclaration",
                     "src": "4365:15:19"
                   }
                 ],
-                "id": 5699,
+                "id": 5705,
                 "name": "ParameterList",
                 "src": "4364:17:19"
               },
@@ -1236,12 +1236,12 @@
                   ]
                 },
                 "children": [],
-                "id": 5700,
+                "id": 5706,
                 "name": "ParameterList",
                 "src": "4390:0:19"
               }
             ],
-            "id": 5701,
+            "id": 5707,
             "name": "FunctionDefinition",
             "src": "4331:60:19"
           },
@@ -1256,7 +1256,7 @@
                 null
               ],
               "name": "submitSignatureFraud",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1268,7 +1268,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_v",
-                      "scope": 5716,
+                      "scope": 5722,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint8",
@@ -1281,12 +1281,12 @@
                           "name": "uint8",
                           "type": "uint8"
                         },
-                        "id": 5702,
+                        "id": 5708,
                         "name": "ElementaryTypeName",
                         "src": "5060:5:19"
                       }
                     ],
-                    "id": 5703,
+                    "id": 5709,
                     "name": "VariableDeclaration",
                     "src": "5060:8:19"
                   },
@@ -1294,7 +1294,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_r",
-                      "scope": 5716,
+                      "scope": 5722,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1307,12 +1307,12 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 5704,
+                        "id": 5710,
                         "name": "ElementaryTypeName",
                         "src": "5078:7:19"
                       }
                     ],
-                    "id": 5705,
+                    "id": 5711,
                     "name": "VariableDeclaration",
                     "src": "5078:10:19"
                   },
@@ -1320,7 +1320,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_s",
-                      "scope": 5716,
+                      "scope": 5722,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1333,12 +1333,12 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 5706,
+                        "id": 5712,
                         "name": "ElementaryTypeName",
                         "src": "5098:7:19"
                       }
                     ],
-                    "id": 5707,
+                    "id": 5713,
                     "name": "VariableDeclaration",
                     "src": "5098:10:19"
                   },
@@ -1346,7 +1346,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_signedDigest",
-                      "scope": 5716,
+                      "scope": 5722,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1359,12 +1359,12 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 5708,
+                        "id": 5714,
                         "name": "ElementaryTypeName",
                         "src": "5118:7:19"
                       }
                     ],
-                    "id": 5709,
+                    "id": 5715,
                     "name": "VariableDeclaration",
                     "src": "5118:21:19"
                   },
@@ -1372,7 +1372,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_preimage",
-                      "scope": 5716,
+                      "scope": 5722,
                       "stateVariable": false,
                       "storageLocation": "calldata",
                       "type": "bytes",
@@ -1385,17 +1385,17 @@
                           "name": "bytes",
                           "type": "bytes"
                         },
-                        "id": 5710,
+                        "id": 5716,
                         "name": "ElementaryTypeName",
                         "src": "5149:5:19"
                       }
                     ],
-                    "id": 5711,
+                    "id": 5717,
                     "name": "VariableDeclaration",
                     "src": "5149:24:19"
                   }
                 ],
-                "id": 5712,
+                "id": 5718,
                 "name": "ParameterList",
                 "src": "5050:129:19"
               },
@@ -1405,7 +1405,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_isFraud",
-                      "scope": 5716,
+                      "scope": 5722,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1418,22 +1418,22 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 5713,
+                        "id": 5719,
                         "name": "ElementaryTypeName",
                         "src": "5206:4:19"
                       }
                     ],
-                    "id": 5714,
+                    "id": 5720,
                     "name": "VariableDeclaration",
                     "src": "5206:13:19"
                   }
                 ],
-                "id": 5715,
+                "id": 5721,
                 "name": "ParameterList",
                 "src": "5205:15:19"
               }
             ],
-            "id": 5716,
+            "id": 5722,
             "name": "FunctionDefinition",
             "src": "5021:200:19"
           },
@@ -1448,7 +1448,7 @@
                 null
               ],
               "name": "closeKeep",
-              "scope": 5720,
+              "scope": 5726,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1461,7 +1461,7 @@
                   ]
                 },
                 "children": [],
-                "id": 5717,
+                "id": 5723,
                 "name": "ParameterList",
                 "src": "5581:2:19"
               },
@@ -1472,22 +1472,22 @@
                   ]
                 },
                 "children": [],
-                "id": 5718,
+                "id": 5724,
                 "name": "ParameterList",
                 "src": "5592:0:19"
               }
             ],
-            "id": 5719,
+            "id": 5725,
             "name": "FunctionDefinition",
             "src": "5563:30:19"
           }
         ],
-        "id": 5720,
+        "id": 5726,
         "name": "ContractDefinition",
         "src": "1931:3664:19"
       }
     ],
-    "id": 5721,
+    "id": 5727,
     "name": "SourceUnit",
     "src": "1837:3759:19"
   },
@@ -1497,7 +1497,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.283Z",
+  "updatedAt": "2021-04-30T08:59:51.125Z",
   "devdoc": {
     "methods": {
       "checkBondAmount()": {

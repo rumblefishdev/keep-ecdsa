@@ -70,14 +70,14 @@
     "absolutePath": "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol",
     "exportedSymbols": {
       "IFullyBackedBonding": [
-        20975
+        20981
       ]
     },
-    "id": 20976,
+    "id": 20982,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 20962,
+        "id": 20968,
         "literals": [
           "solidity",
           "0.5",
@@ -89,10 +89,10 @@
       {
         "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
         "file": "./IBonding.sol",
-        "id": 20963,
+        "id": 20969,
         "nodeType": "ImportDirective",
-        "scope": 20976,
-        "sourceUnit": 20961,
+        "scope": 20982,
+        "sourceUnit": 20967,
         "src": "25:24:88",
         "symbolAliases": [],
         "unitAlias": ""
@@ -103,31 +103,31 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 20964,
+              "id": 20970,
               "name": "IBonding",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 20960,
+              "referencedDeclaration": 20966,
               "src": "247:8:88",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IBonding_$20960",
+                "typeIdentifier": "t_contract$_IBonding_$20966",
                 "typeString": "contract IBonding"
               }
             },
-            "id": 20965,
+            "id": 20971,
             "nodeType": "InheritanceSpecifier",
             "src": "247:8:88"
           }
         ],
         "contractDependencies": [
-          20960
+          20966
         ],
         "contractKind": "contract",
         "documentation": "@title Fully Backed Bonding contract interface.\n @notice The interface should be implemented by a bonding contract used for\n Fully Backed Sortition Pool.",
         "fullyImplemented": false,
-        "id": 20975,
+        "id": 20981,
         "linearizedBaseContracts": [
-          20975,
-          20960
+          20981,
+          20966
         ],
         "name": "IFullyBackedBonding",
         "nodeType": "ContractDefinition",
@@ -135,22 +135,22 @@
           {
             "body": null,
             "documentation": "@notice Checks if the operator for the given bond creator contract\n has passed the initialization period.\n @param operator The operator address.\n @param bondCreator The bond creator contract address.\n @return True if operator has passed initialization period for given\n bond creator contract, false otherwise.",
-            "id": 20974,
+            "id": 20980,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isInitialized",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 20970,
+              "id": 20976,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 20967,
+                  "id": 20973,
                   "name": "operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 20974,
+                  "scope": 20980,
                   "src": "624:16:88",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -159,7 +159,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 20966,
+                    "id": 20972,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "624:7:88",
@@ -174,10 +174,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 20969,
+                  "id": 20975,
                   "name": "bondCreator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 20974,
+                  "scope": 20980,
                   "src": "642:19:88",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -186,7 +186,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 20968,
+                    "id": 20974,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "642:7:88",
@@ -203,15 +203,15 @@
               "src": "623:39:88"
             },
             "returnParameters": {
-              "id": 20973,
+              "id": 20979,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 20972,
+                  "id": 20978,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 20974,
+                  "scope": 20980,
                   "src": "696:4:88",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -220,7 +220,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 20971,
+                    "id": 20977,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "696:4:88",
@@ -235,14 +235,14 @@
               ],
               "src": "695:6:88"
             },
-            "scope": 20975,
+            "scope": 20981,
             "src": "601:101:88",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 20976,
+        "scope": 20982,
         "src": "215:489:88"
       }
     ],
@@ -253,7 +253,7 @@
       "absolutePath": "@keep-network/sortition-pools/contracts/api/IFullyBackedBonding.sol",
       "exportedSymbols": {
         "IFullyBackedBonding": [
-          20975
+          20981
         ]
       }
     },
@@ -266,39 +266,39 @@
             ".17"
           ]
         },
-        "id": 20962,
+        "id": 20968,
         "name": "PragmaDirective",
         "src": "0:23:88"
       },
       {
         "attributes": {
-          "SourceUnit": 20961,
+          "SourceUnit": 20967,
           "absolutePath": "@keep-network/sortition-pools/contracts/api/IBonding.sol",
           "file": "./IBonding.sol",
-          "scope": 20976,
+          "scope": 20982,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 20963,
+        "id": 20969,
         "name": "ImportDirective",
         "src": "25:24:88"
       },
       {
         "attributes": {
           "contractDependencies": [
-            20960
+            20966
           ],
           "contractKind": "contract",
           "documentation": "@title Fully Backed Bonding contract interface.\n @notice The interface should be implemented by a bonding contract used for\n Fully Backed Sortition Pool.",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            20975,
-            20960
+            20981,
+            20966
           ],
           "name": "IFullyBackedBonding",
-          "scope": 20976
+          "scope": 20982
         },
         "children": [
           {
@@ -310,15 +310,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IBonding",
-                  "referencedDeclaration": 20960,
+                  "referencedDeclaration": 20966,
                   "type": "contract IBonding"
                 },
-                "id": 20964,
+                "id": 20970,
                 "name": "UserDefinedTypeName",
                 "src": "247:8:88"
               }
             ],
-            "id": 20965,
+            "id": 20971,
             "name": "InheritanceSpecifier",
             "src": "247:8:88"
           },
@@ -333,7 +333,7 @@
                 null
               ],
               "name": "isInitialized",
-              "scope": 20975,
+              "scope": 20981,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -345,7 +345,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "operator",
-                      "scope": 20974,
+                      "scope": 20980,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -359,12 +359,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 20966,
+                        "id": 20972,
                         "name": "ElementaryTypeName",
                         "src": "624:7:88"
                       }
                     ],
-                    "id": 20967,
+                    "id": 20973,
                     "name": "VariableDeclaration",
                     "src": "624:16:88"
                   },
@@ -372,7 +372,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "bondCreator",
-                      "scope": 20974,
+                      "scope": 20980,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -386,17 +386,17 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 20968,
+                        "id": 20974,
                         "name": "ElementaryTypeName",
                         "src": "642:7:88"
                       }
                     ],
-                    "id": 20969,
+                    "id": 20975,
                     "name": "VariableDeclaration",
                     "src": "642:19:88"
                   }
                 ],
-                "id": 20970,
+                "id": 20976,
                 "name": "ParameterList",
                 "src": "623:39:88"
               },
@@ -406,7 +406,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 20974,
+                      "scope": 20980,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -419,32 +419,32 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 20971,
+                        "id": 20977,
                         "name": "ElementaryTypeName",
                         "src": "696:4:88"
                       }
                     ],
-                    "id": 20972,
+                    "id": 20978,
                     "name": "VariableDeclaration",
                     "src": "696:4:88"
                   }
                 ],
-                "id": 20973,
+                "id": 20979,
                 "name": "ParameterList",
                 "src": "695:6:88"
               }
             ],
-            "id": 20974,
+            "id": 20980,
             "name": "FunctionDefinition",
             "src": "601:101:88"
           }
         ],
-        "id": 20975,
+        "id": 20981,
         "name": "ContractDefinition",
         "src": "215:489:88"
       }
     ],
-    "id": 20976,
+    "id": 20982,
     "name": "SourceUnit",
     "src": "0:705:88"
   },
@@ -454,7 +454,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.577Z",
+  "updatedAt": "2021-04-30T08:59:51.440Z",
   "devdoc": {
     "methods": {
       "isInitialized(address,address)": {

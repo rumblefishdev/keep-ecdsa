@@ -148,17 +148,17 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/ECDSARewardsEscrowBeneficiary.sol",
     "exportedSymbols": {
       "ECDSABackportRewardsEscrowBeneficiary": [
-        4576
+        4582
       ],
       "ECDSARewardsEscrowBeneficiary": [
-        4561
+        4567
       ]
     },
-    "id": 4577,
+    "id": 4583,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4545,
+        "id": 4551,
         "literals": [
           "solidity",
           "0.5",
@@ -170,10 +170,10 @@
       {
         "absolutePath": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
         "file": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
-        "id": 4546,
+        "id": 4552,
         "nodeType": "ImportDirective",
-        "scope": 4577,
-        "sourceUnit": 9864,
+        "scope": 4583,
+        "sourceUnit": 9870,
         "src": "25:60:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -184,46 +184,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 4547,
+              "id": 4553,
               "name": "StakerRewardsBeneficiary",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 9833,
+              "referencedDeclaration": 9839,
               "src": "280:24:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9833",
+                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9839",
                 "typeString": "contract StakerRewardsBeneficiary"
               }
             },
-            "id": 4548,
+            "id": 4554,
             "nodeType": "InheritanceSpecifier",
             "src": "280:24:13"
           }
         ],
         "contractDependencies": [
-          9833,
-          21592
+          9839,
+          21598
         ],
         "contractKind": "contract",
         "documentation": "@title ECDSARewardsEscrowBeneficiary\n @notice Transfer the received tokens from PhasedEscrow to a designated\n         ECDSARewards contract.",
         "fullyImplemented": true,
-        "id": 4561,
+        "id": 4567,
         "linearizedBaseContracts": [
-          4561,
-          9833,
-          21592
+          4567,
+          9839,
+          21598
         ],
         "name": "ECDSARewardsEscrowBeneficiary",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 4559,
+              "id": 4565,
               "nodeType": "Block",
               "src": "445:2:13",
               "statements": []
             },
             "documentation": null,
-            "id": 4560,
+            "id": 4566,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -231,42 +231,42 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 4555,
+                    "id": 4561,
                     "name": "_token",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4550,
+                    "referencedDeclaration": 4556,
                     "src": "417:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$22175",
+                      "typeIdentifier": "t_contract$_IERC20_$22181",
                       "typeString": "contract IERC20"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 4556,
+                    "id": 4562,
                     "name": "_stakerRewards",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4552,
+                    "referencedDeclaration": 4558,
                     "src": "425:14:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IStakerRewards_$9774",
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9780",
                       "typeString": "contract IStakerRewards"
                     }
                   }
                 ],
-                "id": 4557,
+                "id": 4563,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 4554,
+                  "id": 4560,
                   "name": "StakerRewardsBeneficiary",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 9833,
+                  "referencedDeclaration": 9839,
                   "src": "392:24:13",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9833_$",
+                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9839_$",
                     "typeString": "type(contract StakerRewardsBeneficiary)"
                   }
                 },
@@ -277,31 +277,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4553,
+              "id": 4559,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4550,
+                  "id": 4556,
                   "name": "_token",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4560,
+                  "scope": 4566,
                   "src": "323:13:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20_$22175",
+                    "typeIdentifier": "t_contract$_IERC20_$22181",
                     "typeString": "contract IERC20"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 4549,
+                    "id": 4555,
                     "name": "IERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22175,
+                    "referencedDeclaration": 22181,
                     "src": "323:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$22175",
+                      "typeIdentifier": "t_contract$_IERC20_$22181",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -310,26 +310,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 4552,
+                  "id": 4558,
                   "name": "_stakerRewards",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4560,
+                  "scope": 4566,
                   "src": "338:29:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IStakerRewards_$9774",
+                    "typeIdentifier": "t_contract$_IStakerRewards_$9780",
                     "typeString": "contract IStakerRewards"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 4551,
+                    "id": 4557,
                     "name": "IStakerRewards",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9774,
+                    "referencedDeclaration": 9780,
                     "src": "338:14:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IStakerRewards_$9774",
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9780",
                       "typeString": "contract IStakerRewards"
                     }
                   },
@@ -340,19 +340,19 @@
               "src": "322:46:13"
             },
             "returnParameters": {
-              "id": 4558,
+              "id": 4564,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "445:0:13"
             },
-            "scope": 4561,
+            "scope": 4567,
             "src": "311:136:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4577,
+        "scope": 4583,
         "src": "238:211:13"
       },
       {
@@ -361,46 +361,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 4562,
+              "id": 4568,
               "name": "StakerRewardsBeneficiary",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 9833,
+              "referencedDeclaration": 9839,
               "src": "668:24:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9833",
+                "typeIdentifier": "t_contract$_StakerRewardsBeneficiary_$9839",
                 "typeString": "contract StakerRewardsBeneficiary"
               }
             },
-            "id": 4563,
+            "id": 4569,
             "nodeType": "InheritanceSpecifier",
             "src": "668:24:13"
           }
         ],
         "contractDependencies": [
-          9833,
-          21592
+          9839,
+          21598
         ],
         "contractKind": "contract",
         "documentation": "@title ECDSABackportRewardsEscrowBeneficiary\n @notice Trasfer the received tokens from Phased Escrow to a designated\n         ECDSABackportRewards contract.",
         "fullyImplemented": true,
-        "id": 4576,
+        "id": 4582,
         "linearizedBaseContracts": [
-          4576,
-          9833,
-          21592
+          4582,
+          9839,
+          21598
         ],
         "name": "ECDSABackportRewardsEscrowBeneficiary",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 4574,
+              "id": 4580,
               "nodeType": "Block",
               "src": "833:2:13",
               "statements": []
             },
             "documentation": null,
-            "id": 4575,
+            "id": 4581,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -408,42 +408,42 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 4570,
+                    "id": 4576,
                     "name": "_token",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4565,
+                    "referencedDeclaration": 4571,
                     "src": "805:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$22175",
+                      "typeIdentifier": "t_contract$_IERC20_$22181",
                       "typeString": "contract IERC20"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 4571,
+                    "id": 4577,
                     "name": "_stakerRewards",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4567,
+                    "referencedDeclaration": 4573,
                     "src": "813:14:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IStakerRewards_$9774",
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9780",
                       "typeString": "contract IStakerRewards"
                     }
                   }
                 ],
-                "id": 4572,
+                "id": 4578,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 4569,
+                  "id": 4575,
                   "name": "StakerRewardsBeneficiary",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 9833,
+                  "referencedDeclaration": 9839,
                   "src": "780:24:13",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9833_$",
+                    "typeIdentifier": "t_type$_t_contract$_StakerRewardsBeneficiary_$9839_$",
                     "typeString": "type(contract StakerRewardsBeneficiary)"
                   }
                 },
@@ -454,31 +454,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4568,
+              "id": 4574,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4565,
+                  "id": 4571,
                   "name": "_token",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4575,
+                  "scope": 4581,
                   "src": "711:13:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20_$22175",
+                    "typeIdentifier": "t_contract$_IERC20_$22181",
                     "typeString": "contract IERC20"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 4564,
+                    "id": 4570,
                     "name": "IERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22175,
+                    "referencedDeclaration": 22181,
                     "src": "711:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$22175",
+                      "typeIdentifier": "t_contract$_IERC20_$22181",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -487,26 +487,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 4567,
+                  "id": 4573,
                   "name": "_stakerRewards",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4575,
+                  "scope": 4581,
                   "src": "726:29:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IStakerRewards_$9774",
+                    "typeIdentifier": "t_contract$_IStakerRewards_$9780",
                     "typeString": "contract IStakerRewards"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 4566,
+                    "id": 4572,
                     "name": "IStakerRewards",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9774,
+                    "referencedDeclaration": 9780,
                     "src": "726:14:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IStakerRewards_$9774",
+                      "typeIdentifier": "t_contract$_IStakerRewards_$9780",
                       "typeString": "contract IStakerRewards"
                     }
                   },
@@ -517,19 +517,19 @@
               "src": "710:46:13"
             },
             "returnParameters": {
-              "id": 4573,
+              "id": 4579,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "833:0:13"
             },
-            "scope": 4576,
+            "scope": 4582,
             "src": "699:136:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4577,
+        "scope": 4583,
         "src": "618:219:13"
       }
     ],
@@ -540,10 +540,10 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/ECDSARewardsEscrowBeneficiary.sol",
       "exportedSymbols": {
         "ECDSABackportRewardsEscrowBeneficiary": [
-          4576
+          4582
         ],
         "ECDSARewardsEscrowBeneficiary": [
-          4561
+          4567
         ]
       }
     },
@@ -556,41 +556,41 @@
             ".17"
           ]
         },
-        "id": 4545,
+        "id": 4551,
         "name": "PragmaDirective",
         "src": "0:23:13"
       },
       {
         "attributes": {
-          "SourceUnit": 9864,
+          "SourceUnit": 9870,
           "absolutePath": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
           "file": "@keep-network/keep-core/contracts/PhasedEscrow.sol",
-          "scope": 4577,
+          "scope": 4583,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 4546,
+        "id": 4552,
         "name": "ImportDirective",
         "src": "25:60:13"
       },
       {
         "attributes": {
           "contractDependencies": [
-            9833,
-            21592
+            9839,
+            21598
           ],
           "contractKind": "contract",
           "documentation": "@title ECDSARewardsEscrowBeneficiary\n @notice Transfer the received tokens from PhasedEscrow to a designated\n         ECDSARewards contract.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            4561,
-            9833,
-            21592
+            4567,
+            9839,
+            21598
           ],
           "name": "ECDSARewardsEscrowBeneficiary",
-          "scope": 4577
+          "scope": 4583
         },
         "children": [
           {
@@ -602,15 +602,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "StakerRewardsBeneficiary",
-                  "referencedDeclaration": 9833,
+                  "referencedDeclaration": 9839,
                   "type": "contract StakerRewardsBeneficiary"
                 },
-                "id": 4547,
+                "id": 4553,
                 "name": "UserDefinedTypeName",
                 "src": "280:24:13"
               }
             ],
-            "id": 4548,
+            "id": 4554,
             "name": "InheritanceSpecifier",
             "src": "280:24:13"
           },
@@ -621,7 +621,7 @@
               "isConstructor": true,
               "kind": "constructor",
               "name": "",
-              "scope": 4561,
+              "scope": 4567,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -633,7 +633,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_token",
-                      "scope": 4560,
+                      "scope": 4566,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IERC20",
@@ -645,15 +645,15 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IERC20",
-                          "referencedDeclaration": 22175,
+                          "referencedDeclaration": 22181,
                           "type": "contract IERC20"
                         },
-                        "id": 4549,
+                        "id": 4555,
                         "name": "UserDefinedTypeName",
                         "src": "323:6:13"
                       }
                     ],
-                    "id": 4550,
+                    "id": 4556,
                     "name": "VariableDeclaration",
                     "src": "323:13:13"
                   },
@@ -661,7 +661,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_stakerRewards",
-                      "scope": 4560,
+                      "scope": 4566,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IStakerRewards",
@@ -673,20 +673,20 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IStakerRewards",
-                          "referencedDeclaration": 9774,
+                          "referencedDeclaration": 9780,
                           "type": "contract IStakerRewards"
                         },
-                        "id": 4551,
+                        "id": 4557,
                         "name": "UserDefinedTypeName",
                         "src": "338:14:13"
                       }
                     ],
-                    "id": 4552,
+                    "id": 4558,
                     "name": "VariableDeclaration",
                     "src": "338:29:13"
                   }
                 ],
-                "id": 4553,
+                "id": 4559,
                 "name": "ParameterList",
                 "src": "322:46:13"
               },
@@ -697,7 +697,7 @@
                   ]
                 },
                 "children": [],
-                "id": 4558,
+                "id": 4564,
                 "name": "ParameterList",
                 "src": "445:0:13"
               },
@@ -709,11 +709,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 9833,
+                      "referencedDeclaration": 9839,
                       "type": "type(contract StakerRewardsBeneficiary)",
                       "value": "StakerRewardsBeneficiary"
                     },
-                    "id": 4554,
+                    "id": 4560,
                     "name": "Identifier",
                     "src": "392:24:13"
                   },
@@ -723,11 +723,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4550,
+                      "referencedDeclaration": 4556,
                       "type": "contract IERC20",
                       "value": "_token"
                     },
-                    "id": 4555,
+                    "id": 4561,
                     "name": "Identifier",
                     "src": "417:6:13"
                   },
@@ -737,16 +737,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4552,
+                      "referencedDeclaration": 4558,
                       "type": "contract IStakerRewards",
                       "value": "_stakerRewards"
                     },
-                    "id": 4556,
+                    "id": 4562,
                     "name": "Identifier",
                     "src": "425:14:13"
                   }
                 ],
-                "id": 4557,
+                "id": 4563,
                 "name": "ModifierInvocation",
                 "src": "392:48:13"
               },
@@ -757,36 +757,36 @@
                   ]
                 },
                 "children": [],
-                "id": 4559,
+                "id": 4565,
                 "name": "Block",
                 "src": "445:2:13"
               }
             ],
-            "id": 4560,
+            "id": 4566,
             "name": "FunctionDefinition",
             "src": "311:136:13"
           }
         ],
-        "id": 4561,
+        "id": 4567,
         "name": "ContractDefinition",
         "src": "238:211:13"
       },
       {
         "attributes": {
           "contractDependencies": [
-            9833,
-            21592
+            9839,
+            21598
           ],
           "contractKind": "contract",
           "documentation": "@title ECDSABackportRewardsEscrowBeneficiary\n @notice Trasfer the received tokens from Phased Escrow to a designated\n         ECDSABackportRewards contract.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            4576,
-            9833,
-            21592
+            4582,
+            9839,
+            21598
           ],
           "name": "ECDSABackportRewardsEscrowBeneficiary",
-          "scope": 4577
+          "scope": 4583
         },
         "children": [
           {
@@ -798,15 +798,15 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "StakerRewardsBeneficiary",
-                  "referencedDeclaration": 9833,
+                  "referencedDeclaration": 9839,
                   "type": "contract StakerRewardsBeneficiary"
                 },
-                "id": 4562,
+                "id": 4568,
                 "name": "UserDefinedTypeName",
                 "src": "668:24:13"
               }
             ],
-            "id": 4563,
+            "id": 4569,
             "name": "InheritanceSpecifier",
             "src": "668:24:13"
           },
@@ -817,7 +817,7 @@
               "isConstructor": true,
               "kind": "constructor",
               "name": "",
-              "scope": 4576,
+              "scope": 4582,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -829,7 +829,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_token",
-                      "scope": 4575,
+                      "scope": 4581,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IERC20",
@@ -841,15 +841,15 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IERC20",
-                          "referencedDeclaration": 22175,
+                          "referencedDeclaration": 22181,
                           "type": "contract IERC20"
                         },
-                        "id": 4564,
+                        "id": 4570,
                         "name": "UserDefinedTypeName",
                         "src": "711:6:13"
                       }
                     ],
-                    "id": 4565,
+                    "id": 4571,
                     "name": "VariableDeclaration",
                     "src": "711:13:13"
                   },
@@ -857,7 +857,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_stakerRewards",
-                      "scope": 4575,
+                      "scope": 4581,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IStakerRewards",
@@ -869,20 +869,20 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IStakerRewards",
-                          "referencedDeclaration": 9774,
+                          "referencedDeclaration": 9780,
                           "type": "contract IStakerRewards"
                         },
-                        "id": 4566,
+                        "id": 4572,
                         "name": "UserDefinedTypeName",
                         "src": "726:14:13"
                       }
                     ],
-                    "id": 4567,
+                    "id": 4573,
                     "name": "VariableDeclaration",
                     "src": "726:29:13"
                   }
                 ],
-                "id": 4568,
+                "id": 4574,
                 "name": "ParameterList",
                 "src": "710:46:13"
               },
@@ -893,7 +893,7 @@
                   ]
                 },
                 "children": [],
-                "id": 4573,
+                "id": 4579,
                 "name": "ParameterList",
                 "src": "833:0:13"
               },
@@ -905,11 +905,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 9833,
+                      "referencedDeclaration": 9839,
                       "type": "type(contract StakerRewardsBeneficiary)",
                       "value": "StakerRewardsBeneficiary"
                     },
-                    "id": 4569,
+                    "id": 4575,
                     "name": "Identifier",
                     "src": "780:24:13"
                   },
@@ -919,11 +919,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4565,
+                      "referencedDeclaration": 4571,
                       "type": "contract IERC20",
                       "value": "_token"
                     },
-                    "id": 4570,
+                    "id": 4576,
                     "name": "Identifier",
                     "src": "805:6:13"
                   },
@@ -933,16 +933,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 4567,
+                      "referencedDeclaration": 4573,
                       "type": "contract IStakerRewards",
                       "value": "_stakerRewards"
                     },
-                    "id": 4571,
+                    "id": 4577,
                     "name": "Identifier",
                     "src": "813:14:13"
                   }
                 ],
-                "id": 4572,
+                "id": 4578,
                 "name": "ModifierInvocation",
                 "src": "780:48:13"
               },
@@ -953,22 +953,22 @@
                   ]
                 },
                 "children": [],
-                "id": 4574,
+                "id": 4580,
                 "name": "Block",
                 "src": "833:2:13"
               }
             ],
-            "id": 4575,
+            "id": 4581,
             "name": "FunctionDefinition",
             "src": "699:136:13"
           }
         ],
-        "id": 4576,
+        "id": 4582,
         "name": "ContractDefinition",
         "src": "618:219:13"
       }
     ],
-    "id": 4577,
+    "id": 4583,
     "name": "SourceUnit",
     "src": "0:838:13"
   },
@@ -978,7 +978,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.234Z",
+  "updatedAt": "2021-04-30T08:59:51.075Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

@@ -33,14 +33,14 @@
     "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/TestEtherReceiver.sol",
     "exportedSymbols": {
       "TestEtherReceiver": [
-        7793
+        7799
       ]
     },
-    "id": 7794,
+    "id": 7800,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 7770,
+        "id": 7776,
         "literals": [
           "solidity",
           "0.5",
@@ -55,19 +55,19 @@
         "contractKind": "contract",
         "documentation": "@title Ether Transfer Receiver.\n @dev This contract is for testing purposes only.",
         "fullyImplemented": true,
-        "id": 7793,
+        "id": 7799,
         "linearizedBaseContracts": [
-          7793
+          7799
         ],
         "name": "TestEtherReceiver",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 7772,
+            "id": 7778,
             "name": "shouldFail",
             "nodeType": "VariableDeclaration",
-            "scope": 7793,
+            "scope": 7799,
             "src": "147:15:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -76,7 +76,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 7771,
+              "id": 7777,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "147:4:42",
@@ -90,7 +90,7 @@
           },
           {
             "body": {
-              "id": 7781,
+              "id": 7787,
               "nodeType": "Block",
               "src": "306:57:42",
               "statements": [
@@ -100,7 +100,7 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 7777,
+                        "id": 7783,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -111,11 +111,11 @@
                         "src": "324:11:42",
                         "subExpression": {
                           "argumentTypes": null,
-                          "id": 7776,
+                          "id": 7782,
                           "name": "shouldFail",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 7772,
+                          "referencedDeclaration": 7778,
                           "src": "325:10:42",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -130,7 +130,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "5061796d656e742072656a6563746564",
-                        "id": 7778,
+                        "id": 7784,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -157,21 +157,21 @@
                           "typeString": "literal_string \"Payment rejected\""
                         }
                       ],
-                      "id": 7775,
+                      "id": 7781,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        22463,
-                        22464
+                        22469,
+                        22470
                       ],
-                      "referencedDeclaration": 22464,
+                      "referencedDeclaration": 22470,
                       "src": "316:7:42",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 7779,
+                    "id": 7785,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -185,32 +185,32 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 7780,
+                  "id": 7786,
                   "nodeType": "ExpressionStatement",
                   "src": "316:40:42"
                 }
               ]
             },
             "documentation": "@notice Rejects ether transfers sent to this contract if the shouldFail\n flag is set to true.",
-            "id": 7782,
+            "id": 7788,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7773,
+              "id": 7779,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "286:2:42"
             },
             "returnParameters": {
-              "id": 7774,
+              "id": 7780,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "306:0:42"
             },
-            "scope": 7793,
+            "scope": 7799,
             "src": "278:85:42",
             "stateMutability": "payable",
             "superFunction": null,
@@ -218,25 +218,25 @@
           },
           {
             "body": {
-              "id": 7791,
+              "id": 7797,
               "nodeType": "Block",
               "src": "412:36:42",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 7789,
+                    "id": 7795,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 7787,
+                      "id": 7793,
                       "name": "shouldFail",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7772,
+                      "referencedDeclaration": 7778,
                       "src": "422:10:42",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -247,11 +247,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 7788,
+                      "id": 7794,
                       "name": "_value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7784,
+                      "referencedDeclaration": 7790,
                       "src": "435:6:42",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -264,29 +264,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 7790,
+                  "id": 7796,
                   "nodeType": "ExpressionStatement",
                   "src": "422:19:42"
                 }
               ]
             },
             "documentation": null,
-            "id": 7792,
+            "id": 7798,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setShouldFail",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7785,
+              "id": 7791,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7784,
+                  "id": 7790,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7792,
+                  "scope": 7798,
                   "src": "392:11:42",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -295,7 +295,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 7783,
+                    "id": 7789,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "392:4:42",
@@ -311,19 +311,19 @@
               "src": "391:13:42"
             },
             "returnParameters": {
-              "id": 7786,
+              "id": 7792,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "412:0:42"
             },
-            "scope": 7793,
+            "scope": 7799,
             "src": "369:79:42",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7794,
+        "scope": 7800,
         "src": "114:336:42"
       }
     ],
@@ -334,7 +334,7 @@
       "absolutePath": "/Users/konrad/Desktop/rumble/fin/local-setup/keep-ecdsa/solidity/contracts/test/TestEtherReceiver.sol",
       "exportedSymbols": {
         "TestEtherReceiver": [
-          7793
+          7799
         ]
       }
     },
@@ -347,7 +347,7 @@
             ".17"
           ]
         },
-        "id": 7770,
+        "id": 7776,
         "name": "PragmaDirective",
         "src": "0:23:42"
       },
@@ -363,17 +363,17 @@
           "documentation": "@title Ether Transfer Receiver.\n @dev This contract is for testing purposes only.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            7793
+            7799
           ],
           "name": "TestEtherReceiver",
-          "scope": 7794
+          "scope": 7800
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "shouldFail",
-              "scope": 7793,
+              "scope": 7799,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "bool",
@@ -386,12 +386,12 @@
                   "name": "bool",
                   "type": "bool"
                 },
-                "id": 7771,
+                "id": 7777,
                 "name": "ElementaryTypeName",
                 "src": "147:4:42"
               }
             ],
-            "id": 7772,
+            "id": 7778,
             "name": "VariableDeclaration",
             "src": "147:15:42"
           },
@@ -405,7 +405,7 @@
                 null
               ],
               "name": "",
-              "scope": 7793,
+              "scope": 7799,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "external"
@@ -418,7 +418,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7773,
+                "id": 7779,
                 "name": "ParameterList",
                 "src": "286:2:42"
               },
@@ -429,7 +429,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7774,
+                "id": 7780,
                 "name": "ParameterList",
                 "src": "306:0:42"
               },
@@ -465,14 +465,14 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                22463,
-                                22464
+                                22469,
+                                22470
                               ],
-                              "referencedDeclaration": 22464,
+                              "referencedDeclaration": 22470,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 7775,
+                            "id": 7781,
                             "name": "Identifier",
                             "src": "316:7:42"
                           },
@@ -494,16 +494,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7772,
+                                  "referencedDeclaration": 7778,
                                   "type": "bool",
                                   "value": "shouldFail"
                                 },
-                                "id": 7776,
+                                "id": 7782,
                                 "name": "Identifier",
                                 "src": "325:10:42"
                               }
                             ],
-                            "id": 7777,
+                            "id": 7783,
                             "name": "UnaryOperation",
                             "src": "324:11:42"
                           },
@@ -520,27 +520,27 @@
                               "type": "literal_string \"Payment rejected\"",
                               "value": "Payment rejected"
                             },
-                            "id": 7778,
+                            "id": 7784,
                             "name": "Literal",
                             "src": "337:18:42"
                           }
                         ],
-                        "id": 7779,
+                        "id": 7785,
                         "name": "FunctionCall",
                         "src": "316:40:42"
                       }
                     ],
-                    "id": 7780,
+                    "id": 7786,
                     "name": "ExpressionStatement",
                     "src": "316:40:42"
                   }
                 ],
-                "id": 7781,
+                "id": 7787,
                 "name": "Block",
                 "src": "306:57:42"
               }
             ],
-            "id": 7782,
+            "id": 7788,
             "name": "FunctionDefinition",
             "src": "278:85:42"
           },
@@ -554,7 +554,7 @@
                 null
               ],
               "name": "setShouldFail",
-              "scope": 7793,
+              "scope": 7799,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -566,7 +566,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_value",
-                      "scope": 7792,
+                      "scope": 7798,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -579,17 +579,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 7783,
+                        "id": 7789,
                         "name": "ElementaryTypeName",
                         "src": "392:4:42"
                       }
                     ],
-                    "id": 7784,
+                    "id": 7790,
                     "name": "VariableDeclaration",
                     "src": "392:11:42"
                   }
                 ],
-                "id": 7785,
+                "id": 7791,
                 "name": "ParameterList",
                 "src": "391:13:42"
               },
@@ -600,7 +600,7 @@
                   ]
                 },
                 "children": [],
-                "id": 7786,
+                "id": 7792,
                 "name": "ParameterList",
                 "src": "412:0:42"
               },
@@ -625,11 +625,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7772,
+                              "referencedDeclaration": 7778,
                               "type": "bool",
                               "value": "shouldFail"
                             },
-                            "id": 7787,
+                            "id": 7793,
                             "name": "Identifier",
                             "src": "422:10:42"
                           },
@@ -639,41 +639,41 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7784,
+                              "referencedDeclaration": 7790,
                               "type": "bool",
                               "value": "_value"
                             },
-                            "id": 7788,
+                            "id": 7794,
                             "name": "Identifier",
                             "src": "435:6:42"
                           }
                         ],
-                        "id": 7789,
+                        "id": 7795,
                         "name": "Assignment",
                         "src": "422:19:42"
                       }
                     ],
-                    "id": 7790,
+                    "id": 7796,
                     "name": "ExpressionStatement",
                     "src": "422:19:42"
                   }
                 ],
-                "id": 7791,
+                "id": 7797,
                 "name": "Block",
                 "src": "412:36:42"
               }
             ],
-            "id": 7792,
+            "id": 7798,
             "name": "FunctionDefinition",
             "src": "369:79:42"
           }
         ],
-        "id": 7793,
+        "id": 7799,
         "name": "ContractDefinition",
         "src": "114:336:42"
       }
     ],
-    "id": 7794,
+    "id": 7800,
     "name": "SourceUnit",
     "src": "0:451:42"
   },
@@ -683,7 +683,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-13T14:08:44.332Z",
+  "updatedAt": "2021-04-30T08:59:51.173Z",
   "devdoc": {
     "details": "This contract is for testing purposes only.",
     "methods": {},
