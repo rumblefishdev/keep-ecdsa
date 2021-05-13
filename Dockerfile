@@ -1,76 +1,60 @@
-FROM golang:1.13.8-alpine3.10 AS gobuild
+FROM golang:1.13.6-alpine3.10 AS gobuild
 
 ARG VERSION
 ARG REVISION
 
 ENV GOPATH=/go \
 	GOBIN=/go/bin \
-	APP_NAME=keep-ecdsa \
-	APP_DIR=/go/src/github.com/keep-network/keep-ecdsa \
+	APP_NAME=keep-app \
+	APP_DIR=/go/src/keep-core \
 	BIN_PATH=/usr/local/bin \
-	# GO111MODULE required to support go modules
+	LD_LIBRARY_PATH=/usr/local/lib/ \
 	GO111MODULE=on
 
 RUN apk add --update --no-cache \
 	g++ \
 	linux-headers \
-	make \
-	nodejs \
-	npm \
-	python \
+	protobuf \
 	git \
-	protobuf && \
+	make \
+	python && \
 	rm -rf /var/cache/apk/ && mkdir /var/cache/apk/ && \
 	rm -rf /usr/share/man
 
-# Install Solidity compiler.
 COPY --from=ethereum/solc:0.5.17 /usr/bin/solc /usr/bin/solc
 
-# Configure GitHub token to be able to get private repositories.
-ARG GITHUB_TOKEN
-RUN git config --global url."https://$GITHUB_TOKEN:@github.com/".insteadOf "https://github.com/"
-
-# Configure working directory.
 RUN mkdir -p $APP_DIR
+
 WORKDIR $APP_DIR
+COPY . $APP_DIR/
 
-# Get dependencies.
-COPY go.mod $APP_DIR/
-COPY go.sum $APP_DIR/
-
-RUN go mod download
-
-# Install code generators.
-RUN cd /go/pkg/mod/github.com/gogo/protobuf@v1.3.1/protoc-gen-gogoslick && go install .
-RUN cd /go/pkg/mod/github.com/ethereum/go-ethereum@v1.9.10/cmd/abigen && go install .
-
-# Install Solidity contracts.
-COPY ./solidity $APP_DIR/solidity
-RUN cd $APP_DIR/solidity && npm install
-
-# Generate code.
-COPY ./pkg/chain/gen $APP_DIR/pkg/chain/gen
-COPY ./pkg/ecdsa/tss/gen $APP_DIR/pkg/ecdsa/tss/gen
-# Need this to resolve imports in generated Ethereum commands.
-COPY ./config $APP_DIR/config
-RUN go generate ./.../gen
-
-# Build the application.
-COPY ./ $APP_DIR/
-
-# Configure private repositories for Go dependencies
-ARG GOPRIVATE
-
-RUN GOOS=linux GOPRIVATE=$GOPRIVATE go build -ldflags "-X main.version=$VERSION -X main.revision=$REVISION" -a -o $APP_NAME ./ && \
+RUN GOOS=linux go build -ldflags "-X main.version=$VERSION -X main.revision=$REVISION" -a -o $APP_NAME ./ && \
 	mv $APP_NAME $BIN_PATH
 
-# Configure runtime container.
-FROM alpine:3.10
+FROM node:15-alpine AS app
 
-ENV APP_NAME=keep-ecdsa \
+ENV APP_NAME=keep-app \
 	BIN_PATH=/usr/local/bin
 
+RUN apk add --update --no-cache git
+	# git \
+	# nodejs \
+	# npm
+
+RUN npm i -g pm2
+
 COPY --from=gobuild $BIN_PATH/$APP_NAME $BIN_PATH
+
+COPY ./configs/config.local.1.toml ./config.toml
+COPY entrypoint.sh .
+
+RUN git clone https://github.com/rumblefishdev/tbtc-rsk-proxy.git proxy
+RUN cd proxy/node-http-proxy && npm install
+RUN cd proxy && npm install
+
+RUN mkdir /data
+
+ENTRYPOINT ["./entrypoint.sh"]
 
 # docker caches more when using CMD [] resulting in a faster build.
 CMD []
