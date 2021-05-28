@@ -8,6 +8,7 @@ replace (
 	github.com/btcsuite/btcd => github.com/keep-network/btcd v0.0.0-20190427004231-96897255fd17
 	github.com/btcsuite/btcutil => github.com/keep-network/btcutil v0.0.0-20190425235716-9e5f4b9a998d
 	github.com/urfave/cli => github.com/keep-network/cli v1.20.0
+	go.opencensus.io/exporter/zipkin => contrib.go.opencensus.io/exporter/zipkin v0.1.2
 )
 
 require (
@@ -21,6 +22,7 @@ require (
 	github.com/keep-network/keep-common v1.3.0
 	github.com/keep-network/keep-core v1.3.2-0.20201229154408-59ac640ed0cb
 	github.com/keep-network/tbtc v1.1.1-0.20201117095624-38508bdb562e
+	github.com/keymetrics/pm2-io-apm-go v0.0.1
 	github.com/pkg/errors v0.9.1
 	github.com/urfave/cli v1.22.1
 )
