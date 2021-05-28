@@ -50,7 +50,7 @@ COPY --from=gobuild $BIN_PATH/$APP_NAME $BIN_PATH
 COPY ./configs/config.local.1.toml ./config.toml
 COPY entrypoint.sh .
 
-RUN git clone https://github.com/rumblefishdev/tbtc-rsk-proxy.git proxy
+RUN git clone https://github.com/DistributedCollective/tbtc-rsk-proxy.git proxy
 RUN cd proxy/node-http-proxy && npm install
 RUN cd proxy && npm install
 
