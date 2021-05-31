@@ -1,0 +1,25 @@
+[ethereum]
+  URL = "ws://127.0.0.1:5050"
+  URLRPC = "http://127.0.0.1:5050"
+
+  [ethereum.account]
+  Address = "0xff01e3962be34745033e4c7d734843704156827e"
+  KeyFile = "/Users/konrad/Desktop/rumble/fin/local-setup/ethereum/data/keystore/UTC--2019-08-01T13-19-54.505377000Z--28bcfad75ee4c87b9089ba4c03a79b8148104da4"
+
+  [ethereum.ContractAddresses]
+  BondedECDSAKeepFactory = "0xD9C3E217E0fAAB0faE52CACA4603bA154Ab44680"
+
+[SanctionedApplications]
+Addresses = [
+  "0x81dCF94f4A4B15D936142b951A56AB9FF61a85a5"
+]
+
+[Extensions.TBTC]
+	TBTCSystem = "0x81dCF94f4A4B15D936142b951A56AB9FF61a85a5"
+
+[Storage]
+DataDir = "/Users/konrad/Desktop/rumble/fin/local-setup/storage/keep-ecdsa/3"
+
+[LibP2P]
+Port = 3922
+Peers = ["/ip4/127.0.0.1/tcp/3920/ipfs/16Uiu2HAmL3fUCp1BCpewHzxcnUf3R1ZoL82CSVVNE6zvi9zUcP1T"]
